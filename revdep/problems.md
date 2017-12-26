@@ -4,48 +4,42 @@ Version: 3.1.0
 
 ## In both
 
-*   checking CRAN incoming feasibility ... NOTE
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    Maintainer: 'Henrik Bengtsson <henrikb@braju.com>'
+    Maintainer: ‘Henrik Bengtsson <henrikb@braju.com>’
+    
+    Insufficient package version (submitted: 3.1.0, existing: 3.1.0)
     
     The Date field is over a month old.
     
     This build time stamp is over a month old.
     ```
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is 1028.1Mb
-      sub-directories of 1Mb or more:
-        R            1024.9Mb
-        help            1.1Mb
-        testScripts     1.2Mb
-    ```
-
 # aroma.core
 
 Version: 3.1.1
 
-## Newly fixed
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 1025.6Mb
-      sub-directories of 1Mb or more:
-        R  1024.5Mb
-    ```
-
 ## In both
+
+*   checking CRAN incoming feasibility ... WARNING
+    ```
+    Maintainer: ‘Henrik Bengtsson <henrikb@braju.com>’
+    
+    Insufficient package version (submitted: 3.1.1, existing: 3.1.1)
+    
+    Suggests or Enhances not in mainstream repositories:
+      sfit, expectile, HaarSeg, mpcbs
+    Availability using Additional_repositories specification:
+      sfit        yes   https://henrikbengtsson.github.io/drat
+      expectile   yes   http://r-forge.r-project.org          
+      HaarSeg     yes   http://r-forge.r-project.org          
+      mpcbs       yes   http://r-forge.r-project.org          
+    ```
 
 *   checking package dependencies ... NOTE
     ```
     Packages suggested but not available for checking:
-      'GLAD' 'sfit' 'expectile' 'HaarSeg' 'mpcbs'
-    ```
-
-*   checking Rd cross-references ... NOTE
-    ```
-    Package unavailable to check Rd xrefs: 'GLAD'
+      ‘sfit’ ‘expectile’ ‘HaarSeg’ ‘mpcbs’
     ```
 
 # brms
@@ -54,46 +48,11 @@ Version: 1.10.0
 
 ## In both
 
-*   checking tests ...
+*   checking CRAN incoming feasibility ... WARNING
     ```
-     ERROR
-    Running the tests in 'tests/testthat.R' failed.
-    Last 13 lines of output:
-      can be found by typing help('brms'). A more detailed introduction
-      to the package is available through vignette('brms_overview').
-      Run theme_set(theme_default()) to use the default bayesplot theme.
-      > 
-      > test_check("brms")
-      1. Failure: plotting functions don't throw unexpected errors (@tests.plots.R#13) 
-      p <- stanplot(fit, type = "trace", pars = "^b_") produced messages.
-      
-      
-      testthat results ================================================================
-      OK: 1195 SKIPPED: 1 FAILED: 1
-      1. Failure: plotting functions don't throw unexpected errors (@tests.plots.R#13) 
-      
-      Error: testthat unit tests failed
-      Execution halted
-    ```
-
-*   R CMD check timed out
+    Maintainer: ‘Paul-Christian Bürkner <paul.buerkner@gmail.com>’
     
-
-*   checking top-level files ... WARNING
-    ```
-    Conversion of 'README.md' failed:
-    pandoc: Could not fetch https://travis-ci.org/paul-buerkner/brms.svg?branch=master
-    TlsExceptionHostPort (HandshakeFailed (Error_Protocol ("certificate has unknown CA",True,UnknownCa))) "travis-ci.org" 443
-    ```
-
-*   checking examples ... WARNING
-    ```
-    checking a package with encoding  'UTF-8'  in an ASCII locale
-    ```
-
-*   checking CRAN incoming feasibility ... NOTE
-    ```
-    Maintainer: 'Paul-Christian B<U+00FC>rkner <paul.buerkner@gmail.com>'
+    Insufficient package version (submitted: 1.10.0, existing: 1.10.0)
     
     The Date field is over a month old.
     
@@ -108,15 +67,58 @@ Version: 1.10.0
         doc   2.4Mb
     ```
 
+# doFuture
+
+Version: 0.5.1
+
+## In both
+
+*   checking CRAN incoming feasibility ... WARNING
+    ```
+    Maintainer: ‘Henrik Bengtsson <henrikb@braju.com>’
+    
+    Insufficient package version (submitted: 0.5.1, existing: 0.5.1)
+    ```
+
+# fiery
+
+Version: 1.0.0
+
+## In both
+
+*   checking CRAN incoming feasibility ... WARNING
+    ```
+    Maintainer: ‘Thomas Lin Pedersen <thomasp85@gmail.com>’
+    
+    Insufficient package version (submitted: 1.0.0, existing: 1.0.0)
+    
+    This build time stamp is over a month old.
+    ```
+
+*   checking top-level files ... WARNING
+    ```
+    Conversion of ‘README.md’ failed:
+    pandoc: Could not fetch https://img.shields.io/codecov/c/github/thomasp85/fiery/master.svg
+    TlsExceptionHostPort (HandshakeFailed Error_EOF) "img.shields.io" 443
+    ```
+
+*   checking dependencies in R code ... NOTE
+    ```
+    Namespace in Imports field not imported from: ‘desc’
+      All declared Imports should be used.
+    ```
+
 # future
 
 Version: 1.6.1
 
 ## In both
 
-*   checking CRAN incoming feasibility ... NOTE
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    Maintainer: 'Henrik Bengtsson <henrikb@braju.com>'
+    Maintainer: ‘Henrik Bengtsson <henrikb@braju.com>’
+    
+    Insufficient package version (submitted: 1.6.1, existing: 1.6.1)
     
     This build time stamp is over a month old.
     ```
@@ -127,9 +129,11 @@ Version: 0.15.0
 
 ## In both
 
-*   checking CRAN incoming feasibility ... NOTE
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    Maintainer: 'Henrik Bengtsson <henrikb@braju.com>'
+    Maintainer: ‘Henrik Bengtsson <henrikb@braju.com>’
+    
+    Insufficient package version (submitted: 0.15.0, existing: 0.15.0)
     
     This build time stamp is over a month old.
     ```
@@ -140,9 +144,11 @@ Version: 0.6.0
 
 ## In both
 
-*   checking CRAN incoming feasibility ... NOTE
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    Maintainer: 'Henrik Bengtsson <henrikb@braju.com>'
+    Maintainer: ‘Henrik Bengtsson <henrikb@braju.com>’
+    
+    Insufficient package version (submitted: 0.6.0, existing: 0.6.0)
     
     This build time stamp is over a month old.
     ```
@@ -153,34 +159,11 @@ Version: 0.2.0
 
 ## In both
 
-*   checking tests ...
+*   checking CRAN incoming feasibility ... WARNING
     ```
-     ERROR
-    Running the tests in 'tests/testthat.R' failed.
-    Last 13 lines of output:
-      testthat results ================================================================
-      OK: 17 SKIPPED: 0 FAILED: 46
-      1. Error: We can see a project resource (@test_aa_auth.R#16) 
-      2. Error: We can set auto project (@test_aa_auth.R#26) 
-      3. Error: We can get auto project (@test_aa_auth.R#37) 
-      4. Error: We can list networks (@test_aa_auth.R#70) 
-      5. Error: We can get a network (@test_aa_auth.R#79) 
-      6. Error: We can make a container VM (@test_bb_create_vm.R#7) 
-      7. Error: We can make a VM with metadata (@test_bb_create_vm.R#24) 
-      8. Error: We can make a template VM (@test_bb_create_vm.R#41) 
-      9. Error: We can make a VM with custom disk size (@test_bb_create_vm.R#57) 
-      1. ...
-      
-      Error: testthat unit tests failed
-      Execution halted
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 1027.0Mb
-      sub-directories of 1Mb or more:
-        doc          1024.3Mb
-        dockerfiles     2.3Mb
+    Maintainer: ‘Mark Edmondson <r@sunholo.com>’
+    
+    Insufficient package version (submitted: 0.2.0, existing: 0.2.0)
     ```
 
 # kernelboot
@@ -189,11 +172,11 @@ Version: 0.1.2
 
 ## In both
 
-*   checking installed package size ... NOTE
+*   checking CRAN incoming feasibility ... WARNING
     ```
-      installed size is 1024.1Mb
-      sub-directories of 1Mb or more:
-        libs  1024.0Mb
+    Maintainer: ‘Tymoteusz Wolodzko <twolodzko+kernelboot@gmail.com>’
+    
+    Insufficient package version (submitted: 0.1.2, existing: 0.1.2)
     ```
 
 # multiApply
@@ -202,14 +185,11 @@ Version: 0.0.1
 
 ## In both
 
-*   checking examples ... WARNING
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    checking a package with encoding  'UTF-8'  in an ASCII locale
-    ```
-
-*   checking CRAN incoming feasibility ... NOTE
-    ```
-    Maintainer: 'Alasdair Hunter <alasdair.hunter@bsc.es>'
+    Maintainer: ‘Alasdair Hunter <alasdair.hunter@bsc.es>’
+    
+    Insufficient package version (submitted: 0.0.1, existing: 0.0.1)
     
     This build time stamp is over a month old.
     ```
@@ -220,21 +200,18 @@ Version: 0.8.0
 
 ## In both
 
-*   checking examples ... WARNING
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    checking a package with encoding  'UTF-8'  in an ASCII locale
-    ```
-
-*   checking CRAN incoming feasibility ... NOTE
-    ```
-    Maintainer: 'Jeremy Coyle <jeremyrcoyle@gmail.com>'
+    Maintainer: ‘Jeremy Coyle <jeremyrcoyle@gmail.com>’
+    
+    Insufficient package version (submitted: 0.8.0, existing: 0.8.0)
     
     This build time stamp is over a month old.
     ```
 
 *   checking dependencies in R code ... NOTE
     ```
-    Namespace in Imports field not imported from: 'methods'
+    Namespace in Imports field not imported from: ‘methods’
       All declared Imports should be used.
     ```
 
@@ -244,9 +221,11 @@ Version: 1.2.4
 
 ## In both
 
-*   checking CRAN incoming feasibility ... NOTE
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    Maintainer: 'Kevin kuang <kvn.kuang@mail.utoronto.ca>'
+    Maintainer: ‘Kevin kuang <kvn.kuang@mail.utoronto.ca>’
+    
+    Insufficient package version (submitted: 1.2.4, existing: 1.2.4)
     
     This build time stamp is over a month old.
     ```
@@ -257,21 +236,15 @@ Version: 2017.07.11
 
 ## In both
 
-*   checking CRAN incoming feasibility ... NOTE
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    Maintainer: 'Toby Dylan Hocking <toby.hocking@r-project.org>'
+    Maintainer: ‘Toby Dylan Hocking <toby.hocking@r-project.org>’
     
+    Insufficient package version (submitted: 2017.7.11, existing: 2017.7.11)
     Version contains leading zeroes (2017.07.11)
     Version contains large components (2017.07.11)
     
     This build time stamp is over a month old.
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 1024.8Mb
-      sub-directories of 1Mb or more:
-        data  1024.0Mb
     ```
 
 # PSCBS
@@ -280,20 +253,15 @@ Version: 0.63.0
 
 ## In both
 
-*   checking CRAN incoming feasibility ... NOTE
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    Maintainer: 'Henrik Bengtsson <henrikb@braju.com>'
+    Maintainer: ‘Henrik Bengtsson <henrikb@braju.com>’
+    
+    Insufficient package version (submitted: 0.63.0, existing: 0.63.0)
     
     The Date field is over a month old.
     
     This build time stamp is over a month old.
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 1025.9Mb
-      sub-directories of 1Mb or more:
-        data-ex  1024.0Mb
     ```
 
 # R.filesets
@@ -302,9 +270,11 @@ Version: 2.11.0
 
 ## In both
 
-*   checking CRAN incoming feasibility ... NOTE
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    Maintainer: 'Henrik Bengtsson <henrikb@braju.com>'
+    Maintainer: ‘Henrik Bengtsson <henrikb@braju.com>’
+    
+    Insufficient package version (submitted: 2.11.0, existing: 2.11.0)
     
     This build time stamp is over a month old.
     ```
@@ -315,44 +285,11 @@ Version: 2.1.0
 
 ## In both
 
-*   checking tests ...
+*   checking CRAN incoming feasibility ... WARNING
     ```
-     ERROR
-    Running the tests in 'tests/testthat.R' failed.
-    Last 13 lines of output:
-      1. Error: sperrorest() when missing factor levels in train data (@test-sperrorest.R#639) 
-      cannot open the connection
-      1: readRDS("/Users/pjs/Servers/GIServer/home/shares/data/LIFE/mod/survey_data/data-clean.rda") %>% 
-             as_tibble() at testthat/test-sperrorest.R:639
-      2: eval(lhs, parent, parent)
-      3: eval(lhs, parent, parent)
-      4: readRDS("/Users/pjs/Servers/GIServer/home/shares/data/LIFE/mod/survey_data/data-clean.rda")
-      5: gzfile(file, "rb")
-      
-      testthat results ================================================================
-      OK: 101 SKIPPED: 7 FAILED: 1
-      1. Error: sperrorest() when missing factor levels in train data (@test-sperrorest.R#639) 
-      
-      Error: testthat unit tests failed
-      Execution halted
-    ```
-
-*   checking top-level files ... WARNING
-    ```
-    Conversion of 'README.md' failed:
-    pandoc: Could not fetch https://zenodo.org/badge/69967610.svg
-    TlsExceptionHostPort (HandshakeFailed (Error_Protocol ("certificate has unknown CA",True,UnknownCa))) "zenodo.org" 443
-    ```
-
-*   checking re-building of vignette outputs ... WARNING
-    ```
-    Error in re-building vignettes:
-      ...
-    pandoc: Could not fetch https://raw.githubusercontent.com/pat-s/sperrorest/master/inst/figure/resamp-plot.png
-    TlsExceptionHostPort (HandshakeFailed (Error_Protocol ("certificate has unknown CA",True,UnknownCa))) "raw.githubusercontent.com" 443
-    Error: processing vignette 'spatial-modeling-use-case.Rmd' failed with diagnostics:
-    pandoc document conversion failed with error 67
-    Execution halted
+    Maintainer: ‘Alexander Brenning <alexander.brenning@uni-jena.de>’
+    
+    Insufficient package version (submitted: 2.1.0, existing: 2.1.0)
     ```
 
 # startR
@@ -361,9 +298,11 @@ Version: 0.0.1
 
 ## In both
 
-*   checking CRAN incoming feasibility ... NOTE
+*   checking CRAN incoming feasibility ... WARNING
     ```
-    Maintainer: 'Nicolau Manubens <nicolau.manubens@bsc.es>'
+    Maintainer: ‘Nicolau Manubens <nicolau.manubens@bsc.es>’
+    
+    Insufficient package version (submitted: 0.0.1, existing: 0.0.1)
     
     This build time stamp is over a month old.
     ```
