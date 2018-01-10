@@ -27,7 +27,7 @@
 |[aroma.core](problems.md#aromacore)                      |3.1.1      |      |        |3    |
 |doFuture                                                 |0.6.0      |      |        |     |
 |[fiery](problems.md#fiery)                               |1.1.0      |      |5       |5    |
-|future                                                   |1.6.2      |-1    |        |     |
+|future                                                   |1.6.2      |      |        |     |
 |future.BatchJobs                                         |0.15.0     |      |        |     |
 |future.batchtools                                        |0.6.0      |      |        |     |
 |[googleComputeEngineR](problems.md#googlecomputeenginer) |0.2.0      |      |        |1    |
