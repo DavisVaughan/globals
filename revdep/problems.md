@@ -37,61 +37,11 @@ Version: 3.1.1
     Package unavailable to check Rd xrefs: 'GLAD'
     ```
 
-# doFuture
-
-Version: 0.6.0
-
-## Newly broken
-
-*   checking tests ...
-    ```
-     ERROR
-    Running the tests in 'tests/doRNG,dopar.R' failed.
-    Last 13 lines of output:
-      - args: function (expr, envir = parent.frame(), substitute = TRUE, lazy = FALSE, seed = NULL, globals = TRUE, persistent = FALSE, workers = availableCores(), gc = FALSE, earlySignal = FALSE, label = NULL, ...)
-      - tweaked: FALSE
-      - call: plan(strategy)
-      Workers: [n = 2] 'localhost', 'localhost'
-      Base port: 11622
-      Creating node 1 of 2 ...
-      - setting up node
-      Starting worker #1 on 'localhost': '/home/shared/cbc/software_cbc/R/R-3.4.3-20171130/lib64/R/bin/Rscript' --default-packages=datasets,utils,grDevices,graphics,stats,methods -e 'parallel:::.slaveRSOCK()' MASTER=localhost PORT=11622 OUT=/dev/null TIMEOUT=2592000 XDR=TRUE
-      Waiting for worker #1 on 'localhost' to connect back
-      Warning in socketConnection("localhost", port = port, server = TRUE, blocking = TRUE,  :
-        port 11622 cannot be opened
-      Error in socketConnection("localhost", port = port, server = TRUE, blocking = TRUE,  : 
-        cannot open the connection
-      Calls: plan ... eval.parent -> eval -> eval -> eval -> eval -> socketConnection
-      Execution halted
-    ```
-
 # fiery
 
 Version: 1.1.0
 
 ## In both
-
-*   checking tests ...
-    ```
-     ERROR
-    Running the tests in 'tests/testthat.R' failed.
-    Last 13 lines of output:
-      9: startServer(self$host, self$port, list(call = private$request_logic, onHeaders = private$header_logic, 
-             onWSOpen = private$websocket_logic))
-      10: stop("Failed to create server")
-      
-      == testthat results  ===========================================================
-      OK: 238 SKIPPED: 0 FAILED: 6
-      1. Error: life cycle events get fired (@test-Fire.R#168) 
-      2. Error: futures can be added and called (@test-Fire.R#317) 
-      3. Error: ignite is blocked during run (@test-Fire.R#404) 
-      4. Error: external triggers are fired (@test-Fire.R#424) 
-      5. Error: showcase opens a browser (@test-Fire.R#453) 
-      6. Error: is_running works (@test-Fire.R#529) 
-      
-      Error: testthat unit tests failed
-      Execution halted
-    ```
 
 *   checking whether package 'fiery' can be installed ... WARNING
     ```
@@ -187,6 +137,22 @@ Version: 0.2.0
 Version: 0.1.3
 
 ## In both
+
+*   checking tests ...
+    ```
+     ERROR
+    Running the tests in 'tests/test_parallel.R' failed.
+    Complete output:
+      > 
+      > library("kernelboot")
+      > 
+      > # simply check if it fails
+      > 
+      > stopifnot( kernelboot(mtcars, function(data) coef(lm(mpg ~ disp + hp + drat, data = data)),
+      +                       R = 10, parallel = TRUE)$param$parallel )
+      Error: kernelboot(mtcars, function(data) coef(lm(mpg ~ disp + hp + drat,  .... is not TRUE
+      Execution halted
+    ```
 
 *   checking examples ... WARNING
     ```
