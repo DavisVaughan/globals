@@ -51,30 +51,6 @@ Version: 0.6.0
 
 Version: 1.1.0
 
-## Newly broken
-
-*   checking tests ...
-    ```
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 13 lines of output:
-             onWSOpen = private$websocket_logic))
-      10: stop("Failed to create server")
-      
-      ══ testthat results  ═══════════════════════════════════════════════════════════
-      OK: 236 SKIPPED: 0 FAILED: 7
-      1. Error: life cycle events get fired (@test-Fire.R#168) 
-      2. Error: errors in start and resume gets caught (@test-Fire.R#288) 
-      3. Error: futures can be added and called (@test-Fire.R#317) 
-      4. Error: ignite is blocked during run (@test-Fire.R#404) 
-      5. Error: external triggers are fired (@test-Fire.R#424) 
-      6. Error: showcase opens a browser (@test-Fire.R#453) 
-      7. Error: is_running works (@test-Fire.R#529) 
-      
-      Error: testthat unit tests failed
-      Execution halted
-    ```
-
 ## In both
 
 *   checking top-level files ... WARNING
@@ -102,30 +78,6 @@ Version: 1.1.0
 # future
 
 Version: 1.6.2
-
-## Newly broken
-
-*   checking tests ...
-    ```
-     ERROR
-    Running the tests in ‘tests/future_lapply,RNG.R’ failed.
-    Last 13 lines of output:
-       $ y: int [1:5] 1 2 3 4 5
-      * plan('multisession') ... DONE
-        - Testing with 1 cores ... DONE
-        - Testing with 2 cores ...
-      * plan('multicore') ...
-      List of 1
-       $ y: int [1:5] 1 2 3 4 5
-      * plan('multicore') ... DONE
-      * plan('multisession') ...
-      Warning in socketConnection("localhost", port = port, server = TRUE, blocking = TRUE,  :
-        port 11722 cannot be opened
-      Error in socketConnection("localhost", port = port, server = TRUE, blocking = TRUE,  : 
-        cannot open the connection
-      Calls: plan ... eval.parent -> eval -> eval -> eval -> eval -> socketConnection
-      Execution halted
-    ```
 
 ## In both
 
@@ -173,6 +125,28 @@ Version: 0.2.0
     Maintainer: ‘Mark Edmondson <r@sunholo.com>’
     
     This build time stamp is over a month old.
+    ```
+
+# kernelboot
+
+Version: 0.1.3
+
+## In both
+
+*   checking tests ...
+    ```
+     ERROR
+    Running the tests in ‘tests/test_parallel.R’ failed.
+    Complete output:
+      > 
+      > library("kernelboot")
+      > 
+      > # simply check if it fails
+      > 
+      > stopifnot( kernelboot(mtcars, function(data) coef(lm(mpg ~ disp + hp + drat, data = data)),
+      +                       R = 10, parallel = TRUE)$param$parallel )
+      Error: kernelboot(mtcars, function(data) coef(lm(mpg ~ disp + hp + drat,  .... is not TRUE
+      Execution halted
     ```
 
 # multiApply
