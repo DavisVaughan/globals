@@ -1,9 +1,11 @@
 Package: globals
 ================
 
-Version: 0.12.5-9000 [2019-12-07]
+Version: 0.12.9-9001 [2020-04-21]
 
- * ...
+NEW FEATURES:
+
+ * Now globals part of a function created via purrr::partial() are also found.
  
 
 Version: 0.12.5 [2019-12-07]

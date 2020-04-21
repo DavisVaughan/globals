@@ -1,9 +1,11 @@
 Package: globals
-Version: 0.12.5-9000
+Version: 0.12.9-9000
 Depends:
     R (>= 3.1.2)
 Imports:
     codetools
+Suggests:
+    rlang
 Title: Identify Global Objects in R Expressions
 Authors@R: c(
   person("Henrik", "Bengtsson", role=c("aut", "cre", "cph"),

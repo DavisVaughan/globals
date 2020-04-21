@@ -17,6 +17,15 @@ find_globals_conservative <- function(expr, envir, ..., trace = FALSE) {
     w <- makeUsageCollector(fun, name = "<anonymous>", enterGlobal = enter)
     if (trace) w <- inject_tracer_to_walker(w)
     collect_usage_function(fun, name = "<anonymous>", w)
+
+    if (inherits(fun, "purrr_function_partial")) {
+      body <- attr(fun, "body")
+      expr <- rlang::quo_get_expr(body)
+      fun <- expr[[1]]
+      w <- makeUsageCollector(fun, name = "<purrr_function_partial>", enterGlobal = enter)
+      if (trace) w <- inject_tracer_to_walker(w)
+      collect_usage_function(fun, name = "<purrr_function_partial>", w)
+    }
   } else {
     ## From codetools::findGlobals():
     fun <- as_function(expr, envir = envir, ...)
@@ -50,6 +59,15 @@ find_globals_liberal <- function(expr, envir, ..., trace = FALSE) {
     w <- makeUsageCollector(fun, name = "<anonymous>", enterGlobal = enter)
     if (trace) w <- inject_tracer_to_walker(w)
     collect_usage_function(fun, name = "<anonymous>", w)
+    
+    if (inherits(fun, "purrr_function_partial")) {
+      body <- attr(fun, "body")
+      expr <- rlang::quo_get_expr(body)
+      fun <- expr[[1]]
+      w <- makeUsageCollector(fun, name = "<purrr_function_partial>", enterGlobal = enter)
+      if (trace) w <- inject_tracer_to_walker(w)
+      collect_usage_function(fun, name = "<purrr_function_partial>", w)
+    }
   } else {
     fun <- as_function(expr, envir = envir, ...)
     w <- makeUsageCollector(fun, name = "<anonymous>", enterGlobal = enter)
@@ -131,6 +149,17 @@ find_globals_ordered <- function(expr, envir, ..., trace = FALSE) {
                             enterGlobal = enter_global)
     if (trace) w <- inject_tracer_to_walker(w)
     collect_usage_function(fun, name = "<anonymous>", w)
+    
+    if (inherits(fun, "purrr_function_partial")) {
+      body <- attr(fun, "body")
+      expr <- rlang::quo_get_expr(body)
+      fun <- expr[[1]]
+      w <- makeUsageCollector(fun, name = "<purrr_function_partial>",
+                              enterLocal = enter_local,
+                              enterGlobal = enter_global)
+      if (trace) w <- inject_tracer_to_walker(w)
+      collect_usage_function(fun, name = "<purrr_function_partial>", w)
+    }
   } else {
     fun <- as_function(expr, envir = envir, ...)
     w <- makeUsageCollector(fun, name = "<anonymous>",
