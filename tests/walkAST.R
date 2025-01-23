@@ -34,6 +34,7 @@ exprs <- list(
 )
 if (requireNamespace("methods")) {
   exprs$s4 <- methods::getClass("MethodDefinition")
+  exprs$s7 <- asS3(methods::getClass("S4")@prototype, complete = FALSE)
 }
 
 nullify <- function(e) NULL

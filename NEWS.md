@@ -1,6 +1,9 @@
 # Version (development version)
 
- * ...
+## Bug Fixes
+
+ * `walkAST()` did not recognize objects of type `object`, leading to
+   an error on `Cannot walk expression. Unknown object type 'object'`.
 
 
 # Version 0.16.3 [2024-03-07]
