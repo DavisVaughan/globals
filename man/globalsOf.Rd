@@ -96,7 +96,7 @@ of false positive to a minimum, i.e. the identified objects are
 most likely true global objects.  At the same time, there is
 a risk that some true globals are not identified (see example).
 This search method returns the exact same result as the
-\code{\link[codetools]{findGlobals}()} function of the
+\code{\link[=codetools]{findGlobals}()} function of the
 \pkg{codetools} package.
 
 The \code{method = "liberal"} search method tries to keep the
