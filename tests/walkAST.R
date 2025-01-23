@@ -43,7 +43,7 @@ disp <- function(expr) {
   cat("Expression:\n")
   print(expr)
   cat("str():\n")
-  str(expr)
+  try(str(expr))
   cat(sprintf("typeof: %s\n", typeof(expr)))
   if (is.recursive(expr)) {
     cat("as.list():\n")
