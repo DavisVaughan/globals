@@ -18,18 +18,18 @@ jobs:
         config:
           - {os: windows-latest, r: 'devel'    }
           - {os: windows-latest, r: 'release'  }
-          - {os: windows-latest, r: 'oldrel'   }
 #          - {os: macOS-latest,   r: 'devel'    }
-          - {os: macOS-latest,   r: 'release'  }
+#          - {os: macOS-latest,   r: 'release'  }
 #          - {os: macOS-latest,   r: 'oldrel'   }
           - {os: ubuntu-latest,  r: 'devel'    }
           - {os: ubuntu-latest,  r: 'release'  }
           - {os: ubuntu-latest,  r: 'oldrel'   }
           - {os: ubuntu-latest,  r: 'oldrel-1' }
-          - {os: ubuntu-latest,  r: '3.5'      }
+          - {os: ubuntu-latest,  r: 'oldrel-2' }
+          - {os: ubuntu-latest,  r: '3.6'      }
           - {os: ubuntu-latest,  r: 'release'  , language: ko,    label: ko    }
-#          - {os: ubuntu-latest,  r: 'release'  , language: zh_CN, label: zh_CN }
-#          - {os: ubuntu-latest,  r: 'release'  , language: zh_TW, label: zh_TW }
+          - {os: ubuntu-latest,  r: 'release'  , language: zh_CN, label: zh_CN }
+          - {os: ubuntu-latest,  r: 'release'  , language: zh_TW, label: zh_TW }
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       R_KEEP_PKG_SOURCE: yes
@@ -38,10 +38,9 @@ jobs:
       LANGUAGE: ${{ matrix.config.language }}
       ## R CMD check
       _R_CHECK_CRAN_INCOMING_: false
-      _R_CHECK_LENGTH_1_CONDITION_: true
-      _R_CHECK_LENGTH_1_LOGIC2_: true
       _R_CHECK_MATRIX_DATA_: true
       _R_CHECK_SUGGESTS_ONLY_: true
+      _R_CHECK_THINGS_IN_TEMP_DIR_: true
       ## R (>= 4.4.0) Note, no trailing underscore (sic!)
       _R_COMPARE_LANG_OBJECTS: eqonly
       
@@ -51,7 +50,7 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v2
 
       - uses: r-lib/actions/setup-tinytex@v2
-
+      
       - name: Install system dependencies (Linux)
         if: runner.os == 'Linux'
         run: sudo apt-get install -y tidy
@@ -67,10 +66,16 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
+      - name: Install itself (to build vignettes)
+        run: |
+          install.packages(".", repos=NULL, type="source")
+        shell: Rscript {0}
+
       - name: Session info
         run: |
           options(width = 100)
           capabilities()
+          parallelly::availableCores(which = "all")
           pkgs <- installed.packages()[, "Package"]
           sessioninfo::session_info(pkgs, include_base = TRUE)
           ## Verify LANGUAGE settings by generating a translatable error
@@ -79,21 +84,10 @@ jobs:
           tryCatch(log("a"), error = conditionMessage)
         shell: Rscript {0}
 
-      - name: Check (!Windows)
-        if: runner.os != 'Windows'
+      - name: Check
         run: |
           rcmdcheck::rcmdcheck(
-            args = "--as-cran",
-            error_on = "note",
-            check_dir = "check"
-          )
-        shell: Rscript {0}
-
-      - name: Check (Windows)
-        if: runner.os == 'Windows'
-        run: |
-          rcmdcheck::rcmdcheck(
-            args = c("--no-manual", "--as-cran"),
+            args = c("--as-cran", if (.Platform$OS.type == "windows") "--no-manual"),
             error_on = "note",
             check_dir = "check"
           )
