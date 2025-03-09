@@ -4,7 +4,7 @@
 #'
 #' @param envir The environment from where to search for globals.
 #'
-#' @param \dots Not used.
+#' @param \ldots Not used.
 #'
 #' @param method A character string specifying what type of search algorithm
 #'        to use.

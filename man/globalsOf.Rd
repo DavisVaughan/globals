@@ -37,8 +37,6 @@ globalsOf(
 
 \item{envir}{The environment from where to search for globals.}
 
-\item{\dots}{Not used.}
-
 \item{attributes}{If TRUE (default), attributes of \code{expr} are also searched.
 If FALSE, they are not.
 If a character vector, then attributes with matching names are searched.
@@ -75,6 +73,8 @@ scanned for globals.}
 
 \item{skip}{(internal) A list of globals not to be searched for
 additional globals.  Ignored unless \code{recursive} is TRUE.}
+
+\item{\ldots}{Not used.}
 }
 \value{
 \code{findGlobals()} returns a character vector.
