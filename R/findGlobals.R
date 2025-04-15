@@ -95,8 +95,10 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
     expr <- tweak(expr)
   }
 
-  debug && mdebug(" - workaround 'codetools' bug #16")
-  expr <- walkAST(expr, call = tweakCodetoolsBug16)
+  if (hasCodetoolsBug16()) {
+    debug && mdebug(" - workaround 'codetools' bug #16")
+    expr <- walkAST(expr, call = tweakCodetoolsBug16)
+  }
 
   if (method == "ordered") {
     find_globals_t <- find_globals_ordered

@@ -25,7 +25,6 @@ hasCodetoolsBug16 <- local({
 # [1] https://github.com/futureverse/globals/issues/94
 # [2] https://gitlab.com/luke-tierney/codetools/-/issues/16
 tweakCodetoolsBug16 <- function(expr) {
-  if (!hasCodetoolsBug16()) return(expr)
   if (!is.call(expr)) return(expr)
   expr <- unclass(expr)  
   op <- expr[[1]]
