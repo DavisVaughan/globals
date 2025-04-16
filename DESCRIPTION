@@ -1,5 +1,5 @@
 Package: globals
-Version: 0.16.3-9009
+Version: 0.17.0
 Depends:
     R (>= 3.1.2)
 Imports:
