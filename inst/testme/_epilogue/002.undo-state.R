@@ -1,4 +1,5 @@
 testme <- as.environment("testme")
+hpaste <- globals:::hpaste
 
 ## Undo options
 ## (a) Reset
