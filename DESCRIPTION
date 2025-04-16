@@ -1,5 +1,5 @@
 Package: globals
-Version: 0.16.3-9008
+Version: 0.16.3-9009
 Depends:
     R (>= 3.1.2)
 Imports:
@@ -9,7 +9,7 @@ Authors@R: c(
     person("Henrik", "Bengtsson", role=c("aut", "cre", "cph"),
            email="henrikb@braju.com"),
     person("Davis","Vaughan", role="ctb",
-           email="davis@rstudio.com"))
+           email="davis@posit.co"))
 Description: Identifies global ("unknown" or "free") objects in R expressions
     by code inspection using various strategies (ordered, liberal, or
     conservative).  The objective of this package is to make it as simple as
