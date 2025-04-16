@@ -23,6 +23,7 @@ jobs:
           - { plan: 'future.batchtools::batchtools_local' }
           - { plan: 'future.batchtools::batchtools_bash'  }
           - { plan: 'future.callr::callr'                 }
+          - { plan: 'future.mirai::mirai_multisession'    }
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -68,7 +69,6 @@ jobs:
       - name: Install 'future.tests' and any backend R packages
         run: |
           remotes::install_cran("future.tests")
-          remotes::install_github("HenrikBengtsson/future.tests", ref="develop")
           if (grepl("::", plan <- "${{ matrix.future.plan }}") && nzchar(pkg <- sub("::.*", "", plan))) install.packages(pkg)
         shell: Rscript {0}
 
