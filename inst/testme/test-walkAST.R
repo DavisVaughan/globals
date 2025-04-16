@@ -1,4 +1,4 @@
-source("incl/start.R")
+library(globals)
 
 message("*** walkAST() ...")
 
@@ -114,4 +114,3 @@ message("*** walkAST() - exceptions ... DONE")
 
 message("*** walkAST() ... DONE")
 
-source("incl/end.R")

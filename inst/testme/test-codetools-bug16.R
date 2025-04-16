@@ -1,3 +1,5 @@
+library(globals)
+
 message("*** codetools::findGlobals() bug #16 ...")
 
 exprs <- list(

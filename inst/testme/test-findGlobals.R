@@ -1,5 +1,4 @@
-source("incl/start.R")
-
+library(globals)
 
 message("*** findGlobals() ...")
 
@@ -157,4 +156,3 @@ for (method in c("conservative", "liberal", "ordered")) {
 
 message("*** findGlobals() ... DONE")
 
-source("incl/end.R")
