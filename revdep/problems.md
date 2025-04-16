@@ -1,3 +1,28 @@
+# activAnalyzer
+
+<details>
+
+* Version: 2.1.2
+* GitHub: https://github.com/pydemull/activAnalyzer
+* Source code: https://github.com/cran/activAnalyzer
+* Date/Publication: 2024-09-23 23:40:02 UTC
+* Number of recursive dependencies: 147
+
+Run `revdepcheck::revdep_details(, "activAnalyzer")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.7Mb
+      sub-directories of 1Mb or more:
+        R         1.5Mb
+        doc       1.0Mb
+        extdata   2.0Mb
+    ```
+
 # agcounts
 
 <details>
@@ -6,107 +31,86 @@
 * GitHub: NA
 * Source code: https://github.com/cran/agcounts
 * Date/Publication: 2024-02-29 20:12:36 UTC
-* Number of recursive dependencies: 166
+* Number of recursive dependencies: 187
 
-Run `revdep_details(, "agcounts")` for more info
+Run `revdepcheck::revdep_details(, "agcounts")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘agcounts’ can be installed ... WARNING
+*   checking package dependencies ... ERROR
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/agcounts/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/agcounts/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/agcounts/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/agcounts/new/agcounts.Rcheck/00install.out’ for details.
+    Package required but not available: ‘GGIR’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
+
+# aifeducation
+
+<details>
+
+* Version: 1.0.2
+* GitHub: https://github.com/cran/aifeducation
+* Source code: https://github.com/cran/aifeducation
+* Date/Publication: 2025-02-05 13:00:02 UTC
+* Number of recursive dependencies: 143
+
+Run `revdepcheck::revdep_details(, "aifeducation")` for more info
+
+</details>
+
+## In both
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.6Mb
+      installed size is  8.0Mb
       sub-directories of 1Mb or more:
-        extdata   3.4Mb
-        libs      3.0Mb
+        R      1.5Mb
+        data   3.5Mb
+        help   1.0Mb
+        libs   1.5Mb
     ```
 
-# AIPW
+*   checking data for non-ASCII characters ... NOTE
+    ```
+      Note: found 33 marked UTF-8 strings
+    ```
+
+# AIscreenR
 
 <details>
 
-* Version: 0.6.3.2
-* GitHub: https://github.com/yqzhong7/AIPW
-* Source code: https://github.com/cran/AIPW
-* Date/Publication: 2021-06-11 09:30:02 UTC
-* Number of recursive dependencies: 100
+* Version: 0.1.1
+* GitHub: https://github.com/MikkelVembye/AIscreenR
+* Source code: https://github.com/cran/AIscreenR
+* Date/Publication: 2024-11-26 14:00:02 UTC
+* Number of recursive dependencies: 77
 
-Run `revdep_details(, "AIPW")` for more info
+Run `revdepcheck::revdep_details(, "AIscreenR")` for more info
 
 </details>
 
 ## In both
 
-*   checking dependencies in R code ... NOTE
+*   checking data for non-ASCII characters ... NOTE
     ```
-    Namespaces in Imports field not imported from:
-      ‘Rsolnp’ ‘SuperLearner’ ‘future.apply’ ‘ggplot2’ ‘progressr’ ‘stats’
-      ‘utils’
-      All declared Imports should be used.
-    ```
-
-# AlpsNMR
-
-<details>
-
-* Version: 4.4.0
-* GitHub: https://github.com/sipss/AlpsNMR
-* Source code: https://github.com/cran/AlpsNMR
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 185
-
-Run `revdep_details(, "AlpsNMR")` for more info
-
-</details>
-
-## In both
-
-*   checking re-building of vignette outputs ... ERROR
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘Vig01-introduction-to-alpsnmr.Rmd’ using rmarkdown
-    ! LuaTeX error .../texlive/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua:55: b
-    ad argument #1 to 'insert' (table expected, got nil)
-    stack traceback:
-    	[C]: in function 'insert'
-    	.../texlive/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua:55: in main chunk
-    	[C]: in function 'dofile'
-    	[string "\directlua "]:6: in main chunk.
-    l.139   }
-    ...
-    LaTeX failed to compile /c4/home/henrik/repositories/globals/revdep/checks/AlpsNMR/new/AlpsNMR.Rcheck/vign_test/AlpsNMR/vignettes/Vig02-handling-metadata-and-annotations.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See Vig02-handling-metadata-and-annotations.log for more info.
-    --- failed re-building ‘Vig02-handling-metadata-and-annotations.Rmd’
-    
-    SUMMARY: processing the following files failed:
-      ‘Vig01-introduction-to-alpsnmr.Rmd’
-      ‘Vig01b-introduction-to-alpsnmr-old-api.Rmd’
-      ‘Vig02-handling-metadata-and-annotations.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
+      Note: found 1 marked Latin-1 string
+      Note: found 5 marked UTF-8 strings
     ```
 
 # altdoc
 
 <details>
 
-* Version: 0.3.0
+* Version: 0.5.0
 * GitHub: https://github.com/etiennebacher/altdoc
 * Source code: https://github.com/cran/altdoc
-* Date/Publication: 2024-02-21 16:00:06 UTC
-* Number of recursive dependencies: 85
+* Date/Publication: 2025-01-23 16:40:07 UTC
+* Number of recursive dependencies: 80
 
-Run `revdep_details(, "altdoc")` for more info
+Run `revdepcheck::revdep_details(, "altdoc")` for more info
 
 </details>
 
@@ -119,20 +123,20 @@ Run `revdep_details(, "altdoc")` for more info
      ERROR
     Running the tests in ‘tests/testthat.R’ failed.
     Last 50 lines of output:
-      v Setting active project to '<no active project>'
-      v Setting active project to '/scratch/henrik/1701657/RtmpS2ZQsi/testpkg3b30f233c050d'
-      v Setting active project to '<no active project>'
-      v Setting active project to '/scratch/henrik/1701657/RtmpS2ZQsi/testpkg3b30f2ab089d5'
-      v Setting active project to '<no active project>'
+        5. │     │ └─base::withCallingHandlers(...)
+        6. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+        7. └─altdoc::render_docs(path = getwd())
+        8.   └─altdoc:::.import_vignettes(...)
+        9.     └─base::vapply(...)
     ...
-      Error in `render_docs(path = getwd())`: There were some failures when rendering vignettes.
-      Backtrace:
-          ▆
-       1. └─altdoc::render_docs(path = getwd()) at test-update.R:111:5
-       2.   └─cli::cli_abort("There were some failures when rendering vignettes.")
-       3.     └─rlang::abort(...)
+       2.   └─altdoc:::.import_vignettes(...)
+       3.     └─base::vapply(...)
+       4.       └─altdoc (local) FUN(X[[i]], ...)
+       5.         └─altdoc:::.render_one_vignette(...)
+       6.           └─altdoc:::.qmd2md(origin, tar_dir, verbose = verbose, preamble = pre)
+       7.             └─base::cat(out[[2]])
       
-      [ FAIL 5 | WARN 0 | SKIP 7 | PASS 56 ]
+      [ FAIL 8 | WARN 0 | SKIP 8 | PASS 55 ]
       Error: Test failures
       Execution halted
     ```
@@ -145,18 +149,69 @@ Run `revdep_details(, "altdoc")` for more info
 * GitHub: https://github.com/womeimingzi11/amapGeocode
 * Source code: https://github.com/cran/amapGeocode
 * Date/Publication: 2021-04-19 07:20:02 UTC
-* Number of recursive dependencies: 79
+* Number of recursive dependencies: 77
 
-Run `revdep_details(, "amapGeocode")` for more info
+Run `revdepcheck::revdep_details(, "amapGeocode")` for more info
 
 </details>
 
 ## In both
 
-*   checking dependencies in R code ... NOTE
+*   checking package dependencies ... ERROR
     ```
-    Namespace in Imports field not imported from: ‘jsonlite’
-      All declared Imports should be used.
+    Package required but not available: ‘sjmisc’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# apsimx
+
+<details>
+
+* Version: 2.8.235
+* GitHub: https://github.com/femiguez/apsimx
+* Source code: https://github.com/cran/apsimx
+* Date/Publication: 2025-03-10 05:40:02 UTC
+* Number of recursive dependencies: 185
+
+Run `revdepcheck::revdep_details(, "apsimx")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  7.7Mb
+      sub-directories of 1Mb or more:
+        R         1.5Mb
+        extdata   5.4Mb
+    ```
+
+# aroma.affymetrix
+
+<details>
+
+* Version: 3.2.2
+* GitHub: https://github.com/HenrikBengtsson/aroma.affymetrix
+* Source code: https://github.com/cran/aroma.affymetrix
+* Date/Publication: 2024-02-18 20:40:03 UTC
+* Number of recursive dependencies: 85
+
+Run `revdepcheck::revdep_details(, "aroma.affymetrix")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  7.2Mb
+      sub-directories of 1Mb or more:
+        R             3.5Mb
+        help          1.6Mb
+        testScripts   1.1Mb
     ```
 
 # aroma.core
@@ -167,9 +222,9 @@ Run `revdep_details(, "amapGeocode")` for more info
 * GitHub: https://github.com/HenrikBengtsson/aroma.core
 * Source code: https://github.com/cran/aroma.core
 * Date/Publication: 2024-02-19 08:40:02 UTC
-* Number of recursive dependencies: 68
+* Number of recursive dependencies: 67
 
-Run `revdep_details(, "aroma.core")` for more info
+Run `revdepcheck::revdep_details(, "aroma.core")` for more info
 
 </details>
 
@@ -181,66 +236,106 @@ Run `revdep_details(, "aroma.core")` for more info
       'sfit', 'expectile', 'HaarSeg', 'mpcbs'
     ```
 
-# BAMBI
+# autostats
 
 <details>
 
-* Version: 2.3.5
-* GitHub: https://github.com/c7rishi/BAMBI
-* Source code: https://github.com/cran/BAMBI
-* Date/Publication: 2023-03-08 23:10:05 UTC
-* Number of recursive dependencies: 53
+* Version: 0.4.1
+* GitHub: https://github.com/Harrison4192/autostats
+* Source code: https://github.com/cran/autostats
+* Date/Publication: 2024-06-04 09:44:44 UTC
+* Number of recursive dependencies: 201
 
-Run `revdep_details(, "BAMBI")` for more info
+Run `revdepcheck::revdep_details(, "autostats")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘BAMBI’ can be installed ... WARNING
+*   checking package dependencies ... ERROR
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/BAMBI/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/BAMBI/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/BAMBI/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/BAMBI/new/BAMBI.Rcheck/00install.out’ for details.
+    Package required but not available: ‘presenter’
+    
+    Package suggested but not available for checking: ‘XICOR’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
+
+# BAMBI
+
+<details>
+
+* Version: 2.3.6
+* GitHub: https://github.com/c7rishi/BAMBI
+* Source code: https://github.com/cran/BAMBI
+* Date/Publication: 2024-10-25 13:30:02 UTC
+* Number of recursive dependencies: 53
+
+Run `revdepcheck::revdep_details(, "BAMBI")` for more info
+
+</details>
+
+## In both
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  7.3Mb
+      installed size is  8.1Mb
       sub-directories of 1Mb or more:
-        libs   6.8Mb
+        libs   7.4Mb
     ```
 
 # bamm
 
 <details>
 
-* Version: 0.4.3
+* Version: 0.5.0
 * GitHub: https://github.com/luismurao/bamm
 * Source code: https://github.com/cran/bamm
-* Date/Publication: 2022-12-20 11:10:05 UTC
-* Number of recursive dependencies: 109
+* Date/Publication: 2024-07-06 20:22:11 UTC
+* Number of recursive dependencies: 103
 
-Run `revdep_details(, "bamm")` for more info
+Run `revdepcheck::revdep_details(, "bamm")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘bamm’ can be installed ... WARNING
+*   checking installed package size ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/bamm/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/bamm/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/bamm/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/bamm/new/bamm.Rcheck/00install.out’ for details.
+      installed size is  6.1Mb
+      sub-directories of 1Mb or more:
+        R      1.5Mb
+        libs   2.9Mb
     ```
 
-*   checking C++ specification ... NOTE
+*   checking dependencies in R code ... NOTE
     ```
-      Specified C++11: please drop specification unless essential
+    Namespaces in Imports field not imported from:
+      ‘crosstalk’ ‘plotly’
+      All declared Imports should be used.
+    ```
+
+# baskexact
+
+<details>
+
+* Version: 1.0.1
+* GitHub: https://github.com/lbau7/baskexact
+* Source code: https://github.com/cran/baskexact
+* Date/Publication: 2024-04-09 13:30:02 UTC
+* Number of recursive dependencies: 85
+
+Run `revdepcheck::revdep_details(, "baskexact")` for more info
+
+</details>
+
+## In both
+
+*   checking dependencies in R code ... NOTE
+    ```
+    Namespace in Imports field not imported from: ‘ggplot2’
+      All declared Imports should be used.
     ```
 
 # batchtools
@@ -251,22 +346,43 @@ Run `revdep_details(, "bamm")` for more info
 * GitHub: https://github.com/mllg/batchtools
 * Source code: https://github.com/cran/batchtools
 * Date/Publication: 2023-04-20 14:20:06 UTC
-* Number of recursive dependencies: 83
+* Number of recursive dependencies: 81
 
-Run `revdep_details(, "batchtools")` for more info
+Run `revdepcheck::revdep_details(, "batchtools")` for more info
 
 </details>
 
 ## In both
 
-*   checking package dependencies ... NOTE
+*   checking dependencies in R code ... NOTE
     ```
-    Package suggested but not available for checking: ‘doMPI’
+    [c4-n43:1821302] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
+    --------------------------------------------------------------------------
+    The application appears to have been direct launched using "srun",
+    but OMPI was not built with SLURM's PMI support and therefore cannot
+    execute. There are several options for building PMI support under
+    SLURM, depending upon the SLURM version you are using:
+    
+      version 16.05 or later: you can use SLURM's PMIx support. This
+      requires that you configure and build SLURM --with-pmix.
+    
+      Versions earlier than 16.05: you must use either SLURM's PMI-1 or
+      PMI-2 support. SLURM builds PMI-1 by default, or you can manually
+      install PMI-2. You must then build Open MPI using --with-pmi pointing
+      to the SLURM PMI library location.
+    
+    Please configure as appropriate and try again.
+    --------------------------------------------------------------------------
     ```
 
-*   checking Rd cross-references ... NOTE
+*   checking Rd files ... NOTE
     ```
-    Package unavailable to check Rd xrefs: ‘Rmpi’
+    checkRd: (-1) JobCollection.Rd:41: Lost braces
+        41 |  \item{namespaces}{code{character} with required packages to load via \code{\link[base]{requireNamespace}}.}
+           |                        ^
+    checkRd: (-1) addAlgorithm.Rd:31: Lost braces
+        31 | Algorithms are functions which get the code{data} part as well as the problem instance (the return value of the
+           |                                            ^
     ```
 
 # bayesmove
@@ -277,66 +393,87 @@ Run `revdep_details(, "batchtools")` for more info
 * GitHub: https://github.com/joshcullen/bayesmove
 * Source code: https://github.com/cran/bayesmove
 * Date/Publication: 2021-10-22 08:50:09 UTC
-* Number of recursive dependencies: 168
+* Number of recursive dependencies: 165
 
-Run `revdep_details(, "bayesmove")` for more info
+Run `revdepcheck::revdep_details(, "bayesmove")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘bayesmove’ can be installed ... WARNING
+*   checking installed package size ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/bayesmove/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/bayesmove/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/bayesmove/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/bayesmove/new/bayesmove.Rcheck/00install.out’ for details.
+      installed size is  5.2Mb
+      sub-directories of 1Mb or more:
+        data   2.0Mb
+        libs   2.8Mb
+    ```
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) insert_NAs.Rd:22: Lost braces; missing escapes or markup?
+        22 | A data frame where new rows have been inserted to regularize the \code{date} column. This results in values provided for \code{id}, \code{date}, and {dt} while inserting NAs for all other columns. Additionally, observations with duplicate date-times are removed.
+           |                                                                                                                                                      ^
+    ```
+
+# bbknnR
+
+<details>
+
+* Version: 1.1.1
+* GitHub: https://github.com/ycli1995/bbknnR
+* Source code: https://github.com/cran/bbknnR
+* Date/Publication: 2024-02-13 10:20:03 UTC
+* Number of recursive dependencies: 162
+
+Run `revdepcheck::revdep_details(, "bbknnR")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.1Mb
+      sub-directories of 1Mb or more:
+        data   3.0Mb
+        libs   1.6Mb
     ```
 
 # BEKKs
 
 <details>
 
-* Version: 1.4.4
+* Version: 1.4.5
 * GitHub: NA
 * Source code: https://github.com/cran/BEKKs
-* Date/Publication: 2024-01-14 15:50:09 UTC
-* Number of recursive dependencies: 86
+* Date/Publication: 2024-11-25 08:50:06 UTC
+* Number of recursive dependencies: 85
 
-Run `revdep_details(, "BEKKs")` for more info
+Run `revdepcheck::revdep_details(, "BEKKs")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘BEKKs’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/BEKKs/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/BEKKs/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/BEKKs/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/BEKKs/new/BEKKs.Rcheck/00install.out’ for details.
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is 18.5Mb
+      installed size is 18.8Mb
       sub-directories of 1Mb or more:
-        libs  17.6Mb
+        libs  17.7Mb
     ```
 
 # bigDM
 
 <details>
 
-* Version: 0.5.3
+* Version: 0.5.6
 * GitHub: https://github.com/spatialstatisticsupna/bigDM
 * Source code: https://github.com/cran/bigDM
-* Date/Publication: 2023-10-17 12:50:02 UTC
+* Date/Publication: 2025-03-25 09:30:06 UTC
 * Number of recursive dependencies: 135
 
-Run `revdep_details(, "bigDM")` for more info
+Run `revdepcheck::revdep_details(, "bigDM")` for more info
 
 </details>
 
@@ -347,9 +484,43 @@ Run `revdep_details(, "bigDM")` for more info
     Package suggested but not available for checking: ‘INLA’
     ```
 
+*   checking installed package size ... NOTE
+    ```
+      installed size is  8.9Mb
+      sub-directories of 1Mb or more:
+        data   8.5Mb
+    ```
+
 *   checking data for non-ASCII characters ... NOTE
     ```
       Note: found 940 marked Latin-1 strings
+    ```
+
+# BiocHubsShiny
+
+<details>
+
+* Version: 1.6.2
+* GitHub: https://github.com/Bioconductor/BiocHubsShiny
+* Source code: https://github.com/cran/BiocHubsShiny
+* Date/Publication: 2025-01-27
+* Number of recursive dependencies: 115
+
+Run `revdepcheck::revdep_details(, "BiocHubsShiny")` for more info
+
+</details>
+
+## In both
+
+*   checking R code for possible problems ... NOTE
+    ```
+    BiocHubsShiny : server : <anonymous>: no visible global function
+      definition for ‘write.table’
+    Undefined global functions or variables:
+      write.table
+    Consider adding
+      importFrom("utils", "write.table")
+    to your NAMESPACE file.
     ```
 
 # bistablehistory
@@ -360,9 +531,9 @@ Run `revdep_details(, "bigDM")` for more info
 * GitHub: https://github.com/alexander-pastukhov/bistablehistory
 * Source code: https://github.com/cran/bistablehistory
 * Date/Publication: 2023-09-13 13:20:09 UTC
-* Number of recursive dependencies: 97
+* Number of recursive dependencies: 95
 
-Run `revdep_details(, "bistablehistory")` for more info
+Run `revdepcheck::revdep_details(, "bistablehistory")` for more info
 
 </details>
 
@@ -370,9 +541,9 @@ Run `revdep_details(, "bistablehistory")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 75.5Mb
+      installed size is 71.8Mb
       sub-directories of 1Mb or more:
-        libs  74.6Mb
+        libs  70.7Mb
     ```
 
 *   checking for GNU extensions in Makefiles ... NOTE
@@ -384,13 +555,13 @@ Run `revdep_details(, "bistablehistory")` for more info
 
 <details>
 
-* Version: 0.5-3
+* Version: 0.5-8
 * GitHub: https://github.com/ecmerkle/blavaan
 * Source code: https://github.com/cran/blavaan
-* Date/Publication: 2024-01-19 22:50:02 UTC
-* Number of recursive dependencies: 98
+* Date/Publication: 2025-01-08 19:20:09 UTC
+* Number of recursive dependencies: 101
 
-Run `revdep_details(, "blavaan")` for more info
+Run `revdepcheck::revdep_details(, "blavaan")` for more info
 
 </details>
 
@@ -398,15 +569,15 @@ Run `revdep_details(, "blavaan")` for more info
 
 *   checking package dependencies ... NOTE
     ```
-    Package suggested but not available for checking: ‘cmdstanr’
+    Packages suggested but not available for checking: 'cmdstanr', 'blavsam'
     ```
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 196.2Mb
+      installed size is 186.9Mb
       sub-directories of 1Mb or more:
-        R           1.2Mb
-        libs      193.4Mb
+        R           1.5Mb
+        libs      183.6Mb
         testdata    1.4Mb
     ```
 
@@ -415,69 +586,64 @@ Run `revdep_details(, "blavaan")` for more info
     GNU make is a SystemRequirements.
     ```
 
-# BPrinStratTTE
+# bonsai
 
 <details>
 
-* Version: 0.0.2
-* GitHub: https://github.com/Boehringer-Ingelheim/BPrinStratTTE
-* Source code: https://github.com/cran/BPrinStratTTE
-* Date/Publication: 2023-12-20 16:40:07 UTC
-* Number of recursive dependencies: 74
+* Version: 0.3.2
+* GitHub: https://github.com/tidymodels/bonsai
+* Source code: https://github.com/cran/bonsai
+* Date/Publication: 2025-02-11 23:30:06 UTC
+* Number of recursive dependencies: 136
 
-Run `revdep_details(, "BPrinStratTTE")` for more info
+Run `revdepcheck::revdep_details(, "bonsai")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘BPrinStratTTE’ can be installed ... ERROR
+*   R CMD check timed out
+    
+
+# BPrinStratTTE
+
+<details>
+
+* Version: 0.0.7
+* GitHub: https://github.com/Boehringer-Ingelheim/BPrinStratTTE
+* Source code: https://github.com/cran/BPrinStratTTE
+* Date/Publication: 2024-04-13 09:20:02 UTC
+* Number of recursive dependencies: 74
+
+Run `revdepcheck::revdep_details(, "BPrinStratTTE")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
     ```
-    Installation failed.
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/BPrinStratTTE/new/BPrinStratTTE.Rcheck/00install.out’ for details.
+      installed size is 82.7Mb
+      sub-directories of 1Mb or more:
+        libs  82.3Mb
     ```
 
-## Installation
+*   checking for GNU extensions in Makefiles ... NOTE
+    ```
+    GNU make is a SystemRequirements.
+    ```
 
-### Devel
-
-```
-* installing *source* package ‘BPrinStratTTE’ ...
-** package ‘BPrinStratTTE’ successfully unpacked and MD5 sums checked
-** using staged installation
-Error in loadNamespace(x) : there is no package called ‘rstantools’
-Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-ERROR: configuration failed for package ‘BPrinStratTTE’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/BPrinStratTTE/new/BPrinStratTTE.Rcheck/BPrinStratTTE’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘BPrinStratTTE’ ...
-** package ‘BPrinStratTTE’ successfully unpacked and MD5 sums checked
-** using staged installation
-Error in loadNamespace(x) : there is no package called ‘rstantools’
-Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-ERROR: configuration failed for package ‘BPrinStratTTE’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/BPrinStratTTE/old/BPrinStratTTE.Rcheck/BPrinStratTTE’
-
-
-```
 # brms
 
 <details>
 
-* Version: 2.20.4
+* Version: 2.22.0
 * GitHub: https://github.com/paul-buerkner/brms
 * Source code: https://github.com/cran/brms
-* Date/Publication: 2023-09-25 19:00:09 UTC
-* Number of recursive dependencies: 200
+* Date/Publication: 2024-09-23 13:00:29 UTC
+* Number of recursive dependencies: 207
 
-Run `revdep_details(, "brms")` for more info
+Run `revdepcheck::revdep_details(, "brms")` for more info
 
 </details>
 
@@ -490,23 +656,24 @@ Run `revdep_details(, "brms")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  7.6Mb
+      installed size is 12.9Mb
       sub-directories of 1Mb or more:
-        R     3.0Mb
-        doc   3.5Mb
+        R      7.0Mb
+        doc    3.6Mb
+        help   1.7Mb
     ```
 
-# broom.mixed
+# broom.helpers
 
 <details>
 
-* Version: 0.2.9.4
-* GitHub: https://github.com/bbolker/broom.mixed
-* Source code: https://github.com/cran/broom.mixed
-* Date/Publication: 2022-04-17 17:42:29 UTC
-* Number of recursive dependencies: 166
+* Version: 1.20.0
+* GitHub: https://github.com/larmarange/broom.helpers
+* Source code: https://github.com/cran/broom.helpers
+* Date/Publication: 2025-03-06 11:00:02 UTC
+* Number of recursive dependencies: 248
 
-Run `revdep_details(, "broom.mixed")` for more info
+Run `revdepcheck::revdep_details(, "broom.helpers")` for more info
 
 </details>
 
@@ -514,20 +681,54 @@ Run `revdep_details(, "broom.mixed")` for more info
 
 *   checking package dependencies ... NOTE
     ```
-    Package suggested but not available for checking: ‘glmmADMB’
+    Packages suggested but not available for checking:
+      'margins', 'multgee', 'tidycmprsk'
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘tidycmprsk’
+    ```
+
+# broom.mixed
+
+<details>
+
+* Version: 0.2.9.6
+* GitHub: https://github.com/bbolker/broom.mixed
+* Source code: https://github.com/cran/broom.mixed
+* Date/Publication: 2024-10-15 22:20:02 UTC
+* Number of recursive dependencies: 186
+
+Run `revdepcheck::revdep_details(, "broom.mixed")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Packages suggested but not available for checking: 'dotwhisker', 'glmmADMB'
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.5Mb
+      sub-directories of 1Mb or more:
+        extdata   5.0Mb
     ```
 
 # bsitar
 
 <details>
 
-* Version: 0.1.1
+* Version: 0.3.2
 * GitHub: https://github.com/Sandhu-SS/bsitar
 * Source code: https://github.com/cran/bsitar
-* Date/Publication: 2024-01-25 13:50:09 UTC
+* Date/Publication: 2025-02-07 06:50:02 UTC
 * Number of recursive dependencies: 167
 
-Run `revdep_details(, "bsitar")` for more info
+Run `revdepcheck::revdep_details(, "bsitar")` for more info
 
 </details>
 
@@ -535,109 +736,131 @@ Run `revdep_details(, "bsitar")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.3Mb
+      installed size is 10.6Mb
       sub-directories of 1Mb or more:
-        data   2.9Mb
-        doc    1.3Mb
+        R      1.5Mb
+        data   8.0Mb
+    ```
+
+# bslib
+
+<details>
+
+* Version: 0.9.0
+* GitHub: https://github.com/rstudio/bslib
+* Source code: https://github.com/cran/bslib
+* Date/Publication: 2025-01-30 23:20:02 UTC
+* Number of recursive dependencies: 78
+
+Run `revdepcheck::revdep_details(, "bslib")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 12.6Mb
+      sub-directories of 1Mb or more:
+        components   1.0Mb
+        fonts        2.4Mb
+        lib          5.3Mb
+    ```
+
+# butcher
+
+<details>
+
+* Version: 0.3.5
+* GitHub: https://github.com/tidymodels/butcher
+* Source code: https://github.com/cran/butcher
+* Date/Publication: 2025-03-18 23:00:02 UTC
+* Number of recursive dependencies: 225
+
+Run `revdepcheck::revdep_details(, "butcher")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Packages suggested but not available for checking: 'ddalpha', 'xrf'
+    ```
+
+# CAESAR.Suite
+
+<details>
+
+* Version: 0.2.2
+* GitHub: https://github.com/XiaoZhangryy/CAESAR.Suite
+* Source code: https://github.com/cran/CAESAR.Suite
+* Date/Publication: 2025-04-01 09:00:07 UTC
+* Number of recursive dependencies: 255
+
+Run `revdepcheck::revdep_details(, "CAESAR.Suite")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 10.6Mb
+      sub-directories of 1Mb or more:
+        data   1.5Mb
+        doc    1.2Mb
+        libs   7.6Mb
+    ```
+
+# card
+
+<details>
+
+* Version: 0.1.1
+* GitHub: https://github.com/shah-in-boots/card
+* Source code: https://github.com/cran/card
+* Date/Publication: 2024-11-06 07:40:02 UTC
+* Number of recursive dependencies: 100
+
+Run `revdepcheck::revdep_details(, "card")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘recipes’
     ```
 
 # ceRNAnetsim
 
 <details>
 
-* Version: 1.14.1
+* Version: 1.18.0
 * GitHub: https://github.com/selcenari/ceRNAnetsim
 * Source code: https://github.com/cran/ceRNAnetsim
-* Date/Publication: 2023-12-18
-* Number of recursive dependencies: 101
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 99
 
-Run `revdep_details(, "ceRNAnetsim")` for more info
+Run `revdepcheck::revdep_details(, "ceRNAnetsim")` for more info
 
 </details>
 
 ## In both
 
-*   checking examples ... ERROR
-    ```
-    Running examples in ‘ceRNAnetsim-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: find_node_perturbation
-    > ### Title: Calculates average expression changes of all (or specified)
-    > ###   nodes except trigger and finds the perturbed node count for all (or
-    > ###   specified) nodes in system.
-    > ### Aliases: find_node_perturbation
-    > 
-    > ### ** Examples
-    ...
-     23. │                 └─dplyr (local) eval()
-     24. └─tidygraph::map_bfs(...)
-     25.   └─tidygraph:::bfs_df(graph, root, mode, unreachable)
-     26.     └─tibble::tibble(...)
-     27.       └─tibble:::tibble_quos(xs, .rows, .name_repair)
-     28.         └─tibble:::vectbl_recycle_rows(...)
-     29.           └─tibble:::abort_incompatible_size(...)
-     30.             └─tibble:::tibble_abort(...)
-     31.               └─rlang::abort(x, class, ..., call = call, parent = parent, use_cli_format = TRUE)
-    Execution halted
-    ```
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-      > library(testthat)
-      > library(ceRNAnetsim)
-      Loading required package: dplyr
-      
-      Attaching package: 'dplyr'
-      
-    ...
-      ══ Failed tests ════════════════════════════════════════════════════════════════
-      ── Failure ('test-iter_perturb.R:33:3'): Could the functions work?  ────────────
-      `node_efficiencies` not equal to c(NA, NA, NA, 3.18, 2.27, 3.18, NA, 32).
-      2/8 mismatches (average diff: 14.9)
-      [5] 3.18 -  2.27 ==   0.91
-      [8] 3.18 - 32.00 == -28.82
-      
-      [ FAIL 1 | WARN 35 | SKIP 0 | PASS 36 ]
-      Error: Test failures
-      Execution halted
-    ```
-
-*   checking re-building of vignette outputs ... ERROR
-    ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘auxiliary_commands.Rmd’ using rmarkdown
-    --- finished re-building ‘auxiliary_commands.Rmd’
-    
-    --- re-building ‘basic_usage.Rmd’ using rmarkdown
-    --- finished re-building ‘basic_usage.Rmd’
-    
-    --- re-building ‘convenient_iteration.Rmd’ using rmarkdown
-    
-    Quitting from lines 226-233 [unnamed-chunk-15] (convenient_iteration.Rmd)
-    ...
-    • Size 5: Existing data.
-    • Size 53: Column `rank`.
-    ℹ Only values of size one are recycled.
-    --- failed re-building ‘mirtarbase_example.Rmd’
-    
-    SUMMARY: processing the following files failed:
-      ‘convenient_iteration.Rmd’ ‘mirtarbase_example.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
-    ```
-
 *   checking R code for possible problems ... NOTE
     ```
+    find_node_perturbation: no visible binding for global variable
+      ‘perturbation_efficiency’
+    find_node_perturbation: no visible binding for global variable
+      ‘perturbed_count’
     simulate: no visible binding for global variable ‘avg_count_current’
     simulate: no visible binding for global variable ‘avg_count_pre’
     Undefined global functions or variables:
-      avg_count_current avg_count_pre
+      avg_count_current avg_count_pre perturbation_efficiency
+      perturbed_count
     ```
 
 # cft
@@ -650,7 +873,7 @@ Run `revdep_details(, "ceRNAnetsim")` for more info
 * Date/Publication: 2022-10-03 07:12:18 UTC
 * Number of recursive dependencies: 90
 
-Run `revdep_details(, "cft")` for more info
+Run `revdepcheck::revdep_details(, "cft")` for more info
 
 </details>
 
@@ -659,7 +882,7 @@ Run `revdep_details(, "cft")` for more info
 *   checking whether package ‘cft’ can be installed ... ERROR
     ```
     Installation failed.
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/cft/new/cft.Rcheck/00install.out’ for details.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/cft/new/cft.Rcheck/00install.out’ for details.
     ```
 
 ## Installation
@@ -674,11 +897,11 @@ Run `revdep_details(, "cft")` for more info
 ** inst
 ** byte-compile and prepare package for lazy loading
 Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
-  there is no package called ‘ncdf4’
+  there is no package called ‘RNetCDF’
 Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
 Execution halted
 ERROR: lazy loading failed for package ‘cft’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/cft/new/cft.Rcheck/cft’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/cft/new/cft.Rcheck/cft’
 
 
 ```
@@ -692,11 +915,11 @@ ERROR: lazy loading failed for package ‘cft’
 ** inst
 ** byte-compile and prepare package for lazy loading
 Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
-  there is no package called ‘ncdf4’
+  there is no package called ‘RNetCDF’
 Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
 Execution halted
 ERROR: lazy loading failed for package ‘cft’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/cft/old/cft.Rcheck/cft’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/cft/old/cft.Rcheck/cft’
 
 
 ```
@@ -704,17 +927,42 @@ ERROR: lazy loading failed for package ‘cft’
 
 <details>
 
-* Version: 1.12.0
+* Version: 1.16.0
 * GitHub: https://github.com/vallotlab/ChromSCape
 * Source code: https://github.com/cran/ChromSCape
-* Date/Publication: 2023-10-25
+* Date/Publication: 2024-10-29
 * Number of recursive dependencies: 232
 
-Run `revdep_details(, "ChromSCape")` for more info
+Run `revdepcheck::revdep_details(, "ChromSCape")` for more info
 
 </details>
 
 ## In both
+
+*   checking examples ... ERROR
+    ```
+    Running examples in ‘ChromSCape-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: get_pathway_mat_scExp
+    > ### Title: Get pathway matrix
+    > ### Aliases: get_pathway_mat_scExp
+    > 
+    > ### ** Examples
+    > 
+    > data(scExp)
+    ...
+      4. │   └─tibble:::`[.tbl_df`(msigdbr::msigdbr("Homo sapiens"), , columns)
+      5. │     └─tibble:::vectbl_as_col_location(...)
+      6. │       ├─tibble:::subclass_col_index_errors(...)
+      7. │       │ └─base::withCallingHandlers(...)
+      8. │       └─vctrs::vec_as_location(j, n, names, missing = "error", call = call)
+      9. └─vctrs (local) `<fn>`()
+     10.   └─vctrs:::stop_subscript_oob(...)
+     11.     └─vctrs:::stop_subscript(...)
+     12.       └─rlang::abort(...)
+    Execution halted
+    ```
 
 *   checking dependencies in R code ... WARNING
     ```
@@ -726,7 +974,7 @@ Run `revdep_details(, "ChromSCape")` for more info
 
 *   checking for code/documentation mismatches ... WARNING
     ```
-    Codoc mismatches from documentation object 'generate_analysis':
+    Codoc mismatches from Rd file 'generate_analysis.Rd':
     generate_analysis
       Code: function(input_data_folder, analysis_name = "Analysis_1",
                      output_directory = "./", input_data_type = c("scBED",
@@ -751,7 +999,7 @@ Run `revdep_details(, "ChromSCape")` for more info
 
 *   checking Rd \usage sections ... WARNING
     ```
-    Undocumented arguments in documentation object 'rebin_matrix'
+    Undocumented arguments in Rd file 'rebin_matrix.Rd'
       ‘rebin_function’
     
     Functions with \usage entries need to have the appropriate \alias
@@ -759,16 +1007,6 @@ Run `revdep_details(, "ChromSCape")` for more info
     The \usage entries must correspond to syntactically valid R code.
     See chapter ‘Writing R documentation files’ in the ‘Writing R
     Extensions’ manual.
-    ```
-
-*   checking examples ... WARNING
-    ```
-    Found the following significant warnings:
-    
-      Warning: 'as(<matrix>, "dspMatrix")' is deprecated.
-    Deprecated functions may be defunct as soon as of the next release of
-    R.
-    See ?Deprecated.
     ```
 
 *   checking for hidden files and directories ... NOTE
@@ -781,12 +1019,12 @@ Run `revdep_details(, "ChromSCape")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  8.3Mb
+      installed size is  8.7Mb
       sub-directories of 1Mb or more:
-        data   1.4Mb
+        data   1.5Mb
         doc    2.9Mb
-        libs   1.0Mb
-        www    2.0Mb
+        libs   1.1Mb
+        www    2.1Mb
     ```
 
 *   checking R code for possible problems ... NOTE
@@ -819,38 +1057,17 @@ Run `revdep_details(, "ChromSCape")` for more info
     prepare_Rd: raw_counts_to_sparse_matrix.Rd:6-8: Dropping empty section \source
     ```
 
-# clickR
+# civis
 
 <details>
 
-* Version: 0.9.39
-* GitHub: NA
-* Source code: https://github.com/cran/clickR
-* Date/Publication: 2023-08-07 17:40:06 UTC
-* Number of recursive dependencies: 9
+* Version: 3.1.2
+* GitHub: https://github.com/civisanalytics/civis-r
+* Source code: https://github.com/cran/civis
+* Date/Publication: 2023-03-31 08:00:03 UTC
+* Number of recursive dependencies: 88
 
-Run `revdep_details(, "clickR")` for more info
-
-</details>
-
-## In both
-
-*   checking data for non-ASCII characters ... NOTE
-    ```
-      Note: found 1 marked UTF-8 string
-    ```
-
-# clustermq
-
-<details>
-
-* Version: 0.9.4
-* GitHub: https://github.com/mschubert/clustermq
-* Source code: https://github.com/cran/clustermq
-* Date/Publication: 2024-03-04 15:20:10 UTC
-* Number of recursive dependencies: 110
-
-Run `revdep_details(, "clustermq")` for more info
+Run `revdepcheck::revdep_details(, "civis")` for more info
 
 </details>
 
@@ -858,9 +1075,58 @@ Run `revdep_details(, "clustermq")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 22.0Mb
+      installed size is  5.8Mb
       sub-directories of 1Mb or more:
-        libs  21.4Mb
+        R      1.5Mb
+        help   3.6Mb
+    ```
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) enhancements_get_civis_data_match.Rd:60: Lost braces; missing escapes or markup?
+        60 | \item{inputFieldMapping}{list, The field (i.e., column) mapping for the input table. See https://api.civisanalytics.com/enhancements/field-mapping for a list of valid field types and descriptions. Each field type should be mapped to a string specifying a column name in the input table. For field types that support multiple values (e.g., the "phone" field), a list of column names can be provided (e.g., {"phone": ["home_phone", "mobile_phone"], ...}).}
+           |                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+    checkRd: (-1) enhancements_patch_civis_data_match.Rd:53: Lost braces; missing escapes or markup?
+        53 | \item{input_field_mapping}{list optional. The field (i.e., column) mapping for the input table. See https://api.civisanalytics.com/enhancements/field-mapping for a list of valid field types and descriptions. Each field type should be mapped to a string specifying a column name in the input table. For field types that support multiple values (e.g., the "phone" field), a list of column names can be provided (e.g., {"phone": ["home_phone", "mobile_phone"], ...}).}
+           |                                                                                                                                                                                                                                                                                                                                                                                                                                 ^
+    checkRd: (-1) enhancements_patch_civis_data_match.Rd:125: Lost braces; missing escapes or markup?
+       125 | \item{inputFieldMapping}{list, The field (i.e., column) mapping for the input table. See https://api.civisanalytics.com/enhancements/field-mapping for a list of valid field types and descriptions. Each field type should be mapped to a string specifying a column name in the input table. For field types that support multiple values (e.g., the "phone" field), a list of column names can be provided (e.g., {"phone": ["home_phone", "mobile_phone"], ...}).}
+           |                                                                                                                                                                                                                                                                                                                                                                                                                      ^
+    checkRd: (-1) enhancements_post_civis_data_match.Rd:24: Lost braces; missing escapes or markup?
+    ...
+           |                                                                                                                                                                                         ^
+    checkRd: (-1) templates_patch_scripts.Rd:42: Lost braces; missing escapes or markup?
+        42 | \item allowedValues array, The possible values this parameter can take, effectively making this an enumerable parameter. Allowed values is an array of hashes of the following format: `{label: 'Import', 'value': 'import'}`
+           |                                                                                                                                                                                         ^
+    checkRd: (-1) templates_post_scripts.Rd:45: Lost braces; missing escapes or markup?
+        45 | \item allowedValues array, The possible values this parameter can take, effectively making this an enumerable parameter. Allowed values is an array of hashes of the following format: `{label: 'Import', 'value': 'import'}`
+           |                                                                                                                                                                                         ^
+    checkRd: (-1) templates_put_scripts.Rd:42: Lost braces; missing escapes or markup?
+        42 | \item allowedValues array, The possible values this parameter can take, effectively making this an enumerable parameter. Allowed values is an array of hashes of the following format: `{label: 'Import', 'value': 'import'}`
+           |                                                                                                                                                                                         ^
+    ```
+
+# clustermq
+
+<details>
+
+* Version: 0.9.8
+* GitHub: https://github.com/mschubert/clustermq
+* Source code: https://github.com/cran/clustermq
+* Date/Publication: 2025-03-19 00:00:02 UTC
+* Number of recursive dependencies: 107
+
+Run `revdepcheck::revdep_details(, "clustermq")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 23.4Mb
+      sub-directories of 1Mb or more:
+        libs  22.8Mb
     ```
 
 *   checking dependencies in R code ... NOTE
@@ -869,33 +1135,78 @@ Run `revdep_details(, "clustermq")` for more info
       All declared Imports should be used.
     ```
 
-# codebook
+# ClustIRR
 
 <details>
 
-* Version: 0.9.2
-* GitHub: https://github.com/rubenarslan/codebook
-* Source code: https://github.com/cran/codebook
-* Date/Publication: 2020-06-06 23:40:03 UTC
-* Number of recursive dependencies: 156
+* Version: 1.4.0
+* GitHub: https://github.com/snaketron/ClustIRR
+* Source code: https://github.com/cran/ClustIRR
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 118
 
-Run `revdep_details(, "codebook")` for more info
+Run `revdepcheck::revdep_details(, "ClustIRR")` for more info
 
 </details>
 
 ## In both
 
-*   checking package dependencies ... NOTE
+*   checking installed package size ... NOTE
     ```
-    Package suggested but not available for checking: ‘userfriendlyscience’
+      installed size is 85.4Mb
+      sub-directories of 1Mb or more:
+        data   1.1Mb
+        doc    3.9Mb
+        libs  79.4Mb
     ```
 
-*   checking dependencies in R code ... NOTE
+*   checking for GNU extensions in Makefiles ... NOTE
     ```
-    Namespaces in Imports field not imported from:
-      ‘graphics’ ‘jsonlite’ ‘rlang’ ‘tidyselect’ ‘vctrs’
-      All declared Imports should be used.
+    GNU make is a SystemRequirements.
     ```
+
+# codalm
+
+<details>
+
+* Version: 0.1.2
+* GitHub: https://github.com/jfiksel/codalm
+* Source code: https://github.com/cran/codalm
+* Date/Publication: 2021-07-26 18:40:02 UTC
+* Number of recursive dependencies: 50
+
+Run `revdepcheck::revdep_details(, "codalm")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) educFM.Rd:22: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) educFM.Rd:23: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) educFM.Rd:24: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) educFM.Rd:25: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) educFM.Rd:26: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) educFM.Rd:27: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) educFM.Rd:28: Lost braces in \itemize; meant \describe ?
+    ```
+
+# codebook
+
+<details>
+
+* Version: 0.9.6
+* GitHub: https://github.com/rubenarslan/codebook
+* Source code: https://github.com/cran/codebook
+* Date/Publication: 2025-01-08 08:10:08 UTC
+* Number of recursive dependencies: 189
+
+Run `revdepcheck::revdep_details(, "codebook")` for more info
+
+</details>
+
+## In both
 
 *   checking data for non-ASCII characters ... NOTE
     ```
@@ -906,17 +1217,24 @@ Run `revdep_details(, "codebook")` for more info
 
 <details>
 
-* Version: 1.1.1
-* GitHub: NA
+* Version: 2.0.0
+* GitHub: https://github.com/blasbenito/collinear
 * Source code: https://github.com/cran/collinear
-* Date/Publication: 2023-12-08 08:50:02 UTC
-* Number of recursive dependencies: 55
+* Date/Publication: 2024-11-08 13:50:02 UTC
+* Number of recursive dependencies: 47
 
-Run `revdep_details(, "collinear")` for more info
+Run `revdepcheck::revdep_details(, "collinear")` for more info
 
 </details>
 
 ## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  8.4Mb
+      sub-directories of 1Mb or more:
+        data   8.0Mb
+    ```
 
 *   checking data for non-ASCII characters ... NOTE
     ```
@@ -932,33 +1250,58 @@ Run `revdep_details(, "collinear")` for more info
 * GitHub: https://github.com/ropensci/colocr
 * Source code: https://github.com/cran/colocr
 * Date/Publication: 2020-05-08 13:20:06 UTC
-* Number of recursive dependencies: 126
+* Number of recursive dependencies: 125
 
-Run `revdep_details(, "colocr")` for more info
+Run `revdepcheck::revdep_details(, "colocr")` for more info
 
 </details>
 
 ## In both
 
-*   checking package dependencies ... ERROR
+*   checking LazyData ... NOTE
     ```
-    Package required but not available: ‘imager’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
+      'LazyData' is specified without a 'data' directory
+    ```
+
+# ConfusionTableR
+
+<details>
+
+* Version: 1.0.4
+* GitHub: NA
+* Source code: https://github.com/cran/ConfusionTableR
+* Date/Publication: 2021-12-01 16:30:01 UTC
+* Number of recursive dependencies: 100
+
+Run `revdepcheck::revdep_details(, "ConfusionTableR")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) binary_class_cm.Rd:19: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) binary_class_cm.Rd:20: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) binary_class_cm.Rd:21: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) binary_class_cm.Rd:22: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) multi_class_cm.Rd:19: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) multi_class_cm.Rd:20: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) multi_class_cm.Rd:21: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) multi_class_cm.Rd:22: Lost braces in \itemize; \value handles \item{}{} directly
     ```
 
 # corporaexplorer
 
 <details>
 
-* Version: 0.8.6
+* Version: 0.9.0
 * GitHub: https://github.com/kgjerde/corporaexplorer
 * Source code: https://github.com/cran/corporaexplorer
-* Date/Publication: 2022-06-20 12:50:02 UTC
-* Number of recursive dependencies: 109
+* Date/Publication: 2024-09-02 14:50:02 UTC
+* Number of recursive dependencies: 104
 
-Run `revdep_details(, "corporaexplorer")` for more info
+Run `revdepcheck::revdep_details(, "corporaexplorer")` for more info
 
 </details>
 
@@ -972,17 +1315,103 @@ Run `revdep_details(, "corporaexplorer")` for more info
       All declared Imports should be used.
     ```
 
+# Coxmos
+
+<details>
+
+* Version: 1.1.2
+* GitHub: https://github.com/BiostatOmics/Coxmos
+* Source code: https://github.com/cran/Coxmos
+* Date/Publication: 2025-03-05 16:30:02 UTC
+* Number of recursive dependencies: 202
+
+Run `revdepcheck::revdep_details(, "Coxmos")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  7.7Mb
+      sub-directories of 1Mb or more:
+        R      1.5Mb
+        data   2.5Mb
+        doc    3.1Mb
+    ```
+
+# crossmap
+
+<details>
+
+* Version: 0.4.0
+* GitHub: https://github.com/rossellhayes/crossmap
+* Source code: https://github.com/cran/crossmap
+* Date/Publication: 2023-01-12 21:50:02 UTC
+* Number of recursive dependencies: 60
+
+Run `revdepcheck::revdep_details(, "crossmap")` for more info
+
+</details>
+
+## In both
+
+*   checking tests ...
+    ```
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Complete output:
+      > library(testthat)
+      > library(crossmap)
+      > 
+      > test_check("crossmap")
+      [ FAIL 1 | WARN 3 | SKIP 0 | PASS 382 ]
+      
+      ══ Failed tests ════════════════════════════════════════════════════════════════
+      ── Failure ('test-errors.R:12:3'): require future ──────────────────────────────
+      `future_xmap(list(1:3, 1:3), paste)` did not throw an error.
+      
+      [ FAIL 1 | WARN 3 | SKIP 0 | PASS 382 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+# crunchy
+
+<details>
+
+* Version: 0.3.3
+* GitHub: https://github.com/Crunch-io/crunchy
+* Source code: https://github.com/cran/crunchy
+* Date/Publication: 2021-01-13 21:20:06 UTC
+* Number of recursive dependencies: 76
+
+Run `revdepcheck::revdep_details(, "crunchy")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘crunch’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
 # cSEM
 
 <details>
 
-* Version: 0.5.0
-* GitHub: https://github.com/M-E-Rademaker/cSEM
+* Version: 0.6.0
+* GitHub: https://github.com/FloSchuberth/cSEM
 * Source code: https://github.com/cran/cSEM
-* Date/Publication: 2022-11-24 17:50:05 UTC
-* Number of recursive dependencies: 128
+* Date/Publication: 2025-02-25 10:00:02 UTC
+* Number of recursive dependencies: 146
 
-Run `revdep_details(, "cSEM")` for more info
+Run `revdepcheck::revdep_details(, "cSEM")` for more info
 
 </details>
 
@@ -1002,9 +1431,9 @@ Run `revdep_details(, "cSEM")` for more info
 * GitHub: https://github.com/adsoncostanzifilho/CSGo
 * Source code: https://github.com/cran/CSGo
 * Date/Publication: 2021-05-07 18:50:02 UTC
-* Number of recursive dependencies: 77
+* Number of recursive dependencies: 76
 
-Run `revdep_details(, "CSGo")` for more info
+Run `revdepcheck::revdep_details(, "CSGo")` for more info
 
 </details>
 
@@ -1027,7 +1456,7 @@ Run `revdep_details(, "CSGo")` for more info
 * Date/Publication: 2022-01-08 01:42:47 UTC
 * Number of recursive dependencies: 75
 
-Run `revdep_details(, "cuda.ml")` for more info
+Run `revdepcheck::revdep_details(, "cuda.ml")` for more info
 
 </details>
 
@@ -1035,22 +1464,76 @@ Run `revdep_details(, "cuda.ml")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.0Mb
+      installed size is  6.7Mb
       sub-directories of 1Mb or more:
-        libs   5.8Mb
+        libs   6.3Mb
+    ```
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) cuML_major_version.Rd:5: Lost braces; missing escapes or markup?
+         5 | \title{Get the major version of the RAPIDS cuML shared library {cuda.ml} was linked
+           |                                                                ^
+    checkRd: (-1) cuML_major_version.Rd:16: Lost braces; missing escapes or markup?
+        16 | Get the major version of the RAPIDS cuML shared library {cuda.ml} was linked
+           |                                                         ^
+    checkRd: (-1) cuML_major_version.Rd:11: Lost braces; missing escapes or markup?
+        11 | The major version of the RAPIDS cuML shared library {cuda.ml} was
+           |                                                     ^
+    checkRd: (-1) cuML_major_version.Rd:12: Lost braces; missing escapes or markup?
+    ...
+           |                          ^
+    checkRd: (-1) has_cuML.Rd:15: Lost braces; missing escapes or markup?
+        15 | Determine whether {cuda.ml} was linked to a valid version of the RAPIDS cuML
+           |                   ^
+    checkRd: (-1) has_cuML.Rd:11: Lost braces; missing escapes or markup?
+        11 | A logical value indicating whether the current installation {cuda.ml}
+           |                                                             ^
+    checkRd: (-1) predict.cuda_ml_rand_forest.Rd:30: Lost braces; missing escapes or markup?
+        30 | {"off", "critical", "error", "warn", "info", "debug", "trace"}.
+           | ^
+    ```
+
+# cvms
+
+<details>
+
+* Version: 1.7.0
+* GitHub: https://github.com/ludvigolsen/cvms
+* Source code: https://github.com/cran/cvms
+* Date/Publication: 2025-03-07 11:30:07 UTC
+* Number of recursive dependencies: 154
+
+Run `revdepcheck::revdep_details(, "cvms")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘merDeriv’
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  7.2Mb
+      sub-directories of 1Mb or more:
+        data   3.5Mb
+        doc    2.4Mb
     ```
 
 # cytomapper
 
 <details>
 
-* Version: 1.14.0
+* Version: 1.18.0
 * GitHub: https://github.com/BodenmillerGroup/cytomapper
 * Source code: https://github.com/cran/cytomapper
-* Date/Publication: 2023-10-24
+* Date/Publication: 2024-10-29
 * Number of recursive dependencies: 162
 
-Run `revdep_details(, "cytomapper")` for more info
+Run `revdepcheck::revdep_details(, "cytomapper")` for more info
 
 </details>
 
@@ -1058,10 +1541,10 @@ Run `revdep_details(, "cytomapper")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  7.4Mb
+      installed size is  8.3Mb
       sub-directories of 1Mb or more:
-        R     1.3Mb
-        doc   5.0Mb
+        R     2.0Mb
+        doc   5.1Mb
     ```
 
 *   checking Rd cross-references ... NOTE
@@ -1069,49 +1552,143 @@ Run `revdep_details(, "cytomapper")` for more info
     Package unavailable to check Rd xrefs: ‘CATALYST’
     ```
 
-# deseats
+# dar
 
 <details>
 
-* Version: 1.0.0
-* GitHub: NA
-* Source code: https://github.com/cran/deseats
-* Date/Publication: 2023-11-08 19:50:02 UTC
-* Number of recursive dependencies: 109
+* Version: 1.2.0
+* GitHub: https://github.com/MicrobialGenomics-IrsicaixaOrg/dar
+* Source code: https://github.com/cran/dar
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 395
 
-Run `revdep_details(, "deseats")` for more info
+Run `revdepcheck::revdep_details(, "dar")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘deseats’ can be installed ... WARNING
+*   checking installed package size ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/deseats/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/deseats/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/deseats/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/deseats/new/deseats.Rcheck/00install.out’ for details.
+      installed size is  6.8Mb
+      sub-directories of 1Mb or more:
+        R     1.5Mb
+        doc   4.4Mb
     ```
+
+# dataquieR
+
+<details>
+
+* Version: 2.5.1
+* GitHub: NA
+* Source code: https://github.com/cran/dataquieR
+* Date/Publication: 2025-03-05 18:10:02 UTC
+* Number of recursive dependencies: 198
+
+Run `revdepcheck::revdep_details(, "dataquieR")` for more info
+
+</details>
+
+## In both
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  8.3Mb
+      installed size is  5.7Mb
       sub-directories of 1Mb or more:
-        libs   7.6Mb
+        R      3.5Mb
+        help   1.6Mb
+    ```
+
+# delimtools
+
+<details>
+
+* Version: 0.2.0
+* GitHub: https://github.com/legalLab/delimtools
+* Source code: https://github.com/cran/delimtools
+* Date/Publication: 2025-03-31 18:00:02 UTC
+* Number of recursive dependencies: 96
+
+Run `revdepcheck::revdep_details(, "delimtools")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Packages suggested but not available for checking: 'bGMYC', 'splits'
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Packages unavailable to check Rd xrefs: ‘bGMYC’, ‘splits’
+    ```
+
+*   checking data for non-ASCII characters ... NOTE
+    ```
+      Note: found 222 marked UTF-8 strings
+    ```
+
+# deseats
+
+<details>
+
+* Version: 1.1.0
+* GitHub: NA
+* Source code: https://github.com/cran/deseats
+* Date/Publication: 2024-07-12 10:50:15 UTC
+* Number of recursive dependencies: 114
+
+Run `revdepcheck::revdep_details(, "deseats")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  9.1Mb
+      sub-directories of 1Mb or more:
+        libs   8.3Mb
+    ```
+
+# designer
+
+<details>
+
+* Version: 0.3.0
+* GitHub: https://github.com/ashbaldry/designer
+* Source code: https://github.com/cran/designer
+* Date/Publication: 2023-08-20 12:42:37 UTC
+* Number of recursive dependencies: 119
+
+Run `revdepcheck::revdep_details(, "designer")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘shinipsum’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # dipsaus
 
 <details>
 
-* Version: 0.2.8
+* Version: 0.3.1
 * GitHub: https://github.com/dipterix/dipsaus
 * Source code: https://github.com/cran/dipsaus
-* Date/Publication: 2023-07-03 20:00:03 UTC
-* Number of recursive dependencies: 70
+* Date/Publication: 2025-04-03 16:50:02 UTC
+* Number of recursive dependencies: 62
 
-Run `revdep_details(, "dipsaus")` for more info
+Run `revdepcheck::revdep_details(, "dipsaus")` for more info
 
 </details>
 
@@ -1119,10 +1696,82 @@ Run `revdep_details(, "dipsaus")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.9Mb
+      installed size is  7.3Mb
       sub-directories of 1Mb or more:
-        doc    1.1Mb
-        libs   3.5Mb
+        R      1.5Mb
+        libs   4.3Mb
+    ```
+
+# discrim
+
+<details>
+
+* Version: 1.0.1
+* GitHub: https://github.com/tidymodels/discrim
+* Source code: https://github.com/cran/discrim
+* Date/Publication: 2023-03-08 22:00:15 UTC
+* Number of recursive dependencies: 139
+
+Run `revdepcheck::revdep_details(, "discrim")` for more info
+
+</details>
+
+## In both
+
+*   checking tests ...
+    ```
+      Running ‘spelling.R’
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Complete output:
+      > library(testthat)
+      > library(discrim)
+      Loading required package: parsnip
+      > 
+      > test_check("discrim")
+    ...
+      Backtrace:
+          ▆
+       1. └─base::loadNamespace(x) at test-linear-sda.R:2:3
+       2.   └─base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
+       3.     └─base (local) withOneRestart(expr, restarts[[1L]])
+       4.       └─base (local) doWithOneRestart(return(expr), restart)
+      
+      [ FAIL 2 | WARN 0 | SKIP 6 | PASS 706 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘sda’
+    ```
+
+# disk.frame
+
+<details>
+
+* Version: 0.8.3
+* GitHub: https://github.com/DiskFrame/disk.frame
+* Source code: https://github.com/cran/disk.frame
+* Date/Publication: 2023-08-24 16:20:10 UTC
+* Number of recursive dependencies: 98
+
+Run `revdepcheck::revdep_details(, "disk.frame")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) csv_to_disk.frame.Rd:56: Lost braces; missing escapes or markup?
+        56 | strings, and you are encouraged to use {fasttime} to convert the strings to
+           |                                        ^
+    checkRd: (-1) purrr_as_mapper.Rd:10: Lost braces; missing escapes or markup?
+        10 | \item{.f}{a normal function or purrr syntax function i.e. `~{ ...code...}`}
+           |                                                             ^
     ```
 
 # dispositionEffect
@@ -1133,9 +1782,9 @@ Run `revdep_details(, "dipsaus")` for more info
 * GitHub: https://github.com/marcozanotti/dispositionEffect
 * Source code: https://github.com/cran/dispositionEffect
 * Date/Publication: 2022-05-30 07:50:02 UTC
-* Number of recursive dependencies: 136
+* Number of recursive dependencies: 135
 
-Run `revdep_details(, "dispositionEffect")` for more info
+Run `revdepcheck::revdep_details(, "dispositionEffect")` for more info
 
 </details>
 
@@ -1166,70 +1815,52 @@ Run `revdep_details(, "dispositionEffect")` for more info
       Execution halted
     ```
 
-# dragon
+# distantia
 
 <details>
 
-* Version: 1.2.1
-* GitHub: https://github.com/sjspielman/dragon
-* Source code: https://github.com/cran/dragon
-* Date/Publication: 2022-04-08 08:42:33 UTC
-* Number of recursive dependencies: 131
+* Version: 2.0.2
+* GitHub: https://github.com/BlasBenito/distantia
+* Source code: https://github.com/cran/distantia
+* Date/Publication: 2025-02-01 19:50:02 UTC
+* Number of recursive dependencies: 68
 
-Run `revdep_details(, "dragon")` for more info
+Run `revdepcheck::revdep_details(, "distantia")` for more info
 
 </details>
 
 ## In both
 
-*   checking tests ...
+*   checking installed package size ... NOTE
     ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > library(testthat)
-      > library(dragon)
-      > 
-      > test_check("dragon")
-      Error in `FUN()`:
-      ! In path: "/c4/home/henrik/repositories/globals/revdep/checks/dragon/new/dragon.Rcheck/tests/testthat/setup_test-settings.R"
-    ...
-       10. │                 └─testthat::source_file(path, env = env, chdir = chdir, wrap = wrap)
-       11. │                   ├─base::withCallingHandlers(...)
-       12. │                   └─base::eval(exprs, env)
-       13. │                     └─base::eval(exprs, env)
-       14. │                       └─igraph::read_graph("graph_by_redox.igraph", format = "ncol") at tests/testthat/setup_test-settings.R:8:1
-       15. │                         └─igraph:::read.graph.ncol(file, ...)
-       16. └─base::.handleSimpleError(...)
-       17.   └─testthat (local) h(simpleError(msg, call))
-       18.     └─rlang::abort(...)
-      Execution halted
+      installed size is 11.8Mb
+      sub-directories of 1Mb or more:
+        data   2.0Mb
+        help   1.5Mb
+        libs   7.8Mb
     ```
 
-*   checking package subdirectories ... NOTE
+*   checking Rd cross-references ... NOTE
     ```
-    Problems with news in ‘NEWS.md’:
-    No news entries found.
+    Package unavailable to check Rd xrefs: ‘fields’
     ```
 
-*   checking dependencies in R code ... NOTE
+*   checking data for non-ASCII characters ... NOTE
     ```
-    Namespace in Imports field not imported from: ‘htmltools’
-      All declared Imports should be used.
+      Note: found 844 marked UTF-8 strings
     ```
 
 # drake
 
 <details>
 
-* Version: 7.13.9
+* Version: 7.13.11
 * GitHub: https://github.com/ropensci/drake
 * Source code: https://github.com/cran/drake
-* Date/Publication: 2024-03-04 15:20:02 UTC
-* Number of recursive dependencies: 165
+* Date/Publication: 2024-12-04 11:30:06 UTC
+* Number of recursive dependencies: 164
 
-Run `revdep_details(, "drake")` for more info
+Run `revdepcheck::revdep_details(, "drake")` for more info
 
 </details>
 
@@ -1237,20 +1868,44 @@ Run `revdep_details(, "drake")` for more info
 
 *   checking package dependencies ... NOTE
     ```
-    Package suggested but not available for checking: ‘clustermq’
+    Package suggested but not available for checking: ‘networkD3’
+    ```
+
+# DrugExposureDiagnostics
+
+<details>
+
+* Version: 1.1.2
+* GitHub: https://github.com/darwin-eu/DrugExposureDiagnostics
+* Source code: https://github.com/cran/DrugExposureDiagnostics
+* Date/Publication: 2025-03-13 15:20:07 UTC
+* Number of recursive dependencies: 131
+
+Run `revdepcheck::revdep_details(, "DrugExposureDiagnostics")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Packages required but not available: 'CDMConnector', 'DrugUtilisation'
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # DT
 
 <details>
 
-* Version: 0.32
+* Version: 0.33
 * GitHub: https://github.com/rstudio/DT
 * Source code: https://github.com/cran/DT
-* Date/Publication: 2024-02-19 16:50:02 UTC
-* Number of recursive dependencies: 53
+* Date/Publication: 2024-04-04 05:03:17 UTC
+* Number of recursive dependencies: 52
 
-Run `revdep_details(, "DT")` for more info
+Run `revdepcheck::revdep_details(, "DT")` for more info
 
 </details>
 
@@ -1258,46 +1913,77 @@ Run `revdep_details(, "DT")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.4Mb
+      installed size is  6.5Mb
       sub-directories of 1Mb or more:
-        htmlwidgets   4.8Mb
+        htmlwidgets   5.6Mb
+    ```
+
+# easysurv
+
+<details>
+
+* Version: 2.0.1
+* GitHub: https://github.com/Maple-Health-Group/easysurv
+* Source code: https://github.com/cran/easysurv
+* Date/Publication: 2024-06-21 10:30:06 UTC
+* Number of recursive dependencies: 156
+
+Run `revdepcheck::revdep_details(, "easysurv")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Packages required but not available: 'bshazard', 'flexsurvcure'
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# eCerto
+
+<details>
+
+* Version: 0.8.5
+* GitHub: https://github.com/janlisec/eCerto
+* Source code: https://github.com/cran/eCerto
+* Date/Publication: 2025-03-28 13:00:02 UTC
+* Number of recursive dependencies: 99
+
+Run `revdepcheck::revdep_details(, "eCerto")` for more info
+
+</details>
+
+## In both
+
+*   checking data for non-ASCII characters ... NOTE
+    ```
+      Note: found 1 marked UTF-8 string
     ```
 
 # EFAtools
 
 <details>
 
-* Version: 0.4.4
+* Version: 0.4.6
 * GitHub: https://github.com/mdsteiner/EFAtools
 * Source code: https://github.com/cran/EFAtools
-* Date/Publication: 2023-01-06 14:50:40 UTC
-* Number of recursive dependencies: 94
+* Date/Publication: 2025-03-21 18:00:13 UTC
+* Number of recursive dependencies: 92
 
-Run `revdep_details(, "EFAtools")` for more info
+Run `revdepcheck::revdep_details(, "EFAtools")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘EFAtools’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/EFAtools/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/EFAtools/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/EFAtools/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/EFAtools/new/EFAtools.Rcheck/00install.out’ for details.
-    ```
-
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is  7.2Mb
+      installed size is  7.7Mb
       sub-directories of 1Mb or more:
-        libs   6.0Mb
+        libs   6.3Mb
     ```
 
 *   checking dependencies in R code ... NOTE
@@ -1310,13 +1996,13 @@ Run `revdep_details(, "EFAtools")` for more info
 
 <details>
 
-* Version: 0.8.6
+* Version: 1.0.0
 * GitHub: https://github.com/easystats/effectsize
 * Source code: https://github.com/cran/effectsize
-* Date/Publication: 2023-09-14 10:40:02 UTC
-* Number of recursive dependencies: 192
+* Date/Publication: 2024-12-10 07:20:02 UTC
+* Number of recursive dependencies: 202
 
-Run `revdep_details(, "effectsize")` for more info
+Run `revdepcheck::revdep_details(, "effectsize")` for more info
 
 </details>
 
@@ -1327,17 +2013,41 @@ Run `revdep_details(, "effectsize")` for more info
     Package suggested but not available for checking: ‘see’
     ```
 
+# EGAnet
+
+<details>
+
+* Version: 2.3.0
+* GitHub: https://github.com/hfgolino/EGAnet
+* Source code: https://github.com/cran/EGAnet
+* Date/Publication: 2025-04-09 23:10:15 UTC
+* Number of recursive dependencies: 186
+
+Run `revdepcheck::revdep_details(, "EGAnet")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  6.2Mb
+      sub-directories of 1Mb or more:
+        R      1.5Mb
+        data   4.0Mb
+    ```
+
 # envi
 
 <details>
 
-* Version: 0.1.19
+* Version: 1.0.0
 * GitHub: https://github.com/lance-waller-lab/envi
 * Source code: https://github.com/cran/envi
-* Date/Publication: 2024-01-23 14:40:03 UTC
+* Date/Publication: 2024-11-06 19:00:03 UTC
 * Number of recursive dependencies: 153
 
-Run `revdep_details(, "envi")` for more info
+Run `revdepcheck::revdep_details(, "envi")` for more info
 
 </details>
 
@@ -1347,31 +2057,42 @@ Run `revdep_details(, "envi")` for more info
     ```
     Found the following significant warnings:
       Warning: no DISPLAY variable so Tk is not available
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/envi/new/envi.Rcheck/00install.out’ for details.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/envi/new/envi.Rcheck/00install.out’ for details.
     ```
 
 # EpiNow2
 
 <details>
 
-* Version: 1.4.0
+* Version: 1.7.1
 * GitHub: https://github.com/epiforecasts/EpiNow2
 * Source code: https://github.com/cran/EpiNow2
-* Date/Publication: 2023-09-26 12:00:02 UTC
+* Date/Publication: 2025-02-19 23:40:09 UTC
 * Number of recursive dependencies: 131
 
-Run `revdep_details(, "EpiNow2")` for more info
+Run `revdepcheck::revdep_details(, "EpiNow2")` for more info
 
 </details>
 
 ## In both
 
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘cmdstanr’
+    ```
+
 *   checking installed package size ... NOTE
     ```
-      installed size is 223.7Mb
+      installed size is 265.7Mb
       sub-directories of 1Mb or more:
-        help    2.0Mb
-        libs  220.8Mb
+        R       1.5Mb
+        doc     1.5Mb
+        libs  261.1Mb
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘cmdstanr’
     ```
 
 *   checking for GNU extensions in Makefiles ... NOTE
@@ -1387,9 +2108,9 @@ Run `revdep_details(, "EpiNow2")` for more info
 * GitHub: https://github.com/EU-ECDC/epitweetr
 * Source code: https://github.com/cran/epitweetr
 * Date/Publication: 2023-11-15 09:30:08 UTC
-* Number of recursive dependencies: 149
+* Number of recursive dependencies: 148
 
-Run `revdep_details(, "epitweetr")` for more info
+Run `revdepcheck::revdep_details(, "epitweetr")` for more info
 
 </details>
 
@@ -1415,9 +2136,9 @@ Run `revdep_details(, "epitweetr")` for more info
 * GitHub: https://github.com/gadenbuie/epoxy
 * Source code: https://github.com/cran/epoxy
 * Date/Publication: 2023-09-20 00:00:02 UTC
-* Number of recursive dependencies: 94
+* Number of recursive dependencies: 93
 
-Run `revdep_details(, "epoxy")` for more info
+Run `revdepcheck::revdep_details(, "epoxy")` for more info
 
 </details>
 
@@ -1428,89 +2149,71 @@ Run `revdep_details(, "epoxy")` for more info
       Note: found 1 marked UTF-8 string
     ```
 
-# erah
+# epwshiftr
 
 <details>
 
-* Version: 2.0.1
-* GitHub: https://github.com/xdomingoal/erah-devel
-* Source code: https://github.com/cran/erah
-* Date/Publication: 2023-12-20 10:10:02 UTC
-* Number of recursive dependencies: 92
+* Version: 0.1.4
+* GitHub: https://github.com/ideas-lab-nus/epwshiftr
+* Source code: https://github.com/cran/epwshiftr
+* Date/Publication: 2024-03-12 12:40:05 UTC
+* Number of recursive dependencies: 75
 
-Run `revdep_details(, "erah")` for more info
+Run `revdepcheck::revdep_details(, "epwshiftr")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘erah’ can be installed ... ERROR
+*   checking package dependencies ... ERROR
     ```
-    Installation failed.
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/erah/new/erah.Rcheck/00install.out’ for details.
-    ```
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘ncdf4’
+    Package required but not available: ‘RNetCDF’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
-## Installation
+# EQRN
 
-### Devel
+<details>
 
-```
-* installing *source* package ‘erah’ ...
-** package ‘erah’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)’
-gcc -I"/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c registerDynamicSymbol.c -o registerDynamicSymbol.o
-gcc -I"/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c runfunc.c -o runfunc.o
-gcc -shared -L/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/lib -L/usr/local/lib64 -o erah.so registerDynamicSymbol.o runfunc.o -L/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/lib -lR
-installing to /c4/home/henrik/repositories/globals/revdep/checks/erah/new/erah.Rcheck/00LOCK-erah/00new/erah/libs
-** R
-...
-** data
-*** moving datasets to lazyload DB
-** inst
-** byte-compile and prepare package for lazy loading
-Error in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]) : 
-  there is no package called ‘ncdf4’
-Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-ERROR: lazy loading failed for package ‘erah’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/erah/new/erah.Rcheck/erah’
+* Version: 0.1.1
+* GitHub: https://github.com/opasche/EQRN
+* Source code: https://github.com/cran/EQRN
+* Date/Publication: 2025-03-17 20:40:02 UTC
+* Number of recursive dependencies: 41
 
+Run `revdepcheck::revdep_details(, "EQRN")` for more info
 
-```
-### CRAN
+</details>
 
-```
-* installing *source* package ‘erah’ ...
-** package ‘erah’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘gcc (GCC) 10.2.1 20210130 (Red Hat 10.2.1-11)’
-gcc -I"/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c registerDynamicSymbol.c -o registerDynamicSymbol.o
-gcc -I"/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/include" -DNDEBUG   -I/usr/local/include    -fpic  -g -O2  -c runfunc.c -o runfunc.o
-gcc -shared -L/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/lib -L/usr/local/lib64 -o erah.so registerDynamicSymbol.o runfunc.o -L/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/lib -lR
-installing to /c4/home/henrik/repositories/globals/revdep/checks/erah/old/erah.Rcheck/00LOCK-erah/00new/erah/libs
-** R
-...
-** data
-*** moving datasets to lazyload DB
-** inst
-** byte-compile and prepare package for lazy loading
-Error in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]) : 
-  there is no package called ‘ncdf4’
-Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-ERROR: lazy loading failed for package ‘erah’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/erah/old/erah.Rcheck/erah’
+## In both
 
+*   checking examples ... ERROR
+    ```
+    Running examples in ‘EQRN-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: default_device
+    > ### Title: Default torch device
+    > ### Aliases: default_device
+    > 
+    > ### ** Examples
+    > 
+    > device <- default_device()
+    Error in cpp_cuda_is_available() : 
+      Lantern is not loaded. Please use `install_torch()` to install additional dependencies.
+    Calls: default_device -> <Anonymous> -> cpp_cuda_is_available
+    Execution halted
+    ```
 
-```
+*   checking whether package ‘EQRN’ can be installed ... WARNING
+    ```
+    Found the following significant warnings:
+      Warning: ℹ torch failed to start, restart your R session to try again.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/EQRN/new/EQRN.Rcheck/00install.out’ for details.
+    ```
+
 # evalITR
 
 <details>
@@ -1521,52 +2224,92 @@ ERROR: lazy loading failed for package ‘erah’
 * Date/Publication: 2023-08-25 23:10:06 UTC
 * Number of recursive dependencies: 167
 
-Run `revdep_details(, "evalITR")` for more info
+Run `revdepcheck::revdep_details(, "evalITR")` for more info
 
 </details>
 
 ## In both
 
-*   checking dependencies in R code ... NOTE
+*   checking package dependencies ... ERROR
     ```
-    Namespaces in Imports field not imported from:
-      ‘forcats’ ‘rqPen’ ‘utils’
-      All declared Imports should be used.
+    Packages required but not available: 'rqPen', 'bartCause'
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# EventDetectGUI
+
+<details>
+
+* Version: 0.3.0
+* GitHub: NA
+* Source code: https://github.com/cran/EventDetectGUI
+* Date/Publication: 2020-04-03 17:50:08 UTC
+* Number of recursive dependencies: 156
+
+Run `revdepcheck::revdep_details(, "EventDetectGUI")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘EventDetectR’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# fastRhockey
+
+<details>
+
+* Version: 0.4.0
+* GitHub: https://github.com/sportsdataverse/fastRhockey
+* Source code: https://github.com/cran/fastRhockey
+* Date/Publication: 2022-10-25 20:55:15 UTC
+* Number of recursive dependencies: 115
+
+Run `revdepcheck::revdep_details(, "fastRhockey")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) update_nhl_db.Rd:51-53: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) update_nhl_db.Rd:54-57: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) update_phf_db.Rd:51-53: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) update_phf_db.Rd:54-57: Lost braces in \itemize; meant \describe ?
     ```
 
 # fdacluster
 
 <details>
 
-* Version: 0.3.0
+* Version: 0.4.1
 * GitHub: https://github.com/astamm/fdacluster
 * Source code: https://github.com/cran/fdacluster
-* Date/Publication: 2023-07-04 15:53:04 UTC
-* Number of recursive dependencies: 118
+* Date/Publication: 2025-01-14 16:50:09 UTC
+* Number of recursive dependencies: 125
 
-Run `revdep_details(, "fdacluster")` for more info
+Run `revdepcheck::revdep_details(, "fdacluster")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘fdacluster’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/fdacluster/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/fdacluster/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/fdacluster/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/fdacluster/new/fdacluster.Rcheck/00install.out’ for details.
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is 22.2Mb
+      installed size is 24.0Mb
       sub-directories of 1Mb or more:
-        R      1.8Mb
-        doc    1.4Mb
-        help   2.1Mb
-        libs  16.4Mb
+        R      2.1Mb
+        doc    1.5Mb
+        help   2.2Mb
+        libs  17.7Mb
     ```
 
 # fect
@@ -1577,22 +2320,13 @@ Run `revdep_details(, "fdacluster")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/fect
 * Date/Publication: 2022-10-14 09:52:32 UTC
-* Number of recursive dependencies: 81
+* Number of recursive dependencies: 69
 
-Run `revdep_details(, "fect")` for more info
+Run `revdepcheck::revdep_details(, "fect")` for more info
 
 </details>
 
 ## In both
-
-*   checking whether package ‘fect’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/fect/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/fect/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/fect/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/fect/new/fect.Rcheck/00install.out’ for details.
-    ```
 
 *   checking C++ specification ... NOTE
     ```
@@ -1601,9 +2335,9 @@ Run `revdep_details(, "fect")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 13.9Mb
+      installed size is 14.8Mb
       sub-directories of 1Mb or more:
-        libs  12.6Mb
+        libs  13.5Mb
     ```
 
 *   checking dependencies in R code ... NOTE
@@ -1612,67 +2346,211 @@ Run `revdep_details(, "fect")` for more info
       All declared Imports should be used.
     ```
 
-# FLAMES
+# fiery
 
 <details>
 
-* Version: 1.8.0
-* GitHub: https://github.com/OliverVoogd/FLAMES
-* Source code: https://github.com/cran/FLAMES
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 255
+* Version: 1.2.1
+* GitHub: https://github.com/thomasp85/fiery
+* Source code: https://github.com/cran/fiery
+* Date/Publication: 2024-02-05 22:40:11 UTC
+* Number of recursive dependencies: 67
 
-Run `revdep_details(, "FLAMES")` for more info
+Run `revdepcheck::revdep_details(, "fiery")` for more info
 
 </details>
 
 ## In both
 
-*   checking for hidden files and directories ... NOTE
+*   checking tests ...
     ```
-    Found the following hidden files and directories:
-      .BBSoptions
-    These were most likely included in error. See section ‘Package
-    structure’ in the ‘Writing R Extensions’ manual.
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Last 50 lines of output:
+      > # Learn more about the roles of various files in:
+      > # * https://r-pkgs.org/tests.html
+      > # * https://testthat.r-lib.org/reference/test_package.html#special-files
+      > 
+      > library(testthat)
+      > library(fiery)
+    ...
+        9. └─app$ignite(silent = TRUE)
+       10.   └─private$run(block = block, showcase = showcase, ..., silent = silent)
+       11.     └─private$run_blocking_server(showcase = showcase)
+       12.       └─httpuv::startServer(...)
+       13.         └─WebServer$new(host, port, app, quiet)
+       14.           └─httpuv (local) initialize(...)
+      
+      [ FAIL 1 | WARN 0 | SKIP 4 | PASS 245 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+# finetune
+
+<details>
+
+* Version: 1.2.0
+* GitHub: https://github.com/tidymodels/finetune
+* Source code: https://github.com/cran/finetune
+* Date/Publication: 2024-03-21 03:30:02 UTC
+* Number of recursive dependencies: 175
+
+Run `revdepcheck::revdep_details(, "finetune")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘BradleyTerry2’
+    ```
+
+# finnts
+
+<details>
+
+* Version: 0.5.0
+* GitHub: https://github.com/microsoft/finnts
+* Source code: https://github.com/cran/finnts
+* Date/Publication: 2024-10-25 17:50:02 UTC
+* Number of recursive dependencies: 247
+
+Run `revdepcheck::revdep_details(, "finnts")` for more info
+
+</details>
+
+## In both
+
+*   checking whether package ‘finnts’ can be installed ... ERROR
+    ```
+    Installation failed.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/finnts/new/finnts.Rcheck/00install.out’ for details.
+    ```
+
+*   checking package dependencies ... NOTE
+    ```
+    Packages suggested but not available for checking:
+      'AzureStor', 'Microsoft365R'
+    ```
+
+## Installation
+
+### Devel
+
+```
+* installing *source* package ‘finnts’ ...
+** package ‘finnts’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Error: package or namespace load failed for ‘modeltime’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ there is no package called ‘infer’
+Execution halted
+ERROR: lazy loading failed for package ‘finnts’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/finnts/new/finnts.Rcheck/finnts’
+
+
+```
+### CRAN
+
+```
+* installing *source* package ‘finnts’ ...
+** package ‘finnts’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+Error: package or namespace load failed for ‘modeltime’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ there is no package called ‘infer’
+Execution halted
+ERROR: lazy loading failed for package ‘finnts’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/finnts/old/finnts.Rcheck/finnts’
+
+
+```
+# FLAMES
+
+<details>
+
+* Version: 2.0.2
+* GitHub: https://github.com/mritchielab/FLAMES
+* Source code: https://github.com/cran/FLAMES
+* Date/Publication: 2024-12-09
+* Number of recursive dependencies: 261
+
+Run `revdepcheck::revdep_details(, "FLAMES")` for more info
+
+</details>
+
+## In both
+
+*   checking examples ... ERROR
+    ```
+    Running examples in ‘FLAMES-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: create_sce_from_dir
+    > ### Title: Create 'SingleCellExperiment' object from 'FLAMES' output folder
+    > ### Aliases: create_sce_from_dir
+    > 
+    > ### ** Examples
+    > 
+    > outdir <- tempfile()
+    ...
+        return _find_and_load(name, import_)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      File "/scratch/henrik/606930/globals/revdep/checks/FLAMES/new/FLAMES.Rcheck/FLAMES/python/count_gene.py", line 8, in <module>
+        import pandas as pd
+      File "/scratch/henrik/606930/globals/revdep/library/FLAMES/reticulate/python/rpytools/loader.py", line 122, in _find_and_load_hook
+        return _run_hook(name, _hook)
+               ^^^^^^^^^^^^^^^^^^^^^^
+      File "/
+    Calls: <Anonymous> ... tryCatch -> tryCatchList -> tryCatchOne -> <Anonymous>
+    Execution halted
     ```
 
 *   checking whether package ‘FLAMES’ can be installed ... NOTE
     ```
     Found the following notes/warnings:
       Non-staged installation was used
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/FLAMES/new/FLAMES.Rcheck/00install.out’ for details.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/FLAMES/new/FLAMES.Rcheck/00install.out’ for details.
     ```
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.2Mb
+      installed size is  7.3Mb
       sub-directories of 1Mb or more:
         data   2.7Mb
-        doc    1.7Mb
+        doc    2.0Mb
+        libs   1.4Mb
     ```
 
 *   checking R code for possible problems ... NOTE
     ```
-    annotation_to_fasta: no visible global function definition for
-      'write.table'
-    generate_sc_sce: no visible binding for global variable 'FSM_match'
-    plot_coverage: no visible binding for global variable 'x'
-    plot_coverage: no visible binding for global variable 'transcript'
-    plot_coverage: no visible binding for global variable 'length_bin'
-    plot_demultiplex: no visible binding for global variable 'Freq'
-    plot_demultiplex: no visible binding for global variable '.'
-    plot_demultiplex: no visible binding for global variable 'x'
-    plot_demultiplex: no visible binding for global variable
+    create_spe: no visible binding for global variable 'barcode'
+    filter_coverage: no visible global function definition for
+      'starts_with'
+    filter_coverage: no visible binding for global variable 'filter_res'
+    find_barcode: no visible binding for global variable 'Sample'
+    find_barcode: no visible binding for global variable 'Outfile'
+    find_variants_grange: no visible binding for global variable
+      'which_label'
+    find_variants_grange: no visible binding for global variable
+      'nucleotide'
     ...
-    sc_umap_expression : plot_idx: no visible binding for global variable
-      'y'
-    transcript_coverage: no visible binding for global variable 'mat'
-    Undefined global functions or variables:
-      . BarcodeEditDist FSM_match FlankEditDist Freq all_vars cell_id cnt
-      everything gene_id heatmap_annotation_colors label length_bin mat n
-      name tr_id transcript transcript_id value write.table x y
+      filter_res gene_id head imageX imageY input label length_bin
+      max_length min_length multi-matching reads mutation_index n_reads
+      name nucleotide output pct pos read1_with_adapter read_counts ref
+      region single match reads starts_with total reads total_counts tr_id
+      tr_length transcript type undemultiplexted reads value which_label x
+      y
     Consider adding
-      importFrom("utils", "write.table")
+      importFrom("base", "match", "single")
+      importFrom("utils", "head")
     to your NAMESPACE file.
     ```
 
@@ -1685,13 +2563,13 @@ Run `revdep_details(, "FLAMES")` for more info
 
 <details>
 
-* Version: 1.10.0
+* Version: 1.14.0
 * GitHub: https://github.com/aya49/flowGraph
 * Source code: https://github.com/cran/flowGraph
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 94
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 92
 
-Run `revdep_details(, "flowGraph")` for more info
+Run `revdepcheck::revdep_details(, "flowGraph")` for more info
 
 </details>
 
@@ -1706,9 +2584,40 @@ Run `revdep_details(, "flowGraph")` for more info
       meta no_cores
     ```
 
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) fg_get_graph.Rd:13: Lost braces
+        13 | A list containing two data frames (\code{v} and ]code{e})
+           |                                                      ^
+    checkRd: (-1) ggdf.Rd:22: Lost braces
+        22 | code{ggdf} adds to the data frames \code{v} and \code{e} in slot
+           |     ^
+    ```
+
 *   checking Rd cross-references ... NOTE
     ```
     Package unavailable to check Rd xrefs: ‘doParallel’
+    ```
+
+# flowml
+
+<details>
+
+* Version: 0.1.3
+* GitHub: https://github.com/Boehringer-Ingelheim/flowml
+* Source code: https://github.com/cran/flowml
+* Date/Publication: 2024-02-16 10:40:02 UTC
+* Number of recursive dependencies: 267
+
+Run `revdepcheck::revdep_details(, "flowml")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘sda’
     ```
 
 # forecastML
@@ -1719,9 +2628,9 @@ Run `revdep_details(, "flowGraph")` for more info
 * GitHub: https://github.com/nredell/forecastML
 * Source code: https://github.com/cran/forecastML
 * Date/Publication: 2020-05-07 15:10:17 UTC
-* Number of recursive dependencies: 105
+* Number of recursive dependencies: 103
 
-Run `revdep_details(, "forecastML")` for more info
+Run `revdepcheck::revdep_details(, "forecastML")` for more info
 
 </details>
 
@@ -1733,45 +2642,48 @@ Run `revdep_details(, "forecastML")` for more info
       All declared Imports should be used.
     ```
 
-# genBaRcode
+# future.mirai
 
 <details>
 
-* Version: 1.2.7
-* GitHub: NA
-* Source code: https://github.com/cran/genBaRcode
-* Date/Publication: 2023-12-11 13:10:05 UTC
-* Number of recursive dependencies: 160
+* Version: 0.2.2
+* GitHub: https://github.com/futureverse/future.mirai
+* Source code: https://github.com/cran/future.mirai
+* Date/Publication: 2024-07-03 11:40:02 UTC
+* Number of recursive dependencies: 14
 
-Run `revdep_details(, "genBaRcode")` for more info
+Run `revdepcheck::revdep_details(, "future.mirai")` for more info
 
 </details>
 
 ## In both
 
-*   checking re-building of vignette outputs ... WARNING
+*   checking package dependencies ... NOTE
     ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘genBaRcode_GUI_Vignette.Rmd’ using rmarkdown
-    ! LaTeX Error: File `iftex.sty' not found.
-    
-    ! Emergency stop.
-    <read *> 
-    
-    Error: processing vignette 'genBaRcode_GUI_Vignette.Rmd' failed with diagnostics:
-    LaTeX failed to compile /c4/home/henrik/repositories/globals/revdep/checks/genBaRcode/new/genBaRcode.Rcheck/vign_test/genBaRcode/vignettes/genBaRcode_GUI_Vignette.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See genBaRcode_GUI_Vignette.log for more info.
-    --- failed re-building ‘genBaRcode_GUI_Vignette.Rmd’
-    ...
-    
-    Error: processing vignette 'genBaRcode_Vignette.Rmd' failed with diagnostics:
-    LaTeX failed to compile /c4/home/henrik/repositories/globals/revdep/checks/genBaRcode/new/genBaRcode.Rcheck/vign_test/genBaRcode/vignettes/genBaRcode_Vignette.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See genBaRcode_Vignette.log for more info.
-    --- failed re-building ‘genBaRcode_Vignette.Rmd’
-    
-    SUMMARY: processing the following files failed:
-      ‘genBaRcode_GUI_Vignette.Rmd’ ‘genBaRcode_Vignette.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
+    Package suggested but not available for checking: ‘future.tests’
+    ```
+
+# GeDS
+
+<details>
+
+* Version: 0.2.9
+* GitHub: https://github.com/emilioluissaenzguillen/GeDS
+* Source code: https://github.com/cran/GeDS
+* Date/Publication: 2025-03-28 11:40:26 UTC
+* Number of recursive dependencies: 46
+
+Run `revdepcheck::revdep_details(, "GeDS")` for more info
+
+</details>
+
+## In both
+
+*   checking whether package ‘GeDS’ can be installed ... WARNING
+    ```
+    Found the following significant warnings:
+      Warning: no DISPLAY variable so Tk is not available
+    See ‘/scratch/henrik/606930/globals/revdep/checks/GeDS/new/GeDS.Rcheck/00install.out’ for details.
     ```
 
 # geocmeans
@@ -1782,29 +2694,110 @@ Run `revdep_details(, "genBaRcode")` for more info
 * GitHub: https://github.com/JeremyGelb/geocmeans
 * Source code: https://github.com/cran/geocmeans
 * Date/Publication: 2023-09-12 03:10:02 UTC
-* Number of recursive dependencies: 197
+* Number of recursive dependencies: 207
 
-Run `revdep_details(, "geocmeans")` for more info
+Run `revdepcheck::revdep_details(, "geocmeans")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘geocmeans’ can be installed ... WARNING
+*   checking installed package size ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/geocmeans/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/geocmeans/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/geocmeans/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/geocmeans/new/geocmeans.Rcheck/00install.out’ for details.
+      installed size is 14.5Mb
+      sub-directories of 1Mb or more:
+        extdata   3.0Mb
+        libs      9.1Mb
     ```
+
+# geohabnet
+
+<details>
+
+* Version: 2.1.3
+* GitHub: https://github.com/GarrettLab/HabitatConnectivity
+* Source code: https://github.com/cran/geohabnet
+* Date/Publication: 2024-06-27 11:50:02 UTC
+* Number of recursive dependencies: 144
+
+Run `revdepcheck::revdep_details(, "geohabnet")` for more info
+
+</details>
+
+## In both
+
+*   checking tests ...
+    ```
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Complete output:
+      > # This file is part of the standard setup for testthat.
+      > # It is recommended that you do not modify it.
+      > #
+      > # Where should you do additional test configuration?
+      > # Learn more about the roles of various files in:
+      > # * https://r-pkgs.org/tests.html
+    ...
+        9.   └─geohabnet::get_rasters(cparams$`CCRI parameters`$Hosts)
+       10.     └─geohabnet::crops_rast(hosts)
+       11.       └─future.apply::future_lapply(...)
+       12.         └─future.apply:::future_xapply(...)
+       13.           ├─future::value(fs)
+       14.           └─future:::value.list(fs)
+      
+      [ FAIL 2 | WARN 0 | SKIP 0 | PASS 16 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+*   checking re-building of vignette outputs ... ERROR
+    ```
+    Error(s) in re-building vignettes:
+    --- re-building ‘LinkWeightsAnalysis.Rmd’ using rmarkdown
+    trying URL 'https://s3.us-east-2.amazonaws.com/earthstatdata/HarvestedAreaYield175Crops_Indvidual_Geotiff/potato_HarvAreaYield_Geotiff.zip'
+    
+    Quitting from LinkWeightsAnalysis.Rmd:34-43 [run]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    <error/rlang_error>
+    Error in `.getClassesFromCache()`:
+    ! class should be either a character-string name or a class definition
+    ---
+    ...
+    
+    Error: processing vignette 'analysis.Rmd' failed with diagnostics:
+    unable to find an inherited method for function 'wrap' for signature 'x = "NULL"'
+    --- failed re-building ‘analysis.Rmd’
+    
+    SUMMARY: processing the following files failed:
+      ‘LinkWeightsAnalysis.Rmd’ ‘analysis.Rmd’
+    
+    Error: Vignette re-building failed.
+    Execution halted
+    ```
+
+# GeoModels
+
+<details>
+
+* Version: 2.1.1
+* GitHub: https://github.com/vmoprojs/GeoModels
+* Source code: https://github.com/cran/GeoModels
+* Date/Publication: 2025-04-13 10:50:02 UTC
+* Number of recursive dependencies: 54
+
+Run `revdepcheck::revdep_details(, "GeoModels")` for more info
+
+</details>
+
+## In both
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 13.5Mb
+      installed size is  5.5Mb
       sub-directories of 1Mb or more:
-        extdata   3.0Mb
-        libs      8.2Mb
+        R      1.5Mb
+        libs   2.7Mb
     ```
 
 # geospark
@@ -1815,9 +2808,9 @@ Run `revdep_details(, "geocmeans")` for more info
 * GitHub: https://github.com/harryprince/geospark
 * Source code: https://github.com/cran/geospark
 * Date/Publication: 2020-03-02 05:40:02 UTC
-* Number of recursive dependencies: 60
+* Number of recursive dependencies: 58
 
-Run `revdep_details(, "geospark")` for more info
+Run `revdepcheck::revdep_details(, "geospark")` for more info
 
 </details>
 
@@ -1834,6 +2827,27 @@ Run `revdep_details(, "geospark")` for more info
       'LazyData' is specified without a 'data' directory
     ```
 
+# ggeffects
+
+<details>
+
+* Version: 2.2.1
+* GitHub: https://github.com/strengejacke/ggeffects
+* Source code: https://github.com/cran/ggeffects
+* Date/Publication: 2025-03-11 22:30:01 UTC
+* Number of recursive dependencies: 292
+
+Run `revdepcheck::revdep_details(, "ggeffects")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘nestedLogit’
+    ```
+
 # googleComputeEngineR
 
 <details>
@@ -1842,13 +2856,38 @@ Run `revdep_details(, "geospark")` for more info
 * GitHub: https://github.com/cloudyr/googleComputeEngineR
 * Source code: https://github.com/cran/googleComputeEngineR
 * Date/Publication: 2019-05-04 22:40:02 UTC
-* Number of recursive dependencies: 67
+* Number of recursive dependencies: 59
 
-Run `revdep_details(, "googleComputeEngineR")` for more info
+Run `revdepcheck::revdep_details(, "googleComputeEngineR")` for more info
 
 </details>
 
 ## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) docker_cmd.gce_instance.Rd:21: Lost braces; missing escapes or markup?
+        21 | \item{nvidia}{If true will use \code{nvidia-docker} instead of {docker}}
+           |                                                                ^
+    checkRd: (-1) gce_list_disks.Rd:11: Lost braces; missing escapes or markup?
+        11 | \item{filter}{Sets a filter expression for filtering listed resources, in the form filter={expression}}
+           |                                                                                           ^
+    checkRd: (-1) gce_list_disks_all.Rd:11: Lost braces; missing escapes or markup?
+        11 | \item{filter}{Sets a filter expression for filtering listed resources, in the form filter={expression}}
+           |                                                                                           ^
+    checkRd: (-1) gce_list_firewall_rules.Rd:11: Lost braces; missing escapes or markup?
+    ...
+           |                                                                                           ^
+    checkRd: (-1) gce_list_networks.Rd:11: Lost braces; missing escapes or markup?
+        11 | \item{filter}{Sets a filter expression for filtering listed resources, in the form filter={expression}}
+           |                                                                                           ^
+    checkRd: (-1) gce_list_zone_op.Rd:11: Lost braces; missing escapes or markup?
+        11 | \item{filter}{Sets a filter expression for filtering listed resources, in the form filter={expression}}
+           |                                                                                           ^
+    checkRd: (-1) gce_list_zones.Rd:13: Lost braces; missing escapes or markup?
+        13 | \item{filter}{Sets a filter expression for filtering listed resources, in the form filter={expression}}
+           |                                                                                           ^
+    ```
 
 *   checking LazyData ... NOTE
     ```
@@ -1863,9 +2902,9 @@ Run `revdep_details(, "googleComputeEngineR")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/googleTagManageR
 * Date/Publication: 2022-04-16 18:12:29 UTC
-* Number of recursive dependencies: 69
+* Number of recursive dependencies: 67
 
-Run `revdep_details(, "googleTagManageR")` for more info
+Run `revdepcheck::revdep_details(, "googleTagManageR")` for more info
 
 </details>
 
@@ -1878,6 +2917,52 @@ Run `revdep_details(, "googleTagManageR")` for more info
       All declared Imports should be used.
     ```
 
+# gptstudio
+
+<details>
+
+* Version: 0.4.0
+* GitHub: https://github.com/MichelNivard/gptstudio
+* Source code: https://github.com/cran/gptstudio
+* Date/Publication: 2024-05-21 11:21:21 UTC
+* Number of recursive dependencies: 94
+
+Run `revdepcheck::revdep_details(, "gptstudio")` for more info
+
+</details>
+
+## In both
+
+*   checking examples ... ERROR
+    ```
+    Running examples in ‘gptstudio-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: gptstudio_sitrep
+    > ### Title: Current Configuration for gptstudio
+    > ### Aliases: gptstudio_sitrep
+    > 
+    > ### ** Examples
+    > 
+    > gptstudio_sitrep(verbose = FALSE) # Print basic settings, no API checks
+    ...
+    35. httr2:::check_response(resp)
+    36. httr2:::is_response(resp)
+    37. httr2::req_perform(request)
+    38. httr2:::handle_resp(req, resp, error_call = error_call)
+    39. rlang::cnd_signal(cnd)
+    40. rlang:::signal_abort(cnd)
+    41. base::signalCondition(cnd)
+    42. | (function (e) …
+    43. | cli:::throw_error(err, parent = e)
+    Execution halted
+    ```
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘AzureRMR’
+    ```
+
 # grapesAgri1
 
 <details>
@@ -1886,32 +2971,20 @@ Run `revdep_details(, "googleTagManageR")` for more info
 * GitHub: https://github.com/pratheesh3780/grapesAgri1
 * Source code: https://github.com/cran/grapesAgri1
 * Date/Publication: 2021-08-14 12:50:02 UTC
-* Number of recursive dependencies: 166
+* Number of recursive dependencies: 167
 
-Run `revdep_details(, "grapesAgri1")` for more info
+Run `revdepcheck::revdep_details(, "grapesAgri1")` for more info
 
 </details>
 
 ## In both
 
-*   checking dependencies in R code ... NOTE
+*   checking package dependencies ... ERROR
     ```
-    Namespaces in Imports field not imported from:
-      ‘Hmisc’ ‘PairedData’ ‘RColorBrewer’ ‘agricolae’ ‘corrplot’ ‘desplot’
-      ‘dplyr’ ‘ggplot2’ ‘ggpubr’ ‘gridGraphics’ ‘gtools’ ‘kableExtra’
-      ‘knitr’ ‘magrittr’ ‘pastecs’ ‘reshape2’ ‘rmarkdown’ ‘shinyWidgets’
-      ‘summarytools’
-      All declared Imports should be used.
-    ```
-
-*   checking Rd files ... NOTE
-    ```
-    checkRd: (-1) corrApp.Rd:40: Escaped LaTeX specials: \&
-    checkRd: (-1) crdApp.Rd:46: Escaped LaTeX specials: \&
-    checkRd: (-1) descApp.Rd:55: Escaped LaTeX specials: \&
-    checkRd: (-1) layoutApp.Rd:50: Escaped LaTeX specials: \&
-    checkRd: (-1) rbdApp.Rd:46: Escaped LaTeX specials: \&
-    checkRd: (-1) ttApp.Rd:43: Escaped LaTeX specials: \&
+    Packages required but not available: 'summarytools', 'agricolae'
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # graphframes
@@ -1922,9 +2995,9 @@ Run `revdep_details(, "grapesAgri1")` for more info
 * GitHub: https://github.com/rstudio/graphframes
 * Source code: https://github.com/cran/graphframes
 * Date/Publication: 2018-10-30 19:20:03 UTC
-* Number of recursive dependencies: 61
+* Number of recursive dependencies: 59
 
-Run `revdep_details(, "graphframes")` for more info
+Run `revdepcheck::revdep_details(, "graphframes")` for more info
 
 </details>
 
@@ -1943,22 +3016,13 @@ Run `revdep_details(, "graphframes")` for more info
 * GitHub: https://github.com/comeetie/greed
 * Source code: https://github.com/cran/greed
 * Date/Publication: 2022-10-03 22:00:05 UTC
-* Number of recursive dependencies: 98
+* Number of recursive dependencies: 96
 
-Run `revdep_details(, "greed")` for more info
+Run `revdepcheck::revdep_details(, "greed")` for more info
 
 </details>
 
 ## In both
-
-*   checking whether package ‘greed’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/greed/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/greed/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/greed/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/greed/new/greed.Rcheck/00install.out’ for details.
-    ```
 
 *   checking C++ specification ... NOTE
     ```
@@ -1967,14 +3031,38 @@ Run `revdep_details(, "greed")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 36.5Mb
+      installed size is 39.7Mb
       sub-directories of 1Mb or more:
-        libs  34.3Mb
+        data   2.0Mb
+        libs  36.3Mb
     ```
 
 *   checking data for non-ASCII characters ... NOTE
     ```
       Note: found 989 marked UTF-8 strings
+    ```
+
+# greta
+
+<details>
+
+* Version: 0.5.0
+* GitHub: https://github.com/greta-dev/greta
+* Source code: https://github.com/cran/greta
+* Date/Publication: 2024-11-12 06:40:02 UTC
+* Number of recursive dependencies: 146
+
+Run `revdepcheck::revdep_details(, "greta")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.1Mb
+      sub-directories of 1Mb or more:
+        R   3.5Mb
     ```
 
 # gsynth
@@ -1985,22 +3073,13 @@ Run `revdep_details(, "greed")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/gsynth
 * Date/Publication: 2021-08-06 07:50:05 UTC
-* Number of recursive dependencies: 77
+* Number of recursive dependencies: 65
 
-Run `revdep_details(, "gsynth")` for more info
+Run `revdepcheck::revdep_details(, "gsynth")` for more info
 
 </details>
 
 ## In both
-
-*   checking whether package ‘gsynth’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/gsynth/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/gsynth/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/gsynth/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/gsynth/new/gsynth.Rcheck/00install.out’ for details.
-    ```
 
 *   checking C++ specification ... NOTE
     ```
@@ -2009,30 +3088,165 @@ Run `revdep_details(, "gsynth")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.2Mb
+      installed size is  5.7Mb
       sub-directories of 1Mb or more:
-        libs   4.9Mb
+        libs   5.3Mb
     ```
 
-# hackeRnews
+# gtfs2emis
 
 <details>
 
-* Version: 0.1.0
-* GitHub: https://github.com/szymanskir/hackeRnews
-* Source code: https://github.com/cran/hackeRnews
-* Date/Publication: 2019-12-13 13:20:05 UTC
-* Number of recursive dependencies: 69
+* Version: 0.1.1
+* GitHub: https://github.com/ipeaGIT/gtfs2emis
+* Source code: https://github.com/cran/gtfs2emis
+* Date/Publication: 2024-12-02 15:40:12 UTC
+* Number of recursive dependencies: 94
 
-Run `revdep_details(, "hackeRnews")` for more info
+Run `revdepcheck::revdep_details(, "gtfs2emis")` for more info
 
 </details>
 
 ## In both
 
-*   checking LazyData ... NOTE
+*   checking installed package size ... NOTE
     ```
-      'LazyData' is specified without a 'data' directory
+      installed size is  5.4Mb
+      sub-directories of 1Mb or more:
+        data   3.5Mb
+    ```
+
+# gtfs2gps
+
+<details>
+
+* Version: 2.1-2
+* GitHub: https://github.com/ipeaGIT/gtfs2gps
+* Source code: https://github.com/cran/gtfs2gps
+* Date/Publication: 2024-10-08 07:00:06 UTC
+* Number of recursive dependencies: 87
+
+Run `revdepcheck::revdep_details(, "gtfs2gps")` for more info
+
+</details>
+
+## In both
+
+*   checking tests ...
+    ```
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Complete output:
+      > library(testthat)
+      > library(gtfs2gps)
+      gtfs2gps version 2.1-2 is now loaded
+      NOTE: All filter functions from gtfs2gps were removed
+      Please replace them by similar functions from gtfstools
+      > 
+    ...
+       4.     └─terra (local) .local(x, ...)
+       5.       ├─terra::makeValid(x)
+       6.       └─terra::makeValid(x)
+       7.         └─terra (local) .local(x, ...)
+       8.           └─terra:::messages(x)
+       9.             └─terra:::error(f, x@pntr$getError())
+      
+      [ FAIL 1 | WARN 28 | SKIP 0 | PASS 119 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+# gtsummary
+
+<details>
+
+* Version: 2.2.0
+* GitHub: https://github.com/ddsjoberg/gtsummary
+* Source code: https://github.com/cran/gtsummary
+* Date/Publication: 2025-04-14 10:30:02 UTC
+* Number of recursive dependencies: 206
+
+Run `revdepcheck::revdep_details(, "gtsummary")` for more info
+
+</details>
+
+## In both
+
+*   checking examples ... ERROR
+    ```
+    Running examples in ‘gtsummary-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: add_nevent.tbl_survfit
+    > ### Title: Add event N
+    > ### Aliases: add_nevent.tbl_survfit
+    > 
+    > ### ** Examples
+    > 
+    > ## Don't show: 
+    ...
+    +   add_nevent()
+    + ## Don't show: 
+    + }) # examplesIf
+    > library(survival)
+    > fit1 <- survfit(Surv(ttdeath, death) ~ 1, trial)
+    > fit2 <- survfit(Surv(ttdeath, death) ~ trt, trial)
+    > add_nevent(add_n(tbl_survfit(list(fit1, fit2), times = c(12, 24))))
+    Error in loadNamespace(x) : there is no package called ‘cardx’
+    Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+    Execution halted
+    ```
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘cardx’
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘cardx’
+    ```
+
+# hacksig
+
+<details>
+
+* Version: 0.1.2
+* GitHub: https://github.com/Acare/hacksig
+* Source code: https://github.com/cran/hacksig
+* Date/Publication: 2022-02-17 14:22:02 UTC
+* Number of recursive dependencies: 75
+
+Run `revdepcheck::revdep_details(, "hacksig")` for more info
+
+</details>
+
+## In both
+
+*   checking re-building of vignette outputs ... ERROR
+    ```
+    Error(s) in re-building vignettes:
+    --- re-building ‘hacksig.Rmd’ using rmarkdown
+    
+    Quitting from hacksig.Rmd:215-225 [unnamed-chunk-19]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    <error/rlang_error>
+    Error in `msigdbr()`:
+    ! Unknown subcollection.
+    ---
+    Backtrace:
+    ...
+    
+    Error: processing vignette 'hacksig.Rmd' failed with diagnostics:
+    Unknown subcollection.
+    --- failed re-building ‘hacksig.Rmd’
+    
+    SUMMARY: processing the following file failed:
+      ‘hacksig.Rmd’
+    
+    Error: Vignette re-building failed.
+    Execution halted
     ```
 
 # hal9001
@@ -2043,9 +3257,9 @@ Run `revdep_details(, "hackeRnews")` for more info
 * GitHub: https://github.com/tlverse/hal9001
 * Source code: https://github.com/cran/hal9001
 * Date/Publication: 2023-11-14 15:00:02 UTC
-* Number of recursive dependencies: 100
+* Number of recursive dependencies: 98
 
-Run `revdep_details(, "hal9001")` for more info
+Run `revdepcheck::revdep_details(, "hal9001")` for more info
 
 </details>
 
@@ -2053,7 +3267,7 @@ Run `revdep_details(, "hal9001")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.3Mb
+      installed size is  5.4Mb
       sub-directories of 1Mb or more:
         libs   4.9Mb
     ```
@@ -2062,13 +3276,13 @@ Run `revdep_details(, "hal9001")` for more info
 
 <details>
 
-* Version: 2.2.1
+* Version: 2.4.2
 * GitHub: https://github.com/jbolstad/hbamr
 * Source code: https://github.com/cran/hbamr
-* Date/Publication: 2024-02-23 12:30:02 UTC
-* Number of recursive dependencies: 91
+* Date/Publication: 2025-03-05 11:40:03 UTC
+* Number of recursive dependencies: 90
 
-Run `revdep_details(, "hbamr")` for more info
+Run `revdepcheck::revdep_details(, "hbamr")` for more info
 
 </details>
 
@@ -2076,9 +3290,9 @@ Run `revdep_details(, "hbamr")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 353.1Mb
+      installed size is 92.1Mb
       sub-directories of 1Mb or more:
-        libs  351.6Mb
+        libs  90.7Mb
     ```
 
 *   checking for GNU extensions in Makefiles ... NOTE
@@ -2090,23 +3304,78 @@ Run `revdep_details(, "hbamr")` for more info
 
 <details>
 
-* Version: 0.3.0
+* Version: 0.3.1
 * GitHub: https://github.com/spsanderson/healthyR.ts
 * Source code: https://github.com/cran/healthyR.ts
-* Date/Publication: 2023-11-15 06:00:05 UTC
-* Number of recursive dependencies: 221
+* Date/Publication: 2024-10-11 23:00:03 UTC
+* Number of recursive dependencies: 211
 
-Run `revdep_details(, "healthyR.ts")` for more info
+Run `revdepcheck::revdep_details(, "healthyR.ts")` for more info
 
 </details>
 
 ## In both
 
+*   checking examples ... ERROR
+    ```
+    Running examples in ‘healthyR.ts-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: tidy_fft
+    > ### Title: Tidy Style FFT
+    > ### Aliases: tidy_fft
+    > 
+    > ### ** Examples
+    > 
+    > suppressPackageStartupMessages(library(dplyr))
+    ...
+    > a <- tidy_fft(
+    +   .data = data_tbl,
+    +   .value_col = value,
+    +   .date_col = date_col,
+    +   .harmonics = 3,
+    +   .frequency = 12
+    + )
+    Error in loadNamespace(x) : there is no package called ‘TSA’
+    Calls: tidy_fft ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+    Execution halted
+    ```
+
+*   checking re-building of vignette outputs ... ERROR
+    ```
+    Error(s) in re-building vignettes:
+    --- re-building ‘getting-started.Rmd’ using rmarkdown
+    --- finished re-building ‘getting-started.Rmd’
+    
+    --- re-building ‘using-tidy-fft.Rmd’ using rmarkdown
+    
+    Quitting from using-tidy-fft.Rmd:108-117 [run_func]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    <error/rlang_error>
+    Error in `loadNamespace()`:
+    ...
+    
+    Error: processing vignette 'using-tidy-fft.Rmd' failed with diagnostics:
+    there is no package called 'TSA'
+    --- failed re-building ‘using-tidy-fft.Rmd’
+    
+    SUMMARY: processing the following file failed:
+      ‘using-tidy-fft.Rmd’
+    
+    Error: Vignette re-building failed.
+    Execution halted
+    ```
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘TSA’
+    ```
+
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.1Mb
+      installed size is  6.3Mb
       sub-directories of 1Mb or more:
-        doc   5.2Mb
+        doc   5.3Mb
     ```
 
 # hero
@@ -2117,22 +3386,43 @@ Run `revdep_details(, "healthyR.ts")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/hero
 * Date/Publication: 2023-07-15 21:10:09 UTC
-* Number of recursive dependencies: 160
+* Number of recursive dependencies: 158
 
-Run `revdep_details(, "hero")` for more info
+Run `revdepcheck::revdep_details(, "hero")` for more info
 
 </details>
 
 ## In both
 
-*   checking package dependencies ... NOTE
+*   checking dependencies in R code ... NOTE
     ```
-    Package suggested but not available for checking: ‘Rmpi’
+    [c4-n43:3140122] OPAL ERROR: Not initialized in file ext2x_client.c at line 112
+    --------------------------------------------------------------------------
+    The application appears to have been direct launched using "srun",
+    but OMPI was not built with SLURM's PMI support and therefore cannot
+    execute. There are several options for building PMI support under
+    SLURM, depending upon the SLURM version you are using:
+    
+      version 16.05 or later: you can use SLURM's PMIx support. This
+      requires that you configure and build SLURM --with-pmix.
+    
+      Versions earlier than 16.05: you must use either SLURM's PMI-1 or
+      PMI-2 support. SLURM builds PMI-1 by default, or you can manually
+      install PMI-2. You must then build Open MPI using --with-pmi pointing
+      to the SLURM PMI library location.
+    
+    Please configure as appropriate and try again.
+    --------------------------------------------------------------------------
     ```
 
-*   checking Rd cross-references ... NOTE
+*   checking Rd files ... NOTE
     ```
-    Package unavailable to check Rd xrefs: ‘Rmpi’
+    checkRd: (-1) hero.Rd:67-68: Lost braces
+        67 | then \code{\link[pbapply]{pblapply}} is used. If code{package ==
+           |                                                      ^
+    checkRd: (-1) hero.Rd:69: Lost braces
+        69 | code{package == "Rmpi"}, then \code{\link[Rmpi]{mpi.applyLB}} is used.}
+           |     ^
     ```
 
 # heterogen
@@ -2143,53 +3433,108 @@ Run `revdep_details(, "hero")` for more info
 * GitHub: https://github.com/patauchi/heterogen
 * Source code: https://github.com/cran/heterogen
 * Date/Publication: 2023-08-17 07:42:33 UTC
-* Number of recursive dependencies: 56
+* Number of recursive dependencies: 55
 
-Run `revdep_details(, "heterogen")` for more info
+Run `revdepcheck::revdep_details(, "heterogen")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘heterogen’ can be installed ... WARNING
+*   checking installed package size ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/heterogen/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/heterogen/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/heterogen/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/heterogen/new/heterogen.Rcheck/00install.out’ for details.
+      installed size is  8.8Mb
+      sub-directories of 1Mb or more:
+        extdata   2.6Mb
+        libs      6.0Mb
+    ```
+
+# hgwrr
+
+<details>
+
+* Version: 0.6-1
+* GitHub: https://github.com/HPDell/hgwrr
+* Source code: https://github.com/cran/hgwrr
+* Date/Publication: 2024-11-16 11:50:02 UTC
+* Number of recursive dependencies: 63
+
+Run `revdepcheck::revdep_details(, "hgwrr")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  9.5Mb
+      sub-directories of 1Mb or more:
+        libs   8.4Mb
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘lme4’
+    ```
+
+# hoopR
+
+<details>
+
+* Version: 2.1.0
+* GitHub: https://github.com/sportsdataverse/hoopR
+* Source code: https://github.com/cran/hoopR
+* Date/Publication: 2023-11-25 23:40:20 UTC
+* Number of recursive dependencies: 115
+
+Run `revdepcheck::revdep_details(, "hoopR")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.2Mb
+      sub-directories of 1Mb or more:
+        R      1.5Mb
+        help   3.5Mb
+    ```
+
+# httpgd
+
+<details>
+
+* Version: 2.0.4
+* GitHub: https://github.com/nx10/httpgd
+* Source code: https://github.com/cran/httpgd
+* Date/Publication: 2025-03-16 00:50:01 UTC
+* Number of recursive dependencies: 59
+
+Run `revdepcheck::revdep_details(, "httpgd")` for more info
+
+</details>
+
+## In both
+
+*   checking tests ...
+    ```
+      Running ‘testthat.R’/software/c4/cbi/software/_rocky8/R-4.4.3-gcc13/lib64/R/bin/BATCH: line 60: 838299 Killed                  ${R_HOME}/bin/R -f ${in} ${opts} ${R_BATCH_OPTIONS} > ${out} 2>&1
+    
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Complete output:
+      > library(testthat)
+      > library(httpgd)
+      > 
+      > test_check("httpgd")
     ```
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  8.6Mb
+      installed size is 12.4Mb
       sub-directories of 1Mb or more:
-        extdata   2.5Mb
-        libs      6.0Mb
-    ```
-
-# historicalborrowlong
-
-<details>
-
-* Version: 0.0.8
-* GitHub: https://github.com/wlandau/historicalborrowlong
-* Source code: https://github.com/cran/historicalborrowlong
-* Date/Publication: 2023-11-30 08:00:07 UTC
-* Number of recursive dependencies: 110
-
-Run `revdep_details(, "historicalborrowlong")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘clustermq’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
+        libs  11.8Mb
     ```
 
 # hwep
@@ -2200,9 +3545,9 @@ Run `revdep_details(, "historicalborrowlong")` for more info
 * GitHub: https://github.com/dcgerard/hwep
 * Source code: https://github.com/cran/hwep
 * Date/Publication: 2023-05-16 17:40:02 UTC
-* Number of recursive dependencies: 116
+* Number of recursive dependencies: 114
 
-Run `revdep_details(, "hwep")` for more info
+Run `revdepcheck::revdep_details(, "hwep")` for more info
 
 </details>
 
@@ -2210,9 +3555,16 @@ Run `revdep_details(, "hwep")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 84.5Mb
+      installed size is 80.1Mb
       sub-directories of 1Mb or more:
-        libs  83.9Mb
+        libs  79.4Mb
+    ```
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) simgl.Rd:50: Lost braces; missing escapes or markup?
+        50 | Uses the {updog} R package for simulating read counts and generating
+           |          ^
     ```
 
 *   checking for GNU extensions in Makefiles ... NOTE
@@ -2220,17 +3572,17 @@ Run `revdep_details(, "hwep")` for more info
     GNU make is a SystemRequirements.
     ```
 
-# infercnv
+# igvShiny
 
 <details>
 
-* Version: 1.18.1
-* GitHub: https://github.com/broadinstitute/inferCNV
-* Source code: https://github.com/cran/infercnv
-* Date/Publication: 2023-12-01
-* Number of recursive dependencies: 204
+* Version: 1.2.0
+* GitHub: https://github.com/gladkia/igvShiny
+* Source code: https://github.com/cran/igvShiny
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 134
 
-Run `revdep_details(, "infercnv")` for more info
+Run `revdepcheck::revdep_details(, "igvShiny")` for more info
 
 </details>
 
@@ -2238,8 +3590,40 @@ Run `revdep_details(, "infercnv")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.1Mb
+      installed size is 11.8Mb
       sub-directories of 1Mb or more:
+        extdata       2.2Mb
+        htmlwidgets   8.7Mb
+    ```
+
+*   checking dependencies in R code ... NOTE
+    ```
+    Unexported object imported by a ':::' call: ‘BiocGenerics:::testPackage’
+      See the note in ?`:::` about the use of this operator.
+    ```
+
+# infercnv
+
+<details>
+
+* Version: 1.22.0
+* GitHub: https://github.com/broadinstitute/inferCNV
+* Source code: https://github.com/cran/infercnv
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 204
+
+Run `revdepcheck::revdep_details(, "infercnv")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  7.5Mb
+      sub-directories of 1Mb or more:
+        R         1.5Mb
+        data      2.0Mb
         extdata   3.1Mb
     ```
 
@@ -2249,21 +3633,47 @@ Run `revdep_details(, "infercnv")` for more info
       See the note in ?`:::` about the use of this operator.
     ```
 
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) run.Rd:268: Lost braces; missing escapes or markup?
+       268 | \item{require_DE_all_normals}{If mask_nonDE_genes is set, those genes will be masked only if they are are found as DE according to test.use and mask_nonDE_pval in each of the comparisons to normal cells options: {"any", "most", "all"} (default: "any")
+           |                                                                                                                                                                                                                     ^
+    ```
+
 # InPAS
 
 <details>
 
-* Version: 2.10.0
+* Version: 2.14.1
 * GitHub: NA
 * Source code: https://github.com/cran/InPAS
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 172
+* Date/Publication: 2024-12-23
+* Number of recursive dependencies: 166
 
-Run `revdep_details(, "InPAS")` for more info
+Run `revdepcheck::revdep_details(, "InPAS")` for more info
 
 </details>
 
 ## In both
+
+*   checking Rd cross-references ... WARNING
+    ```
+    Missing link or links in Rd file 'get_ssRleCov.Rd':
+      ‘[BSgenome:BSgenomeForge]{BSgenome::forgeBSgenomeDataPkg()}’
+    
+    Missing link or links in Rd file 'set_globals.Rd':
+      ‘[BSgenome:BSgenomeForge]{BSgenome::forgeBSgenomeDataPkg()}’
+    
+    See section 'Cross-references' in the 'Writing R Extensions' manual.
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.5Mb
+      sub-directories of 1Mb or more:
+        R      1.5Mb
+        data   2.1Mb
+    ```
 
 *   checking dependencies in R code ... NOTE
     ```
@@ -2275,6 +3685,41 @@ Run `revdep_details(, "InPAS")` for more info
       ‘search_distalCPs’ ‘search_proximalCPs’
     ```
 
+*   checking Rd \usage sections ... NOTE
+    ```
+    Documented arguments not in \usage in Rd file 'get_UTR3TotalCov.Rd':
+      ‘gcCompensationensation’
+    
+    Functions with \usage entries need to have the appropriate \alias
+    entries, and all their arguments documented.
+    The \usage entries must correspond to syntactically valid R code.
+    See chapter ‘Writing R documentation files’ in the ‘Writing R
+    Extensions’ manual.
+    ```
+
+# insight
+
+<details>
+
+* Version: 1.1.0
+* GitHub: https://github.com/easystats/insight
+* Source code: https://github.com/cran/insight
+* Date/Publication: 2025-03-01 23:10:06 UTC
+* Number of recursive dependencies: 426
+
+Run `revdepcheck::revdep_details(, "insight")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Packages suggested but not available for checking:
+      'censReg', 'cgam', 'cobalt', 'epiR', 'gmnl', 'metaBMA', 'metaplus',
+      'multgee', 'nestedLogit', 'panelr', 'PROreg', 'svylme'
+    ```
+
 # interflex
 
 <details>
@@ -2283,22 +3728,13 @@ Run `revdep_details(, "InPAS")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/interflex
 * Date/Publication: 2021-05-18 11:40:02 UTC
-* Number of recursive dependencies: 103
+* Number of recursive dependencies: 91
 
-Run `revdep_details(, "interflex")` for more info
+Run `revdepcheck::revdep_details(, "interflex")` for more info
 
 </details>
 
 ## In both
-
-*   checking whether package ‘interflex’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/interflex/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/interflex/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/interflex/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/interflex/new/interflex.Rcheck/00install.out’ for details.
-    ```
 
 *   checking C++ specification ... NOTE
     ```
@@ -2307,22 +3743,22 @@ Run `revdep_details(, "interflex")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.8Mb
+      installed size is  6.1Mb
       sub-directories of 1Mb or more:
-        libs   5.1Mb
+        libs   5.3Mb
     ```
 
 # ISAnalytics
 
 <details>
 
-* Version: 1.12.0
+* Version: 1.16.1
 * GitHub: https://github.com/calabrialab/ISAnalytics
 * Source code: https://github.com/cran/ISAnalytics
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 173
+* Date/Publication: 2024-12-05
+* Number of recursive dependencies: 177
 
-Run `revdep_details(, "ISAnalytics")` for more info
+Run `revdepcheck::revdep_details(, "ISAnalytics")` for more info
 
 </details>
 
@@ -2330,10 +3766,18 @@ Run `revdep_details(, "ISAnalytics")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  7.2Mb
+      installed size is  8.3Mb
       sub-directories of 1Mb or more:
+        R      1.5Mb
         data   1.4Mb
-        doc    3.5Mb
+        doc    3.8Mb
+    ```
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) refGenes_hg19.Rd:21: Lost braces; missing escapes or markup?
+        21 | \item Download from {http://hgdownload.soe.ucsc.edu/goldenPath/hg19/database/}
+           |                     ^
     ```
 
 # ivmte
@@ -2344,9 +3788,9 @@ Run `revdep_details(, "ISAnalytics")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/ivmte
 * Date/Publication: 2021-09-17 12:20:07 UTC
-* Number of recursive dependencies: 112
+* Number of recursive dependencies: 118
 
-Run `revdep_details(, "ivmte")` for more info
+Run `revdepcheck::revdep_details(, "ivmte")` for more info
 
 </details>
 
@@ -2357,17 +3801,27 @@ Run `revdep_details(, "ivmte")` for more info
     Packages suggested but not available for checking: 'gurobi', 'cplexAPI'
     ```
 
-# keyATM
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) sTsls.Rd:17: Lost braces; missing escapes or markup?
+        17 | \item{pi}{the matrix E[XZ']E[ZZ']^{-1}}
+           |                                   ^
+    checkRd: (-1) sTslsSplines.Rd:20: Lost braces; missing escapes or markup?
+        20 | \item{pi}{matrix, corresponds to E[XZ']E[ZZ']^{-1}, the first stage
+           |                                               ^
+    ```
+
+# JANE
 
 <details>
 
-* Version: 0.5.1
-* GitHub: https://github.com/keyATM/keyATM
-* Source code: https://github.com/cran/keyATM
-* Date/Publication: 2024-02-04 23:30:02 UTC
-* Number of recursive dependencies: 107
+* Version: 1.0.0
+* GitHub: https://github.com/a1arakkal/JANE
+* Source code: https://github.com/cran/JANE
+* Date/Publication: 2025-03-22 18:00:02 UTC
+* Number of recursive dependencies: 53
 
-Run `revdep_details(, "keyATM")` for more info
+Run `revdepcheck::revdep_details(, "JANE")` for more info
 
 </details>
 
@@ -2375,9 +3829,174 @@ Run `revdep_details(, "keyATM")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 24.7Mb
+      installed size is 16.5Mb
       sub-directories of 1Mb or more:
-        libs  24.3Mb
+        libs  16.2Mb
+    ```
+
+*   checking dependencies in R code ... NOTE
+    ```
+    Namespace in Imports field not imported from: ‘progress’
+      All declared Imports should be used.
+    ```
+
+# jsmodule
+
+<details>
+
+* Version: 1.6.4
+* GitHub: https://github.com/jinseob2kim/jsmodule
+* Source code: https://github.com/cran/jsmodule
+* Date/Publication: 2025-03-10 06:20:02 UTC
+* Number of recursive dependencies: 241
+
+Run `revdepcheck::revdep_details(, "jsmodule")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Packages required but not available:
+      'jskm', 'jstable', 'survIDINRI', 'timeROC'
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# kernelshap
+
+<details>
+
+* Version: 0.7.0
+* GitHub: https://github.com/ModelOriented/kernelshap
+* Source code: https://github.com/cran/kernelshap
+* Date/Publication: 2024-08-17 16:00:02 UTC
+* Number of recursive dependencies: 34
+
+Run `revdepcheck::revdep_details(, "kernelshap")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Packages unavailable to check Rd xrefs: ‘mgcv’, ‘survival’
+    ```
+
+# keyATM
+
+<details>
+
+* Version: 0.5.3
+* GitHub: https://github.com/keyATM/keyATM
+* Source code: https://github.com/cran/keyATM
+* Date/Publication: 2025-03-30 12:20:02 UTC
+* Number of recursive dependencies: 100
+
+Run `revdepcheck::revdep_details(, "keyATM")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 25.4Mb
+      sub-directories of 1Mb or more:
+        libs  24.9Mb
+    ```
+
+# kmeRtone
+
+<details>
+
+* Version: 1.0
+* GitHub: https://github.com/SahakyanLab/kmeRtone
+* Source code: https://github.com/cran/kmeRtone
+* Date/Publication: 2024-08-30 10:50:06 UTC
+* Number of recursive dependencies: 75
+
+Run `revdepcheck::revdep_details(, "kmeRtone")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  9.9Mb
+      sub-directories of 1Mb or more:
+        libs   8.4Mb
+    ```
+
+*   checking for GNU extensions in Makefiles ... NOTE
+    ```
+    GNU make is a SystemRequirements.
+    ```
+
+# latentcor
+
+<details>
+
+* Version: 2.0.1
+* GitHub: NA
+* Source code: https://github.com/cran/latentcor
+* Date/Publication: 2022-09-05 20:50:02 UTC
+* Number of recursive dependencies: 143
+
+Run `revdepcheck::revdep_details(, "latentcor")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) evaluation.Rd:38: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) evaluation.Rd:39: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) evaluation.Rd:40: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) evaluation.Rd:41: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) evaluation.Rd:42: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) evaluation.Rd:43: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) evaluation.Rd:44: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) evaluation.Rd:45: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) evaluation.Rd:46: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) evaluation.Rd:47: Lost braces in \itemize; \value handles \item{}{} directly
+    ...
+    checkRd: (-1) gen_data.Rd:35: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) gen_data.Rd:36-37: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) get_types.Rd:17: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) interpolation.Rd:23: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) interpolation.Rd:24: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) latentcor.Rd:38: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) latentcor.Rd:39: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) latentcor.Rd:40: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) latentcor.Rd:41: Lost braces in \itemize; \value handles \item{}{} directly
+    checkRd: (-1) latentcor.Rd:42: Lost braces in \itemize; \value handles \item{}{} directly
+    ```
+
+# layer
+
+<details>
+
+* Version: 0.0.3
+* GitHub: https://github.com/marcosci/layer
+* Source code: https://github.com/cran/layer
+* Date/Publication: 2025-01-29 17:30:05 UTC
+* Number of recursive dependencies: 61
+
+Run `revdepcheck::revdep_details(, "layer")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘viridis’
     ```
 
 # ldsr
@@ -2388,26 +4007,24 @@ Run `revdep_details(, "keyATM")` for more info
 * GitHub: https://github.com/ntthung/ldsr
 * Source code: https://github.com/cran/ldsr
 * Date/Publication: 2020-05-04 14:40:09 UTC
-* Number of recursive dependencies: 78
+* Number of recursive dependencies: 76
 
-Run `revdep_details(, "ldsr")` for more info
+Run `revdepcheck::revdep_details(, "ldsr")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘ldsr’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/ldsr/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/ldsr/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/ldsr/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/ldsr/new/ldsr.Rcheck/00install.out’ for details.
-    ```
-
 *   checking C++ specification ... NOTE
     ```
       Specified C++11: please drop specification unless essential
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.5Mb
+      sub-directories of 1Mb or more:
+        libs   4.9Mb
     ```
 
 # leafdown
@@ -2418,9 +4035,9 @@ Run `revdep_details(, "ldsr")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/leafdown
 * Date/Publication: 2022-09-19 06:06:11 UTC
-* Number of recursive dependencies: 133
+* Number of recursive dependencies: 123
 
-Run `revdep_details(, "leafdown")` for more info
+Run `revdepcheck::revdep_details(, "leafdown")` for more info
 
 </details>
 
@@ -2435,13 +4052,13 @@ Run `revdep_details(, "leafdown")` for more info
 
 <details>
 
-* Version: 4.1.1
+* Version: 4.1.2
 * GitHub: https://github.com/r-lidar/lidR
 * Source code: https://github.com/cran/lidR
-* Date/Publication: 2024-03-05 17:00:11 UTC
-* Number of recursive dependencies: 156
+* Date/Publication: 2024-07-09 08:40:02 UTC
+* Number of recursive dependencies: 146
 
-Run `revdep_details(, "lidR")` for more info
+Run `revdepcheck::revdep_details(, "lidR")` for more info
 
 </details>
 
@@ -2449,7 +4066,7 @@ Run `revdep_details(, "lidR")` for more info
 
 *   checking tests ...
     ```
-      Running ‘testthat.R’/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/bin/BATCH: line 60: 39355 Aborted                 (core dumped) ${R_HOME}/bin/R -f ${in} ${opts} ${R_BATCH_OPTIONS} > ${out} 2>&1
+      Running ‘testthat.R’/software/c4/cbi/software/_rocky8/R-4.4.3-gcc13/lib64/R/bin/BATCH: line 60: 3418894 Aborted                 (core dumped) ${R_HOME}/bin/R -f ${in} ${opts} ${R_BATCH_OPTIONS} > ${out} 2>&1
     
      ERROR
     Running the tests in ‘tests/testthat.R’ failed.
@@ -2462,42 +4079,109 @@ Run `revdep_details(, "lidR")` for more info
       Tests using raster: terra 
       Tests using future: TRUE 
       Tests using OpenMP thread: 32 
+      Tests using rlas: 1.8.0 
       OGR: Unsupported geometry type
       OGR: Unsupported geometry type
       Chunk 1 of 1 (100%): state ✓
       terminate called after throwing an instance of 'std::length_error'
-        what():  basic_string::_S_create
-    ```
-
-*   checking whether package ‘lidR’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/lidR/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/lidR/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/lidR/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/lidR/new/lidR.Rcheck/00install.out’ for details.
+        what():  basic_string::_M_create
     ```
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 20.0Mb
+      installed size is 19.2Mb
       sub-directories of 1Mb or more:
         R         1.0Mb
-        extdata   1.1Mb
-        libs     16.3Mb
+        doc       1.0Mb
+        extdata   1.2Mb
+        libs     15.4Mb
+    ```
+
+# lnmixsurv
+
+<details>
+
+* Version: 3.1.6
+* GitHub: NA
+* Source code: https://github.com/cran/lnmixsurv
+* Date/Publication: 2024-09-03 15:20:08 UTC
+* Number of recursive dependencies: 196
+
+Run `revdepcheck::revdep_details(, "lnmixsurv")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 11.2Mb
+      sub-directories of 1Mb or more:
+        doc    4.0Mb
+        libs   6.8Mb
+    ```
+
+*   checking dependencies in R code ... NOTE
+    ```
+    Namespaces in Imports field not imported from:
+      ‘purrr’ ‘readr’
+      All declared Imports should be used.
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘rstanarm’
+    ```
+
+*   checking for GNU extensions in Makefiles ... NOTE
+    ```
+    GNU make is a SystemRequirements.
+    ```
+
+# MachineShop
+
+<details>
+
+* Version: 3.8.0
+* GitHub: https://github.com/brian-j-smith/MachineShop
+* Source code: https://github.com/cran/MachineShop
+* Date/Publication: 2024-08-19 17:40:16 UTC
+* Number of recursive dependencies: 234
+
+Run `revdepcheck::revdep_details(, "MachineShop")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘randomForestSRC’
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.2Mb
+      sub-directories of 1Mb or more:
+        R   3.5Mb
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘randomForestSRC’
     ```
 
 # MAI
 
 <details>
 
-* Version: 1.8.0
+* Version: 1.12.0
 * GitHub: https://github.com/KechrisLab/MAI
 * Source code: https://github.com/cran/MAI
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 176
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 177
 
-Run `revdep_details(, "MAI")` for more info
+Run `revdepcheck::revdep_details(, "MAI")` for more info
 
 </details>
 
@@ -2514,13 +4198,13 @@ Run `revdep_details(, "MAI")` for more info
 
 <details>
 
-* Version: 0.4.1
+* Version: 1.3.2
 * GitHub: https://github.com/stocnet/manynet
 * Source code: https://github.com/cran/manynet
-* Date/Publication: 2024-01-24 23:10:06 UTC
-* Number of recursive dependencies: 142
+* Date/Publication: 2024-11-05 20:50:02 UTC
+* Number of recursive dependencies: 145
 
-Run `revdep_details(, "manynet")` for more info
+Run `revdepcheck::revdep_details(, "manynet")` for more info
 
 </details>
 
@@ -2531,71 +4215,30 @@ Run `revdep_details(, "manynet")` for more info
     Package which this enhances but not available for checking: ‘Rgraphviz’
     ```
 
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.3Mb
+      sub-directories of 1Mb or more:
+        R           1.5Mb
+        tutorials   1.9Mb
+    ```
+
 *   checking data for non-ASCII characters ... NOTE
     ```
       Note: found 7 marked UTF-8 strings
     ```
 
-# metabolomicsR
+# mapme.biodiversity
 
 <details>
 
-* Version: 1.0.0
-* GitHub: https://github.com/XikunHan/metabolomicsR
-* Source code: https://github.com/cran/metabolomicsR
-* Date/Publication: 2022-04-29 07:40:02 UTC
-* Number of recursive dependencies: 182
+* Version: 0.9.3
+* GitHub: https://github.com/mapme-initiative/mapme.biodiversity
+* Source code: https://github.com/cran/mapme.biodiversity
+* Date/Publication: 2024-10-21 08:10:02 UTC
+* Number of recursive dependencies: 106
 
-Run `revdep_details(, "metabolomicsR")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... WARNING
-    ```
-    Missing or unexported object: ‘future::multiprocess’
-    ```
-
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘genuMet’
-    ```
-
-# metaGE
-
-<details>
-
-* Version: 1.0.3
-* GitHub: NA
-* Source code: https://github.com/cran/metaGE
-* Date/Publication: 2023-09-28 08:50:02 UTC
-* Number of recursive dependencies: 149
-
-Run `revdep_details(, "metaGE")` for more info
-
-</details>
-
-## In both
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is  5.1Mb
-      sub-directories of 1Mb or more:
-        data   4.2Mb
-    ```
-
-# microservices
-
-<details>
-
-* Version: 0.2.0
-* GitHub: https://github.com/tidylab/microservices
-* Source code: https://github.com/cran/microservices
-* Date/Publication: 2022-10-01 09:50:02 UTC
-* Number of recursive dependencies: 72
-
-Run `revdep_details(, "microservices")` for more info
+Run `revdepcheck::revdep_details(, "mapme.biodiversity")` for more info
 
 </details>
 
@@ -2606,37 +4249,240 @@ Run `revdep_details(, "microservices")` for more info
       Running ‘testthat.R’
      ERROR
     Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > library(testthat)
-      > library(microservices)
-      > test_check("microservices")
-      [ FAIL 1 | WARN 0 | SKIP 0 | PASS 12 ]
-      
+    Last 50 lines of output:
       ══ Failed tests ════════════════════════════════════════════════════════════════
-    ...
-      Backtrace:
-          ▆
-       1. ├─config::get(...) at test-endpoint-plumber-{route_name}.R:2:1
-       2. │ └─base::normalizePath(file, mustWork = FALSE)
-       3. │   └─base::path.expand(path)
-       4. └─base::system.file(...)
+      ── Failure ('test-calc_deforestation_drivers.R:16:3'): deforestation drivers works ──
+      `.check_single_asset(result)` produced warnings.
+      ── Failure ('test-calc_deforestation_drivers.R:17:3'): deforestation drivers works ──
+      unique(result$variable) (`actual`) not equal to c(...) (`expected`).
       
-      [ FAIL 1 | WARN 0 | SKIP 0 | PASS 12 ]
+    ...
+       12. │               └─jsonlite:::parseJSON(txt, bigint_as_char)
+       13. │                 └─jsonlite:::parse_string(txt, bigint_as_char)
+       14. └─base::.handleSimpleError(...)
+       15.   └─purrr (local) h(simpleError(msg, call))
+       16.     └─cli::cli_abort(...)
+       17.       └─rlang::abort(...)
+      
+      [ FAIL 5 | WARN 1 | SKIP 38 | PASS 560 ]
       Error: Test failures
       Execution halted
+    ```
+
+# marginaleffects
+
+<details>
+
+* Version: 0.25.1
+* GitHub: https://github.com/vincentarelbundock/marginaleffects
+* Source code: https://github.com/cran/marginaleffects
+* Date/Publication: 2025-03-29 18:10:02 UTC
+* Number of recursive dependencies: 455
+
+Run `revdepcheck::revdep_details(, "marginaleffects")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘cobalt’
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.1Mb
+      sub-directories of 1Mb or more:
+        R      1.5Mb
+        help   1.6Mb
+        libs   1.8Mb
+    ```
+
+# metaGE
+
+<details>
+
+* Version: 1.2.1
+* GitHub: NA
+* Source code: https://github.com/cran/metaGE
+* Date/Publication: 2025-02-22 23:10:02 UTC
+* Number of recursive dependencies: 161
+
+Run `revdepcheck::revdep_details(, "metaGE")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 13.6Mb
+      sub-directories of 1Mb or more:
+        data  12.5Mb
+    ```
+
+# metasnf
+
+<details>
+
+* Version: 2.0.6
+* GitHub: https://github.com/BRANCHlab/metasnf
+* Source code: https://github.com/cran/metasnf
+* Date/Publication: 2025-03-25 21:20:02 UTC
+* Number of recursive dependencies: 119
+
+Run `revdepcheck::revdep_details(, "metasnf")` for more info
+
+</details>
+
+## In both
+
+*   checking examples ... ERROR
+    ```
+    Running examples in ‘metasnf-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: alluvial_cluster_plot
+    > ### Title: Alluvial plot of patients across cluster counts and important
+    > ###   features
+    > ### Aliases: alluvial_cluster_plot
+    > 
+    > ### ** Examples
+    > 
+    ...
+    > 
+    > sc <- snf_config(input_dl, n_solutions = 1)
+    ℹ No distance functions specified. Using defaults.
+    ℹ No clustering functions specified. Using defaults.
+    > 
+    > sol_df <- batch_snf(input_dl, sc, return_sim_mats = TRUE)
+    Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
+      there is no package called ‘ExPosition’
+    Calls: batch_snf ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+    Execution halted
+    ```
+
+*   checking tests ...
+    ```
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Complete output:
+      > # This file is part of the standard setup for testthat.
+      > # It is recommended that you do not modify it.
+      > #
+      > # Where should you do additional test configuration?
+      > # Learn more about the roles of various files in:
+      > # * https://r-pkgs.org/tests.html
+    ...
+        9.   ├─base::namespaceImportFrom(...)
+       10.   │ └─base::asNamespace(ns)
+       11.   └─base::loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]])
+       12.     └─base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
+       13.       └─base (local) withOneRestart(expr, restarts[[1L]])
+       14.         └─base (local) doWithOneRestart(return(expr), restart)
+      
+      [ FAIL 1 | WARN 0 | SKIP 0 | PASS 10 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+*   checking re-building of vignette outputs ... ERROR
+    ```
+    Error(s) in re-building vignettes:
+    --- re-building ‘a_complete_example.Rmd’ using rmarkdown
+    
+    Quitting from a_complete_example.Rmd:288-292 [unnamed-chunk-14]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    <error/rlang_error>
+    Error in `loadNamespace()`:
+    ! there is no package called 'ExPosition'
+    ---
+    Backtrace:
+    ...
+    --- finished re-building ‘troubleshooting.Rmd’
+    
+    SUMMARY: processing the following files failed:
+      ‘a_complete_example.Rmd’ ‘a_simple_example.Rmd’ ‘alluvial_plots.Rmd’
+      ‘clustering_algorithms.Rmd’ ‘confounders.Rmd’ ‘feature_plots.Rmd’
+      ‘label_propagation.Rmd’ ‘nmi_scores.Rmd’
+      ‘similarity_matrix_heatmap.Rmd’
+    
+    Error: Vignette re-building failed.
+    Execution halted
+    ```
+
+# mice
+
+<details>
+
+* Version: 3.17.0
+* GitHub: https://github.com/amices/mice
+* Source code: https://github.com/cran/mice
+* Date/Publication: 2024-11-27 18:00:02 UTC
+* Number of recursive dependencies: 135
+
+Run `revdepcheck::revdep_details(, "mice")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.3Mb
+      sub-directories of 1Mb or more:
+        help   1.5Mb
+        libs   2.9Mb
+    ```
+
+# mikropml
+
+<details>
+
+* Version: 1.6.1
+* GitHub: https://github.com/SchlossLab/mikropml
+* Source code: https://github.com/cran/mikropml
+* Date/Publication: 2023-08-21 15:10:05 UTC
+* Number of recursive dependencies: 130
+
+Run `revdepcheck::revdep_details(, "mikropml")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) create_grouped_data_partition.Rd:60: Lost braces; missing escapes or markup?
+        60 | Zena Lapp, {zenalapp@umich.edu}
+           |            ^
+    checkRd: (-1) create_grouped_data_partition.Rd:62: Lost braces; missing escapes or markup?
+        62 | Kelly Sovacool, {sovacool@umich.edu}
+           |                 ^
+    checkRd: (-1) create_grouped_k_multifolds.Rd:30: Lost braces; missing escapes or markup?
+        30 | Zena Lapp, {zenalapp@umich.edu}
+           |            ^
+    checkRd: (-1) get_partition_indices.Rd:58: Lost braces; missing escapes or markup?
+        58 | Kelly Sovacool, {sovacool@umich.edu}
+           |                 ^
+    checkRd: (-1) set_hparams_glmnet.Rd:16: Lost braces; missing escapes or markup?
+        16 | Zena Lapp, {zenalapp@umich.edu}
+           |            ^
     ```
 
 # MineICA
 
 <details>
 
-* Version: 1.42.0
+* Version: 1.46.0
 * GitHub: NA
 * Source code: https://github.com/cran/MineICA
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 216
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 220
 
-Run `revdep_details(, "MineICA")` for more info
+Run `revdepcheck::revdep_details(, "MineICA")` for more info
 
 </details>
 
@@ -2664,19 +4510,19 @@ Run `revdep_details(, "MineICA")` for more info
 
 *   checking Rd cross-references ... WARNING
     ```
-    Missing link or links in documentation object 'Alist.Rd':
+    Missing link or links in Rd file 'Alist.Rd':
       ‘class-IcaSet’
     
-    Missing link or links in documentation object 'Slist.Rd':
+    Missing link or links in Rd file 'Slist.Rd':
       ‘class-IcaSet’
     
-    Missing link or links in documentation object 'class-IcaSet.Rd':
+    Missing link or links in Rd file 'class-IcaSet.Rd':
       ‘class-IcaSet’
     
-    Missing link or links in documentation object 'getComp.Rd':
+    Missing link or links in Rd file 'getComp.Rd':
       ‘class-IcaSet’
     
-    Missing link or links in documentation object 'runAn.Rd':
+    Missing link or links in Rd file 'runAn.Rd':
       ‘[Category:class-GOHyperGParams]{GOHyperGParams}’
     
     See section 'Cross-references' in the 'Writing R Extensions' manual.
@@ -2690,6 +4536,31 @@ Run `revdep_details(, "MineICA")` for more info
     should have documentation entries.
     See chapter ‘Writing R documentation files’ in the ‘Writing R
     Extensions’ manual.
+    ```
+
+*   checking re-building of vignette outputs ... WARNING
+    ```
+    Error(s) in re-building vignettes:
+    --- re-building ‘MineICA.Rnw’ using Sweave
+    Loading required package: BiocGenerics
+    
+    Attaching package: ‘BiocGenerics’
+    
+    The following objects are masked from ‘package:stats’:
+    
+        IQR, mad, sd, var, xtabs
+    
+    ...
+    l.23 \usepackage
+                    {subfig}^^M
+    !  ==> Fatal error occurred, no output PDF file produced!
+    --- failed re-building ‘MineICA.Rnw’
+    
+    SUMMARY: processing the following file failed:
+      ‘MineICA.Rnw’
+    
+    Error: Vignette re-building failed.
+    Execution halted
     ```
 
 *   checking package dependencies ... NOTE
@@ -2737,105 +4608,73 @@ Run `revdep_details(, "MineICA")` for more info
     contains 'methods').
     ```
 
-*   checking re-building of vignette outputs ... NOTE
+*   checking Rd files ... NOTE
     ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘MineICA.Rnw’ using Sweave
-    Loading required package: BiocGenerics
-    
-    Attaching package: ‘BiocGenerics’
-    
-    The following objects are masked from ‘package:stats’:
-    
-        IQR, mad, sd, var, xtabs
-    
+    checkRd: (-1) clusterFastICARuns.Rd:47: Lost braces
+        47 |   \item{...}{Additional parameters for code{funClus}}
+           |                                            ^
+    checkRd: (-1) clusterFastICARuns.Rd:52: Lost braces
+        52 |   item{W}{the estimated unmixing matrix}, \item{Iq}{Iq
+           |       ^
+    checkRd: (-1) clusterFastICARuns.Rd:52: Lost braces
+        52 |   item{W}{the estimated unmixing matrix}, \item{Iq}{Iq
+           |          ^
+    checkRd: (-1) plotDensOneAnnotInAllComp.Rd:104: Lost braces
     ...
-    l.23 \usepackage
-                    {subfig}^^M
-    !  ==> Fatal error occurred, no output PDF file produced!
-    --- failed re-building ‘MineICA.Rnw’
-    
-    SUMMARY: processing the following file failed:
-      ‘MineICA.Rnw’
-    
-    Error: Vignette re-building failed.
-    Execution halted
+           |                                 ^
+    checkRd: (-1) runICA.Rd:44: Lost braces
+        44 |   item{W}{the estimated unmixing matrix}}
+           |       ^
+    checkRd: (-1) runICA.Rd:44: Lost braces
+        44 |   item{W}{the estimated unmixing matrix}}
+           |          ^
+    checkRd: (-1) writeProjByComp.Rd:38: Lost braces
+        38 | their annotations, please remember to modify code{genesPath(params)}, or
+           |                                                  ^
     ```
 
 # missSBM
 
 <details>
 
-* Version: 1.0.4
+* Version: 1.0.5
 * GitHub: https://github.com/grossSBM/missSBM
 * Source code: https://github.com/cran/missSBM
-* Date/Publication: 2023-10-24 16:00:05 UTC
-* Number of recursive dependencies: 114
+* Date/Publication: 2025-03-13 08:30:02 UTC
+* Number of recursive dependencies: 112
 
-Run `revdep_details(, "missSBM")` for more info
+Run `revdepcheck::revdep_details(, "missSBM")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘missSBM’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/missSBM/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/missSBM/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/missSBM/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/missSBM/new/missSBM.Rcheck/00install.out’ for details.
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is  9.8Mb
+      installed size is 10.9Mb
       sub-directories of 1Mb or more:
-        libs   7.8Mb
+        R      1.5Mb
+        libs   8.0Mb
     ```
 
 # mistyR
 
 <details>
 
-* Version: 1.10.0
+* Version: 1.14.0
 * GitHub: https://github.com/saezlab/mistyR
 * Source code: https://github.com/cran/mistyR
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 155
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 153
 
-Run `revdep_details(, "mistyR")` for more info
+Run `revdepcheck::revdep_details(, "mistyR")` for more info
 
 </details>
 
-## Newly fixed
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-      
-      Collecting contributions
-      
-      Collecting importances
-      
-      Aggregating
-    ...
-      ══ Failed tests ════════════════════════════════════════════════════════════════
-      ── Failure ('test-misty.R:212:3'): k for cv , n.bags for bagging can be changed and approx works ──
-      first.run < second.run is not TRUE
-      
-      `actual`:   FALSE
-      `expected`: TRUE 
-      
-      [ FAIL 1 | WARN 4 | SKIP 0 | PASS 172 ]
-      Error: Test failures
-      Execution halted
-    ```
-
 ## In both
+
+*   R CMD check timed out
+    
 
 *   checking R code for possible problems ... NOTE
     ```
@@ -2862,6 +4701,13 @@ Run `revdep_details(, "mistyR")` for more info
     to your NAMESPACE file.
     ```
 
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) collect_results.Rd:32: Lost braces; missing escapes or markup?
+        32 |             for all performance measures for each {target} over all samples.}
+           |                                                   ^
+    ```
+
 # MLDataR
 
 <details>
@@ -2870,9 +4716,9 @@ Run `revdep_details(, "mistyR")` for more info
 * GitHub: https://github.com/StatsGary/MLDataR
 * Source code: https://github.com/cran/MLDataR
 * Date/Publication: 2022-10-03 15:10:02 UTC
-* Number of recursive dependencies: 126
+* Number of recursive dependencies: 128
 
-Run `revdep_details(, "MLDataR")` for more info
+Run `revdepcheck::revdep_details(, "MLDataR")` for more info
 
 </details>
 
@@ -2886,17 +4732,94 @@ Run `revdep_details(, "MLDataR")` for more info
       All declared Imports should be used.
     ```
 
+# mlflow
+
+<details>
+
+* Version: 2.21.3
+* GitHub: https://github.com/mlflow/mlflow
+* Source code: https://github.com/cran/mlflow
+* Date/Publication: 2025-04-10 05:30:02 UTC
+* Number of recursive dependencies: 95
+
+Run `revdepcheck::revdep_details(, "mlflow")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘git2r’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# mlr3
+
+<details>
+
+* Version: 0.23.0
+* GitHub: https://github.com/mlr-org/mlr3
+* Source code: https://github.com/cran/mlr3
+* Date/Publication: 2025-03-12 12:30:02 UTC
+* Number of recursive dependencies: 49
+
+Run `revdepcheck::revdep_details(, "mlr3")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  6.0Mb
+      sub-directories of 1Mb or more:
+        R      3.5Mb
+        help   1.7Mb
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘mlr3oml’
+    ```
+
+# mlr3pipelines
+
+<details>
+
+* Version: 0.7.2
+* GitHub: https://github.com/mlr-org/mlr3pipelines
+* Source code: https://github.com/cran/mlr3pipelines
+* Date/Publication: 2025-03-07 18:10:02 UTC
+* Number of recursive dependencies: 167
+
+Run `revdepcheck::revdep_details(, "mlr3pipelines")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.3Mb
+      sub-directories of 1Mb or more:
+        R      3.5Mb
+        help   1.5Mb
+    ```
+
 # mlr3shiny
 
 <details>
 
-* Version: 0.3.0
+* Version: 0.5.0
 * GitHub: NA
 * Source code: https://github.com/cran/mlr3shiny
-* Date/Publication: 2023-09-30 20:30:05 UTC
-* Number of recursive dependencies: 179
+* Date/Publication: 2025-01-09 13:50:02 UTC
+* Number of recursive dependencies: 188
 
-Run `revdep_details(, "mlr3shiny")` for more info
+Run `revdepcheck::revdep_details(, "mlr3shiny")` for more info
 
 </details>
 
@@ -2905,11 +4828,56 @@ Run `revdep_details(, "mlr3shiny")` for more info
 *   checking dependencies in R code ... NOTE
     ```
     Namespaces in Imports field not imported from:
-      ‘DT’ ‘Metrics’ ‘data.table’ ‘dplyr’ ‘mlr3’ ‘mlr3learners’
-      ‘mlr3measures’ ‘mlr3pipelines’ ‘patchwork’ ‘plyr’ ‘purrr’
-      ‘shinyWidgets’ ‘shinyalert’ ‘shinydashboard’ ‘shinyjs’ ‘stats’
-      ‘stringr’
+      ‘DT’ ‘GGally’ ‘Metrics’ ‘data.table’ ‘dplyr’ ‘ggparty’ ‘mlr3’
+      ‘mlr3learners’ ‘mlr3measures’ ‘mlr3pipelines’ ‘mlr3viz’ ‘patchwork’
+      ‘plyr’ ‘purrr’ ‘shinyWidgets’ ‘shinyalert’ ‘shinydashboard’ ‘shinyjs’
+      ‘stats’ ‘stringr’
       All declared Imports should be used.
+    ```
+
+# mlr3torch
+
+<details>
+
+* Version: 0.2.1
+* GitHub: https://github.com/mlr-org/mlr3torch
+* Source code: https://github.com/cran/mlr3torch
+* Date/Publication: 2025-02-13 16:00:02 UTC
+* Number of recursive dependencies: 107
+
+Run `revdepcheck::revdep_details(, "mlr3torch")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.8Mb
+      sub-directories of 1Mb or more:
+        R      3.5Mb
+        help   2.2Mb
+    ```
+
+# mlr3tuning
+
+<details>
+
+* Version: 1.3.0
+* GitHub: https://github.com/mlr-org/mlr3tuning
+* Source code: https://github.com/cran/mlr3tuning
+* Date/Publication: 2024-12-17 12:10:06 UTC
+* Number of recursive dependencies: 98
+
+Run `revdepcheck::revdep_details(, "mlr3tuning")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘mlflow’
     ```
 
 # mmaqshiny
@@ -2920,9 +4888,9 @@ Run `revdep_details(, "mlr3shiny")` for more info
 * GitHub: https://github.com/meenakshi-kushwaha/mmaqshiny
 * Source code: https://github.com/cran/mmaqshiny
 * Date/Publication: 2020-06-26 16:00:23 UTC
-* Number of recursive dependencies: 145
+* Number of recursive dependencies: 142
 
-Run `revdep_details(, "mmaqshiny")` for more info
+Run `revdepcheck::revdep_details(, "mmaqshiny")` for more info
 
 </details>
 
@@ -2930,10 +4898,10 @@ Run `revdep_details(, "mmaqshiny")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 15.5Mb
+      installed size is 15.6Mb
       sub-directories of 1Mb or more:
-        images   1.0Mb
-        shiny   14.4Mb
+        images   1.1Mb
+        shiny   14.5Mb
     ```
 
 *   checking dependencies in R code ... NOTE
@@ -2954,70 +4922,114 @@ Run `revdep_details(, "mmaqshiny")` for more info
 
 <details>
 
-* Version: 0.3.11
+* Version: 0.3.14
 * GitHub: https://github.com/openpharma/mmrm
 * Source code: https://github.com/cran/mmrm
-* Date/Publication: 2024-03-05 08:10:02 UTC
-* Number of recursive dependencies: 158
+* Date/Publication: 2024-09-27 23:30:01 UTC
+* Number of recursive dependencies: 177
 
-Run `revdep_details(, "mmrm")` for more info
+Run `revdepcheck::revdep_details(, "mmrm")` for more info
 
 </details>
 
 ## In both
 
+*   checking re-building of vignette outputs ... ERROR
+    ```
+    Error(s) in re-building vignettes:
+    --- re-building ‘algorithm.Rmd’ using rmarkdown
+    --- finished re-building ‘algorithm.Rmd’
+    
+    --- re-building ‘between_within.Rmd’ using rmarkdown
+    --- finished re-building ‘between_within.Rmd’
+    
+    --- re-building ‘coef_vcov.Rmd’ using rmarkdown
+    --- finished re-building ‘coef_vcov.Rmd’
+    
+    ...
+    --- finished re-building ‘predict.Rmd’
+    
+    --- re-building ‘satterthwaite.Rmd’ using rmarkdown
+    --- finished re-building ‘satterthwaite.Rmd’
+    
+    SUMMARY: processing the following file failed:
+      ‘introduction.Rmd’
+    
+    Error: Vignette re-building failed.
+    Execution halted
+    ```
+
 *   checking installed package size ... NOTE
     ```
-      installed size is 198.1Mb
+      installed size is 188.6Mb
       sub-directories of 1Mb or more:
-        libs  196.4Mb
+        libs  186.8Mb
     ```
 
 # modeltime
 
 <details>
 
-* Version: 1.2.8
+* Version: 1.3.1
 * GitHub: https://github.com/business-science/modeltime
 * Source code: https://github.com/cran/modeltime
-* Date/Publication: 2023-09-02 15:10:02 UTC
-* Number of recursive dependencies: 252
+* Date/Publication: 2024-10-22 20:10:02 UTC
+* Number of recursive dependencies: 233
 
-Run `revdep_details(, "modeltime")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘tidymodels’ ‘tidyverse’
-      All declared Imports should be used.
-    ```
-
-# modeltime.ensemble
-
-<details>
-
-* Version: 1.0.3
-* GitHub: https://github.com/business-science/modeltime.ensemble
-* Source code: https://github.com/cran/modeltime.ensemble
-* Date/Publication: 2023-04-18 11:50:02 UTC
-* Number of recursive dependencies: 229
-
-Run `revdep_details(, "modeltime.ensemble")` for more info
+Run `revdepcheck::revdep_details(, "modeltime")` for more info
 
 </details>
 
 ## In both
 
-*   checking dependencies in R code ... NOTE
+*   checking whether package ‘modeltime’ can be installed ... ERROR
     ```
-    Namespace in Imports field not imported from: ‘parsnip’
-      All declared Imports should be used.
+    Installation failed.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/modeltime/new/modeltime.Rcheck/00install.out’ for details.
     ```
 
+## Installation
+
+### Devel
+
+```
+* installing *source* package ‘modeltime’ ...
+** package ‘modeltime’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
+  there is no package called ‘infer’
+Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+ERROR: lazy loading failed for package ‘modeltime’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/modeltime/new/modeltime.Rcheck/modeltime’
+
+
+```
+### CRAN
+
+```
+* installing *source* package ‘modeltime’ ...
+** package ‘modeltime’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]) : 
+  there is no package called ‘infer’
+Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
+Execution halted
+ERROR: lazy loading failed for package ‘modeltime’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/modeltime/old/modeltime.Rcheck/modeltime’
+
+
+```
 # modeltime.resample
 
 <details>
@@ -3026,21 +5038,65 @@ Run `revdep_details(, "modeltime.ensemble")` for more info
 * GitHub: https://github.com/business-science/modeltime.resample
 * Source code: https://github.com/cran/modeltime.resample
 * Date/Publication: 2023-04-12 15:50:02 UTC
-* Number of recursive dependencies: 228
+* Number of recursive dependencies: 236
 
-Run `revdep_details(, "modeltime.resample")` for more info
+Run `revdepcheck::revdep_details(, "modeltime.resample")` for more info
 
 </details>
 
 ## In both
 
-*   checking dependencies in R code ... NOTE
+*   checking whether package ‘modeltime.resample’ can be installed ... ERROR
     ```
-    Namespaces in Imports field not imported from:
-      ‘crayon’ ‘dials’ ‘glue’ ‘parsnip’
-      All declared Imports should be used.
+    Installation failed.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/modeltime.resample/new/modeltime.resample.Rcheck/00install.out’ for details.
     ```
 
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘tidyquant’
+    ```
+
+## Installation
+
+### Devel
+
+```
+* installing *source* package ‘modeltime.resample’ ...
+** package ‘modeltime.resample’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error: package or namespace load failed for ‘modeltime’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ there is no package called ‘infer’
+Execution halted
+ERROR: lazy loading failed for package ‘modeltime.resample’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/modeltime.resample/new/modeltime.resample.Rcheck/modeltime.resample’
+
+
+```
+### CRAN
+
+```
+* installing *source* package ‘modeltime.resample’ ...
+** package ‘modeltime.resample’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+Error: package or namespace load failed for ‘modeltime’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ there is no package called ‘infer’
+Execution halted
+ERROR: lazy loading failed for package ‘modeltime.resample’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/modeltime.resample/old/modeltime.resample.Rcheck/modeltime.resample’
+
+
+```
 # momentuHMM
 
 <details>
@@ -3049,30 +5105,26 @@ Run `revdep_details(, "modeltime.resample")` for more info
 * GitHub: https://github.com/bmcclintock/momentuHMM
 * Source code: https://github.com/cran/momentuHMM
 * Date/Publication: 2022-10-18 20:52:35 UTC
-* Number of recursive dependencies: 145
+* Number of recursive dependencies: 152
 
-Run `revdep_details(, "momentuHMM")` for more info
+Run `revdepcheck::revdep_details(, "momentuHMM")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘momentuHMM’ can be installed ... WARNING
+*   checking package dependencies ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/momentuHMM/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/momentuHMM/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/momentuHMM/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/momentuHMM/new/momentuHMM.Rcheck/00install.out’ for details.
+    Package suggested but not available for checking: ‘moveHMM’
     ```
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 10.2Mb
+      installed size is 11.1Mb
       sub-directories of 1Mb or more:
-        R      1.2Mb
+        R      1.5Mb
         doc    1.7Mb
-        libs   6.7Mb
+        libs   7.1Mb
     ```
 
 # MOSS
@@ -3085,131 +5137,69 @@ Run `revdep_details(, "momentuHMM")` for more info
 * Date/Publication: 2022-03-25 15:50:05 UTC
 * Number of recursive dependencies: 182
 
-Run `revdep_details(, "MOSS")` for more info
+Run `revdepcheck::revdep_details(, "MOSS")` for more info
 
 </details>
 
 ## In both
 
-*   checking re-building of vignette outputs ... WARNING
+*   checking Rd files ... NOTE
     ```
-    Error(s) in re-building vignettes:
-      ...
-    --- re-building ‘MOSS_working_example.Rmd’ using rmarkdown
-    ! LaTeX Error: File `iftex.sty' not found.
-    
-    ! Emergency stop.
-    <read *> 
-    
-    Error: processing vignette 'MOSS_working_example.Rmd' failed with diagnostics:
-    LaTeX failed to compile /c4/home/henrik/repositories/globals/revdep/checks/MOSS/new/MOSS.Rcheck/vign_test/MOSS/vignettes/MOSS_working_example.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See MOSS_working_example.log for more info.
-    --- failed re-building ‘MOSS_working_example.Rmd’
-    
-    SUMMARY: processing the following file failed:
-      ‘MOSS_working_example.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
+    checkRd: (-1) ssvdEN_sol_path.Rd:58: Lost braces; missing escapes or markup?
+        58 | \item{tol}{Convergence is determined when ||U_j - U_{j-1}||_F < tol,
+           |                                                     ^
+    checkRd: (-1) ssvdEN_sol_path_par.Rd:59: Lost braces; missing escapes or markup?
+        59 | \item{tol}{Convergence is determined when ||U_j - U_{j-1}||_F < tol,
+           |                                                     ^
     ```
 
 # MSstatsBig
 
 <details>
 
-* Version: 1.0.0
+* Version: 1.4.0
 * GitHub: NA
 * Source code: https://github.com/cran/MSstatsBig
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 128
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 117
 
-Run `revdep_details(, "MSstatsBig")` for more info
+Run `revdepcheck::revdep_details(, "MSstatsBig")` for more info
 
 </details>
 
 ## In both
 
-*   checking R code for possible problems ... NOTE
+*   checking package dependencies ... ERROR
     ```
-    MSstatsPreprocessBig: no visible binding for global variable ‘input’
-    MSstatsPreprocessBigArrow: no visible binding for global variable
-      ‘PeptideSequence’
-    MSstatsPreprocessBigArrow: no visible binding for global variable
-      ‘PrecursorCharge’
-    MSstatsPreprocessBigArrow: no visible binding for global variable
-      ‘FragmentIon’
-    MSstatsPreprocessBigArrow: no visible binding for global variable
-      ‘ProductCharge’
-    MSstatsPreprocessBigArrow: no visible binding for global variable
-    ...
-    cleanSpectronautChunk: no visible binding for global variable
-      ‘BioReplicate’
-    cleanSpectronautChunk: no visible binding for global variable
-      ‘Condition’
-    Undefined global functions or variables:
-      %>% := BioReplicate Condition EGQvalue Excluded FFrgLossType Feature
-      FragmentIon Identified Intensity IsLabeled IsotopeLabelType
-      LabeledSequence MeanAbundance NumObs NumProteins PGQvalue
-      PeptideSequence PrecursorCharge ProductCharge ProteinName Rank Run
-      all_of feature_rank if_else input min_rank n_distinct tbl
+    Packages required but not available: 'MSstats', 'MSstatsConvert'
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # MSstatsShiny
 
 <details>
 
-* Version: 1.4.3
+* Version: 1.8.0
 * GitHub: https://github.com/Vitek-Lab/MSstatsShiny
 * Source code: https://github.com/cran/MSstatsShiny
-* Date/Publication: 2024-03-04
-* Number of recursive dependencies: 155
+* Date/Publication: 2024-11-28
+* Number of recursive dependencies: 158
 
-Run `revdep_details(, "MSstatsShiny")` for more info
+Run `revdepcheck::revdep_details(, "MSstatsShiny")` for more info
 
 </details>
 
 ## In both
 
-*   checking dependencies in R code ... NOTE
+*   checking package dependencies ... ERROR
     ```
-    Unexported objects imported by ':::' calls:
-      ‘MSstatsTMT:::.logSum’ ‘MSstatsTMT:::.summarizeSimpleStat’
-      ‘MSstatsTMT:::.summarizeTMP’
-      ‘MSstatsTMT:::MSstatsFitComparisonModelsTMT’
-      ‘MSstatsTMT:::MSstatsGroupComparisonOutputTMT’
-      ‘MSstatsTMT:::MSstatsModerateTTest’
-      ‘MSstatsTMT:::MSstatsNormalizeTMT’
-      ‘MSstatsTMT:::MSstatsPrepareForGroupComparisonTMT’
-      ‘MSstatsTMT:::MSstatsPrepareForSummarizationTMT’
-      ‘MSstatsTMT:::MSstatsSummarizationOutputTMT’
-      ‘MSstatsTMT:::MSstatsTestSingleProteinTMT’
-      ‘MSstatsTMT:::getProcessedTMT’ ‘MSstatsTMT:::getSummarizedTMT’
-      ‘shinyBS:::buildTooltipOrPopoverOptionsList’ ‘shinyBS:::shinyBSDep’
-      See the note in ?`:::` about the use of this operator.
-    ```
-
-*   checking R code for possible problems ... NOTE
-    ```
-    getAnnot: no visible binding for global variable ‘annotation.pd’
-    getSummary1: no visible binding for global variable ‘Condition’
-    getSummary1: no visible binding for global variable ‘BioReplicate’
-    getSummary1: no visible binding for global variable ‘Mixture’
-    getSummary1: no visible binding for global variable ‘Run’
-    getSummary1: no visible binding for global variable ‘TechRepMixture’
-    getSummary1: no visible binding for global variable ‘Fraction’
-    getSummary1: no visible binding for global variable ‘Condition_Run’
-    getSummary1: no visible binding for global variable ‘BioReplicate_Run’
-    getSummary1: no visible binding for global variable ‘Number of
-    ...
-    server: no visible global function definition for ‘callModule’
-    statmodelServer: no visible global function definition for
-      ‘updateNumericInput’
-    Undefined global functions or variables:
-      BioReplicate BioReplicate_Run Charge Condition Condition_Run FEATURES
-      Features_Peptides_max Features_Peptides_min Fraction FragmentIon
-      Intensity Max_Intensity Min_Intensity Mixture Number of Fractions
-      PeptideSequence Peptides_Proteins_max Peptides_Proteins_min
-      PrecursorCharge ProductCharge ProteinName Run TechRepMixture
-      annotation.pd callModule moduleServer nfea npep updateNumericInput
+    Packages required but not available:
+      'MSstats', 'MSstatsTMT', 'MSstatsPTM', 'MSstatsConvert'
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # MtreeRing
@@ -3220,9 +5210,9 @@ Run `revdep_details(, "MSstatsShiny")` for more info
 * GitHub: https://github.com/ropensci/MtreeRing
 * Source code: https://github.com/cran/MtreeRing
 * Date/Publication: 2021-04-19 22:10:06 UTC
-* Number of recursive dependencies: 115
+* Number of recursive dependencies: 119
 
-Run `revdep_details(, "MtreeRing")` for more info
+Run `revdepcheck::revdep_details(, "MtreeRing")` for more info
 
 </details>
 
@@ -3230,35 +5220,103 @@ Run `revdep_details(, "MtreeRing")` for more info
 
 *   checking package dependencies ... ERROR
     ```
-    Package required but not available: ‘imager’
+    Package required but not available: ‘measuRing’
     
     See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
     manual.
     ```
 
-# mvrsquared
+# multilevelcoda
 
 <details>
 
-* Version: 0.1.5
-* GitHub: https://github.com/TommyJones/mvrsquared
-* Source code: https://github.com/cran/mvrsquared
-* Date/Publication: 2023-07-15 00:10:02 UTC
-* Number of recursive dependencies: 91
+* Version: 1.3.1
+* GitHub: https://github.com/florale/multilevelcoda
+* Source code: https://github.com/cran/multilevelcoda
+* Date/Publication: 2024-11-23 15:30:06 UTC
+* Number of recursive dependencies: 169
 
-Run `revdep_details(, "mvrsquared")` for more info
+Run `revdepcheck::revdep_details(, "multilevelcoda")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘mvrsquared’ can be installed ... WARNING
+*   checking package dependencies ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/mvrsquared/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/mvrsquared/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/mvrsquared/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/mvrsquared/new/mvrsquared.Rcheck/00install.out’ for details.
+    Package suggested but not available for checking: ‘cmdstanr’
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  9.1Mb
+      sub-directories of 1Mb or more:
+        data   2.0Mb
+        doc    6.4Mb
+    ```
+
+# multilevelmod
+
+<details>
+
+* Version: 1.0.0
+* GitHub: https://github.com/tidymodels/multilevelmod
+* Source code: https://github.com/cran/multilevelmod
+* Date/Publication: 2022-06-17 12:00:02 UTC
+* Number of recursive dependencies: 148
+
+Run `revdepcheck::revdep_details(, "multilevelmod")` for more info
+
+</details>
+
+## In both
+
+*   checking re-building of vignette outputs ... ERROR
+    ```
+    Error(s) in re-building vignettes:
+    --- re-building ‘multilevelmod.Rmd’ using rmarkdown
+    
+    Quitting from multilevelmod.Rmd:15-18 [unnamed-chunk-1]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    <error/rlang_error>
+    Error:
+    ! package or namespace load failed for 'tidymodels' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+     there is no package called 'infer'
+    ---
+    ...
+    Error: processing vignette 'multilevelmod.Rmd' failed with diagnostics:
+    package or namespace load failed for 'tidymodels' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+     there is no package called 'infer'
+    --- failed re-building ‘multilevelmod.Rmd’
+    
+    SUMMARY: processing the following file failed:
+      ‘multilevelmod.Rmd’
+    
+    Error: Vignette re-building failed.
+    Execution halted
+    ```
+
+# multitool
+
+<details>
+
+* Version: 0.1.4
+* GitHub: https://github.com/ethan-young/multitool
+* Source code: https://github.com/cran/multitool
+* Date/Publication: 2024-02-08 17:40:02 UTC
+* Number of recursive dependencies: 152
+
+Run `revdepcheck::revdep_details(, "multitool")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.1Mb
+      sub-directories of 1Mb or more:
+        doc   4.3Mb
     ```
 
 # nebula
@@ -3269,9 +5327,9 @@ Run `revdep_details(, "mvrsquared")` for more info
 * GitHub: https://github.com/lhe17/nebula
 * Source code: https://github.com/cran/nebula
 * Date/Publication: 2024-02-15 23:00:02 UTC
-* Number of recursive dependencies: 184
+* Number of recursive dependencies: 172
 
-Run `revdep_details(, "nebula")` for more info
+Run `revdepcheck::revdep_details(, "nebula")` for more info
 
 </details>
 
@@ -3279,68 +5337,78 @@ Run `revdep_details(, "nebula")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 37.4Mb
+      installed size is 35.4Mb
       sub-directories of 1Mb or more:
-        libs  35.9Mb
+        libs  33.7Mb
     ```
 
-# nevada
+# neuroim2
 
 <details>
 
-* Version: 0.2.0
-* GitHub: https://github.com/astamm/nevada
-* Source code: https://github.com/cran/nevada
-* Date/Publication: 2023-09-03 21:00:02 UTC
-* Number of recursive dependencies: 108
+* Version: 0.8.1
+* GitHub: https://github.com/bbuchsbaum/neuroim2
+* Source code: https://github.com/cran/neuroim2
+* Date/Publication: 2025-04-10 14:50:06 UTC
+* Number of recursive dependencies: 117
 
-Run `revdep_details(, "nevada")` for more info
+Run `revdepcheck::revdep_details(, "neuroim2")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘nevada’ can be installed ... WARNING
+*   checking package dependencies ... ERROR
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/nevada/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/nevada/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/nevada/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/nevada/new/nevada.Rcheck/00install.out’ for details.
+    Package required but not available: ‘RNiftyReg’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
-# nfl4th
+# nflfastR
 
 <details>
 
-* Version: 1.0.4
-* GitHub: https://github.com/nflverse/nfl4th
-* Source code: https://github.com/cran/nfl4th
-* Date/Publication: 2023-08-21 09:32:33 UTC
-* Number of recursive dependencies: 111
+* Version: 5.0.0
+* GitHub: https://github.com/nflverse/nflfastR
+* Source code: https://github.com/cran/nflfastR
+* Date/Publication: 2024-11-26 23:10:02 UTC
+* Number of recursive dependencies: 87
 
-Run `revdep_details(, "nfl4th")` for more info
+Run `revdepcheck::revdep_details(, "nflfastR")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘nfl4th’ can be installed ... WARNING
+*   checking data for non-ASCII characters ... NOTE
     ```
-    Found the following significant warnings:
-      Warning: GitHub.com seems offline, and `options(nfl4th.keep_games)` is not set to TRUE. Deleting the games cache, and predictions may not be available without an internet connection.
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/nfl4th/new/nfl4th.Rcheck/00install.out’ for details.
+      Note: found 1 marked UTF-8 string
     ```
 
-*   checking whether the namespace can be loaded with stated dependencies ... NOTE
+# nhdplusTools
+
+<details>
+
+* Version: 1.3.1
+* GitHub: https://github.com/doi-usgs/nhdplusTools
+* Source code: https://github.com/cran/nhdplusTools
+* Date/Publication: 2025-02-14 23:20:02 UTC
+* Number of recursive dependencies: 138
+
+Run `revdepcheck::revdep_details(, "nhdplusTools")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
     ```
-    Warning: GitHub.com seems offline, and `options(nfl4th.keep_games)` is not set to TRUE. Deleting the games cache, and predictions may not be available without an internet connection.
-    
-    A namespace must be able to be loaded with just the base namespace
-    loaded: otherwise if the namespace gets loaded by a saved object, the
-    session will be unable to start.
-    
-    Probably some imports need to be declared in the NAMESPACE file.
+      installed size is  8.4Mb
+      sub-directories of 1Mb or more:
+        data   2.5Mb
+        doc    5.1Mb
     ```
 
 # occupationMeasurement
@@ -3351,17 +5419,74 @@ Run `revdep_details(, "nfl4th")` for more info
 * GitHub: https://github.com/occupationMeasurement/occupationMeasurement
 * Source code: https://github.com/cran/occupationMeasurement
 * Date/Publication: 2023-09-27 13:40:02 UTC
-* Number of recursive dependencies: 126
+* Number of recursive dependencies: 125
 
-Run `revdep_details(, "occupationMeasurement")` for more info
+Run `revdepcheck::revdep_details(, "occupationMeasurement")` for more info
 
 </details>
 
 ## In both
 
+*   checking tests ...
+    ```
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Last 50 lines of output:
+        5. ├─occupationMeasurement::get_job_suggestions("Arbeiter")
+        6. │ ├─base::do.call(step[["algorithm"]], parameters)
+        7. │ └─occupationMeasurement (local) `<fn>`(...)
+        8. │   └─occupationMeasurement:::create_document_term_matrix(text_processed)
+        9. └─base::loadNamespace(x)
+       10.   ├─base::namespaceImportFrom(...)
+    ...
+        9. └─base::loadNamespace(x)
+       10.   ├─base::namespaceImportFrom(...)
+       11.   │ └─base::asNamespace(ns)
+       12.   └─base::loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]])
+       13.     └─base::library.dynam(lib, package, package.lib)
+       14.       └─base::dyn.load(file, DLLpath = DLLpath, ...)
+      
+      [ FAIL 5 | WARN 0 | SKIP 5 | PASS 22 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  6.0Mb
+      sub-directories of 1Mb or more:
+        data   3.5Mb
+        help   2.0Mb
+    ```
+
 *   checking data for non-ASCII characters ... NOTE
     ```
       Note: found 6986 marked UTF-8 strings
+    ```
+
+# oceanexplorer
+
+<details>
+
+* Version: 0.1.0
+* GitHub: https://github.com/MartinSchobben/oceanexplorer
+* Source code: https://github.com/cran/oceanexplorer
+* Date/Publication: 2023-10-16 19:40:02 UTC
+* Number of recursive dependencies: 124
+
+Run `revdepcheck::revdep_details(, "oceanexplorer")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘RNetCDF’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # oncomsm
@@ -3372,9 +5497,9 @@ Run `revdep_details(, "occupationMeasurement")` for more info
 * GitHub: https://github.com/Boehringer-Ingelheim/oncomsm
 * Source code: https://github.com/cran/oncomsm
 * Date/Publication: 2023-04-17 07:00:02 UTC
-* Number of recursive dependencies: 127
+* Number of recursive dependencies: 125
 
-Run `revdep_details(, "oncomsm")` for more info
+Run `revdepcheck::revdep_details(, "oncomsm")` for more info
 
 </details>
 
@@ -3382,10 +5507,10 @@ Run `revdep_details(, "oncomsm")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 67.6Mb
+      installed size is 64.0Mb
       sub-directories of 1Mb or more:
-        doc    1.0Mb
-        libs  65.5Mb
+        doc    1.1Mb
+        libs  61.8Mb
     ```
 
 *   checking for GNU extensions in Makefiles ... NOTE
@@ -3393,38 +5518,27 @@ Run `revdep_details(, "oncomsm")` for more info
     GNU make is a SystemRequirements.
     ```
 
-# onemapsgapi
+# oolong
 
 <details>
 
-* Version: 1.1.0
-* GitHub: NA
-* Source code: https://github.com/cran/onemapsgapi
-* Date/Publication: 2022-11-29 08:00:03 UTC
-* Number of recursive dependencies: 71
+* Version: 0.6.1
+* GitHub: https://github.com/gesistsa/oolong
+* Source code: https://github.com/cran/oolong
+* Date/Publication: 2024-04-15 12:40:04 UTC
+* Number of recursive dependencies: 144
 
-Run `revdep_details(, "onemapsgapi")` for more info
+Run `revdepcheck::revdep_details(, "oolong")` for more info
 
 </details>
 
 ## In both
 
-*   checking re-building of vignette outputs ... ERROR
+*   checking installed package size ... NOTE
     ```
-    Error(s) in re-building vignettes:
-      ...
-    --- re-building ‘onemapsgapi_vignette.Rmd’ using rmarkdown
-    
-    Quitting from lines 36-37 [unnamed-chunk-4] (onemapsgapi_vignette.Rmd)
-    Error: processing vignette 'onemapsgapi_vignette.Rmd' failed with diagnostics:
-    Peer certificate cannot be authenticated with given CA certificates: [developers.onemap.sg] Peer's Certificate has expired.
-    --- failed re-building ‘onemapsgapi_vignette.Rmd’
-    
-    SUMMARY: processing the following file failed:
-      ‘onemapsgapi_vignette.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
+      installed size is  8.2Mb
+      sub-directories of 1Mb or more:
+        data   7.0Mb
     ```
 
 # OOS
@@ -3437,7 +5551,7 @@ Run `revdep_details(, "onemapsgapi")` for more info
 * Date/Publication: 2021-03-17 13:20:20 UTC
 * Number of recursive dependencies: 137
 
-Run `revdep_details(, "OOS")` for more info
+Run `revdepcheck::revdep_details(, "OOS")` for more info
 
 </details>
 
@@ -3448,17 +5562,108 @@ Run `revdep_details(, "OOS")` for more info
       'LazyData' is specified without a 'data' directory
     ```
 
+# OptimalGoldstandardDesigns
+
+<details>
+
+* Version: 1.0.1
+* GitHub: https://github.com/jan-imbi/OptimalGoldstandardDesigns
+* Source code: https://github.com/cran/OptimalGoldstandardDesigns
+* Date/Publication: 2023-09-11 10:40:05 UTC
+* Number of recursive dependencies: 71
+
+Run `revdepcheck::revdep_details(, "OptimalGoldstandardDesigns")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) calc_n_from_c.Rd:5: Lost braces; missing escapes or markup?
+         5 | \title{Helper function to calculate other n's given n_{1,T} and allocation ratios}
+           |                                                       ^
+    checkRd: (-1) calc_n_from_c.Rd:15: Lost braces; missing escapes or markup?
+        15 | Helper function to calculate other n's given n_{1,T} and allocation ratios
+           |                                                ^
+    ```
+
+# OutSeekR
+
+<details>
+
+* Version: 1.0.0
+* GitHub: NA
+* Source code: https://github.com/cran/OutSeekR
+* Date/Publication: 2024-11-19 09:10:05 UTC
+* Number of recursive dependencies: 58
+
+Run `revdepcheck::revdep_details(, "OutSeekR")` for more info
+
+</details>
+
+## In both
+
+*   R CMD check timed out
+    
+
+# PAMpal
+
+<details>
+
+* Version: 1.4.4
+* GitHub: NA
+* Source code: https://github.com/cran/PAMpal
+* Date/Publication: 2025-03-04 00:20:02 UTC
+* Number of recursive dependencies: 123
+
+Run `revdepcheck::revdep_details(, "PAMpal")` for more info
+
+</details>
+
+## In both
+
+*   checking whether package ‘PAMpal’ can be installed ... WARNING
+    ```
+    Found the following significant warnings:
+      Warning: no DISPLAY variable so Tk is not available
+    See ‘/scratch/henrik/606930/globals/revdep/checks/PAMpal/new/PAMpal.Rcheck/00install.out’ for details.
+    ```
+
+# PAMscapes
+
+<details>
+
+* Version: 0.11.3
+* GitHub: NA
+* Source code: https://github.com/cran/PAMscapes
+* Date/Publication: 2025-04-02 20:30:05 UTC
+* Number of recursive dependencies: 132
+
+Run `revdepcheck::revdep_details(, "PAMscapes")` for more info
+
+</details>
+
+## In both
+
+*   checking whether package ‘PAMscapes’ can be installed ... WARNING
+    ```
+    Found the following significant warnings:
+      Warning: no DISPLAY variable so Tk is not available
+    See ‘/scratch/henrik/606930/globals/revdep/checks/PAMscapes/new/PAMscapes.Rcheck/00install.out’ for details.
+    ```
+
 # pareg
 
 <details>
 
-* Version: 1.6.0
+* Version: 1.8.0
 * GitHub: https://github.com/cbg-ethz/pareg
 * Source code: https://github.com/cran/pareg
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 320
+* Date/Publication: 2024-04-30
+* Number of recursive dependencies: 321
 
-Run `revdep_details(, "pareg")` for more info
+Run `revdepcheck::revdep_details(, "pareg")` for more info
 
 </details>
 
@@ -3477,15 +5682,15 @@ Run `revdep_details(, "pareg")` for more info
     > 
     > df_genes <- data.frame(
     ...
-    + )
-    > fit <- pareg(df_genes, df_terms, max_iterations = 10)
-    Error in py_module_import(module, convert = convert) : 
-      ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /c4/home/henrik/.cache/R/basilisk/1.14.3/pareg/1.6.0/pareg/lib/python3.9/site-packages/tensorflow/python/platform/_pywrap_cpu_feature_guard.so)
-    Run `reticulate::py_last_error()` for details.
-    Error in .activate_fallback(proc, testload, env = env, envpath = envpath,  : 
-      ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /c4/home/henrik/.cache/R/basilisk/1.14.3/pareg/1.6.0/pareg/lib/python3.9/site-packages/tensorflow/python/platform/_pywrap_cpu_feature_guard.so)
-    Run `reticulate::py_last_error()` for details.
-    Calls: pareg -> basiliskStart -> .activate_fallback
+       │     └─ openssl >=1.1.1q,<1.1.2a , which conflicts with any installable versions previously reported;
+       ├─ tensorflow 2.10.0 would require
+       │  └─ tensorflow-base [2.10.0 eigen_py38h1969d1f_0|2.10.0 gpu_py38h6559e04_0|2.10.0 mkl_py38hb9daa73_0], which requires
+       │     └─ python >=3.8,<3.9.0a0 , which conflicts with any installable versions previously reported;
+       └─ tensorflow 2.10.0 would require
+          └─ tensorflow-base [2.10.0 eigen_py39h1969d1f_0|2.10.0 gpu_py39h6559e04_0|2.10.0 mkl_py39hb9daa73_0], which requires
+             └─ python >=3.9,<3.10.0a0 , which conflicts with any installable versions previously reported.
+    
+    Error: one or more Python packages failed to install [error code 1]
     Execution halted
     ```
 
@@ -3494,42 +5699,42 @@ Run `revdep_details(, "pareg")` for more info
       Running ‘testthat.R’
      ERROR
     Running the tests in ‘tests/testthat.R’ failed.
-    Complete output:
-      > library(testthat)
-      > library(pareg)
-      Loading required package: tensorflow
-      Loading required package: tfprobability
+    Last 50 lines of output:
       
       
+      Preparing transaction: ...working... done
+      Verifying transaction: ...working... done
+      Executing transaction: ...working... done
+      + /c4/home/henrik/.cache/R/basilisk/1.18.0/0/bin/conda install --yes --prefix /c4/home/henrik/.cache/R/basilisk/1.18.0/pareg/1.8.0/pareg 'python=3.10.14' -c anaconda --override-channels
     ...
-      +   testload = c("tensorflow", "tensorflow_probability")
-      + )
-      Error in py_module_import(module, convert = convert) : 
-        ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /c4/home/henrik/.cache/R/basilisk/1.14.3/pareg/1.6.0/pareg/lib/python3.9/site-packages/tensorflow/python/platform/_pywrap_cpu_feature_guard.so)
-      Run `reticulate::py_last_error()` for details.
-      Error in .activate_fallback(proc, testload, env = env, envpath = envpath,  : 
-        ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /c4/home/henrik/.cache/R/basilisk/1.14.3/pareg/1.6.0/pareg/lib/python3.9/site-packages/tensorflow/python/platform/_pywrap_cpu_feature_guard.so)
-      Run `reticulate::py_last_error()` for details.
-      Calls: <Anonymous> -> .activate_fallback
+            └─ tensorflow-base [2.10.0 eigen_py39h1969d1f_0|2.10.0 gpu_py39h6559e04_0|2.10.0 mkl_py39hb9daa73_0], which requires
+               └─ python >=3.9,<3.10.0a0 , which conflicts with any installable versions previously reported.
+      
+      Error: one or more Python packages failed to install [error code 1]
+      In addition: Warning messages:
+      1: In check_forbidden_install("Python packages") :
+        cannot install Python packages during R CMD check
+      2: In check_forbidden_install("Conda Environments") :
+        cannot install Conda Environments during R CMD check
       Execution halted
     ```
 
 *   checking re-building of vignette outputs ... ERROR
     ```
     Error(s) in re-building vignettes:
-      ...
     --- re-building ‘pareg.Rmd’ using rmarkdown
-    The magick package is required to crop "/c4/home/henrik/repositories/globals/revdep/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pareg_files/figure-html/unnamed-chunk-4-1.png" but not available.
-    The magick package is required to crop "/c4/home/henrik/repositories/globals/revdep/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pareg_files/figure-html/unnamed-chunk-5-1.png" but not available.
+    The magick package is required to crop "/scratch/henrik/606930/globals/revdep/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pareg_files/figure-html/unnamed-chunk-4-1.png" but not available.
+    The magick package is required to crop "/scratch/henrik/606930/globals/revdep/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pareg_files/figure-html/unnamed-chunk-5-1.png" but not available.
+    Channels:
+     - anaconda
+    Platform: linux-64
+    Collecting package metadata (repodata.json): ...working... done
+    Solving environment: ...working... done
     
-    Quitting from lines 145-150 [unnamed-chunk-9] (pareg.Rmd)
-    Error: processing vignette 'pareg.Rmd' failed with diagnostics:
-    ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /c4/home/henrik/.cache/R/basilisk/1.14.3/pareg/1.6.0/pareg/lib/python3.9/site-packages/tensorflow/python/platform/_pywrap_cpu_feature_guard.so)
-    Run `reticulate::py_last_error()` for details.
     ...
     --- re-building ‘pathway_similarities.Rmd’ using rmarkdown
-    The magick package is required to crop "/c4/home/henrik/repositories/globals/revdep/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pathway_similarities_files/figure-html/unnamed-chunk-2-1.png" but not available.
-    The magick package is required to crop "/c4/home/henrik/repositories/globals/revdep/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pathway_similarities_files/figure-html/unnamed-chunk-3-1.png" but not available.
+    The magick package is required to crop "/scratch/henrik/606930/globals/revdep/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pathway_similarities_files/figure-html/unnamed-chunk-2-1.png" but not available.
+    The magick package is required to crop "/scratch/henrik/606930/globals/revdep/checks/pareg/new/pareg.Rcheck/vign_test/pareg/vignettes/pathway_similarities_files/figure-html/unnamed-chunk-3-1.png" but not available.
     --- finished re-building ‘pathway_similarities.Rmd’
     
     SUMMARY: processing the following file failed:
@@ -3568,29 +5773,7 @@ Run `revdep_details(, "pareg")` for more info
     ```
     Found the following notes/warnings:
       Non-staged installation was used
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/pareg/new/pareg.Rcheck/00install.out’ for details.
-    ```
-
-# parseRPDR
-
-<details>
-
-* Version: 1.1.0
-* GitHub: https://github.com/martonkolossvary/parseRPDR
-* Source code: https://github.com/cran/parseRPDR
-* Date/Publication: 2024-01-09 12:10:02 UTC
-* Number of recursive dependencies: 89
-
-Run `revdep_details(, "parseRPDR")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘doParallel’
-      All declared Imports should be used.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/pareg/new/pareg.Rcheck/00install.out’ for details.
     ```
 
 # partR2
@@ -3601,9 +5784,9 @@ Run `revdep_details(, "parseRPDR")` for more info
 * GitHub: https://github.com/mastoffel/partR2
 * Source code: https://github.com/cran/partR2
 * Date/Publication: 2024-03-04 13:20:02 UTC
-* Number of recursive dependencies: 94
+* Number of recursive dependencies: 95
 
-Run `revdep_details(, "partR2")` for more info
+Run `revdepcheck::revdep_details(, "partR2")` for more info
 
 </details>
 
@@ -3623,9 +5806,9 @@ Run `revdep_details(, "partR2")` for more info
 * GitHub: https://github.com/rmaia/pavo
 * Source code: https://github.com/cran/pavo
 * Date/Publication: 2023-09-24 10:10:02 UTC
-* Number of recursive dependencies: 104
+* Number of recursive dependencies: 98
 
-Run `revdep_details(, "pavo")` for more info
+Run `revdepcheck::revdep_details(, "pavo")` for more info
 
 </details>
 
@@ -3635,49 +5818,62 @@ Run `revdep_details(, "pavo")` for more info
     ```
     Found the following significant warnings:
       Warning: no DISPLAY variable so Tk is not available
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/pavo/new/pavo.Rcheck/00install.out’ for details.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/pavo/new/pavo.Rcheck/00install.out’ for details.
     ```
 
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘imager’
-    ```
-
-# PCRedux
+# Pedixplorer
 
 <details>
 
-* Version: 1.1-2
-* GitHub: https://github.com/PCRuniversum/PCRedux
-* Source code: https://github.com/cran/PCRedux
-* Date/Publication: 2022-05-11 11:40:02 UTC
-* Number of recursive dependencies: 153
+* Version: 1.2.0
+* GitHub: https://github.com/LouisLeNezet/Pedixplorer
+* Source code: https://github.com/cran/Pedixplorer
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 156
 
-Run `revdep_details(, "PCRedux")` for more info
+Run `revdepcheck::revdep_details(, "Pedixplorer")` for more info
 
 </details>
 
 ## In both
 
-*   checking re-building of vignette outputs ... WARNING
+*   checking installed package size ... NOTE
     ```
-    Error(s) in re-building vignettes:
-      ...
-    --- re-building ‘PCRedux.Rmd’ using rmarkdown
-    ! LaTeX Error: File `iftex.sty' not found.
-    
-    ! Emergency stop.
-    <read *> 
-    
-    Error: processing vignette 'PCRedux.Rmd' failed with diagnostics:
-    LaTeX failed to compile /c4/home/henrik/repositories/globals/revdep/checks/PCRedux/new/PCRedux.Rcheck/vign_test/PCRedux/vignettes/PCRedux.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See PCRedux.log for more info.
-    --- failed re-building ‘PCRedux.Rmd’
-    
-    SUMMARY: processing the following file failed:
-      ‘PCRedux.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
+      installed size is  8.1Mb
+      sub-directories of 1Mb or more:
+        R     1.5Mb
+        doc   5.1Mb
+    ```
+
+# pgxRpi
+
+<details>
+
+* Version: 1.2.3
+* GitHub: https://github.com/progenetix/pgxRpi
+* Source code: https://github.com/cran/pgxRpi
+* Date/Publication: 2025-02-13
+* Number of recursive dependencies: 159
+
+Run `revdepcheck::revdep_details(, "pgxRpi")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.4Mb
+      sub-directories of 1Mb or more:
+        doc   5.1Mb
+    ```
+
+*   checking R code for possible problems ... NOTE
+    ```
+    pgxSegprocess: no visible binding for global variable
+      ‘followup_state_id’
+    Undefined global functions or variables:
+      followup_state_id
     ```
 
 # phecodemap
@@ -3688,30 +5884,33 @@ Run `revdep_details(, "PCRedux")` for more info
 * GitHub: https://github.com/celehs/phecodemap
 * Source code: https://github.com/cran/phecodemap
 * Date/Publication: 2022-01-15 09:02:44 UTC
-* Number of recursive dependencies: 123
+* Number of recursive dependencies: 121
 
-Run `revdep_details(, "phecodemap")` for more info
+Run `revdepcheck::revdep_details(, "phecodemap")` for more info
 
 </details>
 
 ## In both
 
-*   checking data for non-ASCII characters ... NOTE
+*   checking package dependencies ... ERROR
     ```
-      Note: found 114 marked UTF-8 strings
+    Package required but not available: ‘collapsibleTree’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # photosynthesis
 
 <details>
 
-* Version: 2.1.4
+* Version: 2.1.5
 * GitHub: https://github.com/cdmuir/photosynthesis
 * Source code: https://github.com/cran/photosynthesis
-* Date/Publication: 2023-08-15 07:20:05 UTC
-* Number of recursive dependencies: 144
+* Date/Publication: 2024-11-24 19:40:02 UTC
+* Number of recursive dependencies: 120
 
-Run `revdep_details(, "photosynthesis")` for more info
+Run `revdepcheck::revdep_details(, "photosynthesis")` for more info
 
 </details>
 
@@ -3719,9 +5918,9 @@ Run `revdep_details(, "photosynthesis")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  7.1Mb
+      installed size is  7.3Mb
       sub-directories of 1Mb or more:
-        doc   6.0Mb
+        doc   6.2Mb
     ```
 
 *   checking data for non-ASCII characters ... NOTE
@@ -3733,60 +5932,97 @@ Run `revdep_details(, "photosynthesis")` for more info
 
 <details>
 
-* Version: 2.6.2
+* Version: 2.6.5
 * GitHub: https://github.com/lamho86/phylolm
 * Source code: https://github.com/cran/phylolm
-* Date/Publication: 2020-06-22 05:10:08 UTC
-* Number of recursive dependencies: 41
+* Date/Publication: 2024-09-30 19:00:02 UTC
+* Number of recursive dependencies: 34
 
-Run `revdep_details(, "phylolm")` for more info
+Run `revdepcheck::revdep_details(, "phylolm")` for more info
 
 </details>
 
 ## In both
-
-*   checking C++ specification ... NOTE
-    ```
-      Specified C++11: please drop specification unless essential
-    ```
 
 *   checking Rd cross-references ... NOTE
     ```
     Packages unavailable to check Rd xrefs: ‘geiger’, ‘caper’
     ```
 
-# PLNmodels
+# PINstimation
 
 <details>
 
-* Version: 1.2.0
-* GitHub: https://github.com/pln-team/PLNmodels
-* Source code: https://github.com/cran/PLNmodels
-* Date/Publication: 2024-03-05 15:50:03 UTC
-* Number of recursive dependencies: 151
+* Version: 0.1.2
+* GitHub: https://github.com/monty-se/PINstimation
+* Source code: https://github.com/cran/PINstimation
+* Date/Publication: 2023-03-20 23:10:07 UTC
+* Number of recursive dependencies: 50
 
-Run `revdep_details(, "PLNmodels")` for more info
+Run `revdepcheck::revdep_details(, "PINstimation")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘PLNmodels’ can be installed ... WARNING
+*   checking installed package size ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/PLNmodels/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/PLNmodels/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/PLNmodels/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/PLNmodels/new/PLNmodels.Rcheck/00install.out’ for details.
+      installed size is  5.1Mb
+      sub-directories of 1Mb or more:
+        R      1.5Mb
+        data   1.1Mb
+        doc    2.0Mb
     ```
+
+# pliman
+
+<details>
+
+* Version: 3.0.0
+* GitHub: https://github.com/NA/NA
+* Source code: https://github.com/cran/pliman
+* Date/Publication: 2024-11-06 10:30:02 UTC
+* Number of recursive dependencies: 126
+
+Run `revdepcheck::revdep_details(, "pliman")` for more info
+
+</details>
+
+## In both
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 27.5Mb
+      installed size is  9.4Mb
       sub-directories of 1Mb or more:
-        data   1.4Mb
-        doc    2.0Mb
-        libs  22.4Mb
+        R            1.5Mb
+        libs         5.4Mb
+        tmp_images   1.9Mb
+    ```
+
+# PLNmodels
+
+<details>
+
+* Version: 1.2.2
+* GitHub: https://github.com/pln-team/PLNmodels
+* Source code: https://github.com/cran/PLNmodels
+* Date/Publication: 2025-03-21 17:40:06 UTC
+* Number of recursive dependencies: 146
+
+Run `revdepcheck::revdep_details(, "PLNmodels")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 31.6Mb
+      sub-directories of 1Mb or more:
+        R      1.5Mb
+        data   3.5Mb
+        doc    2.4Mb
+        libs  23.4Mb
     ```
 
 # plotly
@@ -3797,9 +6033,9 @@ Run `revdep_details(, "PLNmodels")` for more info
 * GitHub: https://github.com/plotly/plotly.R
 * Source code: https://github.com/cran/plotly
 * Date/Publication: 2024-01-13 22:40:02 UTC
-* Number of recursive dependencies: 148
+* Number of recursive dependencies: 137
 
-Run `revdep_details(, "plotly")` for more info
+Run `revdepcheck::revdep_details(, "plotly")` for more info
 
 </details>
 
@@ -3807,30 +6043,90 @@ Run `revdep_details(, "plotly")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.5Mb
+      installed size is  7.1Mb
       sub-directories of 1Mb or more:
-        htmlwidgets   3.8Mb
+        R             1.0Mb
+        htmlwidgets   4.0Mb
     ```
 
 # pointblank
 
 <details>
 
-* Version: 0.12.0
+* Version: 0.12.2
 * GitHub: https://github.com/rstudio/pointblank
 * Source code: https://github.com/cran/pointblank
-* Date/Publication: 2024-03-01 08:30:02 UTC
-* Number of recursive dependencies: 135
+* Date/Publication: 2024-10-23 03:50:02 UTC
+* Number of recursive dependencies: 131
 
-Run `revdep_details(, "pointblank")` for more info
+Run `revdepcheck::revdep_details(, "pointblank")` for more info
 
 </details>
 
 ## In both
 
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘RPostgres’
+    ```
+
 *   checking data for non-ASCII characters ... NOTE
     ```
       Note: found 1 marked UTF-8 string
+    ```
+
+# polykde
+
+<details>
+
+* Version: 1.1.3
+* GitHub: https://github.com/egarpor/polykde
+* Source code: https://github.com/cran/polykde
+* Date/Publication: 2025-04-15 23:10:02 UTC
+* Number of recursive dependencies: 174
+
+Run `revdepcheck::revdep_details(, "polykde")` for more info
+
+</details>
+
+## In both
+
+*   checking tests ...
+    ```
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Last 50 lines of output:
+       1. ├─testthat::expect_equal(...) at tests_bwd.R:90:3
+       2. │ └─testthat::quasi_label(enquo(expected), expected.label, arg = "expected")
+       3. │   └─rlang::eval_bare(expr, quo_get_env(quo))
+       4. └─polykde::bw_cv_polysph(...)
+       5.   └─parallel::makeCluster(spec = ncores)
+       6.     └─parallel::makePSOCKcluster(names = spec, ...)
+    ...
+       3. │   └─rlang::eval_bare(expr, quo_get_env(quo))
+       4. ├─polykde (local) Bessel_asymp(x = c(50:100, 10000, 1e+05), d = d)
+       5. └─base::loadNamespace(x) at tests_utils.R:214:5
+       6.   └─base::withRestarts(stop(cond), retry_loadNamespace = function() NULL)
+       7.     └─base (local) withOneRestart(expr, restarts[[1L]])
+       8.       └─base (local) doWithOneRestart(return(expr), restart)
+      
+      [ FAIL 4 | WARN 0 | SKIP 6 | PASS 824 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘Bessel’
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 17.7Mb
+      sub-directories of 1Mb or more:
+        R      6.7Mb
+        libs  10.8Mb
     ```
 
 # portvine
@@ -3843,7 +6139,7 @@ Run `revdep_details(, "pointblank")` for more info
 * Date/Publication: 2024-01-18 16:30:02 UTC
 * Number of recursive dependencies: 130
 
-Run `revdep_details(, "portvine")` for more info
+Run `revdepcheck::revdep_details(, "portvine")` for more info
 
 </details>
 
@@ -3851,22 +6147,22 @@ Run `revdep_details(, "portvine")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 52.9Mb
+      installed size is 53.8Mb
       sub-directories of 1Mb or more:
-        libs  51.9Mb
+        libs  52.7Mb
     ```
 
 # ppseq
 
 <details>
 
-* Version: 0.2.3
+* Version: 0.2.5
 * GitHub: https://github.com/zabore/ppseq
 * Source code: https://github.com/cran/ppseq
-* Date/Publication: 2024-01-23 15:00:06 UTC
-* Number of recursive dependencies: 107
+* Date/Publication: 2024-09-04 22:20:02 UTC
+* Number of recursive dependencies: 104
 
-Run `revdep_details(, "ppseq")` for more info
+Run `revdepcheck::revdep_details(, "ppseq")` for more info
 
 </details>
 
@@ -3874,9 +6170,9 @@ Run `revdep_details(, "ppseq")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 10.9Mb
+      installed size is 11.0Mb
       sub-directories of 1Mb or more:
-        doc  10.4Mb
+        doc  10.5Mb
     ```
 
 # ppsr
@@ -3889,7 +6185,7 @@ Run `revdep_details(, "ppseq")` for more info
 * Date/Publication: 2024-02-18 12:30:02 UTC
 * Number of recursive dependencies: 61
 
-Run `revdep_details(, "ppsr")` for more info
+Run `revdepcheck::revdep_details(, "ppsr")` for more info
 
 </details>
 
@@ -3902,6 +6198,30 @@ Run `revdep_details(, "ppsr")` for more info
       All declared Imports should be used.
     ```
 
+# ProFAST
+
+<details>
+
+* Version: 1.6
+* GitHub: https://github.com/feiyoung/ProFAST
+* Source code: https://github.com/cran/ProFAST
+* Date/Publication: 2025-03-27 14:40:02 UTC
+* Number of recursive dependencies: 246
+
+Run `revdepcheck::revdep_details(, "ProFAST")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 27.2Mb
+      sub-directories of 1Mb or more:
+        data   4.5Mb
+        libs  22.2Mb
+    ```
+
 # projpred
 
 <details>
@@ -3910,22 +6230,13 @@ Run `revdep_details(, "ppsr")` for more info
 * GitHub: https://github.com/stan-dev/projpred
 * Source code: https://github.com/cran/projpred
 * Date/Publication: 2023-12-15 00:00:02 UTC
-* Number of recursive dependencies: 158
+* Number of recursive dependencies: 162
 
-Run `revdep_details(, "projpred")` for more info
+Run `revdepcheck::revdep_details(, "projpred")` for more info
 
 </details>
 
 ## In both
-
-*   checking whether package ‘projpred’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/projpred/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/projpred/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/projpred/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/projpred/new/projpred.Rcheck/00install.out’ for details.
-    ```
 
 *   checking package dependencies ... NOTE
     ```
@@ -3934,70 +6245,111 @@ Run `revdep_details(, "projpred")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.9Mb
+      installed size is  6.0Mb
       sub-directories of 1Mb or more:
         doc    1.4Mb
-        libs   3.6Mb
+        libs   3.7Mb
     ```
 
 # Prostar
 
 <details>
 
-* Version: 1.34.6
-* GitHub: https://github.com/prostarproteomics/Prostar
+* Version: 1.38.1
+* GitHub: https://github.com/edyp-lab/Prostar
 * Source code: https://github.com/cran/Prostar
-* Date/Publication: 2024-02-15
-* Number of recursive dependencies: 331
+* Date/Publication: 2024-11-25
+* Number of recursive dependencies: 190
 
-Run `revdep_details(, "Prostar")` for more info
+Run `revdepcheck::revdep_details(, "Prostar")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘Prostar’ can be installed ... ERROR
+*   checking whether package ‘Prostar’ can be installed ... WARNING
     ```
-    Installation failed.
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/Prostar/new/Prostar.Rcheck/00install.out’ for details.
+    Found the following significant warnings:
+      Warning: replacing previous import ‘future::reset’ by ‘shinyjs::reset’ when loading ‘Prostar’
+    See ‘/scratch/henrik/606930/globals/revdep/checks/Prostar/new/Prostar.Rcheck/00install.out’ for details.
     ```
 
-## Installation
+*   checking for hidden files and directories ... NOTE
+    ```
+    Found the following hidden files and directories:
+      docs/.nojekyll
+    These were most likely included in error. See section ‘Package
+    structure’ in the ‘Writing R Extensions’ manual.
+    ```
 
-### Devel
+*   checking dependencies in R code ... NOTE
+    ```
+    Namespaces in Imports field not imported from:
+      ‘DT’ ‘R.utils’ ‘RColorBrewer’ ‘XML’ ‘colourpicker’ ‘gtools’
+      ‘markdown’ ‘rclipboard’ ‘sass’ ‘shinyTree’ ‘shinyWidgets’
+      All declared Imports should be used.
+    ```
 
-```
-* installing *source* package ‘Prostar’ ...
-** using staged installation
-** R
-** inst
-** byte-compile and prepare package for lazy loading
-Error in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]) : 
-  there is no package called ‘ncdf4’
-Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-ERROR: lazy loading failed for package ‘Prostar’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/Prostar/new/Prostar.Rcheck/Prostar’
+*   checking files in ‘vignettes’ ... NOTE
+    ```
+    The following files look like leftovers/mistakes:
+      ‘Prostar_UserManual.log’
+    Please remove them from your package.
+    ```
 
+# psborrow2
 
-```
-### CRAN
+<details>
 
-```
-* installing *source* package ‘Prostar’ ...
-** using staged installation
-** R
-** inst
-** byte-compile and prepare package for lazy loading
-Error in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]) : 
-  there is no package called ‘ncdf4’
-Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-ERROR: lazy loading failed for package ‘Prostar’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/Prostar/old/Prostar.Rcheck/Prostar’
+* Version: 0.0.4.0
+* GitHub: https://github.com/Genentech/psborrow2
+* Source code: https://github.com/cran/psborrow2
+* Date/Publication: 2025-02-12 15:20:02 UTC
+* Number of recursive dependencies: 155
 
+Run `revdepcheck::revdep_details(, "psborrow2")` for more info
 
-```
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Packages suggested but not available for checking: 'cmdstanr', 'cobalt'
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  6.4Mb
+      sub-directories of 1Mb or more:
+        R     1.5Mb
+        doc   3.9Mb
+    ```
+
+# PSCBS
+
+<details>
+
+* Version: 0.67.0
+* GitHub: https://github.com/HenrikBengtsson/PSCBS
+* Source code: https://github.com/cran/PSCBS
+* Date/Publication: 2024-02-17 19:10:02 UTC
+* Number of recursive dependencies: 44
+
+Run `revdepcheck::revdep_details(, "PSCBS")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.4Mb
+      sub-directories of 1Mb or more:
+        R         1.5Mb
+        data-ex   2.6Mb
+    ```
+
 # pseudohouseholds
 
 <details>
@@ -4006,36 +6358,123 @@ ERROR: lazy loading failed for package ‘Prostar’
 * GitHub: https://github.com/chris31415926535/pseudohouseholds
 * Source code: https://github.com/cran/pseudohouseholds
 * Date/Publication: 2023-07-19 09:30:02 UTC
-* Number of recursive dependencies: 105
+* Number of recursive dependencies: 103
 
-Run `revdep_details(, "pseudohouseholds")` for more info
+Run `revdepcheck::revdep_details(, "pseudohouseholds")` for more info
 
 </details>
 
 ## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  6.8Mb
+      sub-directories of 1Mb or more:
+        data   6.5Mb
+    ```
 
 *   checking data for non-ASCII characters ... NOTE
     ```
       Note: found 596 marked UTF-8 strings
     ```
 
-# QDNAseq
+# pvLRT
 
 <details>
 
-* Version: 1.38.0
-* GitHub: https://github.com/ccagc/QDNAseq
-* Source code: https://github.com/cran/QDNAseq
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 89
+* Version: 0.5.1
+* GitHub: https://github.com/c7rishi/pvLRT
+* Source code: https://github.com/cran/pvLRT
+* Date/Publication: 2023-03-06 23:30:02 UTC
+* Number of recursive dependencies: 92
 
-Run `revdep_details(, "QDNAseq")` for more info
+Run `revdepcheck::revdep_details(, "pvLRT")` for more info
 
 </details>
 
 ## In both
 
-*   checking re-building of vignette outputs ... NOTE
+*   checking installed package size ... NOTE
+    ```
+      installed size is  6.8Mb
+      sub-directories of 1Mb or more:
+        data   6.5Mb
+    ```
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) pvlrt.Rd:42: Lost braces; missing escapes or markup?
+        42 | \item{no_zi_idx}{List of pairs {(i, j)} where zero inflation is not allowed. To
+           |                                ^
+    checkRd: (-1) r_contin_table_zip.Rd:35: Lost braces; missing escapes or markup?
+        35 | \item{no_zi_idx}{List of pairs {(i, j)} where zero inflation is not allowed. To
+           |                                ^
+    ```
+
+# qape
+
+<details>
+
+* Version: 2.1
+* GitHub: NA
+* Source code: https://github.com/cran/qape
+* Date/Publication: 2023-08-21 14:10:12 UTC
+* Number of recursive dependencies: 42
+
+Run `revdepcheck::revdep_details(, "qape")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) srswrRe.Rd:10: Lost braces
+        10 |   \item{listRanef}{{\emph{ranef(model)}} object where {\emph{model}} is an { \emph{lmer}} object.}
+           |                                                                            ^
+    ```
+
+# QBMS
+
+<details>
+
+* Version: 1.5.0
+* GitHub: https://github.com/icarda-git/QBMS
+* Source code: https://github.com/cran/QBMS
+* Date/Publication: 2024-09-18 12:40:02 UTC
+* Number of recursive dependencies: 52
+
+Run `revdepcheck::revdep_details(, "QBMS")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘RNetCDF’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# QDNAseq
+
+<details>
+
+* Version: 1.42.0
+* GitHub: https://github.com/ccagc/QDNAseq
+* Source code: https://github.com/cran/QDNAseq
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 94
+
+Run `revdepcheck::revdep_details(, "QDNAseq")` for more info
+
+</details>
+
+## In both
+
+*   checking re-building of vignette outputs ... WARNING
     ```
     Error(s) in re-building vignettes:
     --- re-building ‘QDNAseq.Rnw’ using Sweave
@@ -4044,11 +6483,11 @@ Run `revdep_details(, "QDNAseq")` for more info
     Warning in allprior/tot :
       Recycling array of length 1 in vector-array arithmetic is deprecated.
       Use c() or as.vector() instead.
-    
     Warning in allprior/tot :
       Recycling array of length 1 in vector-array arithmetic is deprecated.
+      Use c() or as.vector() instead.
     ...
-    l.196 \RequirePackage
+    l.197 \RequirePackage
                          {parnotes}^^M
     !  ==> Fatal error occurred, no output PDF file produced!
     --- failed re-building ‘QDNAseq.Rnw’
@@ -4068,9 +6507,9 @@ Run `revdep_details(, "QDNAseq")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/RAINBOWR
 * Date/Publication: 2024-03-03 09:12:36 UTC
-* Number of recursive dependencies: 167
+* Number of recursive dependencies: 153
 
-Run `revdep_details(, "RAINBOWR")` for more info
+Run `revdepcheck::revdep_details(, "RAINBOWR")` for more info
 
 </details>
 
@@ -4078,22 +6517,23 @@ Run `revdep_details(, "RAINBOWR")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 45.2Mb
+      installed size is 43.9Mb
       sub-directories of 1Mb or more:
-        libs  43.9Mb
+        R      1.5Mb
+        libs  41.5Mb
     ```
 
-# raveio
+# Rcurvep
 
 <details>
 
-* Version: 0.9.0
-* GitHub: https://github.com/beauchamplab/raveio
-* Source code: https://github.com/cran/raveio
-* Date/Publication: 2023-07-16 19:10:02 UTC
-* Number of recursive dependencies: 134
+* Version: 1.3.1
+* GitHub: https://github.com/moggces/Rcurvep
+* Source code: https://github.com/cran/Rcurvep
+* Date/Publication: 2024-01-09 08:20:32 UTC
+* Number of recursive dependencies: 116
 
-Run `revdep_details(, "raveio")` for more info
+Run `revdepcheck::revdep_details(, "Rcurvep")` for more info
 
 </details>
 
@@ -4101,20 +6541,33 @@ Run `revdep_details(, "raveio")` for more info
 
 *   checking package dependencies ... NOTE
     ```
-    Package suggested but not available for checking: ‘clustermq’
+    Package suggested but not available for checking: ‘tcpl’
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  6.8Mb
+      sub-directories of 1Mb or more:
+        data   3.5Mb
+        java   2.7Mb
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘tcpl’
     ```
 
 # receptiviti
 
 <details>
 
-* Version: 0.1.7
+* Version: 0.1.8
 * GitHub: https://github.com/Receptiviti/receptiviti-r
 * Source code: https://github.com/cran/receptiviti
-* Date/Publication: 2024-02-23 23:50:05 UTC
-* Number of recursive dependencies: 67
+* Date/Publication: 2024-03-29 18:00:03 UTC
+* Number of recursive dependencies: 65
 
-Run `revdep_details(, "receptiviti")` for more info
+Run `revdepcheck::revdep_details(, "receptiviti")` for more info
 
 </details>
 
@@ -4131,7 +6584,7 @@ Run `revdep_details(, "receptiviti")` for more info
       > 
       > test_check("receptiviti")
       Status: ERROR
-      Message: 400
+      Message: Invalid header received from client.
     ...
        7. └─receptiviti::receptiviti(...)
       ── Failure ('test-receptiviti_status.R:5:3'): failures works ───────────────────
@@ -4149,21 +6602,26 @@ Run `revdep_details(, "receptiviti")` for more info
 
 <details>
 
-* Version: 1.0.10
+* Version: 1.2.1
 * GitHub: https://github.com/tidymodels/recipes
 * Source code: https://github.com/cran/recipes
-* Date/Publication: 2024-02-18 18:00:02 UTC
+* Date/Publication: 2025-03-25 22:10:02 UTC
 * Number of recursive dependencies: 139
 
-Run `revdep_details(, "recipes")` for more info
+Run `revdepcheck::revdep_details(, "recipes")` for more info
 
 </details>
 
 ## In both
 
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘ddalpha’
+    ```
+
 *   checking Rd cross-references ... NOTE
     ```
-    Packages unavailable to check Rd xrefs: ‘fastICA’, ‘dimRed’
+    Packages unavailable to check Rd xrefs: ‘ddalpha’, ‘fastICA’
     ```
 
 # regmedint
@@ -4174,9 +6632,9 @@ Run `revdep_details(, "recipes")` for more info
 * GitHub: https://github.com/kaz-yos/regmedint
 * Source code: https://github.com/cran/regmedint
 * Date/Publication: 2024-01-13 00:50:02 UTC
-* Number of recursive dependencies: 154
+* Number of recursive dependencies: 156
 
-Run `revdep_details(, "regmedint")` for more info
+Run `revdepcheck::revdep_details(, "regmedint")` for more info
 
 </details>
 
@@ -4188,42 +6646,69 @@ Run `revdep_details(, "regmedint")` for more info
       All declared Imports should be used.
     ```
 
-# reservr
+# reproducible
 
 <details>
 
-* Version: 0.0.2
-* GitHub: https://github.com/AshesITR/reservr
-* Source code: https://github.com/cran/reservr
-* Date/Publication: 2023-10-18 20:50:05 UTC
-* Number of recursive dependencies: 143
+* Version: 2.1.2
+* GitHub: https://github.com/PredictiveEcology/reproducible
+* Source code: https://github.com/cran/reproducible
+* Date/Publication: 2024-12-12 06:30:02 UTC
+* Number of recursive dependencies: 104
 
-Run `revdep_details(, "reservr")` for more info
+Run `revdepcheck::revdep_details(, "reproducible")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘reservr’ can be installed ... WARNING
+*   checking tests ...
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/reservr/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/reservr/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/reservr/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/reservr/new/reservr.Rcheck/00install.out’ for details.
+      Running ‘test-all.R’
+     ERROR
+    Running the tests in ‘tests/test-all.R’ failed.
+    Last 50 lines of output:
+        'test-preProcessWorks.R:328:3', 'test-preProcessWorks.R:348:3',
+        'test-preProcessWorks.R:361:3', 'test-preProcessWorks.R:374:3',
+        'test-preProcessWorks.R:391:3', 'test-preProcessWorks.R:409:3',
+        'test-preProcessWorks.R:438:3', 'test-preProcessWorks.R:459:3',
+        'test-preProcessWorks.R:487:3', 'test-preProcessWorks.R:543:3',
+        'test-preProcessWorks.R:569:3', 'test-preProcessWorks.R:672:3',
+    ...
+       4.       └─reproducible:::makeVal(x)
+       5.         ├─terra::makeValid(x)
+       6.         └─terra::makeValid(x)
+       7.           └─terra (local) .local(x, ...)
+       8.             └─terra:::messages(x)
+       9.               └─terra:::error(f, x@pntr$getError())
+      
+      [ FAIL 2 | WARN 0 | SKIP 90 | PASS 391 ]
+      Error: Test failures
+      Execution halted
     ```
 
-*   checking installed package size ... NOTE
-    ```
-      installed size is 16.8Mb
-      sub-directories of 1Mb or more:
-        R      1.5Mb
-        libs  14.7Mb
-    ```
+# reservr
 
-*   checking for GNU extensions in Makefiles ... NOTE
+<details>
+
+* Version: 0.0.3
+* GitHub: https://github.com/AshesITR/reservr
+* Source code: https://github.com/cran/reservr
+* Date/Publication: 2024-06-24 16:40:02 UTC
+* Number of recursive dependencies: 134
+
+Run `revdepcheck::revdep_details(, "reservr")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
     ```
-    GNU make is a SystemRequirements.
+    Package required but not available: ‘keras3’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # rgee
@@ -4234,9 +6719,9 @@ Run `revdep_details(, "reservr")` for more info
 * GitHub: https://github.com/r-spatial/rgee
 * Source code: https://github.com/cran/rgee
 * Date/Publication: 2023-09-27 08:30:02 UTC
-* Number of recursive dependencies: 144
+* Number of recursive dependencies: 135
 
-Run `revdep_details(, "rgee")` for more info
+Run `revdepcheck::revdep_details(, "rgee")` for more info
 
 </details>
 
@@ -4244,68 +6729,57 @@ Run `revdep_details(, "rgee")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  8.2Mb
+      installed size is  8.4Mb
       sub-directories of 1Mb or more:
         doc   6.9Mb
     ```
 
-# robotstxt
-
-<details>
-
-* Version: 0.7.13
-* GitHub: https://github.com/ropensci/robotstxt
-* Source code: https://github.com/cran/robotstxt
-* Date/Publication: 2020-09-03 19:30:02 UTC
-* Number of recursive dependencies: 70
-
-Run `revdep_details(, "robotstxt")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
+*   checking Rd files ... NOTE
     ```
-    Namespace in Imports field not imported from: ‘future’
-      All declared Imports should be used.
-    ```
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
+    checkRd: (-1) ee_Authenticate.Rd:40: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_Authenticate.Rd:41: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_Authenticate.Rd:42: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_Authenticate.Rd:43: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_Authenticate.Rd:44: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_Initialize.Rd:49: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_Initialize.Rd:50: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_Initialize.Rd:51: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_Initialize.Rd:52: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_Initialize.Rd:53: Lost braces in \itemize; meant \describe ?
+    ...
+    checkRd: (-1) ee_imagecollection_to_local.Rd:105: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_imagecollection_to_local.Rd:106: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_imagecollection_to_local.Rd:107: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_imagecollection_to_local.Rd:108: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_install.Rd:35-37: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_install.Rd:38-39: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_install.Rd:40: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_install.Rd:41-44: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_install.Rd:45: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) ee_install.Rd:46: Lost braces in \itemize; meant \describe ?
     ```
 
 # rpm
 
 <details>
 
-* Version: 0.7-1
+* Version: 0.7-3
 * GitHub: https://github.com/handcock/rpm
 * Source code: https://github.com/cran/rpm
-* Date/Publication: 2023-04-21 23:30:02 UTC
-* Number of recursive dependencies: 66
+* Date/Publication: 2024-04-18 08:20:03 UTC
+* Number of recursive dependencies: 65
 
-Run `revdep_details(, "rpm")` for more info
+Run `revdepcheck::revdep_details(, "rpm")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘rpm’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/rpm/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/rpm/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/rpm/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/rpm/new/rpm.Rcheck/00install.out’ for details.
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is 11.6Mb
+      installed size is 13.5Mb
       sub-directories of 1Mb or more:
-        libs  11.1Mb
+        libs  12.9Mb
     ```
 
 # rsparkling
@@ -4316,9 +6790,9 @@ Run `revdep_details(, "rpm")` for more info
 * GitHub: https://github.com/h2oai/sparkling-water
 * Source code: https://github.com/cran/rsparkling
 * Date/Publication: 2020-01-28 23:10:02 UTC
-* Number of recursive dependencies: 60
+* Number of recursive dependencies: 58
 
-Run `revdep_details(, "rsparkling")` for more info
+Run `revdepcheck::revdep_details(, "rsparkling")` for more info
 
 </details>
 
@@ -4335,6 +6809,145 @@ Run `revdep_details(, "rsparkling")` for more info
       'LazyData' is specified without a 'data' directory
     ```
 
+# RTransferEntropy
+
+<details>
+
+* Version: 0.2.21
+* GitHub: https://github.com/BZPaper/RTransferEntropy
+* Source code: https://github.com/cran/RTransferEntropy
+* Date/Publication: 2023-02-01 17:30:05 UTC
+* Number of recursive dependencies: 81
+
+Run `revdepcheck::revdep_details(, "RTransferEntropy")` for more info
+
+</details>
+
+## In both
+
+*   R CMD check timed out
+    
+
+# rules
+
+<details>
+
+* Version: 1.0.2
+* GitHub: https://github.com/tidymodels/rules
+* Source code: https://github.com/cran/rules
+* Date/Publication: 2023-03-08 23:40:02 UTC
+* Number of recursive dependencies: 137
+
+Run `revdepcheck::revdep_details(, "rules")` for more info
+
+</details>
+
+## In both
+
+*   checking tests ...
+    ```
+      Running ‘spelling.R’
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Last 50 lines of output:
+       11.     └─cli::cli_abort(...)
+       12.       └─rlang::abort(...)
+      ── Error ('test-rule-fit-regression.R:184:3'): early stopping works in xrf_fit ──
+      Error in `fit(rf_mod_3, mpg ~ ., data = mtcars)`: Please install the xrf package to use this engine.
+      Backtrace:
+    ...
+       2. │ └─base::withCallingHandlers(...)
+       3. ├─generics::fit(rf_mod, mpg ~ ., data = mtcars)
+       4. └─parsnip::fit.model_spec(rf_mod, mpg ~ ., data = mtcars)
+       5.   └─parsnip:::check_installs(object)
+       6.     └─cli::cli_abort(...)
+       7.       └─rlang::abort(...)
+      
+      [ FAIL 6 | WARN 0 | SKIP 33 | PASS 17 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘xrf’
+    ```
+
+# sae.projection
+
+<details>
+
+* Version: 0.1.3
+* GitHub: https://github.com/Alfrzlp/sae.projection
+* Source code: https://github.com/cran/sae.projection
+* Date/Publication: 2025-04-05 10:40:02 UTC
+* Number of recursive dependencies: 126
+
+Run `revdepcheck::revdep_details(, "sae.projection")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘FSelector’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# safetyCharts
+
+<details>
+
+* Version: 0.3.0
+* GitHub: https://github.com/SafetyGraphics/safetyCharts
+* Source code: https://github.com/cran/safetyCharts
+* Date/Publication: 2022-03-22 20:00:02 UTC
+* Number of recursive dependencies: 149
+
+Run `revdepcheck::revdep_details(, "safetyCharts")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘pharmaRTF’
+    
+    Package suggested but not available for checking: ‘safetyGraphics’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# safetyGraphics
+
+<details>
+
+* Version: 2.1.1
+* GitHub: https://github.com/SafetyGraphics/safetyGraphics
+* Source code: https://github.com/cran/safetyGraphics
+* Date/Publication: 2022-12-14 22:00:02 UTC
+* Number of recursive dependencies: 160
+
+Run `revdepcheck::revdep_details(, "safetyGraphics")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘safetyCharts’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
 # sapfluxnetr
 
 <details>
@@ -4343,9 +6956,9 @@ Run `revdep_details(, "rsparkling")` for more info
 * GitHub: https://github.com/sapfluxnet/sapfluxnetr
 * Source code: https://github.com/cran/sapfluxnetr
 * Date/Publication: 2023-01-25 15:30:02 UTC
-* Number of recursive dependencies: 83
+* Number of recursive dependencies: 81
 
-Run `revdep_details(, "sapfluxnetr")` for more info
+Run `revdepcheck::revdep_details(, "sapfluxnetr")` for more info
 
 </details>
 
@@ -4360,72 +6973,41 @@ Run `revdep_details(, "sapfluxnetr")` for more info
 
 <details>
 
-* Version: 1.8.0
+* Version: 1.12.0
 * GitHub: NA
 * Source code: https://github.com/cran/scanMiRApp
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 177
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 179
 
-Run `revdep_details(, "scanMiRApp")` for more info
+Run `revdepcheck::revdep_details(, "scanMiRApp")` for more info
 
 </details>
 
 ## In both
 
-*   checking dependencies in R code ... WARNING
+*   checking package dependencies ... ERROR
     ```
-    '::' or ':::' import not declared from: 'BSgenome.Mmusculus.UCSC.mm39'
-    ':::' calls which should be '::':
-      'BSgenome.Hsapiens.UCSC.hg38:::BSgenome.Hsapiens.UCSC.hg38'
-      'BSgenome.Mmusculus.UCSC.mm10:::BSgenome.Mmusculus.UCSC.mm10'
-      'BSgenome.Rnorvegicus.UCSC.rn6:::BSgenome.Rnorvegicus.UCSC.rn6'
-      See the note in ?`:::` about the use of this operator.
-    Unavailable namespace imported from by a ':::' call: 'BSgenome.Mmusculus.UCSC.mm39'
-      See the note in ?`:::` about the use of this operator.
-    ```
-
-*   checking R code for possible problems ... NOTE
-    ```
-    .fakeAnno: no visible binding for global variable 'SampleTranscript'
-    .fakeAnno: no visible binding for global variable 'SampleKdModel'
-    plotSitesOnUTR: no visible binding for global variable 'logKd'
-    plotSitesOnUTR: no visible binding for global variable 'note'
-    Undefined global functions or variables:
-      SampleKdModel SampleTranscript logKd note
+    Packages required but not available: 'scanMiR', 'scanMiRData'
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # SCArray.sat
 
 <details>
 
-* Version: 1.2.1
+* Version: 1.6.0
 * GitHub: https://github.com/AbbVie-ComputationalGenomics/SCArray
 * Source code: https://github.com/cran/SCArray.sat
-* Date/Publication: 2024-01-16
-* Number of recursive dependencies: 180
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 183
 
-Run `revdep_details(, "SCArray.sat")` for more info
+Run `revdepcheck::revdep_details(, "SCArray.sat")` for more info
 
 </details>
 
 ## In both
-
-*   checking S3 generic/method consistency ... WARNING
-    ```
-    SetAssayData:
-      function(object, layer, new.data, slot, ...)
-    SetAssayData.SCArrayAssay:
-      function(object, slot, new.data, ...)
-    
-    CreateSeuratObject:
-      function(counts, assay, names.field, names.delim, meta.data, project,
-               ...)
-    CreateSeuratObject.DelayedMatrix:
-      function(counts, project, assay, names.field, names.delim, meta.data,
-               min.cells, min.features, row.names, ...)
-    See section ‘Generic functions and methods’ in the ‘Writing R
-    Extensions’ manual.
-    ```
 
 *   checking dependencies in R code ... NOTE
     ```
@@ -4436,17 +7018,40 @@ Run `revdep_details(, "SCArray.sat")` for more info
       See the note in ?`:::` about the use of this operator.
     ```
 
+# scDiffCom
+
+<details>
+
+* Version: 1.0.0
+* GitHub: NA
+* Source code: https://github.com/cran/scDiffCom
+* Date/Publication: 2023-11-03 18:40:02 UTC
+* Number of recursive dependencies: 262
+
+Run `revdepcheck::revdep_details(, "scDiffCom")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  7.5Mb
+      sub-directories of 1Mb or more:
+        data   6.5Mb
+    ```
+
 # scRNAseqApp
 
 <details>
 
-* Version: 1.2.2
+* Version: 1.6.1
 * GitHub: https://github.com/jianhong/scRNAseqApp
 * Source code: https://github.com/cran/scRNAseqApp
-* Date/Publication: 2023-11-02
-* Number of recursive dependencies: 235
+* Date/Publication: 2025-01-23
+* Number of recursive dependencies: 241
 
-Run `revdep_details(, "scRNAseqApp")` for more info
+Run `revdepcheck::revdep_details(, "scRNAseqApp")` for more info
 
 </details>
 
@@ -4466,61 +7071,30 @@ Run `revdep_details(, "scRNAseqApp")` for more info
 * GitHub: https://github.com/satijalab/sctransform
 * Source code: https://github.com/cran/sctransform
 * Date/Publication: 2023-10-19 04:40:02 UTC
-* Number of recursive dependencies: 68
+* Number of recursive dependencies: 67
 
-Run `revdep_details(, "sctransform")` for more info
+Run `revdepcheck::revdep_details(, "sctransform")` for more info
 
 </details>
 
 ## In both
-
-*   checking whether package ‘sctransform’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/sctransform/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/sctransform/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/sctransform/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/sctransform/new/sctransform.Rcheck/00install.out’ for details.
-    ```
 
 *   checking package dependencies ... NOTE
     ```
     Package which this enhances but not available for checking: ‘glmGamPoi’
     ```
 
-# sdmApp
-
-<details>
-
-* Version: 0.0.2
-* GitHub: https://github.com/Abson-dev/sdmApp
-* Source code: https://github.com/cran/sdmApp
-* Date/Publication: 2021-07-07 08:30:02 UTC
-* Number of recursive dependencies: 176
-
-Run `revdep_details(, "sdmApp")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘sp’
-      All declared Imports should be used.
-    ```
-
 # sdmTMB
 
 <details>
 
-* Version: 0.4.3
+* Version: 0.7.0
 * GitHub: https://github.com/pbs-assess/sdmTMB
 * Source code: https://github.com/cran/sdmTMB
-* Date/Publication: 2024-02-29 01:40:02 UTC
-* Number of recursive dependencies: 115
+* Date/Publication: 2025-04-01 21:30:06 UTC
+* Number of recursive dependencies: 152
 
-Run `revdep_details(, "sdmTMB")` for more info
+Run `revdepcheck::revdep_details(, "sdmTMB")` for more info
 
 </details>
 
@@ -4528,66 +7102,83 @@ Run `revdep_details(, "sdmTMB")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 105.4Mb
+      installed size is 100.7Mb
       sub-directories of 1Mb or more:
-        libs  103.7Mb
+        libs  98.6Mb
     ```
 
-# semidist
+# selenider
 
 <details>
 
-* Version: 0.1.0
-* GitHub: https://github.com/wzhong41/semidist
-* Source code: https://github.com/cran/semidist
-* Date/Publication: 2023-11-21 06:50:02 UTC
-* Number of recursive dependencies: 44
+* Version: 0.4.1
+* GitHub: https://github.com/ashbythorpe/selenider
+* Source code: https://github.com/cran/selenider
+* Date/Publication: 2025-01-12 14:40:01 UTC
+* Number of recursive dependencies: 90
 
-Run `revdep_details(, "semidist")` for more info
+Run `revdepcheck::revdep_details(, "selenider")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘semidist’ can be installed ... WARNING
+*   checking tests ...
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/semidist/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/semidist/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/semidist/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/semidist/new/semidist.Rcheck/00install.out’ for details.
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Last 50 lines of output:
+      ── Failure ('test-keys.R:27:5'): Each key has a selenium key definition ────────
+      Expected `get_rselenium_key(structure("F9", class = "selenider_key"))` to run without any errors.
+      i Actually got a <rlib_error_package_not_found> with text:
+        The package "RSelenium" is required.
+      Backtrace:
+          ▆
+    ...
+      i Actually got a <rlib_error_package_not_found> with text:
+        The package "RSelenium" is required.
+      Backtrace:
+          ▆
+       1. ├─rlang::inject(expect_no_error(get_rselenium_key(!!key))) at test-keys.R:27:5
+       2. └─testthat::expect_no_error(get_rselenium_key(`<slndr_ky>`))
+      
+      [ FAIL 29 | WARN 0 | SKIP 44 | PASS 127 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+*   checking package dependencies ... NOTE
+    ```
+    Packages suggested but not available for checking: 'RSelenium', 'wdman'
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Packages unavailable to check Rd xrefs: ‘wdman’, ‘RSelenium’
     ```
 
 # sentopics
 
 <details>
 
-* Version: 0.7.2
+* Version: 0.7.4
 * GitHub: https://github.com/odelmarcelle/sentopics
 * Source code: https://github.com/cran/sentopics
-* Date/Publication: 2023-05-28 09:50:02 UTC
-* Number of recursive dependencies: 173
+* Date/Publication: 2024-09-20 12:20:02 UTC
+* Number of recursive dependencies: 172
 
-Run `revdep_details(, "sentopics")` for more info
+Run `revdepcheck::revdep_details(, "sentopics")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘sentopics’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/sentopics/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/sentopics/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/sentopics/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/sentopics/new/sentopics.Rcheck/00install.out’ for details.
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is  8.1Mb
+      installed size is  9.7Mb
       sub-directories of 1Mb or more:
-        data   1.2Mb
+        data   2.5Mb
         libs   6.2Mb
     ```
 
@@ -4605,13 +7196,13 @@ Run `revdep_details(, "sentopics")` for more info
 
 <details>
 
-* Version: 5.0.2
+* Version: 5.2.1
 * GitHub: https://github.com/satijalab/seurat
 * Source code: https://github.com/cran/Seurat
-* Date/Publication: 2024-02-29 00:20:08 UTC
-* Number of recursive dependencies: 266
+* Date/Publication: 2025-01-24 06:50:06 UTC
+* Number of recursive dependencies: 281
 
-Run `revdep_details(, "Seurat")` for more info
+Run `revdepcheck::revdep_details(, "Seurat")` for more info
 
 </details>
 
@@ -4619,15 +7210,17 @@ Run `revdep_details(, "Seurat")` for more info
 
 *   checking package dependencies ... NOTE
     ```
-    Packages suggested but not available for checking: 'BPCells', 'presto'
+    Packages suggested but not available for checking:
+      'BPCells', 'hdf5r', 'presto', 'Rfast2'
     ```
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 16.0Mb
+      installed size is 18.8Mb
       sub-directories of 1Mb or more:
-        R      1.7Mb
-        libs  13.5Mb
+        R      3.5Mb
+        help   1.5Mb
+        libs  13.4Mb
     ```
 
 *   checking Rd cross-references ... NOTE
@@ -4639,13 +7232,13 @@ Run `revdep_details(, "Seurat")` for more info
 
 <details>
 
-* Version: 5.0.1
-* GitHub: https://github.com/mojaveazure/seurat-object
+* Version: 5.0.2
+* GitHub: https://github.com/satijalab/seurat-object
 * Source code: https://github.com/cran/SeuratObject
-* Date/Publication: 2023-11-17 22:40:16 UTC
-* Number of recursive dependencies: 103
+* Date/Publication: 2024-05-08 13:40:06 UTC
+* Number of recursive dependencies: 101
 
-Run `revdep_details(, "SeuratObject")` for more info
+Run `revdepcheck::revdep_details(, "SeuratObject")` for more info
 
 </details>
 
@@ -4660,9 +7253,10 @@ Run `revdep_details(, "SeuratObject")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.4Mb
+      installed size is  7.1Mb
       sub-directories of 1Mb or more:
-        R      1.5Mb
+        R      2.0Mb
+        help   1.6Mb
         libs   3.2Mb
     ```
 
@@ -4671,17 +7265,46 @@ Run `revdep_details(, "SeuratObject")` for more info
     Package unavailable to check Rd xrefs: ‘plotly’
     ```
 
+# shapr
+
+<details>
+
+* Version: 1.0.3
+* GitHub: https://github.com/NorskRegnesentral/shapr
+* Source code: https://github.com/cran/shapr
+* Date/Publication: 2025-03-26 17:10:02 UTC
+* Number of recursive dependencies: 167
+
+Run `revdepcheck::revdep_details(, "shapr")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 13.4Mb
+      sub-directories of 1Mb or more:
+        doc    4.3Mb
+        libs   7.8Mb
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘devtools’
+    ```
+
 # sharp
 
 <details>
 
-* Version: 1.4.6
+* Version: 1.4.7
 * GitHub: https://github.com/barbarabodinier/sharp
 * Source code: https://github.com/cran/sharp
-* Date/Publication: 2024-02-03 17:30:02 UTC
-* Number of recursive dependencies: 157
+* Date/Publication: 2025-04-11 08:20:02 UTC
+* Number of recursive dependencies: 158
 
-Run `revdep_details(, "sharp")` for more info
+Run `revdepcheck::revdep_details(, "sharp")` for more info
 
 </details>
 
@@ -4701,13 +7324,13 @@ Run `revdep_details(, "sharp")` for more info
 
 <details>
 
-* Version: 1.8.0
+* Version: 1.10.0
 * GitHub: https://github.com/rstudio/shiny
 * Source code: https://github.com/cran/shiny
-* Date/Publication: 2023-11-17 23:40:02 UTC
-* Number of recursive dependencies: 90
+* Date/Publication: 2024-12-14 00:10:02 UTC
+* Number of recursive dependencies: 94
 
-Run `revdep_details(, "shiny")` for more info
+Run `revdepcheck::revdep_details(, "shiny")` for more info
 
 </details>
 
@@ -4715,10 +7338,11 @@ Run `revdep_details(, "shiny")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 11.4Mb
+      installed size is 16.5Mb
       sub-directories of 1Mb or more:
-        R     1.4Mb
-        www   8.9Mb
+        R      3.5Mb
+        help   1.7Mb
+        www   10.4Mb
     ```
 
 # shiny.worker
@@ -4729,9 +7353,9 @@ Run `revdep_details(, "shiny")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/shiny.worker
 * Date/Publication: 2021-01-21 11:00:02 UTC
-* Number of recursive dependencies: 65
+* Number of recursive dependencies: 57
 
-Run `revdep_details(, "shiny.worker")` for more info
+Run `revdepcheck::revdep_details(, "shiny.worker")` for more info
 
 </details>
 
@@ -4757,9 +7381,9 @@ Run `revdep_details(, "shiny.worker")` for more info
 * GitHub: https://github.com/fweber144/shinybrms
 * Source code: https://github.com/cran/shinybrms
 * Date/Publication: 2022-08-05 22:50:07 UTC
-* Number of recursive dependencies: 149
+* Number of recursive dependencies: 154
 
-Run `revdep_details(, "shinybrms")` for more info
+Run `revdepcheck::revdep_details(, "shinybrms")` for more info
 
 </details>
 
@@ -4770,6 +7394,63 @@ Run `revdep_details(, "shinybrms")` for more info
     Package suggested but not available for checking: ‘cmdstanr’
     ```
 
+# shinymgr
+
+<details>
+
+* Version: 1.1.0
+* GitHub: NA
+* Source code: https://github.com/cran/shinymgr
+* Date/Publication: 2024-05-10 17:50:03 UTC
+* Number of recursive dependencies: 85
+
+Run `revdepcheck::revdep_details(, "shinymgr")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.6Mb
+      sub-directories of 1Mb or more:
+        shinymgr    1.4Mb
+        tutorials   3.6Mb
+    ```
+
+*   checking dependencies in R code ... NOTE
+    ```
+    Namespace in Imports field not imported from: ‘shinydashboard’
+      All declared Imports should be used.
+    ```
+
+# shinyMixR
+
+<details>
+
+* Version: 0.5.0
+* GitHub: NA
+* Source code: https://github.com/cran/shinyMixR
+* Date/Publication: 2024-11-14 16:10:03 UTC
+* Number of recursive dependencies: 201
+
+Run `revdepcheck::revdep_details(, "shinyMixR")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Packages required but not available:
+      'collapsibleTree', 'nlmixr2', 'nlmixr2est'
+    
+    Package suggested but not available for checking: ‘xpose.nlmixr2’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
 # shinyML
 
 <details>
@@ -4778,9 +7459,9 @@ Run `revdep_details(, "shinybrms")` for more info
 * GitHub: https://github.com/JeanBertinR/shinyML
 * Source code: https://github.com/cran/shinyML
 * Date/Publication: 2021-02-24 17:00:02 UTC
-* Number of recursive dependencies: 118
+* Number of recursive dependencies: 114
 
-Run `revdep_details(, "shinyML")` for more info
+Run `revdepcheck::revdep_details(, "shinyML")` for more info
 
 </details>
 
@@ -4791,17 +7472,43 @@ Run `revdep_details(, "shinyML")` for more info
       'LazyData' is specified without a 'data' directory
     ```
 
+# shinyNextUI
+
+<details>
+
+* Version: 0.1.0
+* GitHub: NA
+* Source code: https://github.com/cran/shinyNextUI
+* Date/Publication: 2025-03-17 08:50:02 UTC
+* Number of recursive dependencies: 99
+
+Run `revdepcheck::revdep_details(, "shinyNextUI")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘roxy.shinylive’
+    ```
+
+*   checking data for non-ASCII characters ... NOTE
+    ```
+      Note: found 1973 marked UTF-8 strings
+    ```
+
 # sigminer
 
 <details>
 
-* Version: 2.3.0
+* Version: 2.3.1
 * GitHub: https://github.com/ShixiangWang/sigminer
 * Source code: https://github.com/cran/sigminer
-* Date/Publication: 2023-12-12 11:50:03 UTC
-* Number of recursive dependencies: 205
+* Date/Publication: 2024-05-11 08:50:02 UTC
+* Number of recursive dependencies: 213
 
-Run `revdep_details(, "sigminer")` for more info
+Run `revdepcheck::revdep_details(, "sigminer")` for more info
 
 </details>
 
@@ -4809,23 +7516,26 @@ Run `revdep_details(, "sigminer")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.9Mb
+      installed size is  8.7Mb
       sub-directories of 1Mb or more:
-        help   1.7Mb
-        libs   1.4Mb
+        R         1.5Mb
+        data      2.0Mb
+        extdata   1.0Mb
+        help      1.7Mb
+        libs      1.6Mb
     ```
 
 # Signac
 
 <details>
 
-* Version: 1.12.0
+* Version: 1.14.0
 * GitHub: https://github.com/stuart-lab/signac
 * Source code: https://github.com/cran/Signac
-* Date/Publication: 2023-11-08 09:30:02 UTC
-* Number of recursive dependencies: 254
+* Date/Publication: 2024-08-21 07:40:02 UTC
+* Number of recursive dependencies: 246
 
-Run `revdep_details(, "Signac")` for more info
+Run `revdepcheck::revdep_details(, "Signac")` for more info
 
 </details>
 
@@ -4833,9 +7543,10 @@ Run `revdep_details(, "Signac")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.1Mb
+      installed size is  6.6Mb
       sub-directories of 1Mb or more:
-        R      1.1Mb
+        R      1.5Mb
+        data   1.5Mb
         libs   2.9Mb
     ```
 
@@ -4843,26 +7554,17 @@ Run `revdep_details(, "Signac")` for more info
 
 <details>
 
-* Version: 2.4.0
+* Version: 2.8.0
 * GitHub: https://github.com/TojalLab/signeR
 * Source code: https://github.com/cran/signeR
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 244
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 238
 
-Run `revdep_details(, "signeR")` for more info
+Run `revdepcheck::revdep_details(, "signeR")` for more info
 
 </details>
 
 ## In both
-
-*   checking whether package ‘signeR’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/signeR/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/signeR/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/signeR/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/signeR/new/signeR.Rcheck/00install.out’ for details.
-    ```
 
 *   checking C++ specification ... NOTE
     ```
@@ -4871,10 +7573,10 @@ Run `revdep_details(, "signeR")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.6Mb
+      installed size is  7.3Mb
       sub-directories of 1Mb or more:
         R     1.2Mb
-        doc   4.5Mb
+        doc   5.2Mb
     ```
 
 *   checking R code for possible problems ... NOTE
@@ -4921,75 +7623,58 @@ Run `revdep_details(, "signeR")` for more info
 
 <details>
 
-* Version: 2.14
+* Version: 2.19.2
 * GitHub: https://github.com/philchalmers/SimDesign
 * Source code: https://github.com/cran/SimDesign
-* Date/Publication: 2024-01-09 09:10:11 UTC
-* Number of recursive dependencies: 124
+* Date/Publication: 2025-03-28 15:30:02 UTC
+* Number of recursive dependencies: 138
 
-Run `revdep_details(, "SimDesign")` for more info
+Run `revdepcheck::revdep_details(, "SimDesign")` for more info
 
 </details>
 
 ## In both
 
-*   checking package dependencies ... NOTE
-    ```
-    Package suggested but not available for checking: ‘doMPI’
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.8Mb
+      installed size is  7.5Mb
       sub-directories of 1Mb or more:
-        doc   5.2Mb
+        doc   6.6Mb
     ```
 
-# sits
+# simtrial
 
 <details>
 
-* Version: 1.4.2-1
-* GitHub: https://github.com/e-sensing/sits
-* Source code: https://github.com/cran/sits
-* Date/Publication: 2023-11-02 15:10:02 UTC
-* Number of recursive dependencies: 221
+* Version: 0.4.2
+* GitHub: https://github.com/Merck/simtrial
+* Source code: https://github.com/cran/simtrial
+* Date/Publication: 2024-11-18 15:10:02 UTC
+* Number of recursive dependencies: 115
 
-Run `revdep_details(, "sits")` for more info
+Run `revdepcheck::revdep_details(, "simtrial")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘sits’ can be installed ... WARNING
+*   checking dependencies in R code ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/sits/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/sits/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/sits/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/sits/new/sits.Rcheck/00install.out’ for details.
-    ```
-
-*   checking installed package size ... NOTE
-    ```
-      installed size is 13.2Mb
-      sub-directories of 1Mb or more:
-        R         1.1Mb
-        extdata   1.5Mb
-        libs      9.9Mb
+    Namespace in Imports field not imported from: ‘gsDesign2’
+      All declared Imports should be used.
     ```
 
 # skpr
 
 <details>
 
-* Version: 1.6.2
+* Version: 1.7.1
 * GitHub: https://github.com/tylermorganwall/skpr
 * Source code: https://github.com/cran/skpr
-* Date/Publication: 2024-02-06 19:50:02 UTC
-* Number of recursive dependencies: 149
+* Date/Publication: 2024-03-26 01:30:02 UTC
+* Number of recursive dependencies: 157
 
-Run `revdep_details(, "skpr")` for more info
+Run `revdepcheck::revdep_details(, "skpr")` for more info
 
 </details>
 
@@ -4997,42 +7682,42 @@ Run `revdep_details(, "skpr")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 63.3Mb
+      installed size is 59.7Mb
       sub-directories of 1Mb or more:
-        libs  62.8Mb
+        libs  59.0Mb
     ```
 
 # SmCCNet
 
 <details>
 
-* Version: 2.0.2
+* Version: 2.0.3
 * GitHub: https://github.com/KechrisLab/SmCCNet
 * Source code: https://github.com/cran/SmCCNet
-* Date/Publication: 2024-01-13 21:50:17 UTC
+* Date/Publication: 2024-04-16 05:20:02 UTC
 * Number of recursive dependencies: 162
 
-Run `revdep_details(, "SmCCNet")` for more info
+Run `revdepcheck::revdep_details(, "SmCCNet")` for more info
 
 </details>
 
 ## In both
 
-*   checking re-building of vignette outputs ... ERROR
+*   checking re-building of vignette outputs ... WARNING
     ```
     Error(s) in re-building vignettes:
     --- re-building ‘SmCCNet_Vignette_AutoSmCCNet.Rmd’ using rmarkdown
-    ! kpathsea: Running mktexfmt xelatex.fmt
+    ! LaTeX Error: File `ucharcat.sty' not found.
+    
+    ! Emergency stop.
+    <read *> 
     
     Error: processing vignette 'SmCCNet_Vignette_AutoSmCCNet.Rmd' failed with diagnostics:
-    LaTeX failed to compile /c4/home/henrik/repositories/globals/revdep/checks/SmCCNet/new/SmCCNet.Rcheck/vign_test/SmCCNet/vignettes/SmCCNet_Vignette_AutoSmCCNet.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See SmCCNet_Vignette_AutoSmCCNet.log for more info.
+    LaTeX failed to compile /scratch/henrik/606930/globals/revdep/checks/SmCCNet/new/SmCCNet.Rcheck/vign_test/SmCCNet/vignettes/SmCCNet_Vignette_AutoSmCCNet.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See SmCCNet_Vignette_AutoSmCCNet.log for more info.
     --- failed re-building ‘SmCCNet_Vignette_AutoSmCCNet.Rmd’
-    
-    --- re-building ‘SmCCNet_Vignette_MultiOmics.Rmd’ using rmarkdown
-    ! kpathsea: Running mktexfmt xelatex.fmt
     ...
     Error: processing vignette 'SmCCNet_Vignette_SingleOmics.Rmd' failed with diagnostics:
-    LaTeX failed to compile /c4/home/henrik/repositories/globals/revdep/checks/SmCCNet/new/SmCCNet.Rcheck/vign_test/SmCCNet/vignettes/SmCCNet_Vignette_SingleOmics.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See SmCCNet_Vignette_SingleOmics.log for more info.
+    LaTeX failed to compile /scratch/henrik/606930/globals/revdep/checks/SmCCNet/new/SmCCNet.Rcheck/vign_test/SmCCNet/vignettes/SmCCNet_Vignette_SingleOmics.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See SmCCNet_Vignette_SingleOmics.log for more info.
     --- failed re-building ‘SmCCNet_Vignette_SingleOmics.Rmd’
     
     SUMMARY: processing the following files failed:
@@ -5043,6 +7728,14 @@ Run `revdep_details(, "SmCCNet")` for more info
     Execution halted
     ```
 
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.1Mb
+      sub-directories of 1Mb or more:
+        data   3.5Mb
+        doc    1.2Mb
+    ```
+
 # smoots
 
 <details>
@@ -5051,21 +7744,19 @@ Run `revdep_details(, "SmCCNet")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/smoots
 * Date/Publication: 2023-09-11 08:50:02 UTC
-* Number of recursive dependencies: 76
+* Number of recursive dependencies: 70
 
-Run `revdep_details(, "smoots")` for more info
+Run `revdepcheck::revdep_details(, "smoots")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘smoots’ can be installed ... WARNING
+*   checking installed package size ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/smoots/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/smoots/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/smoots/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/smoots/new/smoots.Rcheck/00install.out’ for details.
+      installed size is  5.5Mb
+      sub-directories of 1Mb or more:
+        libs   4.6Mb
     ```
 
 # solitude
@@ -5078,7 +7769,7 @@ Run `revdep_details(, "smoots")` for more info
 * Date/Publication: 2021-07-29 20:00:02 UTC
 * Number of recursive dependencies: 131
 
-Run `revdep_details(, "solitude")` for more info
+Run `revdepcheck::revdep_details(, "solitude")` for more info
 
 </details>
 
@@ -5095,13 +7786,13 @@ Run `revdep_details(, "solitude")` for more info
 
 <details>
 
-* Version: 2.0.3
+* Version: 2.1.0
 * GitHub: https://github.com/PredictiveEcology/SpaDES.core
 * Source code: https://github.com/cran/SpaDES.core
-* Date/Publication: 2023-11-10 10:20:02 UTC
-* Number of recursive dependencies: 136
+* Date/Publication: 2024-06-02 11:02:47 UTC
+* Number of recursive dependencies: 135
 
-Run `revdep_details(, "SpaDES.core")` for more info
+Run `revdepcheck::revdep_details(, "SpaDES.core")` for more info
 
 </details>
 
@@ -5114,22 +7805,22 @@ Run `revdep_details(, "SpaDES.core")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.2Mb
+      installed size is  9.3Mb
       sub-directories of 1Mb or more:
-        R   4.7Mb
+        R   7.5Mb
     ```
 
 # spaMM
 
 <details>
 
-* Version: 4.4.16
+* Version: 4.5.0
 * GitHub: NA
 * Source code: https://github.com/cran/spaMM
-* Date/Publication: 2023-12-20 13:50:02 UTC
-* Number of recursive dependencies: 102
+* Date/Publication: 2024-06-09 22:20:02 UTC
+* Number of recursive dependencies: 88
 
-Run `revdep_details(, "spaMM")` for more info
+Run `revdepcheck::revdep_details(, "spaMM")` for more info
 
 </details>
 
@@ -5137,7 +7828,7 @@ Run `revdep_details(, "spaMM")` for more info
 
 *   checking package dependencies ... NOTE
     ```
-    Packages suggested but not available for checking: 'Infusion', 'blackbox'
+    Package suggested but not available for checking: ‘IsoriX’
     
     Packages which this enhances but not available for checking:
       'multcomp', 'RLRsim', 'lmerTest'
@@ -5145,10 +7836,11 @@ Run `revdep_details(, "spaMM")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 56.9Mb
+      installed size is 56.0Mb
       sub-directories of 1Mb or more:
-        R      2.7Mb
-        libs  52.9Mb
+        R      3.6Mb
+        help   1.5Mb
+        libs  50.2Mb
     ```
 
 # sparkavro
@@ -5159,9 +7851,9 @@ Run `revdep_details(, "spaMM")` for more info
 * GitHub: https://github.com/chezou/sparkavro
 * Source code: https://github.com/cran/sparkavro
 * Date/Publication: 2020-01-10 04:40:02 UTC
-* Number of recursive dependencies: 57
+* Number of recursive dependencies: 55
 
-Run `revdep_details(, "sparkavro")` for more info
+Run `revdepcheck::revdep_details(, "sparkavro")` for more info
 
 </details>
 
@@ -5180,9 +7872,9 @@ Run `revdep_details(, "sparkavro")` for more info
 * GitHub: https://github.com/miraisolutions/sparkbq
 * Source code: https://github.com/cran/sparkbq
 * Date/Publication: 2019-12-18 18:00:02 UTC
-* Number of recursive dependencies: 40
+* Number of recursive dependencies: 39
 
-Run `revdep_details(, "sparkbq")` for more info
+Run `revdepcheck::revdep_details(, "sparkbq")` for more info
 
 </details>
 
@@ -5201,30 +7893,33 @@ Run `revdep_details(, "sparkbq")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/sparkhail
 * Date/Publication: 2019-12-23 17:50:02 UTC
-* Number of recursive dependencies: 83
+* Number of recursive dependencies: 81
 
-Run `revdep_details(, "sparkhail")` for more info
+Run `revdepcheck::revdep_details(, "sparkhail")` for more info
 
 </details>
 
 ## In both
 
-*   checking LazyData ... NOTE
+*   checking package dependencies ... ERROR
     ```
-      'LazyData' is specified without a 'data' directory
+    Package required but not available: ‘sparklyr.nested’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # sparklyr
 
 <details>
 
-* Version: 1.8.4
+* Version: 1.9.0
 * GitHub: https://github.com/sparklyr/sparklyr
 * Source code: https://github.com/cran/sparklyr
-* Date/Publication: 2023-10-30 08:20:05 UTC
-* Number of recursive dependencies: 116
+* Date/Publication: 2025-03-18 13:40:02 UTC
+* Number of recursive dependencies: 115
 
-Run `revdep_details(, "sparklyr")` for more info
+Run `revdepcheck::revdep_details(, "sparklyr")` for more info
 
 </details>
 
@@ -5232,10 +7927,34 @@ Run `revdep_details(, "sparklyr")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.6Mb
+      installed size is  7.2Mb
       sub-directories of 1Mb or more:
-        R      1.6Mb
-        java   3.8Mb
+        R      3.5Mb
+        help   1.5Mb
+        java   1.7Mb
+    ```
+
+# sparklyr.nested
+
+<details>
+
+* Version: 0.0.4
+* GitHub: https://github.com/mitre/sparklyr.nested
+* Source code: https://github.com/cran/sparklyr.nested
+* Date/Publication: 2023-02-20 22:00:03 UTC
+* Number of recursive dependencies: 81
+
+Run `revdepcheck::revdep_details(, "sparklyr.nested")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) sdf_unnest.Rd:20: Lost braces
+        20 | \code{a1, a2, a3}, then code{sdf_explode(df, a)} will produce output with each record replicated
+           |                             ^
     ```
 
 # sparktf
@@ -5246,9 +7965,9 @@ Run `revdep_details(, "sparklyr")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/sparktf
 * Date/Publication: 2019-03-05 14:30:03 UTC
-* Number of recursive dependencies: 57
+* Number of recursive dependencies: 55
 
-Run `revdep_details(, "sparktf")` for more info
+Run `revdepcheck::revdep_details(, "sparktf")` for more info
 
 </details>
 
@@ -5267,9 +7986,9 @@ Run `revdep_details(, "sparktf")` for more info
 * GitHub: https://github.com/r-spark/sparkwarc
 * Source code: https://github.com/cran/sparkwarc
 * Date/Publication: 2022-01-11 08:50:02 UTC
-* Number of recursive dependencies: 41
+* Number of recursive dependencies: 40
 
-Run `revdep_details(, "sparkwarc")` for more info
+Run `revdepcheck::revdep_details(, "sparkwarc")` for more info
 
 </details>
 
@@ -5278,27 +7997,6 @@ Run `revdep_details(, "sparkwarc")` for more info
 *   checking C++ specification ... NOTE
     ```
       Specified C++11: please drop specification unless essential
-    ```
-
-# sparkxgb
-
-<details>
-
-* Version: 0.1.1
-* GitHub: NA
-* Source code: https://github.com/cran/sparkxgb
-* Date/Publication: 2021-02-23 10:20:02 UTC
-* Number of recursive dependencies: 58
-
-Run `revdep_details(, "sparkxgb")` for more info
-
-</details>
-
-## In both
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
     ```
 
 # sparrpowR
@@ -5311,7 +8009,7 @@ Run `revdep_details(, "sparkxgb")` for more info
 * Date/Publication: 2024-01-23 15:20:02 UTC
 * Number of recursive dependencies: 130
 
-Run `revdep_details(, "sparrpowR")` for more info
+Run `revdepcheck::revdep_details(, "sparrpowR")` for more info
 
 </details>
 
@@ -5321,7 +8019,7 @@ Run `revdep_details(, "sparrpowR")` for more info
     ```
     Found the following significant warnings:
       Warning: no DISPLAY variable so Tk is not available
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/sparrpowR/new/sparrpowR.Rcheck/00install.out’ for details.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/sparrpowR/new/sparrpowR.Rcheck/00install.out’ for details.
     ```
 
 # SPARSEMODr
@@ -5332,9 +8030,9 @@ Run `revdep_details(, "sparrpowR")` for more info
 * GitHub: https://github.com/NAU-CCL/SPARSEMODr
 * Source code: https://github.com/cran/SPARSEMODr
 * Date/Publication: 2022-07-19 20:50:02 UTC
-* Number of recursive dependencies: 127
+* Number of recursive dependencies: 126
 
-Run `revdep_details(, "SPARSEMODr")` for more info
+Run `revdepcheck::revdep_details(, "SPARSEMODr")` for more info
 
 </details>
 
@@ -5347,76 +8045,116 @@ Run `revdep_details(, "SPARSEMODr")` for more info
       All declared Imports should be used.
     ```
 
-# spatialwarnings
+# spatialTIME
 
 <details>
 
-* Version: 3.0.3
-* GitHub: https://github.com/spatial-ews/spatialwarnings
-* Source code: https://github.com/cran/spatialwarnings
-* Date/Publication: 2022-03-21 13:00:02 UTC
-* Number of recursive dependencies: 97
+* Version: 1.3.4-5
+* GitHub: https://github.com/FridleyLab/spatialTIME
+* Source code: https://github.com/cran/spatialTIME
+* Date/Publication: 2024-06-04 15:30:11 UTC
+* Number of recursive dependencies: 141
 
-Run `revdep_details(, "spatialwarnings")` for more info
+Run `revdepcheck::revdep_details(, "spatialTIME")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘spatialwarnings’ can be installed ... WARNING
+*   checking installed package size ... NOTE
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/spatialwarnings/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/spatialwarnings/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/spatialwarnings/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/spatialwarnings/new/spatialwarnings.Rcheck/00install.out’ for details.
+      installed size is  6.1Mb
+      sub-directories of 1Mb or more:
+        data   3.5Mb
+        doc    1.3Mb
     ```
 
-*   checking Rd cross-references ... WARNING
-    ```
-    Missing link or links in documentation object 'indictest.Rd':
-      ‘mgcv’
-    
-    See section 'Cross-references' in the 'Writing R Extensions' manual.
-    ```
+# spatialwarnings
+
+<details>
+
+* Version: 3.1.0
+* GitHub: https://github.com/spatial-ews/spatialwarnings
+* Source code: https://github.com/cran/spatialwarnings
+* Date/Publication: 2024-09-06 14:50:02 UTC
+* Number of recursive dependencies: 96
+
+Run `revdepcheck::revdep_details(, "spatialwarnings")` for more info
+
+</details>
+
+## In both
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  7.0Mb
+      installed size is  9.2Mb
       sub-directories of 1Mb or more:
-        libs   6.0Mb
+        data   2.0Mb
+        libs   6.7Mb
+    ```
+
+# sperrorest
+
+<details>
+
+* Version: 3.0.5
+* GitHub: https://github.com/giscience-fsu/sperrorest
+* Source code: https://github.com/cran/sperrorest
+* Date/Publication: 2022-10-16 12:50:02 UTC
+* Number of recursive dependencies: 73
+
+Run `revdepcheck::revdep_details(, "sperrorest")` for more info
+
+</details>
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) partition_cv.Rd:36: Lost braces; missing escapes or markup?
+        36 | if \code{TRUE} (used internally by other {sperrorest} functions), return a
+           |                                          ^
+    checkRd: (-1) partition_cv_strat.Rd:28: Lost braces; missing escapes or markup?
+        28 | if \code{TRUE} (used internally by other {sperrorest} functions), return a
+           |                                          ^
+    checkRd: (-1) partition_factor.Rd:28: Lost braces; missing escapes or markup?
+        28 | if \code{TRUE} (used internally by other {sperrorest} functions), return a
+           |                                          ^
+    checkRd: (-1) partition_factor_cv.Rd:43: Lost braces; missing escapes or markup?
+    ...
+           |                         ^
+    checkRd: (-1) sperrorest.Rd:148: Lost braces; missing escapes or markup?
+       148 | information about the {sperrorest} package version
+           |                       ^
+    checkRd: (-1) summary.sperroresterror.Rd:5: Lost braces; missing escapes or markup?
+         5 | \title{Summarize error statistics obtained by {sperrorest}}
+           |                                               ^
+    checkRd: (-1) summary.sperrorestimportance.Rd:5: Lost braces; missing escapes or markup?
+         5 | \title{Summarize variable importance statistics obtained by {sperrorest}}
+           |                                                             ^
     ```
 
 # sphunif
 
 <details>
 
-* Version: 1.3.0
+* Version: 1.4.0
 * GitHub: https://github.com/egarpor/sphunif
 * Source code: https://github.com/cran/sphunif
-* Date/Publication: 2023-12-04 19:50:02 UTC
-* Number of recursive dependencies: 77
+* Date/Publication: 2024-05-24 21:50:01 UTC
+* Number of recursive dependencies: 71
 
-Run `revdep_details(, "sphunif")` for more info
+Run `revdepcheck::revdep_details(, "sphunif")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘sphunif’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/sphunif/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/sphunif/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/sphunif/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/sphunif/new/sphunif.Rcheck/00install.out’ for details.
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is 24.7Mb
+      installed size is 26.0Mb
       sub-directories of 1Mb or more:
-        libs  23.7Mb
+        libs  24.8Mb
     ```
 
 *   checking data for non-ASCII characters ... NOTE
@@ -5428,34 +8166,25 @@ Run `revdep_details(, "sphunif")` for more info
 
 <details>
 
-* Version: 0.4.3.8
+* Version: 0.4.4.6
 * GitHub: https://github.com/JeremyGelb/spNetwork
 * Source code: https://github.com/cran/spNetwork
-* Date/Publication: 2023-08-24 11:20:05 UTC
-* Number of recursive dependencies: 146
+* Date/Publication: 2025-03-29 16:00:02 UTC
+* Number of recursive dependencies: 152
 
-Run `revdep_details(, "spNetwork")` for more info
+Run `revdepcheck::revdep_details(, "spNetwork")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘spNetwork’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/spNetwork/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/spNetwork/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/spNetwork/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/spNetwork/new/spNetwork.Rcheck/00install.out’ for details.
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is 25.5Mb
+      installed size is 27.6Mb
       sub-directories of 1Mb or more:
-        doc       1.0Mb
+        doc       1.1Mb
         extdata   2.6Mb
-        libs     20.5Mb
+        libs     22.4Mb
     ```
 
 # squat
@@ -5466,43 +8195,84 @@ Run `revdep_details(, "spNetwork")` for more info
 * GitHub: https://github.com/LMJL-Alea/squat
 * Source code: https://github.com/cran/squat
 * Date/Publication: 2024-01-10 15:40:02 UTC
-* Number of recursive dependencies: 143
+* Number of recursive dependencies: 140
 
-Run `revdep_details(, "squat")` for more info
+Run `revdepcheck::revdep_details(, "squat")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘squat’ can be installed ... WARNING
+*   checking examples ... ERROR
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/squat/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/squat/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/squat/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/squat/new/squat.Rcheck/00install.out’ for details.
+    Running examples in ‘squat-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: autoplot.qtsclust
+    > ### Title: Plot for 'qtsclust' objects
+    > ### Aliases: autoplot.qtsclust
+    > 
+    > ### ** Examples
+    > 
+    > ## Don't show: 
+    ...
+      3. │   ├─base::withVisible(eval(ei, envir))
+      4. │   └─base::eval(ei, envir)
+      5. │     └─base::eval(ei, envir)
+      6. ├─squat::kmeans(vespa64$igp[1:10], n_clusters = 2)
+      7. └─squat:::kmeans.qts_sample(vespa64$igp[1:10], n_clusters = 2)
+      8.   └─fdacluster::fdakmeans(...)
+      9.     └─fdacluster:::check_option_compatibility(...)
+     10.       └─cli::cli_abort("The L2 metric is neither dilation-invariant nor affine-invariant.")
+     11.         └─rlang::abort(...)
+    Execution halted
+    ```
+
+*   checking tests ...
+    ```
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Last 50 lines of output:
+          transformation = transformation, warping_class = warping_class, 
+          metric = metric)`: The L2 metric is neither dilation-invariant nor affine-invariant.
+      Backtrace:
+          ▆
+       1. ├─withr::with_seed(...) at test-qts-kmeans.R:7:3
+       2. │ └─withr::with_preserve_seed(...)
+    ...
+      Deleting unused snapshots:
+      • qts-class/qts-plot-with-change-points.svg
+      • qts-kmeans/k-means-plot.svg
+      • qts-prcomp/colored-score-plot.svg
+      • qts-prcomp/score-plot.svg
+      • qts-prcomp/screeplot.svg
+      • qts-sample-class/qts-sample-plot-with-highlighted-observations.svg
+      • qts-sample-class/qts-sample-plot-with-memberships.svg
+      Error: Test failures
+      Execution halted
     ```
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 20.4Mb
+      installed size is 21.4Mb
       sub-directories of 1Mb or more:
-        data   1.1Mb
-        help   1.1Mb
-        libs  18.0Mb
+        data   2.5Mb
+        help   1.2Mb
+        libs  17.5Mb
     ```
 
 # sRACIPE
 
 <details>
 
-* Version: 1.18.0
+* Version: 1.22.0
 * GitHub: https://github.com/vivekkohar/sRACIPE
 * Source code: https://github.com/cran/sRACIPE
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 104
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 106
 
-Run `revdep_details(, "sRACIPE")` for more info
+Run `revdepcheck::revdep_details(, "sRACIPE")` for more info
 
 </details>
 
@@ -5511,6 +8281,19 @@ Run `revdep_details(, "sRACIPE")` for more info
 *   checking C++ specification ... NOTE
     ```
       Specified C++11: please drop specification unless essential
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.5Mb
+      sub-directories of 1Mb or more:
+        doc    1.5Mb
+        libs   3.5Mb
+    ```
+
+*   checking DESCRIPTION meta-information ... NOTE
+    ```
+    License stub is invalid DCF.
     ```
 
 *   checking R code for possible problems ... NOTE
@@ -5531,17 +8314,27 @@ Run `revdep_details(, "sRACIPE")` for more info
       outFileParamsTmp plan registerDoFuture
     ```
 
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) sracipeHeatmapSimilarity.Rd:31: Lost braces
+        31 | If clusterCut is missing, hierarchical clustering using /code{ward.D2}
+           |                                                              ^
+    checkRd: (-1) sracipeHeatmapSimilarity.Rd:32: Lost braces
+        32 | and /code{distance  = (1-cor(x, method = "spear"))/2} will be used to 
+           |          ^
+    ```
+
 # ssdtools
 
 <details>
 
-* Version: 1.0.6
+* Version: 2.3.0
 * GitHub: https://github.com/bcgov/ssdtools
 * Source code: https://github.com/cran/ssdtools
-* Date/Publication: 2023-09-07 14:10:02 UTC
-* Number of recursive dependencies: 120
+* Date/Publication: 2025-02-20 13:20:02 UTC
+* Number of recursive dependencies: 128
 
-Run `revdep_details(, "ssdtools")` for more info
+Run `revdepcheck::revdep_details(, "ssdtools")` for more info
 
 </details>
 
@@ -5549,10 +8342,9 @@ Run `revdep_details(, "ssdtools")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 42.1Mb
+      installed size is 38.6Mb
       sub-directories of 1Mb or more:
-        doc    1.2Mb
-        libs  39.6Mb
+        libs  37.3Mb
     ```
 
 # SSLR
@@ -5563,202 +8355,235 @@ Run `revdep_details(, "ssdtools")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/SSLR
 * Date/Publication: 2021-07-22 08:10:07 UTC
-* Number of recursive dependencies: 228
+* Number of recursive dependencies: 236
 
-Run `revdep_details(, "SSLR")` for more info
+Run `revdepcheck::revdep_details(, "SSLR")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘SSLR’ can be installed ... WARNING
+*   checking examples ... ERROR
     ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/SSLR/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/SSLR/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/SSLR/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/SSLR/new/SSLR.Rcheck/00install.out’ for details.
+    Running examples in ‘SSLR-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: EMLeastSquaresClassifierSSLR
+    > ### Title: General Interface for EMLeastSquaresClassifier model
+    > ### Aliases: EMLeastSquaresClassifierSSLR
+    > 
+    > ### ** Examples
+    > 
+    > library(tidyverse)
+    ...
+    ✔ purrr     1.0.4     
+    ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+    ✖ dplyr::filter() masks stats::filter()
+    ✖ dplyr::lag()    masks stats::lag()
+    ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+    > #' \donttest{
+    > library(tidymodels)
+    Error: package or namespace load failed for ‘tidymodels’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+     there is no package called ‘infer’
+    Execution halted
+    ```
+
+*   checking tests ...
+    ```
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Last 50 lines of output:
+       there is no package called 'infer'
+      Backtrace:
+          ▆
+       1. └─base::library(tidymodels) at test-WellSVMSSLR.R:2:1
+       2.   └─base::tryCatch(...)
+       3.     └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+    ...
+          ▆
+       1. └─base::library(tidymodels) at test-tritraining.R:2:1
+       2.   └─base::tryCatch(...)
+       3.     └─base (local) tryCatchList(expr, classes, parentenv, handlers)
+       4.       └─base (local) tryCatchOne(expr, names, parentenv, handlers[[1L]])
+       5.         └─value[[3L]](cond)
+      
+      [ FAIL 15 | WARN 0 | SKIP 0 | PASS 0 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+*   checking re-building of vignette outputs ... ERROR
+    ```
+    Error(s) in re-building vignettes:
+    --- re-building ‘classification.Rmd’ using rmarkdown
+    
+    Quitting from classification.Rmd:22-33 [unnamed-chunk-2]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    <error/rlang_error>
+    Error:
+    ! package or namespace load failed for 'tidymodels' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+     there is no package called 'infer'
+    ---
+    ...
+    Error: processing vignette 'regression.Rmd' failed with diagnostics:
+    package or namespace load failed for 'tidymodels' in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+     there is no package called 'infer'
+    --- failed re-building ‘regression.Rmd’
+    
+    SUMMARY: processing the following files failed:
+      ‘classification.Rmd’ ‘clustering.Rmd’ ‘fit.Rmd’ ‘regression.Rmd’
+    
+    Error: Vignette re-building failed.
+    Execution halted
     ```
 
 # stars
 
 <details>
 
-* Version: 0.6-4
+* Version: 0.6-8
 * GitHub: https://github.com/r-spatial/stars
 * Source code: https://github.com/cran/stars
-* Date/Publication: 2023-09-11 11:50:02 UTC
-* Number of recursive dependencies: 164
+* Date/Publication: 2025-02-01 18:50:02 UTC
+* Number of recursive dependencies: 165
 
-Run `revdep_details(, "stars")` for more info
+Run `revdepcheck::revdep_details(, "stars")` for more info
 
 </details>
 
-## Newly broken
-
-*   checking examples ...sh: line 1: 39344 Aborted                 (core dumped) LANGUAGE=en _R_CHECK_INTERNALS2_=1 '/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/bin/R' --vanilla --encoding=UTF-8 > 'stars-Ex.Rout' 2>&1 < 'stars-Ex.R'
-    ```
-     ERROR
-    Running examples in ‘stars-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: mdim
-    > ### Title: Read or write data using GDAL's multidimensional array API
-    > ### Aliases: mdim read_mdim write_mdim
-    > 
-    > ### ** Examples
-    > 
-    ...
-                               dmalloc: no
-        Packages w/ extra debug output: none
-                           API tracing: no
-                  Using memory checker: no
-       Memory allocation sanity checks: no
-                Function stack tracing: no
-                      Use file locking: best-effort
-             Strict file format checks: no
-          Optimization instrumentation: no
-    Bye...
-    ```
-
-## Newly fixed
-
-*   checking examples ...sh: line 1: 39401 Aborted                 (core dumped) LANGUAGE=en _R_CHECK_INTERNALS2_=1 '/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/bin/R' --vanilla --encoding=UTF-8 > 'stars-Ex.Rout' 2>&1 < 'stars-Ex.R'
-    ```
-     ERROR
-    Running examples in ‘stars-Ex.R’ failed
-    The error most likely occurred in:
-    
-    > ### Name: mdim
-    > ### Title: Read or write data using GDAL's multidimensional array API
-    > ### Aliases: mdim read_mdim write_mdim
-    > 
-    > ### ** Examples
-    > 
-    ...
-                               dmalloc: no
-        Packages w/ extra debug output: none
-                           API tracing: no
-                  Using memory checker: no
-       Memory allocation sanity checks: no
-                Function stack tracing: no
-                      Use file locking: best-effort
-             Strict file format checks: no
-          Optimization instrumentation: no
-    Bye...
-    ```
-
 ## In both
+
+*   checking examples ... ERROR
+    ```
+    Running examples in ‘stars-Ex.R’ failed
+    The error most likely occurred in:
+    
+    > ### Name: read_ncdf
+    > ### Title: Read NetCDF into stars object
+    > ### Aliases: read_ncdf
+    > 
+    > ### ** Examples
+    > 
+    > f <- system.file("nc/reduced.nc", package = "stars")
+    ...
+    The following objects are masked from ‘package:stats’:
+    
+        filter, lag
+    
+    The following objects are masked from ‘package:base’:
+    
+        intersect, setdiff, setequal, union
+    
+    Error: object 'prec' not found
+    Execution halted
+    ```
 
 *   checking tests ...
     ```
       Running ‘aggregate.R’
-      Comparing ‘aggregate.Rout’ to ‘aggregate.Rout.save’ ...4c4
-    < Linking to GEOS 3.11.2, GDAL 3.6.4, PROJ 8.2.1; sf_use_s2() is TRUE
-    ---
-    > Linking to GEOS 3.11.2, GDAL 3.6.2, PROJ 9.2.0; sf_use_s2() is TRUE
+      Comparing ‘aggregate.Rout’ to ‘aggregate.Rout.save’ ... OK
       Running ‘align.R’
       Comparing ‘align.Rout’ to ‘align.Rout.save’ ... OK
       Running ‘area.R’
       Comparing ‘area.Rout’ to ‘area.Rout.save’ ... OK
       Running ‘crop.R’
+      Comparing ‘crop.Rout’ to ‘crop.Rout.save’ ... OK
+      Running ‘curvilinear.R’
+      Comparing ‘curvilinear.Rout’ to ‘curvilinear.Rout.save’ ... OK
     ...
-                                 dmalloc: no
-          Packages w/ extra debug output: none
-                             API tracing: no
-                    Using memory checker: no
-         Memory allocation sanity checks: no
-                  Function stack tracing: no
-                        Use file locking: best-effort
-               Strict file format checks: no
-            Optimization instrumentation: no
-      Bye...
+      > 
+      > s = st_set_dimensions(s, st_dimensions(s), xy = NULL) 
+      > sfc = st_sfc(st_point(0:1), st_point(3:2))
+      > s = st_set_dimensions(s, 1, sfc) |> st_set_crs(4326)
+      > tm = as.POSIXct("2023-03-04 12:35") + c(0, 3600)
+      > s = st_set_dimensions(s, 2, tm)
+      > f = tempfile(fileext = ".nc")
+      > write_mdim(s, f, as_float = FALSE)
+      Error: requires GDAL >= 3.1.0 and 64-bit
+      Execution halted
+    ```
+
+*   checking re-building of vignette outputs ... ERROR
+    ```
+    Error(s) in re-building vignettes:
+    --- re-building ‘stars1.Rmd’ using rmarkdown
+    
+    Quitting from stars1.Rmd:181-184 [unnamed-chunk-14]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    <error/rlang_error>
+    Error in `read_ncdf()`:
+    ! package ncmeta required, please install it first
+    ---
+    Backtrace:
+    ...
+    
+    Error: processing vignette 'stars8.Rmd' failed with diagnostics:
+    package ncmeta required, please install it first
+    --- failed re-building ‘stars8.Rmd’
+    
+    SUMMARY: processing the following files failed:
+      ‘stars1.Rmd’ ‘stars8.Rmd’
+    
+    Error: Vignette re-building failed.
+    Execution halted
     ```
 
 *   checking package dependencies ... NOTE
     ```
-    Package suggested but not available for checking: ‘starsdata’
+    Packages suggested but not available for checking: 'RNetCDF', 'starsdata'
     ```
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.1Mb
+      installed size is  7.8Mb
       sub-directories of 1Mb or more:
-        doc   2.4Mb
+        R     1.5Mb
+        doc   2.9Mb
         nc    1.7Mb
     ```
 
-# startR
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘RNetCDF’
+    ```
+
+# steps
 
 <details>
 
-* Version: 2.3.1
-* GitHub: NA
-* Source code: https://github.com/cran/startR
-* Date/Publication: 2023-12-21 16:20:02 UTC
-* Number of recursive dependencies: 60
+* Version: 1.3.0
+* GitHub: https://github.com/steps-dev/steps
+* Source code: https://github.com/cran/steps
+* Date/Publication: 2022-10-04 23:30:02 UTC
+* Number of recursive dependencies: 71
 
-Run `revdep_details(, "startR")` for more info
+Run `revdepcheck::revdep_details(, "steps")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘startR’ can be installed ... ERROR
+*   checking installed package size ... NOTE
     ```
-    Installation failed.
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/startR/new/startR.Rcheck/00install.out’ for details.
+      installed size is  5.3Mb
+      sub-directories of 1Mb or more:
+        data   1.5Mb
+        doc    1.2Mb
+        libs   2.3Mb
     ```
 
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘startR’ ...
-** package ‘startR’ successfully unpacked and MD5 sums checked
-** using staged installation
-** R
-** inst
-** byte-compile and prepare package for lazy loading
-Error in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]) : 
-  there is no package called ‘ncdf4’
-Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-ERROR: lazy loading failed for package ‘startR’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/startR/new/startR.Rcheck/startR’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘startR’ ...
-** package ‘startR’ successfully unpacked and MD5 sums checked
-** using staged installation
-** R
-** inst
-** byte-compile and prepare package for lazy loading
-Error in loadNamespace(i, c(lib.loc, .libPaths()), versionCheck = vI[[i]]) : 
-  there is no package called ‘ncdf4’
-Calls: <Anonymous> ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
-Execution halted
-ERROR: lazy loading failed for package ‘startR’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/startR/old/startR.Rcheck/startR’
-
-
-```
 # stppSim
 
 <details>
 
-* Version: 1.3.2
+* Version: 1.3.4
 * GitHub: https://github.com/Manalytics/stppSim
 * Source code: https://github.com/cran/stppSim
-* Date/Publication: 2023-10-29 21:20:02 UTC
-* Number of recursive dependencies: 133
+* Date/Publication: 2024-07-24 13:30:02 UTC
+* Number of recursive dependencies: 131
 
-Run `revdep_details(, "stppSim")` for more info
+Run `revdepcheck::revdep_details(, "stppSim")` for more info
 
 </details>
 
@@ -5768,20 +8593,41 @@ Run `revdep_details(, "stppSim")` for more info
     ```
     Found the following significant warnings:
       Warning: no DISPLAY variable so Tk is not available
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/stppSim/new/stppSim.Rcheck/00install.out’ for details.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/stppSim/new/stppSim.Rcheck/00install.out’ for details.
+    ```
+
+# survex
+
+<details>
+
+* Version: 1.2.0
+* GitHub: https://github.com/ModelOriented/survex
+* Source code: https://github.com/cran/survex
+* Date/Publication: 2023-10-24 18:50:07 UTC
+* Number of recursive dependencies: 183
+
+Run `revdepcheck::revdep_details(, "survex")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘randomForestSRC’
     ```
 
 # survstan
 
 <details>
 
-* Version: 0.0.6.1
+* Version: 0.0.7.1
 * GitHub: https://github.com/fndemarqui/survstan
 * Source code: https://github.com/cran/survstan
-* Date/Publication: 2024-02-05 15:00:02 UTC
-* Number of recursive dependencies: 127
+* Date/Publication: 2024-04-12 16:50:02 UTC
+* Number of recursive dependencies: 116
 
-Run `revdep_details(, "survstan")` for more info
+Run `revdepcheck::revdep_details(, "survstan")` for more info
 
 </details>
 
@@ -5789,9 +8635,9 @@ Run `revdep_details(, "survstan")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 88.9Mb
+      installed size is 85.6Mb
       sub-directories of 1Mb or more:
-        libs  88.5Mb
+        libs  85.0Mb
     ```
 
 *   checking dependencies in R code ... NOTE
@@ -5810,13 +8656,13 @@ Run `revdep_details(, "survstan")` for more info
 
 <details>
 
-* Version: 3.10.3
+* Version: 3.14.0
 * GitHub: NA
 * Source code: https://github.com/cran/synergyfinder
-* Date/Publication: 2024-01-22
-* Number of recursive dependencies: 202
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 199
 
-Run `revdep_details(, "synergyfinder")` for more info
+Run `revdepcheck::revdep_details(, "synergyfinder")` for more info
 
 </details>
 
@@ -5832,9 +8678,9 @@ Run `revdep_details(, "synergyfinder")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.0Mb
+      installed size is  6.3Mb
       sub-directories of 1Mb or more:
-        doc   5.7Mb
+        doc   5.8Mb
     ```
 
 *   checking R code for possible problems ... NOTE
@@ -5864,7 +8710,22 @@ Run `revdep_details(, "synergyfinder")` for more info
 
 *   checking Rd files ... NOTE
     ```
+    checkRd: (-1) FitDoseResponse.Rd:54: Lost braces
+        54 | href{https://onlinelibrary.wiley.com/doi/book/10.1002/0471725315}{Nonlinear
+           |     ^
+    checkRd: (-1) FitDoseResponse.Rd:54-55: Lost braces
+        54 | href{https://onlinelibrary.wiley.com/doi/book/10.1002/0471725315}{Nonlinear
+           |                                                                  ^
     checkRd: (-1) FitDoseResponse.Rd:55: Escaped LaTeX specials: \&
+    checkRd: (-1) PlotBarometer.Rd:118: Lost braces
+       118 | href{https://www.frontiersin.org/articles/10.3389/fphar.2015.00181/full}{What
+           |     ^
+    checkRd: (-1) PlotBarometer.Rd:118-119: Lost braces
+       118 | href{https://www.frontiersin.org/articles/10.3389/fphar.2015.00181/full}{What
+           |                                                                         ^
+    checkRd: (-1) PlotDoseResponseCurve.Rd:84: Lost braces
+        84 | link[drc]{plot.drc} function. For example, use xlim = c(0.5, 500) or
+           |          ^
     ```
 
 # tableschema.r
@@ -5875,17 +8736,93 @@ Run `revdep_details(, "synergyfinder")` for more info
 * GitHub: https://github.com/frictionlessdata/tableschema-r
 * Source code: https://github.com/cran/tableschema.r
 * Date/Publication: 2022-09-29 20:00:03 UTC
-* Number of recursive dependencies: 66
+* Number of recursive dependencies: 60
 
-Run `revdep_details(, "tableschema.r")` for more info
+Run `revdepcheck::revdep_details(, "tableschema.r")` for more info
+
+</details>
+
+## Newly fixed
+
+*   checking tests ...
+    ```
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Complete output:
+      > Sys.setenv(R_TESTS = "")
+      > library(testthat)
+      > library(tableschema.r)
+      > 
+      > test_check("tableschema.r")
+      [ FAIL 1 | WARN 3 | SKIP 0 | PASS 528 ]
+    ...
+        5.       ├─future::launchFuture(backend, future = future)
+        6.       └─future:::launchFuture.SequentialFutureBackend(backend, future = future)
+        7.         └─future:::signalImmediateConditions(future)
+        8.           └─future:::signalConditions(...)
+        9.             ├─future::result(future)
+       10.             └─future:::result.UniprocessFuture(future)
+      
+      [ FAIL 1 | WARN 3 | SKIP 0 | PASS 528 ]
+      Error: Test failures
+      Execution halted
+    ```
+
+## In both
+
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) Field.Rd:69: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) Field.Rd:70: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) Field.Rd:71: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) Field.Rd:72: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) Field.Rd:77: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) Field.Rd:78-80: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) Field.Rd:81: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) Field.Rd:82: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) Field.Rd:88: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) Field.Rd:89: Lost braces in \itemize; meant \describe ?
+    ...
+    checkRd: (-1) Table.Rd:85: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) tableschema.r-package.Rd:174: Lost braces
+       174 | in the resources array of a href{http://frictionlessdata.io/specs/data-package/}{Data Package}. 
+           |                                 ^
+    checkRd: (-1) tableschema.r-package.Rd:174: Lost braces
+       174 | in the resources array of a href{http://frictionlessdata.io/specs/data-package/}{Data Package}. 
+           |                                                                                 ^
+    checkRd: (-1) types.castDate.Rd:14: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) types.castDate.Rd:15: Lost braces in \itemize; meant \describe ?
+    checkRd: (-1) types.castDate.Rd:16: Lost braces in \itemize; meant \describe ?
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘parsedate’
+    ```
+
+# target
+
+<details>
+
+* Version: 1.20.0
+* GitHub: https://github.com/MahShaaban/target
+* Source code: https://github.com/cran/target
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 79
+
+Run `revdepcheck::revdep_details(, "target")` for more info
 
 </details>
 
 ## In both
 
-*   checking Rd cross-references ... NOTE
+*   checking installed package size ... NOTE
     ```
-    Package unavailable to check Rd xrefs: ‘parsedate’
+      installed size is  5.8Mb
+      sub-directories of 1Mb or more:
+        data      3.5Mb
+        extdata   1.6Mb
     ```
 
 # targeted
@@ -5896,42 +8833,33 @@ Run `revdep_details(, "tableschema.r")` for more info
 * GitHub: https://github.com/kkholst/targeted
 * Source code: https://github.com/cran/targeted
 * Date/Publication: 2024-02-22 10:00:21 UTC
-* Number of recursive dependencies: 98
+* Number of recursive dependencies: 90
 
-Run `revdep_details(, "targeted")` for more info
+Run `revdepcheck::revdep_details(, "targeted")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘targeted’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/targeted/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/targeted/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/targeted/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/targeted/new/targeted.Rcheck/00install.out’ for details.
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is 22.4Mb
+      installed size is 23.2Mb
       sub-directories of 1Mb or more:
         doc    1.1Mb
-        libs  20.9Mb
+        libs  21.5Mb
     ```
 
 # targets
 
 <details>
 
-* Version: 1.5.1
+* Version: 1.11.1
 * GitHub: https://github.com/ropensci/targets
 * Source code: https://github.com/cran/targets
-* Date/Publication: 2024-02-15 11:50:02 UTC
-* Number of recursive dependencies: 166
+* Date/Publication: 2025-04-10 21:10:02 UTC
+* Number of recursive dependencies: 158
 
-Run `revdep_details(, "targets")` for more info
+Run `revdepcheck::revdep_details(, "targets")` for more info
 
 </details>
 
@@ -5939,20 +8867,163 @@ Run `revdep_details(, "targets")` for more info
 
 *   checking package dependencies ... NOTE
     ```
-    Package suggested but not available for checking: ‘clustermq’
+    Package suggested but not available for checking: ‘crew’
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.5Mb
+      sub-directories of 1Mb or more:
+        R      3.5Mb
+        help   1.7Mb
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘qs’
+    ```
+
+# teal
+
+<details>
+
+* Version: 0.16.0
+* GitHub: https://github.com/insightsengineering/teal
+* Source code: https://github.com/cran/teal
+* Date/Publication: 2025-02-23 17:00:02 UTC
+* Number of recursive dependencies: 158
+
+Run `revdepcheck::revdep_details(, "teal")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Packages required but not available:
+      'teal.data', 'teal.slice', 'teal.reporter', 'teal.widgets'
+    
+    Package suggested but not available for checking: ‘roxy.shinylive’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# teal.modules.clinical
+
+<details>
+
+* Version: 0.10.0
+* GitHub: https://github.com/insightsengineering/teal.modules.clinical
+* Source code: https://github.com/cran/teal.modules.clinical
+* Date/Publication: 2025-02-28 15:50:02 UTC
+* Number of recursive dependencies: 206
+
+Run `revdepcheck::revdep_details(, "teal.modules.clinical")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Packages required but not available:
+      'teal', 'teal.transform', 'tern', 'rlistings', 'rtables',
+      'teal.data', 'teal.reporter', 'teal.widgets', 'tern.gee'
+    
+    Package suggested but not available for checking: ‘roxy.shinylive’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# teal.modules.general
+
+<details>
+
+* Version: 0.4.1
+* GitHub: https://github.com/insightsengineering/teal.modules.general
+* Source code: https://github.com/cran/teal.modules.general
+* Date/Publication: 2025-04-01 21:20:01 UTC
+* Number of recursive dependencies: 195
+
+Run `revdepcheck::revdep_details(, "teal.modules.general")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Packages required but not available:
+      'teal', 'teal.transform', 'rtables', 'teal.data', 'teal.reporter',
+      'teal.widgets', 'tern'
+    
+    Package suggested but not available for checking: ‘roxy.shinylive’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# teal.widgets
+
+<details>
+
+* Version: 0.4.3
+* GitHub: https://github.com/insightsengineering/teal.widgets
+* Source code: https://github.com/cran/teal.widgets
+* Date/Publication: 2025-01-31 17:50:01 UTC
+* Number of recursive dependencies: 107
+
+Run `revdepcheck::revdep_details(, "teal.widgets")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘rtables’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# tenm
+
+<details>
+
+* Version: 0.5.1
+* GitHub: https://github.com/luismurao/tenm
+* Source code: https://github.com/cran/tenm
+* Date/Publication: 2024-07-23 00:30:01 UTC
+* Number of recursive dependencies: 78
+
+Run `revdepcheck::revdep_details(, "tenm")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  6.0Mb
+      sub-directories of 1Mb or more:
+        extdata   5.0Mb
     ```
 
 # text
 
 <details>
 
-* Version: 1.2.0
+* Version: 1.4
 * GitHub: https://github.com/OscarKjell/text
 * Source code: https://github.com/cran/text
-* Date/Publication: 2024-02-13 20:51:36 UTC
-* Number of recursive dependencies: 160
+* Date/Publication: 2025-03-18 13:00:02 UTC
+* Number of recursive dependencies: 193
 
-Run `revdep_details(, "text")` for more info
+Run `revdepcheck::revdep_details(, "text")` for more info
 
 </details>
 
@@ -5963,17 +9034,41 @@ Run `revdep_details(, "text")` for more info
       Note: found 3 marked UTF-8 strings
     ```
 
+# tfrmtbuilder
+
+<details>
+
+* Version: 0.1.0
+* GitHub: https://github.com/GSK-Biostatistics/tfrmtbuilder
+* Source code: https://github.com/cran/tfrmtbuilder
+* Date/Publication: 2024-10-11 21:40:02 UTC
+* Number of recursive dependencies: 141
+
+Run `revdepcheck::revdep_details(, "tfrmtbuilder")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘tfrmt’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
 # tglkmeans
 
 <details>
 
-* Version: 0.5.4
+* Version: 0.5.5
 * GitHub: https://github.com/tanaylab/tglkmeans
 * Source code: https://github.com/cran/tglkmeans
-* Date/Publication: 2024-01-09 14:10:02 UTC
+* Date/Publication: 2024-05-15 08:40:02 UTC
 * Number of recursive dependencies: 89
 
-Run `revdep_details(, "tglkmeans")` for more info
+Run `revdepcheck::revdep_details(, "tglkmeans")` for more info
 
 </details>
 
@@ -5981,9 +9076,15 @@ Run `revdep_details(, "tglkmeans")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.2Mb
+      installed size is  5.3Mb
       sub-directories of 1Mb or more:
         libs   5.0Mb
+    ```
+
+*   checking dependencies in R code ... NOTE
+    ```
+    Namespace in Imports field not imported from: ‘doRNG’
+      All declared Imports should be used.
     ```
 
 *   checking for GNU extensions in Makefiles ... NOTE
@@ -5991,58 +9092,38 @@ Run `revdep_details(, "tglkmeans")` for more info
     GNU make is a SystemRequirements.
     ```
 
-# tidyfit
+# tidyAML
 
 <details>
 
-* Version: 0.7.0
-* GitHub: https://github.com/jpfitzinger/tidyfit
-* Source code: https://github.com/cran/tidyfit
-* Date/Publication: 2024-02-26 16:20:02 UTC
-* Number of recursive dependencies: 188
+* Version: 0.0.5
+* GitHub: https://github.com/spsanderson/tidyAML
+* Source code: https://github.com/cran/tidyAML
+* Date/Publication: 2024-03-12 14:10:02 UTC
+* Number of recursive dependencies: 238
 
-Run `revdep_details(, "tidyfit")` for more info
+Run `revdepcheck::revdep_details(, "tidyAML")` for more info
 
 </details>
 
 ## In both
 
-*   checking re-building of vignette outputs ... ERROR
+*   checking package dependencies ... NOTE
     ```
-    Error(s) in re-building vignettes:
-    --- re-building ‘Accessing_Fitted_Model_Objects.Rmd’ using rmarkdown
-    --- finished re-building ‘Accessing_Fitted_Model_Objects.Rmd’
-    
-    --- re-building ‘Flowchart.Rmd’ using rmarkdown
-    --- finished re-building ‘Flowchart.Rmd’
-    
-    --- re-building ‘Predicting_Boston_House_Prices.Rmd’ using rmarkdown
-    --- finished re-building ‘Predicting_Boston_House_Prices.Rmd’
-    
-    ...
-    --- finished re-building ‘Rolling_Window_Time_Series_Regression.Rmd’
-    
-    --- re-building ‘Time-varying_parameters_vs_rolling_windows.Rmd’ using knitr
-    --- finished re-building ‘Time-varying_parameters_vs_rolling_windows.Rmd’
-    
-    SUMMARY: processing the following file failed:
-      ‘Feature_Selection.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
+    Package suggested but not available for checking: ‘sda’
     ```
 
-# tidysdm
+# tidyfinance
 
 <details>
 
-* Version: 0.9.4
-* GitHub: https://github.com/EvolEcolGroup/tidysdm
-* Source code: https://github.com/cran/tidysdm
-* Date/Publication: 2024-03-05 20:30:02 UTC
-* Number of recursive dependencies: 166
+* Version: 0.4.3
+* GitHub: https://github.com/tidy-finance/r-tidyfinance
+* Source code: https://github.com/cran/tidyfinance
+* Date/Publication: 2024-12-17 07:20:02 UTC
+* Number of recursive dependencies: 93
 
-Run `revdep_details(, "tidysdm")` for more info
+Run `revdepcheck::revdep_details(, "tidyfinance")` for more info
 
 </details>
 
@@ -6050,54 +9131,141 @@ Run `revdep_details(, "tidysdm")` for more info
 
 *   checking tests ...
     ```
-      Running ‘spelling.R’
-      Running ‘testthat.R’/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/bin/BATCH: line 60:   536 Aborted                 (core dumped) ${R_HOME}/bin/R -f ${in} ${opts} ${R_BATCH_OPTIONS} > ${out} 2>&1
-    
+      Running ‘testthat.R’
      ERROR
     Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-                               Ranlib: ranlib
+    Complete output:
+      > # This file is part of the standard setup for testthat.
+      > # It is recommended that you do not modify it.
+      > #
+      > # Where should you do additional test configuration?
+      > # Learn more about the roles of various files in:
+      > # * https://r-pkgs.org/testing-design.html#sec-tests-files-overview
+    ...
+        5. │     ├─testthat (local) .capture(...)
+        6. │     │ └─base::withCallingHandlers(...)
+        7. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
+        8. └─tidyfinance::download_data_constituents(index = "SAMPLE_INDEX")
+        9.   └─cli::cli_abort("Failed to download data for index {.arg index}. Please check the index name or try again later.")
+       10.     └─rlang::abort(...)
       
-      Languages:
-      ----------
-    ...
-                                 dmalloc: no
-          Packages w/ extra debug output: none
-                             API tracing: no
-                    Using memory checker: no
-         Memory allocation sanity checks: no
-                  Function stack tracing: no
-                        Use file locking: best-effort
-               Strict file format checks: no
-            Optimization instrumentation: no
-      Bye...
+      [ FAIL 1 | WARN 0 | SKIP 8 | PASS 88 ]
+      Error: Test failures
+      Execution halted
     ```
 
-*   checking re-building of vignette outputs ... ERROR
+*   checking package dependencies ... NOTE
     ```
-    Error(s) in re-building vignettes:
-    sh: line 1:  2729 Aborted                 (core dumped) '/software/c4/cbi/software/_centos7/R-4.3.3-gcc10/lib64/R/bin/R' --vanilla --no-echo > '/scratch/henrik/RtmpgjEKuC/filea983a551478' 2>&1 < '/scratch/henrik/RtmpgjEKuC/filea983ad9357b'
-    --- re-building ‘a0_tidysdm_overview.Rmd’ using rmarkdown
-    Warning! ***HDF5 library version mismatched error***
-    The HDF5 header files used to compile this application do not match
-    the version used by the HDF5 library to which this application is linked.
-    Data corruption or segmentation faults may occur if the application continues.
-    This can happen when an application was compiled by one version of HDF5 but
-    linked with a different version of static or shared HDF5 library.
-    You should recompile the application or check your shared library related
-    ...
-    Bye...
-    --- re-building ‘a3_troubleshooting.Rmd’ using rmarkdown
-    --- finished re-building ‘a3_troubleshooting.Rmd’
-    
-    SUMMARY: processing the following files failed:
-      ‘a0_tidysdm_overview.Rmd’ ‘a1_palaeodata_application.Rmd’
-      ‘a2_tidymodels_additions.Rmd’
-    
-    Error: Vignette re-building failed.
-    Execution halted
+    Package suggested but not available for checking: ‘RPostgres’
     ```
 
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘RPostgres’
+    ```
+
+# tidymodels
+
+<details>
+
+* Version: 1.3.0
+* GitHub: https://github.com/tidymodels/tidymodels
+* Source code: https://github.com/cran/tidymodels
+* Date/Publication: 2025-02-21 22:50:02 UTC
+* Number of recursive dependencies: 135
+
+Run `revdepcheck::revdep_details(, "tidymodels")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘infer’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# tidysdm
+
+<details>
+
+* Version: 1.0.0
+* GitHub: https://github.com/EvolEcolGroup/tidysdm
+* Source code: https://github.com/cran/tidysdm
+* Date/Publication: 2025-03-05 17:40:02 UTC
+* Number of recursive dependencies: 194
+
+Run `revdepcheck::revdep_details(, "tidysdm")` for more info
+
+</details>
+
+## In both
+
+*   checking whether package ‘tidysdm’ can be installed ... ERROR
+    ```
+    Installation failed.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/tidysdm/new/tidysdm.Rcheck/00install.out’ for details.
+    ```
+
+## Installation
+
+### Devel
+
+```
+* installing *source* package ‘tidysdm’ ...
+** package ‘tidysdm’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+Warning: namespace ‘tidysdm’ is not available and has been replaced
+by .GlobalEnv when processing object ‘lacerta_ensemble’
+Warning: namespace ‘tidysdm’ is not available and has been replaced
+by .GlobalEnv when processing object ‘lacerta_ensemble’
+...
+by .GlobalEnv when processing object ‘lacerta_rep_ens’
+Warning: namespace ‘tidysdm’ is not available and has been replaced
+by .GlobalEnv when processing object ‘lacerta_rep_ens’
+** inst
+** byte-compile and prepare package for lazy loading
+Error: package or namespace load failed for ‘tidymodels’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ there is no package called ‘infer’
+Execution halted
+ERROR: lazy loading failed for package ‘tidysdm’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/tidysdm/new/tidysdm.Rcheck/tidysdm’
+
+
+```
+### CRAN
+
+```
+* installing *source* package ‘tidysdm’ ...
+** package ‘tidysdm’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+Warning: namespace ‘tidysdm’ is not available and has been replaced
+by .GlobalEnv when processing object ‘lacerta_ensemble’
+Warning: namespace ‘tidysdm’ is not available and has been replaced
+by .GlobalEnv when processing object ‘lacerta_ensemble’
+...
+by .GlobalEnv when processing object ‘lacerta_rep_ens’
+Warning: namespace ‘tidysdm’ is not available and has been replaced
+by .GlobalEnv when processing object ‘lacerta_rep_ens’
+** inst
+** byte-compile and prepare package for lazy loading
+Error: package or namespace load failed for ‘tidymodels’ in loadNamespace(j <- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
+ there is no package called ‘infer’
+Execution halted
+ERROR: lazy loading failed for package ‘tidysdm’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/tidysdm/old/tidysdm.Rcheck/tidysdm’
+
+
+```
 # timetk
 
 <details>
@@ -6106,9 +9274,9 @@ Run `revdep_details(, "tidysdm")` for more info
 * GitHub: https://github.com/business-science/timetk
 * Source code: https://github.com/cran/timetk
 * Date/Publication: 2023-10-31 22:30:02 UTC
-* Number of recursive dependencies: 225
+* Number of recursive dependencies: 206
 
-Run `revdep_details(, "timetk")` for more info
+Run `revdepcheck::revdep_details(, "timetk")` for more info
 
 </details>
 
@@ -6119,17 +9287,17 @@ Run `revdep_details(, "timetk")` for more info
       Note: found 2750 marked UTF-8 strings
     ```
 
-# TreeSearch
+# TKCat
 
 <details>
 
-* Version: 1.4.0
-* GitHub: https://github.com/ms609/TreeSearch
-* Source code: https://github.com/cran/TreeSearch
-* Date/Publication: 2023-08-26 04:50:02 UTC
-* Number of recursive dependencies: 126
+* Version: 1.1.12
+* GitHub: https://github.com/patzaw/TKCat
+* Source code: https://github.com/cran/TKCat
+* Date/Publication: 2025-03-17 14:50:02 UTC
+* Number of recursive dependencies: 124
 
-Run `revdep_details(, "TreeSearch")` for more info
+Run `revdepcheck::revdep_details(, "TKCat")` for more info
 
 </details>
 
@@ -6137,11 +9305,120 @@ Run `revdep_details(, "TreeSearch")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.9Mb
+      installed size is  5.0Mb
       sub-directories of 1Mb or more:
-        datasets   1.6Mb
-        doc        1.2Mb
-        libs       2.5Mb
+        R     1.5Mb
+        doc   2.7Mb
+    ```
+
+# tramvs
+
+<details>
+
+* Version: 0.0-7
+* GitHub: NA
+* Source code: https://github.com/cran/tramvs
+* Date/Publication: 2025-01-31 10:10:02 UTC
+* Number of recursive dependencies: 104
+
+Run `revdepcheck::revdep_details(, "tramvs")` for more info
+
+</details>
+
+## In both
+
+*   checking re-building of vignette outputs ... WARNING
+    ```
+    Error(s) in re-building vignettes:
+      ...
+    --- re-building ‘tramvs.Rnw’ using knitr
+    Warning in texi2dvi(file = file, pdf = TRUE, clean = clean, quiet = quiet,  :
+      texi2dvi script/program not available, using emulation
+    Error: processing vignette 'tramvs.Rnw' failed with diagnostics:
+    unable to run pdflatex on 'tramvs.tex'
+    LaTeX errors:
+    ! LaTeX Error: File `wrapfig.sty' not found.
+    
+    ...
+    l.68 \usepackage
+                    {float}^^M
+    !  ==> Fatal error occurred, no output PDF file produced!
+    --- failed re-building ‘tramvs.Rnw’
+    
+    SUMMARY: processing the following file failed:
+      ‘tramvs.Rnw’
+    
+    Error: Vignette re-building failed.
+    Execution halted
+    ```
+
+# TreeMineR
+
+<details>
+
+* Version: 1.0.3
+* GitHub: https://github.com/entjos/TreeMineR
+* Source code: https://github.com/cran/TreeMineR
+* Date/Publication: 2025-04-05 13:10:02 UTC
+* Number of recursive dependencies: 65
+
+Run `revdepcheck::revdep_details(, "TreeMineR")` for more info
+
+</details>
+
+## In both
+
+*   checking data for non-ASCII characters ... NOTE
+    ```
+      Note: found 3 marked UTF-8 strings
+    ```
+
+# TreeSearch
+
+<details>
+
+* Version: 1.6.0
+* GitHub: https://github.com/ms609/TreeSearch
+* Source code: https://github.com/cran/TreeSearch
+* Date/Publication: 2025-04-09 23:10:08 UTC
+* Number of recursive dependencies: 123
+
+Run `revdepcheck::revdep_details(, "TreeSearch")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘TreeTools’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# TrialEmulation
+
+<details>
+
+* Version: 0.0.4.2
+* GitHub: https://github.com/Causal-LDA/TrialEmulation
+* Source code: https://github.com/cran/TrialEmulation
+* Date/Publication: 2025-02-21 12:30:18 UTC
+* Number of recursive dependencies: 92
+
+Run `revdepcheck::revdep_details(, "TrialEmulation")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  5.2Mb
+      sub-directories of 1Mb or more:
+        data   2.5Mb
+        libs   1.5Mb
     ```
 
 # TriDimRegression
@@ -6152,9 +9429,9 @@ Run `revdep_details(, "TreeSearch")` for more info
 * GitHub: https://github.com/alexander-pastukhov/tridim-regression
 * Source code: https://github.com/cran/TriDimRegression
 * Date/Publication: 2023-09-13 14:10:03 UTC
-* Number of recursive dependencies: 100
+* Number of recursive dependencies: 98
 
-Run `revdep_details(, "TriDimRegression")` for more info
+Run `revdepcheck::revdep_details(, "TriDimRegression")` for more info
 
 </details>
 
@@ -6163,7 +9440,7 @@ Run `revdep_details(, "TriDimRegression")` for more info
 *   checking whether package ‘TriDimRegression’ can be installed ... ERROR
     ```
     Installation failed.
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/TriDimRegression/new/TriDimRegression.Rcheck/00install.out’ for details.
+    See ‘/scratch/henrik/606930/globals/revdep/checks/TriDimRegression/new/TriDimRegression.Rcheck/00install.out’ for details.
     ```
 
 ## Installation
@@ -6178,7 +9455,7 @@ Error in loadNamespace(x) : there is no package called ‘rstantools’
 Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
 Execution halted
 ERROR: configuration failed for package ‘TriDimRegression’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/TriDimRegression/new/TriDimRegression.Rcheck/TriDimRegression’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/TriDimRegression/new/TriDimRegression.Rcheck/TriDimRegression’
 
 
 ```
@@ -6192,10 +9469,155 @@ Error in loadNamespace(x) : there is no package called ‘rstantools’
 Calls: loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
 Execution halted
 ERROR: configuration failed for package ‘TriDimRegression’
-* removing ‘/c4/home/henrik/repositories/globals/revdep/checks/TriDimRegression/old/TriDimRegression.Rcheck/TriDimRegression’
+* removing ‘/scratch/henrik/606930/globals/revdep/checks/TriDimRegression/old/TriDimRegression.Rcheck/TriDimRegression’
 
 
 ```
+# troopdata
+
+<details>
+
+* Version: 1.0.2
+* GitHub: https://github.com/meflynn/troopdata
+* Source code: https://github.com/cran/troopdata
+* Date/Publication: 2024-09-10 08:00:02 UTC
+* Number of recursive dependencies: 102
+
+Run `revdepcheck::revdep_details(, "troopdata")` for more info
+
+</details>
+
+## In both
+
+*   checking data for non-ASCII characters ... NOTE
+    ```
+      Note: found 192 marked UTF-8 strings
+    ```
+
+# tsdistributions
+
+<details>
+
+* Version: 1.0.2
+* GitHub: https://github.com/tsmodels/tsdistributions
+* Source code: https://github.com/cran/tsdistributions
+* Date/Publication: 2024-08-23 04:20:02 UTC
+* Number of recursive dependencies: 72
+
+Run `revdepcheck::revdep_details(, "tsdistributions")` for more info
+
+</details>
+
+## In both
+
+*   checking re-building of vignette outputs ... ERROR
+    ```
+    Error(s) in re-building vignettes:
+      ...
+    --- re-building ‘estimation_demo.Rmd’ using rmarkdown
+    --- finished re-building ‘estimation_demo.Rmd’
+    
+    --- re-building ‘location_scale_distributions.Rmd’ using rmarkdown
+    ! Undefined control sequence.
+    l.56 \NewDocumentCommand
+                            \citeproctext{}{} 
+    
+    ...
+    --- finished re-building ‘profile_demo.Rmd’
+    
+    --- re-building ‘spd_demo.Rmd’ using rmarkdown
+    --- finished re-building ‘spd_demo.Rmd’
+    
+    SUMMARY: processing the following file failed:
+      ‘location_scale_distributions.Rmd’
+    
+    Error: Vignette re-building failed.
+    Execution halted
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 42.9Mb
+      sub-directories of 1Mb or more:
+        libs  42.2Mb
+    ```
+
+# tsgarch
+
+<details>
+
+* Version: 1.0.3
+* GitHub: https://github.com/tsmodels/tsgarch
+* Source code: https://github.com/cran/tsgarch
+* Date/Publication: 2024-10-12 00:50:02 UTC
+* Number of recursive dependencies: 94
+
+Run `revdepcheck::revdep_details(, "tsgarch")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 144.4Mb
+      sub-directories of 1Mb or more:
+        libs  143.3Mb
+    ```
+
+# tsmarch
+
+<details>
+
+* Version: 1.0.0
+* GitHub: https://github.com/tsmodels/tsmarch
+* Source code: https://github.com/cran/tsmarch
+* Date/Publication: 2024-11-18 13:30:02 UTC
+* Number of recursive dependencies: 150
+
+Run `revdepcheck::revdep_details(, "tsmarch")` for more info
+
+</details>
+
+## In both
+
+*   checking re-building of vignette outputs ... ERROR
+    ```
+    Error(s) in re-building vignettes:
+      ...
+    --- re-building ‘feasible_multivariate_garch.Rmd’ using rmarkdown
+    ! Undefined control sequence.
+    l.97 \NewDocumentCommand
+                            \citeproctext{}{} 
+    
+    Error: processing vignette 'feasible_multivariate_garch.Rmd' failed with diagnostics:
+    LaTeX failed to compile /scratch/henrik/606930/globals/revdep/checks/tsmarch/new/tsmarch.Rcheck/vign_test/tsmarch/vignettes/feasible_multivariate_garch.tex. See https://yihui.org/tinytex/r/#debugging for debugging tips. See feasible_multivariate_garch.log for more info.
+    --- failed re-building ‘feasible_multivariate_garch.Rmd’
+    
+    --- re-building ‘tsmarch_demo.Rmd’ using rmarkdown
+    --- finished re-building ‘tsmarch_demo.Rmd’
+    
+    SUMMARY: processing the following file failed:
+      ‘feasible_multivariate_garch.Rmd’
+    
+    Error: Vignette re-building failed.
+    Execution halted
+    ```
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 22.9Mb
+      sub-directories of 1Mb or more:
+        R      1.5Mb
+        doc    1.6Mb
+        libs  18.8Mb
+    ```
+
+*   checking for GNU extensions in Makefiles ... NOTE
+    ```
+    GNU make is a SystemRequirements.
+    ```
+
 # txshift
 
 <details>
@@ -6204,9 +9626,9 @@ ERROR: configuration failed for package ‘TriDimRegression’
 * GitHub: https://github.com/nhejazi/txshift
 * Source code: https://github.com/cran/txshift
 * Date/Publication: 2022-02-09 22:30:02 UTC
-* Number of recursive dependencies: 113
+* Number of recursive dependencies: 111
 
-Run `revdep_details(, "txshift")` for more info
+Run `revdepcheck::revdep_details(, "txshift")` for more info
 
 </details>
 
@@ -6217,17 +9639,30 @@ Run `revdep_details(, "txshift")` for more info
     Package which this enhances but not available for checking: ‘sl3’
     ```
 
+*   checking Rd files ... NOTE
+    ```
+    checkRd: (-1) est_g_exp.Rd:55: Lost braces; missing escapes or markup?
+        55 |  {A - delta}, {A + delta}, and {A + 2 * delta}).
+           |  ^
+    checkRd: (-1) est_g_exp.Rd:55: Lost braces; missing escapes or markup?
+        55 |  {A - delta}, {A + delta}, and {A + 2 * delta}).
+           |               ^
+    checkRd: (-1) est_g_exp.Rd:55: Lost braces; missing escapes or markup?
+        55 |  {A - delta}, {A + delta}, and {A + 2 * delta}).
+           |                                ^
+    ```
+
 # UCSCXenaShiny
 
 <details>
 
-* Version: 1.1.10
+* Version: 2.1.0
 * GitHub: https://github.com/openbiox/UCSCXenaShiny
 * Source code: https://github.com/cran/UCSCXenaShiny
-* Date/Publication: 2023-02-28 15:32:34 UTC
-* Number of recursive dependencies: 193
+* Date/Publication: 2024-05-15 14:10:06 UTC
+* Number of recursive dependencies: 210
 
-Run `revdep_details(, "UCSCXenaShiny")` for more info
+Run `revdepcheck::revdep_details(, "UCSCXenaShiny")` for more info
 
 </details>
 
@@ -6235,10 +9670,11 @@ Run `revdep_details(, "UCSCXenaShiny")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  6.6Mb
+      installed size is  9.0Mb
       sub-directories of 1Mb or more:
+        data       2.0Mb
         doc        1.4Mb
-        shinyapp   3.3Mb
+        shinyapp   4.9Mb
     ```
 
 # updog
@@ -6249,28 +9685,19 @@ Run `revdep_details(, "UCSCXenaShiny")` for more info
 * GitHub: https://github.com/dcgerard/updog
 * Source code: https://github.com/cran/updog
 * Date/Publication: 2023-11-29 15:50:02 UTC
-* Number of recursive dependencies: 151
+* Number of recursive dependencies: 137
 
-Run `revdep_details(, "updog")` for more info
+Run `revdepcheck::revdep_details(, "updog")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘updog’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/updog/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/updog/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/updog/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/updog/new/updog.Rcheck/00install.out’ for details.
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is  8.0Mb
+      installed size is  8.9Mb
       sub-directories of 1Mb or more:
-        libs   7.3Mb
+        libs   8.1Mb
     ```
 
 # variantspark
@@ -6281,9 +9708,9 @@ Run `revdep_details(, "updog")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/variantspark
 * Date/Publication: 2019-06-13 16:20:03 UTC
-* Number of recursive dependencies: 57
+* Number of recursive dependencies: 55
 
-Run `revdep_details(, "variantspark")` for more info
+Run `revdepcheck::revdep_details(, "variantspark")` for more info
 
 </details>
 
@@ -6294,45 +9721,31 @@ Run `revdep_details(, "variantspark")` for more info
       'LazyData' is specified without a 'data' directory
     ```
 
-# viewpoly
+# vetiver
 
 <details>
 
-* Version: 0.3.2
-* GitHub: https://github.com/mmollina/viewpoly
-* Source code: https://github.com/cran/viewpoly
-* Date/Publication: 2022-11-01 17:30:12 UTC
-* Number of recursive dependencies: 155
+* Version: 0.2.5
+* GitHub: https://github.com/rstudio/vetiver-r
+* Source code: https://github.com/cran/vetiver
+* Date/Publication: 2023-11-16 22:50:02 UTC
+* Number of recursive dependencies: 220
 
-Run `revdep_details(, "viewpoly")` for more info
+Run `revdepcheck::revdep_details(, "vetiver")` for more info
 
 </details>
 
 ## In both
 
-*   checking tests ...
+*   checking package dependencies ... NOTE
     ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 50 lines of output:
-        5.   │ └─shinydashboard:::tagAssert(body, type = "div", class = "content-wrapper")
-        6.   ├─shinydashboard::dashboardBody(...)
-        7.   │ ├─htmltools::div(...)
-        8.   │ │ └─rlang::dots_list(...)
-        9.   │ └─tags$section(class = "content", ...)
-       10.   │   └─rlang::dots_list(...)
-    ...
-      [ FAIL 1 | WARN 3 | SKIP 2 | PASS 27 ]
-      Deleting unused snapshots:
-      • tetra_example/effects-bar.svg
-      • tetra_example/effects-circle.svg
-      • tetra_example/effects-digenic.svg
-      • tetra_example/linkage-map-draw-names.svg
-      • tetra_example/plot-map-list.svg
-      • tetra_example/qtl-plot.svg
-      Error: Test failures
-      Execution halted
+    Packages suggested but not available for checking:
+      'paws.machine.learning', 'smdocker'
+    ```
+
+*   checking Rd cross-references ... NOTE
+    ```
+    Package unavailable to check Rd xrefs: ‘paws.machine.learning’
     ```
 
 # vip
@@ -6345,7 +9758,7 @@ Run `revdep_details(, "viewpoly")` for more info
 * Date/Publication: 2023-08-21 09:20:02 UTC
 * Number of recursive dependencies: 105
 
-Run `revdep_details(, "vip")` for more info
+Run `revdepcheck::revdep_details(, "vip")` for more info
 
 </details>
 
@@ -6353,6 +9766,8 @@ Run `revdep_details(, "vip")` for more info
 
 *   checking package dependencies ... NOTE
     ```
+    Package suggested but not available for checking: ‘varImp’
+    
     Packages which this enhances but not available for checking:
       'C50', 'caret', 'Cubist', 'earth', 'gbm', 'glmnet', 'h2o',
       'lightgbm', 'mixOmics', 'mlr', 'mlr3', 'neuralnet', 'parsnip',
@@ -6365,6 +9780,124 @@ Run `revdep_details(, "vip")` for more info
     Packages unavailable to check Rd xrefs: ‘randomForest’, ‘glmnet’, ‘C50’, ‘Cubist’, ‘caret’, ‘partykit’, ‘earth’, ‘gbm’, ‘h2o’, ‘sparklyr’, ‘ranger’, ‘rpart’, ‘xgboost’, ‘lightgbm’
     ```
 
+# viraldomain
+
+<details>
+
+* Version: 0.0.6
+* GitHub: https://github.com/juanv66x/viraldomain
+* Source code: https://github.com/cran/viraldomain
+* Date/Publication: 2024-10-17 21:50:02 UTC
+* Number of recursive dependencies: 103
+
+Run `revdepcheck::revdep_details(, "viraldomain")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘applicable’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# viralmodels
+
+<details>
+
+* Version: 1.3.3
+* GitHub: https://github.com/juanv66x/viralmodels
+* Source code: https://github.com/cran/viralmodels
+* Date/Publication: 2025-02-19 14:30:02 UTC
+* Number of recursive dependencies: 186
+
+Run `revdepcheck::revdep_details(, "viralmodels")` for more info
+
+</details>
+
+## In both
+
+*   checking tests ...
+    ```
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Last 50 lines of output:
+      Attaching package: 'kernlab'
+      
+      The following object is masked from 'package:purrr':
+      
+          cross
+      
+    ...
+      Error in `library(viraldomain)`: there is no package called 'viraldomain'
+      Backtrace:
+          ▆
+       1. └─base::library(viraldomain) at test-viralvis.R:18:3
+      
+      [ FAIL 4 | WARN 0 | SKIP 0 | PASS 0 ]
+      Deleting unused snapshots:
+      • viralvis/viralvis.svg
+      Error: Test failures
+      Execution halted
+    ```
+
+*   checking package dependencies ... NOTE
+    ```
+    Package suggested but not available for checking: ‘viraldomain’
+    ```
+
+# visvaR
+
+<details>
+
+* Version: 1.0.0
+* GitHub: https://github.com/rameshram96/visvaR
+* Source code: https://github.com/cran/visvaR
+* Date/Publication: 2024-11-14 15:50:02 UTC
+* Number of recursive dependencies: 127
+
+Run `revdepcheck::revdep_details(, "visvaR")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package required but not available: ‘agricolae’
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
+# vital
+
+<details>
+
+* Version: 1.1.0
+* GitHub: https://github.com/robjhyndman/vital
+* Source code: https://github.com/cran/vital
+* Date/Publication: 2024-06-21 08:00:02 UTC
+* Number of recursive dependencies: 200
+
+Run `revdepcheck::revdep_details(, "vital")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  9.7Mb
+      sub-directories of 1Mb or more:
+        data   8.0Mb
+        help   1.3Mb
+    ```
+
 # vmeasur
 
 <details>
@@ -6373,9 +9906,32 @@ Run `revdep_details(, "vip")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/vmeasur
 * Date/Publication: 2021-11-11 19:00:02 UTC
-* Number of recursive dependencies: 119
+* Number of recursive dependencies: 110
 
-Run `revdep_details(, "vmeasur")` for more info
+Run `revdepcheck::revdep_details(, "vmeasur")` for more info
+
+</details>
+
+## In both
+
+*   checking whether package ‘vmeasur’ can be installed ... WARNING
+    ```
+    Found the following significant warnings:
+      Warning: no DISPLAY variable so Tk is not available
+    See ‘/scratch/henrik/606930/globals/revdep/checks/vmeasur/new/vmeasur.Rcheck/00install.out’ for details.
+    ```
+
+# WeibullR.shiny
+
+<details>
+
+* Version: 0.3
+* GitHub: https://github.com/paulgovan/WeibullR.shiny
+* Source code: https://github.com/cran/WeibullR.shiny
+* Date/Publication: 2024-11-13 13:10:08 UTC
+* Number of recursive dependencies: 112
+
+Run `revdepcheck::revdep_details(, "WeibullR.shiny")` for more info
 
 </details>
 
@@ -6383,7 +9939,9 @@ Run `revdep_details(, "vmeasur")` for more info
 
 *   checking package dependencies ... ERROR
     ```
-    Package required but not available: ‘imager’
+    Package required but not available: ‘WeibullR.plotly’
+    
+    Package suggested but not available for checking: ‘WeibullR.learnr’
     
     See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
     manual.
@@ -6393,13 +9951,13 @@ Run `revdep_details(, "vmeasur")` for more info
 
 <details>
 
-* Version: 1.6-4
+* Version: 1.8-1
 * GitHub: NA
 * Source code: https://github.com/cran/WeightedCluster
-* Date/Publication: 2023-07-07 07:50:02 UTC
-* Number of recursive dependencies: 43
+* Date/Publication: 2024-12-10 22:00:02 UTC
+* Number of recursive dependencies: 72
 
-Run `revdep_details(, "WeightedCluster")` for more info
+Run `revdepcheck::revdep_details(, "WeightedCluster")` for more info
 
 </details>
 
@@ -6408,60 +9966,102 @@ Run `revdep_details(, "WeightedCluster")` for more info
 *   checking re-building of vignette outputs ... WARNING
     ```
     Error(s) in re-building vignettes:
-    --- re-building ‘WeightedCluster.Rnw’ using knitr
-    --- finished re-building ‘WeightedCluster.Rnw’
+    --- re-building ‘BigDataSA.Rmd’ using rmarkdown
+    --- finished re-building ‘BigDataSA.Rmd’
     
-    --- re-building ‘WeightedClusterFR.Rnw’ using knitr
-    --- finished re-building ‘WeightedClusterFR.Rnw’
+    --- re-building ‘ClusterExternalValidSA.Rmd’ using rmarkdown
+    --- finished re-building ‘ClusterExternalValidSA.Rmd’
     
-    --- re-building ‘WeightedClusterPreview.Rnw’ using knitr
-    Error: processing vignette 'WeightedClusterPreview.Rnw' failed with diagnostics:
-    Running 'texi2dvi' on 'WeightedClusterPreview.tex' failed.
+    --- re-building ‘ClusterValidSA.Rmd’ using rmarkdown
+    --- finished re-building ‘ClusterValidSA.Rmd’
+    
     ...
     l.85 \usepackage
                     {tikz}^^M
     !  ==> Fatal error occurred, no output PDF file produced!
     --- failed re-building ‘WeightedClusterPreview.Rnw’
     
-    SUMMARY: processing the following file failed:
-      ‘WeightedClusterPreview.Rnw’
+    SUMMARY: processing the following files failed:
+      ‘WeightedClusterFR.Rnw’ ‘WeightedClusterPreview.Rnw’
     
     Error: Vignette re-building failed.
     Execution halted
+    ```
+
+# winputall
+
+<details>
+
+* Version: 1.0.1
+* GitHub: NA
+* Source code: https://github.com/cran/winputall
+* Date/Publication: 2024-06-07 14:40:02 UTC
+* Number of recursive dependencies: 102
+
+Run `revdepcheck::revdep_details(, "winputall")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is 103.2Mb
+      sub-directories of 1Mb or more:
+        libs  102.8Mb
+    ```
+
+*   checking for GNU extensions in Makefiles ... NOTE
+    ```
+    GNU make is a SystemRequirements.
+    ```
+
+# workflowsets
+
+<details>
+
+* Version: 1.1.0
+* GitHub: https://github.com/tidymodels/workflowsets
+* Source code: https://github.com/cran/workflowsets
+* Date/Publication: 2024-03-21 14:20:02 UTC
+* Number of recursive dependencies: 139
+
+Run `revdepcheck::revdep_details(, "workflowsets")` for more info
+
+</details>
+
+## In both
+
+*   checking installed package size ... NOTE
+    ```
+      installed size is  7.1Mb
+      sub-directories of 1Mb or more:
+        data   6.5Mb
     ```
 
 # wru
 
 <details>
 
-* Version: 3.0.1
+* Version: 3.0.3
 * GitHub: https://github.com/kosukeimai/wru
 * Source code: https://github.com/cran/wru
-* Date/Publication: 2024-02-28 04:20:02 UTC
-* Number of recursive dependencies: 96
+* Date/Publication: 2024-05-24 18:00:02 UTC
+* Number of recursive dependencies: 95
 
-Run `revdep_details(, "wru")` for more info
+Run `revdepcheck::revdep_details(, "wru")` for more info
 
 </details>
 
 ## In both
 
-*   checking whether package ‘wru’ can be installed ... WARNING
-    ```
-    Found the following significant warnings:
-      /c4/home/henrik/repositories/globals/revdep/library/wru/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:63:13: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/wru/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:65:7: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-      /c4/home/henrik/repositories/globals/revdep/library/wru/RcppArmadillo/include/armadillo_bits/fn_reshape.hpp:74:9: warning: ‘arma::Mat<typename T1::elem_type> arma::reshape(const arma::Base<typename T1::elem_type, T1>&, arma::uword, arma::uword, arma::uword)’ is deprecated: don't use this form: it will be removed [-Wdeprecated-declarations]
-    See ‘/c4/home/henrik/repositories/globals/revdep/checks/wru/new/wru.Rcheck/00install.out’ for details.
-    ```
-
 *   checking installed package size ... NOTE
     ```
-      installed size is  7.5Mb
+      installed size is  9.6Mb
       sub-directories of 1Mb or more:
-        data   3.5Mb
-        help   1.9Mb
-        libs   2.0Mb
+        data   5.5Mb
+        help   2.0Mb
+        libs   1.9Mb
     ```
 
 *   checking dependencies in R code ... NOTE
@@ -6475,13 +10075,13 @@ Run `revdep_details(, "wru")` for more info
 
 <details>
 
-* Version: 1.10.0
+* Version: 1.14.0
 * GitHub: NA
 * Source code: https://github.com/cran/XNAString
-* Date/Publication: 2023-10-24
-* Number of recursive dependencies: 106
+* Date/Publication: 2024-10-29
+* Number of recursive dependencies: 107
 
-Run `revdep_details(, "XNAString")` for more info
+Run `revdepcheck::revdep_details(, "XNAString")` for more info
 
 </details>
 
@@ -6512,8 +10112,9 @@ Run `revdep_details(, "XNAString")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 11.2Mb
+      installed size is 12.2Mb
       sub-directories of 1Mb or more:
+        R      1.5Mb
         doc    1.0Mb
         libs   9.5Mb
     ```
@@ -6524,4 +10125,23 @@ Run `revdep_details(, "XNAString")` for more info
       LICENSE
     is not mentioned in the DESCRIPTION file.
     ```
+
+# xpect
+
+<details>
+
+* Version: 1.0
+* GitHub: NA
+* Source code: https://github.com/cran/xpect
+* Date/Publication: 2025-03-24 11:30:01 UTC
+* Number of recursive dependencies: 79
+
+Run `revdepcheck::revdep_details(, "xpect")` for more info
+
+</details>
+
+## In both
+
+*   R CMD check timed out
+    
 
