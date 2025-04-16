@@ -61,6 +61,22 @@ globals_i <- findGlobals({ "x" <- 1; x }, substitute = TRUE)
 print(globals_i)
 assert_identical_sets(globals_i, c("{", "<-"))
 
+globals <- findGlobals(list())
+print(globals)
+assert_identical_sets(globals, character(0L))
+
+expr <- quote(list())
+attr(expr, "abc") <- quote({ a })
+attr(expr, "def") <- quote({ d })
+globals <- findGlobals(expr)
+print(globals)
+assert_identical_sets(globals, c("list", "{", "a", "d"))
+
+globals <- findGlobals(expr, attributes = "abc")
+print(globals)
+assert_identical_sets(globals, c("list", "{", "a"))
+
+
 
 message(" ** findGlobals(..., tweak):")
 tweak_another_expression <- function(expr) {
@@ -153,6 +169,11 @@ for (method in c("conservative", "liberal", "ordered")) {
   print(globals_i)
   assert_identical_sets(globals_i, c("GLOBAL", "ARG"))
 }
+
+
+globals <- findGlobals(quote({ a * b }), trace = TRUE)
+print(globals)
+assert_identical_sets(globals, c("{", "*", "a", "b"))
 
 message("*** findGlobals() ... DONE")
 
