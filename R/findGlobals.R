@@ -29,7 +29,11 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
     on.exit(trace_exit(trace_msg))
   }
 
-  debug <- mdebug("findGlobals(..., dotdotdot = '%s', method = '%s', unlist = %s) ...", dotdotdot, method, unlist)
+  debug <- isTRUE(getOption("globals.debug"))
+  if (debug) {
+    mdebugf_push("findGlobals(..., dotdotdot = '%s', method = '%s', unlist = %s) ...", dotdotdot, method, unlist)
+    on.exit(mdebugf_pop("findGlobals(..., dotdotdot = '%s', method = '%s', unlist = %s) ... done", dotdotdot, method, unlist), add = TRUE)
+  }
 
   if (is.logical(attributes)) {
     stop_if_not(length(attributes) == 1L, !is.na(attributes))
@@ -39,7 +43,7 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
   }
   
   if (is.list(expr)) {
-    debug && mdebug(" - expr: <a list of length %d>", .length(expr))
+    if (debug) mdebugf("expr: <a list of length %d>", .length(expr))
 
     ## NOTE: Do *not* look for types that we are interested in, but instead
     ## look for types that we are *not* interested.  The reason for this that
@@ -58,8 +62,7 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
 
     ## Early stopping?
     if (.length(expr) == 0) {
-      debug && mdebug(" - globals found: [0] <none>")
-      debug && mdebug("findGlobals(..., dotdotdot = '%s', method = '%s', unlist = %s) ... DONE", dotdotdot, method, unlist) #nolint
+      if (debug) mdebug("globals found: [0] <none>")
       return(character(0L))
     }
     
@@ -72,7 +75,7 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
     
     keep <- types <- NULL ## Not needed anymore
     
-    debug && mdebug(" - preliminary globals found: [%d] %s",
+    if (debug) mdebugf("preliminary globals found: [%d] %s",
                     length(globals), hpaste(sQuote(names(globals))))
 
     if (unlist) {
@@ -83,20 +86,18 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
       if (length(idxs) > 0L) globals <- c(globals[-idxs], globals[idxs])
     }
 
-    debug && mdebug(" - globals found: [%d] %s",
+    if (debug) mdebugf("globals found: [%d] %s",
                     length(globals), hpaste(sQuote(globals)))
-    debug && mdebug("findGlobals(..., dotdotdot = '%s', method = '%s', unlist = %s) ... DONE", dotdotdot, method, unlist) #nolint
-    
     return(globals)
   }
 
   if (is.function(tweak)) {
-    debug && mdebug(" - tweaking expression using function")
+    if (debug) mdebug("tweaking expression using function")
     expr <- tweak(expr)
   }
 
   if (hasCodetoolsBug16()) {
-    debug && mdebug(" - workaround 'codetools' bug #16")
+    if (debug) mdebug("workaround 'codetools' bug #16")
     expr <- walkAST(expr, call = tweakCodetoolsBug16)
   }
 
@@ -124,7 +125,7 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
 
     ## Attributes to be searched, if any
     if (length(attrs) > 0) {
-      debug && mdebug(" - searching attributes")
+      if (debug) mdebug("searching attributes")
       attrs_globals <- list_apply(attrs, FUN = findGlobals, envir = envir,
                                   ## Don't look for attributes recursively
                                   attributes = FALSE,
@@ -137,14 +138,13 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
                                   trace = trace)
       if (unlist) attrs_globals <- unlist(attrs_globals, use.names = FALSE)
       if (length(attrs_globals) > 1L) attrs_globals <- unique(attrs_globals)
-      debug && mdebug(" - globals found in attributes: [%d] %s",
+      if (debug) mdebugf("globals found in attributes: [%d] %s",
                       length(attrs_globals), hpaste(sQuote(attrs_globals)))
       globals <- unique(c(globals, attrs_globals))
     }
   }
 
-  debug && mdebug(" - globals found: [%d] %s", length(globals), hpaste(sQuote(globals)))
-  debug && mdebug("findGlobals(..., dotdotdot = '%s', method = '%s', unlist = %s) ... DONE", dotdotdot, method, unlist) #nolint
+  if (debug) mdebugf("globals found: [%d] %s", length(globals), hpaste(sQuote(globals)))
 
   globals
 }

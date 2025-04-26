@@ -78,14 +78,18 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
   
   if (substitute) expr <- substitute(expr)
   stop_if_not(is.null(skip) || is.list(skip))
-  
-  debug <- mdebug("globalsOf(..., method = '%s', mustExist = %s, unlist = %s, recursive = %s) ...", method, mustExist, unlist, recursive) #nolint
+
+  debug <- isTRUE(getOption("globals.debug"))
+  if (debug) {
+    mdebugf_push("globalsOf(..., method = '%s', mustExist = %s, unlist = %s, recursive = %s) ...", method, mustExist, unlist, recursive)
+    on.exit(mdebugf_pop("globalsOf(..., method = '%s', mustExist = %s, unlist = %s, recursive = %s) ... done", method, mustExist, unlist, recursive))
+  }
 
   ## 1. Identify global variables (static code inspection)
   names <- findGlobals(expr, envir = envir, ..., method = method,
                        tweak = tweak, substitute = FALSE, unlist = unlist)
-  debug && mdebug(" - preliminary globals (by name): [%d] %s",
-                  length(names), hpaste(sQuote(names)))
+  if (debug) mdebugf("preliminary globals (by name): [%d] %s",
+                     length(names), hpaste(sQuote(names)))
 
   ## 2. Locate them (run time)
   globals <- tryCatch({
@@ -98,8 +102,8 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
     stop(ex)
   })
 
-  debug && mdebug(" - preliminary globals (by value): [%d] %s",
-                  length(globals), hpaste(sQuote(names(globals))))
+  if (debug) mdebugf("preliminary globals (by value): [%d] %s",
+                     length(globals), hpaste(sQuote(names(globals))))
 
   ## If a function, drop any globals that are part of any of the functions
   ## local environments, e.g. 'a' in f <- local({ a <- 1; function() a })
@@ -121,7 +125,7 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
   ## 3. Among globals that are closures (functions) and that exist outside
   ##    of namespaces ("packages"), check for additional globals?
   if (recursive) {
-    debug && mdebug(" - recursive scan of preliminary globals ...")
+    if (debug) mdebug_push("recursive scan of preliminary globals ...")
 
     ## Don't enter functions in namespaces / packages
     where <- attr(globals, "where", exact = TRUE)
@@ -130,7 +134,7 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
                     USE.NAMES = FALSE)
     globals_t <- globals[!(where %in% loadedNamespaces())]
 
-    debug && mdebug(" - subset of globals to be scanned (not in loaded namespaces): [%d] %s", length(globals_t), hpaste(sQuote(names(globals_t)))) #nolint
+    if (debug) mdebugf("subset of globals to be scanned (not in loaded namespaces): [%d] %s", length(globals_t), hpaste(sQuote(names(globals_t)))) #nolint
 
     ## Enter only functions
     ## NOTE: This excludes functions "not found", but also primitives
@@ -138,16 +142,16 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
     globals_t <- globals_t[vapply(globals_t, FUN = typeof, FUN.VALUE = NA_character_, USE.NAMES = FALSE) == "closure"]
 
     if (length(globals_t) > 0) {
-      debug && mdebug(" - subset of globals to be scanned: [%d] %s",
-                      length(globals_t), hpaste(sQuote(names(globals_t))))
+      if (debug) mdebugf("subset of globals to be scanned: [%d] %s",
+                         length(globals_t), hpaste(sQuote(names(globals_t))))
       names_t <- names(globals_t)
 
       ## Avoid recursive scanning of already scanned ("known") globals
       skip_t <- c(skip, globals_t)
       
       for (gg in seq_along(globals_t)) {
-        debug && mdebug("   + scanning global #%d (%s) ...",
-	                gg, sQuote(names_t[[gg]]))
+        if (debug) mdebugf("+ scanning global #%d (%s) ...",
+                           gg, sQuote(names_t[[gg]]))
         fcn <- globals_t[[gg]]
 
         ## Is function 'fcn' among the already identified globals?
@@ -171,19 +175,17 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
         }
       }
       globals <- unique(globals)
-      debug && mdebug(" - updated set of globals found: [%d] %s",
-                      length(globals), hpaste(sQuote(names(globals))))
+      if (debug) mdebugf("updated set of globals found: [%d] %s",
+                         length(globals), hpaste(sQuote(names(globals))))
     } else {
-      debug && mdebug(" - subset of globals to be scanned: [0]")
+      if (debug) mdebug("subset of globals to be scanned: [0]")
     }
 
-    debug && mdebug(" - recursive scan of preliminary globals ... DONE")
+    if (debug) mdebug_pop("recursive scan of preliminary globals ... done")
   }
 
-  debug && mdebug(" - globals found: [%d] %s",
-                  length(globals), hpaste(sQuote(names(globals))))
-
-  debug && mdebug("globalsOf(..., method = '%s', mustExist = %s, unlist = %s, recursive = %s) ... DONE", method, mustExist, unlist, recursive) #nolint
+  if (debug) mdebugf("globals found: [%d] %s",
+                     length(globals), hpaste(sQuote(names(globals))))
 
   globals
 } ## globalsOf()

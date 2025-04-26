@@ -130,31 +130,6 @@ hexpr <- function(expr, trim = TRUE, collapse = "; ", max_head = 6L,
 } # hexpr()
 
 
-now <- function(x = Sys.time(), format = "[%H:%M:%OS3] ") {
-  ## format(x, format = format) ## slower
-  format(as.POSIXlt(x, tz = ""), format = format)
-}
-
-## From future 1.3.0
-mdebug <- function(...) {
-  if (!getOption("globals.debug", FALSE)) return(invisible(FALSE))
-  message(sprintf(...))
-  invisible(TRUE)
-} ## mdebug()
-
-
-mdebugf <- function(..., appendLF = TRUE, prefix = now(), debug = getOption("globals.debug", FALSE)) {
-  if (!debug) return()
-  message(prefix, sprintf(...), appendLF = appendLF)
-}
-
-#' @importFrom utils capture.output str
-mstr <- function(...) {
-  bfr <- capture.output(str(...))
-  bfr <- paste(bfr, collapse = "\n")
-  message(bfr, appendLF = TRUE)
-}
-
 #' @importFrom utils capture.output
 envname <- function(env) {
   if (!is.environment(env)) return(NA_character_)
