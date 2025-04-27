@@ -7,6 +7,9 @@
    depth-first search. This new approach does a better job in
    emulating how the R engine identifies and locates global variables.
 
+ * Now `findGlobals()` supports `expression` objects, e.g.
+   `findGlobals(expression(x + y))`.
+
 
 # Version 0.17.0 [2025-04-15]
 
