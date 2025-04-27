@@ -123,6 +123,7 @@ globals_i <- findGlobals(expr)
 print(globals_i)
 assert_identical_sets(globals_i, c("{", "<-"))
 globals_t <- findGlobals(expr, method = "tree")
+if (getRversion() < "4.0.0") globals_t <- setdiff(globals_t, "x")
 print(globals_t)
 assert_identical_sets(globals_t, c("{", "<-"))
 
