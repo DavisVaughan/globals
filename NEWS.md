@@ -11,6 +11,11 @@
  * Now `findGlobals()` supports `expression` objects, e.g.
    `findGlobals(expression(x + y))`.
 
+## Bug Fixes
+
+ * `findGlobals()` could return reserved R keywords, specifically
+   "break", "if", "for", "next", "repeat", and "while".
+
 
 # Version 0.17.0 [2025-04-15]
 

@@ -151,6 +151,10 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
     }
   }
 
+  ## Ignore reserve R keywords
+  r_keywords <- c("for", "if", "repeat", "while", "break", "next")
+  globals <- setdiff(globals, r_keywords)
+
   if (debug) mdebugf("globals found: [%d] %s", length(globals), hpaste(sQuote(globals)))
 
   globals
