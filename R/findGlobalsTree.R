@@ -39,7 +39,9 @@ findGlobals_AST_atomic <- function(expr, ..., debug = FALSE) {
   typeof <- typeof(expr)
 
   if (typeof %in% c("logical", "integer", "double", "complex", "character", "raw", "NULL")) {
+    if (debug) mdebugf("Skipping because typeof = %s", sQuote(typeof))
     ## Basic types that cannot contain unbound variables
+    if (inherits(expr, "srcref")) name <- "<srcref>"
     globals <- dframe(name = name, type = "constant", comment = "atomic")
   } else {
     bound <- unbound <- character(0L)
