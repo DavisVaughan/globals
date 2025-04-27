@@ -54,6 +54,10 @@
 #' are most likely among the identified ones.  At the same time,
 #' there is a risk that some false positives are also identified.
 #'
+#' The \code{method = "tree"} search method identifies globals in
+#' the abstract syntax tree (AST) using a depth-first search, which
+#' better emulates how the R engine identifies global variables.
+#'
 #' With \code{recursive = TRUE}, globals part of locally defined
 #' functions will also be found, otherwise not.
 #'
@@ -66,12 +70,12 @@
 #' @aliases findGlobals
 #' @export
 globalsOf <- function(expr, envir = parent.frame(), ...,
-                      method = c("ordered", "conservative", "liberal"),
+                      method = c("ordered", "conservative", "liberal", "tree"),
                       tweak = NULL,
                       locals = NA,
                       substitute = FALSE, mustExist = TRUE,
                       unlist = TRUE, recursive = TRUE, skip = NULL) {
-  method <- match.arg(method, choices = c("ordered", "conservative", "liberal"))
+  method <- match.arg(method, choices = c("ordered", "conservative", "liberal", "tree"), several.ok = FALSE)
 
   if (is.na(locals)) locals <- getOption("globals.globalsOf.locals", TRUE)
   stop_if_not(is.logical(locals), length(locals) == 1L, !is.na(locals))
