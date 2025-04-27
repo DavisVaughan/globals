@@ -310,6 +310,25 @@ print(globals_t)
 assert_identical_sets(globals_t, c("{", "names<-", "a", "[<-", "names"))
 
 
+expr <- expression(x)
+print(expr)
+globals_i <- findGlobals(expr)
+print(globals_i)
+assert_identical_sets(globals_i, c("x"))
+globals_t <- findGlobals(expr, method = "tree")
+print(globals_t)
+assert_identical_sets(globals_t, c("x"))
+
+expr <- expression(x + y)
+print(expr)
+globals_i <- findGlobals(expr)
+print(globals_i)
+assert_identical_sets(globals_i, c("+", "x", "y"))
+globals_t <- findGlobals(expr, method = "tree")
+print(globals_t)
+assert_identical_sets(globals_t, c("+", "x", "y"))
+
+
 # BUG: https://github.com/HenrikBengtsson/globals/issues/60
 expr <- as.call(list(function(...) GLOBAL, quote(ARG)))
 print(expr)

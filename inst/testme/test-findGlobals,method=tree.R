@@ -154,6 +154,12 @@ append_expr(fcn, substitute = FALSE, truth = c("::"))
 fcn <- function(a, ...) c(a = a, ...)
 append_expr(fcn, substitute = FALSE, truth = c("c"))
 
+expr <- expression(x)
+append_expr(expr, substitute = FALSE, truth = c("x"))
+
+expr <- expression(x + y)
+append_expr(expr, substitute = FALSE, truth = c("+", "x", "y"))
+
 
 for (kk in seq_along(exprs)) {
   message(sprintf("\n*** Expression #%d ***", kk))

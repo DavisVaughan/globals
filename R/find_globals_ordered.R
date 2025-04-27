@@ -145,6 +145,9 @@ find_globals_ordered <- function(expr, envir, dotdotdot, ..., name = character()
                               enterGlobal = enter_global)
     if (trace) w <- inject_tracer_to_walker(w)
     collect_usage_function(fun, name = "<anonymous>", w, trace = trace)
+  } else if (is.expression(expr)) {
+    if (trace) trace_printf("type = expression\n")
+    
   } else if (is.call(expr) && is.function(expr[[1]])) {
     if (trace) trace_printf("type = a call to a function\n")
     ## AD HOC: Fixes https://github.com/HenrikBengtsson/globals/issues/60

@@ -99,7 +99,14 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
       if (debug) mdebug("workaround 'codetools' bug #16")
       expr <- walkAST(expr, call = tweakCodetoolsBug16)
     }
-  
+
+    if (is.expression(expr)) {
+      return(findGlobals(expr[[1]], substitute = substitute, envir = envir,
+                         attributes = attributes, tweak = tweak, ...,
+                         dotdotdot = dotdotdot, method = method,
+                         unlist = unlist, trace = trace))
+    }
+
     if (method == "ordered") {
       find_globals_t <- find_globals_ordered
     } else if (method == "conservative") {

@@ -326,6 +326,39 @@ findGlobals_AST_environment <- function(expr, ..., debug = FALSE) {
 } 
 
 
+findGlobals_AST_expression <- function(expr, ..., debug = FALSE) {
+  if (debug) {
+    mdebugf_push("findGlobals_AST_expression() ...")
+    mprint(expr)
+    on.exit({
+      mprint(globals)
+      mdebugf_pop("findGlobals_AST_expression() ... done")
+    })
+  }
+  
+  ## NOTE: Do *not* look for types that we are interested in, but instead
+  ## look for types that we are *not* interested.  The reason for this that
+  ## in future versions of R there might be new types added that may contain
+  ## globals and with this approach those types will also be scanned.
+  basicTypes <- c("logical", "integer", "double", "complex", "character",
+                  "raw", "NULL")
+
+  ## Skip elements in 'expr' of basic types that cannot contain globals
+  types <- unlist(list_apply(expr, FUN = typeof), use.names = FALSE)
+  keep <- which(!(types %in% basicTypes))
+
+  ## Early stopping?
+  if (length(keep) == 0) {
+    if (debug) mdebug("globals found: [0] <none>")
+    globals <- dframe(type = "expression", comment = "expression")
+  } else {
+    globals <- list_apply(expr, subset = keep, FUN = findGlobals_AST, ..., debug = debug)
+    globals <- do.call(rbind, args = globals)
+  }
+  globals
+} 
+
+
 findGlobals_AST_function <- function(expr, ..., debug = FALSE) {
   if (debug) {
     mdebugf_push("findGlobals_AST_function() ...")
@@ -387,6 +420,8 @@ findGlobals_AST <- function(expr, ..., debug = FALSE) {
     return(findGlobals_AST_pairlist(expr, debug = debug))
   } else if (is.environment(expr)) {
     return(findGlobals_AST_environment(expr, debug = debug))
+  } else if (is.expression(expr)) {
+    return(findGlobals_AST_expression(expr, debug = debug))
   } else if (is.function(expr)) {
     return(findGlobals_AST_function(expr, debug = debug))
   } else {
