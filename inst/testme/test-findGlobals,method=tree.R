@@ -1,3 +1,5 @@
+options(globals.debug = (.Platform[["OS.type"]] == "windows"))
+
 commaq <- globals:::commaq
 
 exprs <- list()
