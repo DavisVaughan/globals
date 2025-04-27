@@ -87,17 +87,6 @@ findGlobals_AST_call <- function(expr, ..., debug = FALSE) {
   
   op <- expr[[1]]
   mstr(list(op = op, length = length(op)))
-
-  ## Is a known keyword?
-  if (is.symbol(op)) {
-    op_name <- as.character(op)
-    r_keywords <- c("for", "if", "repeat", "while", "break", "next")
-    if (op_name %in% r_keywords) {
-      globals <- dframe(name = op_name, type = "keyword", comment = "symbol")
-      return(globals)
-    }
-  }
-
   if (is.call(op)) {
     globals_op <- findGlobals_AST_call(op, debug = debug)
     if (debug) {

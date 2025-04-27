@@ -65,14 +65,6 @@ find_globals_ordered <- function(expr, envir, dotdotdot, ..., name = character()
       }))
     }
 
-    r_keywords <- c("for", "if", "repeat", "while", "break", "next")
-    if (v %in% r_keywords) {
-      if (trace) {
-        trace_printf("variable is a reserve R keyword: %s\n", sQuote(v))
-      }
-      return()
-    }
-
     is_already_local <- (v %in% hardcoded_locals)
     if (is_already_local) {
       if (trace) {
