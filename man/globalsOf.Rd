@@ -12,7 +12,7 @@ findGlobals(
   attributes = TRUE,
   tweak = NULL,
   dotdotdot = c("warning", "error", "return", "ignore"),
-  method = c("ordered", "conservative", "liberal"),
+  method = c("ordered", "conservative", "liberal", "tree"),
   substitute = FALSE,
   unlist = TRUE,
   trace = FALSE

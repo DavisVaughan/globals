@@ -221,11 +221,23 @@ stop_if_not <- function(...) {
 
 ## An lapply(X) without internal X <- as.list(X), without setting names,
 ## and without dispatching using `[[`.
-list_apply <- function(X, FUN, ...) {
-  n <- .length(X)
+list_apply <- function(X, subset = NULL, FUN, ...) {
+  if (is.null(subset)) {
+    n <- .length(X)
+  } else {
+    n <- length(subset)
+  }
   res <- vector("list", length = n)
-  for (kk in seq_len(n)) {
-    res[[kk]] <- FUN(.subset2(X, kk), ...)
+  if (is.environment(X)) {
+    if (is.null(subset)) subset <- names(X)
+    for (name in subset) {
+      res[[name]] <- FUN(.subset2(X, name), ...)
+    }
+  } else {
+    if (is.null(subset)) subset <- seq_len(n)
+    for (kk in subset) {
+      res[[kk]] <- FUN(.subset2(X, kk), ...)
+    }
   }
   res
 }

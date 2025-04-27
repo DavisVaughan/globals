@@ -17,9 +17,9 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
                         attributes = TRUE,
                         tweak = NULL,
                         dotdotdot = c("warning", "error", "return", "ignore"),
-                        method = c("ordered", "conservative", "liberal"),
+                        method = c("ordered", "conservative", "liberal", "tree"),
                         substitute = FALSE, unlist = TRUE, trace = FALSE) {
-  method <- match.arg(method, choices = c("ordered", "conservative", "liberal"))
+  method <- match.arg(method, choices = c("ordered", "conservative", "liberal", "tree"), several.ok = FALSE)
   dotdotdot <- match.arg(dotdotdot, choices = c("warning", "error", "return", "ignore"))
 
   if (substitute) expr <- substitute(expr)
@@ -54,19 +54,15 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
 
     ## Skip elements in 'expr' of basic types that cannot contain globals
     types <- unlist(list_apply(expr, FUN = typeof), use.names = FALSE)
-    keep <- !(types %in% basicTypes)
-
-    ## Don't use expr[keep] here, because that may use S3 dispatching
-    ## depending on class(expr)
-    expr <- .subset(expr, keep)
+    keep <- which(!(types %in% basicTypes))
 
     ## Early stopping?
-    if (.length(expr) == 0) {
+    if (length(keep) == 0) {
       if (debug) mdebug("globals found: [0] <none>")
       return(character(0L))
     }
-    
-    globals <- list_apply(expr, FUN = findGlobals, envir = envir,
+
+    globals <- list_apply(expr, subset = keep, FUN = findGlobals, envir = envir,
                       attributes = attributes, ...,
                       tweak = tweak, dotdotdot = dotdotdot,
                       method = method,
@@ -96,25 +92,29 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
     expr <- tweak(expr)
   }
 
-  if (hasCodetoolsBug16()) {
-    if (debug) mdebug("workaround 'codetools' bug #16")
-    expr <- walkAST(expr, call = tweakCodetoolsBug16)
-  }
-
-  if (method == "ordered") {
-    find_globals_t <- find_globals_ordered
-  } else if (method == "conservative") {
-    find_globals_t <- find_globals_conservative
-  } else if (method == "liberal") {
-    find_globals_t <- find_globals_liberal
-  }
-
-  globals <- call_find_globals_with_dotdotdot(find_globals_t, expr = expr, envir = envir, dotdotdot = dotdotdot, trace = trace, debug = debug)
-  idx <- which(globals == "codetools.bugfix16:::$<-")
-  if (length(idx) > 0) {
-    globals[idx] <- "$<-"
-    globals <- unique(globals)
-  }
+  if (method == "tree") {
+    globals <- findGlobalsTree(expr)
+  } else {
+    if (hasCodetoolsBug16()) {
+      if (debug) mdebug("workaround 'codetools' bug #16")
+      expr <- walkAST(expr, call = tweakCodetoolsBug16)
+    }
+  
+    if (method == "ordered") {
+      find_globals_t <- find_globals_ordered
+    } else if (method == "conservative") {
+      find_globals_t <- find_globals_conservative
+    } else if (method == "liberal") {
+      find_globals_t <- find_globals_liberal
+    }
+  
+    globals <- call_find_globals_with_dotdotdot(find_globals_t, expr = expr, envir = envir, dotdotdot = dotdotdot, trace = trace, debug = debug)
+    idx <- which(globals == "codetools.bugfix16:::$<-")
+    if (length(idx) > 0) {
+      globals[idx] <- "$<-"
+      globals <- unique(globals)
+    }
+  } ## if (method == ...)
 
   ## Search attributes?
   if (length(attributes) > 0) {

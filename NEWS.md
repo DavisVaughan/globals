@@ -1,6 +1,11 @@
 # Version (development version)
 
- * ...
+## New Features
+
+ * Add `findGlobals(..., method = "tree")`, which finds globals in R
+   expressions by walking its abstract syntax tree (AST) using
+   depth-first search. This new approach does a better job in
+   emulating how the R engine identifies and locates global variables.
 
 
 # Version 0.17.0 [2025-04-15]
