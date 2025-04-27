@@ -23,7 +23,7 @@ append_expr({
 append_expr({
   a <- 42
   a + b
-}, truth = c("{", "<-", "+", "b"))
+}, truth = c("{", "<-", "+", "b", if (getRversion() < "4.0.0") "a"))
 
 append_expr({
   c()
@@ -86,7 +86,7 @@ append_expr(function(a, b = 1) a + b, truth = c("+"))
 append_expr({
   g <- function(a) a
   g(a)
-}, truth = c("{", "<-", "a"))
+}, truth = c("{", "<-", "a", if (getRversion() < "4.0.0") "g"))
 
 
 append_expr({
@@ -96,13 +96,13 @@ append_expr({
     a + b + x
   }
   z <- y(2 * x)
-}, truth = c("{", "<-", "+", "*"))
+}, truth = c("{", "<-", "+", "*", if (getRversion() < "4.0.0") c("b", "x", "y")))
 
 append_expr({
   y <- function(a) a + x
   x <- 1
   z <- y(2 * x)
-}, truth = c("{", "<-", "x", "+", "*"))
+}, truth = c("{", "<-", "x", "+", "*", if (getRversion() < "4.0.0") "y"))
 
 
 append_expr({
@@ -110,7 +110,7 @@ append_expr({
     G <- function(a,b,c) c(a, b, c)
     G(a, b, c)
   })
-}, truth = c(":", "{", "<-", "a", "b", "c", "lapply"))
+}, truth = c(":", "{", "<-", "a", "b", "c", "lapply", if (getRversion() < "4.0.0") "G"))
 
 
 append_expr({
@@ -118,7 +118,7 @@ append_expr({
     G <- function(a,b,c) c(a, b, c)
     G(a, b, c)
   })
-}, truth = c("::", ":", "{", "<-", "a", "b", "c"))
+}, truth = c("::", ":", "{", "<-", "a", "b", "c", if (getRversion() < "4.0.0") "G"))
 
 
 append_expr(~ x, substitute = FALSE, truth = c("~", "x"))
