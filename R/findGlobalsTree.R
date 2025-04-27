@@ -307,7 +307,7 @@ findGlobals_AST_environment <- function(expr, ..., debug = FALSE) {
                   "raw", "NULL")
 
   ## Skip elements in 'expr' of basic types that cannot contain globals
-  types <- unlist(list_apply(expr, FUN = typeof), use.names = FALSE)
+  types <- unlist(list_apply(expr, FUN = typeof), use.names = TRUE)
   keep <- names(types)[!(types %in% basicTypes)]
 
   ## Early stopping?
@@ -315,9 +315,14 @@ findGlobals_AST_environment <- function(expr, ..., debug = FALSE) {
     if (debug) mdebug("globals found: [0] <none>")
     globals <- dframe(type = "environment", comment = "environment")
   } else {
-    globals <- list_apply(expr, subset = keep, FUN = findGlobalsTree, ..., debug = debug)
-    globals <- do.call(rbind, args = globals)
+    ## FIXME: This can lead to infinite recursive calls /HB 2025-04-27
+    if (FALSE) {
+      globals <- list_apply(expr, subset = keep, FUN = findGlobals_AST, ..., debug = debug)
+      globals <- do.call(rbind, args = globals)
+    }
+    globals <- dframe(type = "environment", comment = "environment")
   }
+  globals
 } 
 
 
