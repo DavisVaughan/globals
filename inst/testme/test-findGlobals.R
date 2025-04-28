@@ -358,4 +358,14 @@ globals_t <- findGlobals(expr, method = "dfs")
 print(globals_t)
 assert_identical_sets(globals, character(0L))
 
+message("*** findGlobals() - multiple 'method's ...")
+
+expr <- quote({ a + 1; a <- 1 })
+globals <- findGlobals(expr, method = c("ordered", "dfs"))
+print(globals)
+assert_identical_sets(globals, c("{", "+", "a", "<-"))
+
+message("*** findGlobals() - multiple 'method's ... DONE")
+
+
 message("*** findGlobals() ... DONE")

@@ -19,21 +19,48 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
                         dotdotdot = c("warning", "error", "return", "ignore"),
                         method = c("ordered", "conservative", "liberal", "dfs"),
                         substitute = FALSE, unlist = TRUE, trace = FALSE) {
-  method <- match.arg(method, choices = c("ordered", "conservative", "liberal", "dfs"), several.ok = FALSE)
+  if (missing(method)) method <- method[1]                        
+  method <- match.arg(method, choices = c("ordered", "conservative", "liberal", "dfs"), several.ok = TRUE)
   dotdotdot <- match.arg(dotdotdot, choices = c("warning", "error", "return", "ignore"))
 
   if (substitute) expr <- substitute(expr)
 
   if (trace) {
-    trace_msg <- trace_enter("findGlobals(..., dotdotdot = '%s', method = '%s', unlist = %s)", dotdotdot, method, unlist)
+    methods <- sprintf("'%s'", method)
+    if (length(method) > 1) methods <- sprintf("c(%s)", paste(methods, collapse = ", "))
+    trace_msg <- trace_enter("findGlobals(..., dotdotdot = '%s', method = %s, unlist = %s)", dotdotdot, methods, unlist)
     on.exit(trace_exit(trace_msg))
   }
 
   debug <- isTRUE(getOption("globals.debug"))
   if (debug) {
-    mdebugf_push("findGlobals(..., dotdotdot = '%s', method = '%s', unlist = %s) ...", dotdotdot, method, unlist)
-    on.exit(mdebugf_pop("findGlobals(..., dotdotdot = '%s', method = '%s', unlist = %s) ... done", dotdotdot, method, unlist), add = TRUE)
+    methods <- sprintf("'%s'", method)
+    if (length(method) > 1) methods <- sprintf("c(%s)", paste(methods, collapse = ", "))
+    mdebugf_push("findGlobals(..., dotdotdot = '%s', method = %s, unlist = %s) ...", dotdotdot, methods, unlist)
+    on.exit(mdebugf_pop("findGlobals(..., dotdotdot = '%s', method = %s, unlist = %s) ... done", dotdotdot, methods, unlist), add = TRUE)
   }
+
+  if (length(method) > 1) {
+    if (!unlist) {
+      stop("Argument 'unlist' must be TRUE if more than one 'method' is specified: ", commaq(method))
+    }
+    if (is.function(tweak)) {
+      if (debug) mdebug("tweaking expression using function")
+      expr <- tweak(expr)
+    }
+    globals <- list()
+    for (mtd in method) {
+      globals[[mtd]] <- findGlobals(
+        expr, substitute = FALSE, envir = envir, ...,
+        attributes = attributes, tweak = NULL,
+        dotdotdot = dotdotdot, method = mtd,
+        unlist = TRUE, trace = trace
+      )
+    }
+    globals <- unlist(globals, use.names = FALSE)
+    globals <- globals[!duplicated(globals)]
+    return(globals)
+  } ## if (length(method) > 1)
 
   if (is.logical(attributes)) {
     stop_if_not(length(attributes) == 1L, !is.na(attributes))

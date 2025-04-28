@@ -75,7 +75,8 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
                       locals = NA,
                       substitute = FALSE, mustExist = TRUE,
                       unlist = TRUE, recursive = TRUE, skip = NULL) {
-  method <- match.arg(method, choices = c("ordered", "conservative", "liberal", "dfs"), several.ok = FALSE)
+  if (missing(method)) method <- method[1]                        
+  method <- match.arg(method, choices = c("ordered", "conservative", "liberal", "dfs"), several.ok = TRUE)
 
   if (is.na(locals)) locals <- getOption("globals.globalsOf.locals", TRUE)
   stop_if_not(is.logical(locals), length(locals) == 1L, !is.na(locals))
@@ -85,8 +86,10 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
 
   debug <- isTRUE(getOption("globals.debug"))
   if (debug) {
-    mdebugf_push("globalsOf(..., method = '%s', mustExist = %s, unlist = %s, recursive = %s) ...", method, mustExist, unlist, recursive)
-    on.exit(mdebugf_pop("globalsOf(..., method = '%s', mustExist = %s, unlist = %s, recursive = %s) ... done", method, mustExist, unlist, recursive))
+    methods <- sprintf("'%s'", method)
+    if (length(method) > 1) methods <- sprintf("c(%s)", paste(methods, collapse = ", "))
+    mdebugf_push("globalsOf(..., method = %s, mustExist = %s, unlist = %s, recursive = %s) ...", methods, mustExist, unlist, recursive)
+    on.exit(mdebugf_pop("globalsOf(..., method = %s, mustExist = %s, unlist = %s, recursive = %s) ... done", methods, mustExist, unlist, recursive))
   }
 
   ## 1. Identify global variables (static code inspection)
