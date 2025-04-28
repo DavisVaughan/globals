@@ -335,8 +335,6 @@ expr <- as.call(list(function(...) GLOBAL, quote(ARG)))
 print(expr)
 for (method in c("conservative", "liberal", "ordered", "tree")) {
   message(sprintf("method=%s", sQuote(method)))
-  ## FIXME
-  if (method == "tree") next
   globals_i <- findGlobals(expr, method = method)
   print(globals_i)
   assert_identical_sets(globals_i, c("GLOBAL", "ARG"))

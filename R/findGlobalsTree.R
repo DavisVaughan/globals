@@ -95,12 +95,18 @@ findGlobals_AST_call <- function(expr, ..., debug = FALSE) {
     }
     op_name <- as.character(op[[1]])
     name <- NA_character_
+  } else if (typeof(op) == "closure") {
   } else {
-    op_name <- NULL
+    op_name <- character(0L)
     name <- as.character(op)
   }  
-  
-  if (is.symbol(op) && (name == "function")) {
+
+  if (typeof(op) == "closure") {
+    globals <- list()
+    for (kk in seq_len(n)) {
+      globals[[kk]] <- findGlobals_AST(expr[[kk]], debug = debug)
+    }
+  } else if (is.symbol(op) && (name == "function")) {
     globals[[1]] <- dframe(type = "closure", comment = "function definition")
     stopifnot(n >= 3L)
 
