@@ -17,7 +17,7 @@
  * It is now possible to specify multiple `method` search algorithms
    for `findGlobals()` and `globalsOf()`, which then will combine the
    results from all of them, e.g. `findGlobals(expr, method = c("dfs",
-   "ordered")`.
+   "ordered"))`.
 
 
 # Version 0.17.0 [2025-04-15]
