@@ -16,7 +16,8 @@ append_expr(42, truth = character(0L))
 
 append_expr(a, truth = c("a"))
 
-append_expr(a <- 42, truth = c("<-"))
+append_expr(a <- 42, truth = c("<-", if (getRversion() < "4.0.0") c("a")))
+
 
 append_expr({
   a + b
@@ -69,9 +70,9 @@ append_expr(a(2)@b, truth = c("a", "@"))
 
 append_expr(a[1] <- 0, truth = c("a", "[<-"))
 
-append_expr(a[b <- 1] <- 0, truth = c("a", "[<-", "<-"))
+append_expr(a[b <- 1] <- 0, truth = c("a", "[<-", "<-", if (getRversion() < "4.0.0") c("b")))
 
-append_expr({ a[b <- 1] <- 0 }, truth = c("{", "a", "[<-", "<-"))
+append_expr({ a[b <- 1] <- 0 }, truth = c("{", "a", "[<-", "<-", if (getRversion() < "4.0.0") c("b")))
 
 append_expr({ a$b <- 0 }, truth = c("{", "a", "$<-"))
 
@@ -114,13 +115,13 @@ append_expr({
     a + b + x
   }
   z <- y(2 * x)
-}, truth = c("{", "<-", "+", "*", if (getRversion() < "4.0.0") c("b", "x", "y")))
+}, truth = c("{", "<-", "+", "*", if (getRversion() < "4.0.0") c("b", "x", "y", "z")))
 
 append_expr({
   y <- function(a) a + x
   x <- 1
   z <- y(2 * x)
-}, truth = c("{", "<-", "x", "+", "*", if (getRversion() < "4.0.0") "y"))
+}, truth = c("{", "<-", "x", "+", "*", if (getRversion() < "4.0.0") c("y", "z")))
 
 
 append_expr({
