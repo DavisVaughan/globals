@@ -2,14 +2,14 @@
 
 ## New Features
 
- * Add `findGlobals(..., method = "tree")`, which finds globals in R
+ * Add `findGlobals(..., method = "dfs")`, which finds globals in R
    expressions by walking its abstract syntax tree (AST) using
    depth-first search. This new approach does a better job in
    emulating how the R engine identifies global variables. For
-   example, consider `local({ function(x) x; x })`. Then `"ordered"`
-   method fails to identify `x` as a global variable, which `"tree"`
-   picks it up. Analogously, `globalsOf()` gained support for `method
-   = "tree"`
+   example, the new `"dfs"` method picks up `x` in `local({
+   function(x) x; x })` as a global variable, which the `"ordered"`
+   method fails to do. Analogously, `globalsOf()` gained support for
+   `method = "dfs"`
 
  * Now `findGlobals()` supports `expression` objects, e.g.
    `findGlobals(expression(x + y))`.

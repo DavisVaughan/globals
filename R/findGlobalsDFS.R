@@ -10,14 +10,14 @@ dframe <- function(name = NA_character_, bound = character(0L), unbound = charac
 } ## dframe()
 
 
-findGlobals_AST_symbol <- function(expr, ..., debug = FALSE) {
+findGlobals_dfs_symbol <- function(expr, ..., debug = FALSE) {
   if (debug) {
-    mdebugf_push("findGlobals_AST_symbol() ...")
+    mdebugf_push("findGlobals_dfs_symbol() ...")
     mprint(expr)
     mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
-      mdebugf_pop("findGlobals_AST_symbol() ... done")
+      mdebugf_pop("findGlobals_dfs_symbol() ... done")
     })
   }
   name <- as.character(expr)
@@ -25,14 +25,14 @@ findGlobals_AST_symbol <- function(expr, ..., debug = FALSE) {
   globals
 }
 
-findGlobals_AST_atomic <- function(expr, ..., debug = FALSE) {
+findGlobals_dfs_atomic <- function(expr, ..., debug = FALSE) {
   if (debug) {
-    mdebugf_push("findGlobals_AST_atomic() ...")
+    mdebugf_push("findGlobals_dfs_atomic() ...")
     mprint(expr)
     mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
-      mdebugf_pop("findGlobals_AST_atomic() ... done")
+      mdebugf_pop("findGlobals_dfs_atomic() ... done")
     })
   }
 
@@ -55,13 +55,13 @@ findGlobals_AST_atomic <- function(expr, ..., debug = FALSE) {
   globals
 }
 
-findGlobals_AST_pairlist <- function(expr, ..., debug = FALSE) {
+findGlobals_dfs_pairlist <- function(expr, ..., debug = FALSE) {
   if (debug) {
-    mdebugf_push("findGlobals_AST_pairlist() ...")
+    mdebugf_push("findGlobals_dfs_pairlist() ...")
     mprint(expr)
     on.exit({
       mprint(globals)
-      mdebugf_pop("findGlobals_AST_pairlist() ... done")
+      mdebugf_pop("findGlobals_dfs_pairlist() ... done")
     })
   }
   n <- length(expr)
@@ -74,14 +74,14 @@ findGlobals_AST_pairlist <- function(expr, ..., debug = FALSE) {
   globals
 }
 
-findGlobals_AST_call <- function(expr, ..., debug = FALSE) {
+findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
   if (debug) {
-    mdebugf_push("findGlobals_AST_call() ...")
+    mdebugf_push("findGlobals_dfs_call() ...")
     mprint(expr)
     mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
-      mdebugf_pop("findGlobals_AST_call() ... done")
+      mdebugf_pop("findGlobals_dfs_call() ... done")
     })
   }
   n <- length(expr)
@@ -90,7 +90,7 @@ findGlobals_AST_call <- function(expr, ..., debug = FALSE) {
   op <- expr[[1]]
   mstr(list(op = op, length = length(op)))
   if (is.call(op)) {
-    globals_op <- findGlobals_AST_call(op, debug = debug)
+    globals_op <- findGlobals_dfs_call(op, debug = debug)
     if (debug) {
       mdebugf("Function call whose function is a call:")
       mprint(globals_op)
@@ -106,7 +106,7 @@ findGlobals_AST_call <- function(expr, ..., debug = FALSE) {
   if (typeof(op) == "closure") {
     globals <- list()
     for (kk in seq_len(n)) {
-      globals[[kk]] <- findGlobals_AST(expr[[kk]], debug = debug)
+      globals[[kk]] <- findGlobals_dfs(expr[[kk]], debug = debug)
     }
   } else if (is.symbol(op) && (name == "function")) {
     globals[[1]] <- dframe(type = "closure", comment = "function definition")
@@ -115,7 +115,7 @@ findGlobals_AST_call <- function(expr, ..., debug = FALSE) {
     if (debug) mdebugf("Function definition:")
 
     ## Arguments
-    globals_args <- findGlobals_AST(expr[[2]], debug = debug)
+    globals_args <- findGlobals_dfs(expr[[2]], debug = debug)
     if (debug) {
       mdebugf("Function arguments:")
       mprint(globals_args)
@@ -126,7 +126,7 @@ findGlobals_AST_call <- function(expr, ..., debug = FALSE) {
     unbound_args <- unlist(globals_args[["unbound"]])
 
     ## Body
-    globals_body <- findGlobals_AST(expr[[3]], debug = debug)
+    globals_body <- findGlobals_dfs(expr[[3]], debug = debug)
     if (debug) {
       mdebugf("Function body:")
       mprint(globals_body)
@@ -157,7 +157,7 @@ findGlobals_AST_call <- function(expr, ..., debug = FALSE) {
     if (n >= 2) {
       if (name %in% c("::", ":::")) {
       } else {
-        for (kk in 2:n) globals[[kk]] <- findGlobals_AST(expr[[kk]], debug = debug)
+        for (kk in 2:n) globals[[kk]] <- findGlobals_dfs(expr[[kk]], debug = debug)
         if (name %in% c("$", "@")) {
           ## LHS$RHS, LHS@RHS
           globals_lhs <- globals[[2]]
@@ -299,14 +299,14 @@ findGlobals_AST_call <- function(expr, ..., debug = FALSE) {
 }
 
 
-findGlobals_AST_environment <- function(expr, ..., debug = FALSE) {
+findGlobals_dfs_environment <- function(expr, ..., debug = FALSE) {
   if (debug) {
-    mdebugf_push("findGlobals_AST_environment() ...")
+    mdebugf_push("findGlobals_dfs_environment() ...")
     mprint(expr)
     mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
-      mdebugf_pop("findGlobals_AST_environment() ... done")
+      mdebugf_pop("findGlobals_dfs_environment() ... done")
     })
   }
   
@@ -328,7 +328,7 @@ findGlobals_AST_environment <- function(expr, ..., debug = FALSE) {
   } else {
     ## FIXME: This can lead to infinite recursive calls /HB 2025-04-27
     if (FALSE) {
-      globals <- list_apply(expr, subset = keep, FUN = findGlobals_AST, ..., debug = debug)
+      globals <- list_apply(expr, subset = keep, FUN = findGlobals_dfs, ..., debug = debug)
       globals <- do.call(rbind, args = globals)
     }
     globals <- dframe(type = "environment", comment = "environment")
@@ -337,14 +337,14 @@ findGlobals_AST_environment <- function(expr, ..., debug = FALSE) {
 } 
 
 
-findGlobals_AST_expression <- function(expr, ..., debug = FALSE) {
+findGlobals_dfs_expression <- function(expr, ..., debug = FALSE) {
   if (debug) {
-    mdebugf_push("findGlobals_AST_expression() ...")
+    mdebugf_push("findGlobals_dfs_expression() ...")
     mprint(expr)
     mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
-      mdebugf_pop("findGlobals_AST_expression() ... done")
+      mdebugf_pop("findGlobals_dfs_expression() ... done")
     })
   }
   
@@ -364,21 +364,21 @@ findGlobals_AST_expression <- function(expr, ..., debug = FALSE) {
     if (debug) mdebug("globals found: [0] <none>")
     globals <- dframe(type = "expression", comment = "expression")
   } else {
-    globals <- list_apply(expr, subset = keep, FUN = findGlobals_AST, ..., debug = debug)
+    globals <- list_apply(expr, subset = keep, FUN = findGlobals_dfs, ..., debug = debug)
     globals <- do.call(rbind, args = globals)
   }
   globals
 } 
 
 
-findGlobals_AST_function <- function(expr, ..., debug = FALSE) {
+findGlobals_dfs_function <- function(expr, ..., debug = FALSE) {
   if (debug) {
-    mdebugf_push("findGlobals_AST_function() ...")
+    mdebugf_push("findGlobals_dfs_function() ...")
     mprint(expr)
     mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
-      mdebugf_pop("findGlobals_AST_function() ... done")
+      mdebugf_pop("findGlobals_dfs_function() ... done")
     })
   }
 
@@ -388,7 +388,7 @@ findGlobals_AST_function <- function(expr, ..., debug = FALSE) {
   }
 
   globals_args <- dframe(bound = arg_names, type = "environment", comment = "environment")
-  globals_body <- findGlobals_AST(body(expr), ..., debug = debug)
+  globals_body <- findGlobals_dfs(body(expr), ..., debug = debug)
 
   ## Consolidate
   bound_args <- unlist(globals_args[["bound"]])
@@ -410,14 +410,14 @@ findGlobals_AST_function <- function(expr, ..., debug = FALSE) {
 }
 
 
-findGlobals_AST_object <- function(expr, ..., debug = FALSE) {
+findGlobals_dfs_object <- function(expr, ..., debug = FALSE) {
   if (debug) {
-    mdebugf_push("findGlobals_AST_object() ...")
+    mdebugf_push("findGlobals_dfs_object() ...")
     mprint(expr)
     mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
-      mdebugf_pop("findGlobals_AST_object() ... done")
+      mdebugf_pop("findGlobals_dfs_object() ... done")
     })
   }
   ## FIXME: Should we search for globals in 'object':s?
@@ -426,13 +426,13 @@ findGlobals_AST_object <- function(expr, ..., debug = FALSE) {
 }
 
 
-findGlobals_AST <- function(expr, ..., debug = FALSE) {
+findGlobals_dfs <- function(expr, ..., debug = FALSE) {
   debug <- isTRUE(getOption("globals.debug"))
   if (debug) {
-    mdebugf_push("findGlobals_AST() ...")
+    mdebugf_push("findGlobals_dfs() ...")
     mprint(expr)
     on.exit({
-      mdebugf_pop("findGlobals_AST() ... done")
+      mdebugf_pop("findGlobals_dfs() ... done")
     })
   }
 
@@ -440,31 +440,31 @@ findGlobals_AST <- function(expr, ..., debug = FALSE) {
     globals <- dframe(type = "NULL", comment = "empty")
     return(globals)
   } else if (is.symbol(expr)) {
-    return(findGlobals_AST_symbol(expr, debug = debug))
+    return(findGlobals_dfs_symbol(expr, debug = debug))
   } else if (is.atomic(expr)) {
-    return(findGlobals_AST_atomic(expr, debug = debug))
+    return(findGlobals_dfs_atomic(expr, debug = debug))
   } else if (is.call(expr)) {
-    return(findGlobals_AST_call(expr, debug = debug))
+    return(findGlobals_dfs_call(expr, debug = debug))
   } else if (is.pairlist(expr)) {
-    return(findGlobals_AST_pairlist(expr, debug = debug))
+    return(findGlobals_dfs_pairlist(expr, debug = debug))
   } else if (is.environment(expr)) {
-    return(findGlobals_AST_environment(expr, debug = debug))
+    return(findGlobals_dfs_environment(expr, debug = debug))
   } else if (is.expression(expr)) {
-    return(findGlobals_AST_expression(expr, debug = debug))
+    return(findGlobals_dfs_expression(expr, debug = debug))
   } else if (is.function(expr)) {
-    return(findGlobals_AST_function(expr, debug = debug))
+    return(findGlobals_dfs_function(expr, debug = debug))
   } else if (typeof(expr) %in% c("object", "S4")) {
-    return(findGlobals_AST_object(expr, debug = debug))
+    return(findGlobals_dfs_object(expr, debug = debug))
   } else {
     mprint(expr)
     mstr(expr)
     stop(sprintf("Do not know how to identify globals for an expression of type '%s' and class '%s'", typeof(expr), class(expr)[1]))
   }
   globals
-} ## findGlobals_AST()
+} ## findGlobals_dfs()
 
 
-findGlobalsTree <- function(expr, ..., debug = FALSE) {
-  data <- findGlobals_AST(expr, debug = debug)
+findGlobalsDFS <- function(expr, ..., debug = FALSE) {
+  data <- findGlobals_dfs(expr, debug = debug)
   unlist(data[["unbound"]])
 }

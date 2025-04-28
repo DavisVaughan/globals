@@ -12,7 +12,7 @@ findGlobals(
   attributes = TRUE,
   tweak = NULL,
   dotdotdot = c("warning", "error", "return", "ignore"),
-  method = c("ordered", "conservative", "liberal", "tree"),
+  method = c("ordered", "conservative", "liberal", "dfs"),
   substitute = FALSE,
   unlist = TRUE,
   trace = FALSE
@@ -22,7 +22,7 @@ globalsOf(
   expr,
   envir = parent.frame(),
   ...,
-  method = c("ordered", "conservative", "liberal", "tree"),
+  method = c("ordered", "conservative", "liberal", "dfs"),
   tweak = NULL,
   locals = NA,
   substitute = FALSE,
@@ -104,7 +104,7 @@ true-positive ratio as high as possible, i.e. the true globals
 are most likely among the identified ones.  At the same time,
 there is a risk that some false positives are also identified.
 
-The \code{method = "tree"} search method identifies globals in
+The \code{method = "dfs"} search method identifies globals in
 the abstract syntax tree (AST) using a depth-first search, which
 better emulates how the R engine identifies global variables.
 

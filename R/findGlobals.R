@@ -17,9 +17,9 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
                         attributes = TRUE,
                         tweak = NULL,
                         dotdotdot = c("warning", "error", "return", "ignore"),
-                        method = c("ordered", "conservative", "liberal", "tree"),
+                        method = c("ordered", "conservative", "liberal", "dfs"),
                         substitute = FALSE, unlist = TRUE, trace = FALSE) {
-  method <- match.arg(method, choices = c("ordered", "conservative", "liberal", "tree"), several.ok = FALSE)
+  method <- match.arg(method, choices = c("ordered", "conservative", "liberal", "dfs"), several.ok = FALSE)
   dotdotdot <- match.arg(dotdotdot, choices = c("warning", "error", "return", "ignore"))
 
   if (substitute) expr <- substitute(expr)
@@ -92,8 +92,8 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
     expr <- tweak(expr)
   }
 
-  if (method == "tree") {
-    globals <- findGlobalsTree(expr)
+  if (method == "dfs") {
+    globals <- findGlobalsDFS(expr)
   } else {
     if (hasCodetoolsBug16()) {
       if (debug) mdebug("workaround 'codetools' bug #16")

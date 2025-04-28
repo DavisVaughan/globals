@@ -174,8 +174,8 @@ for (kk in seq_along(exprs)) {
 
   globals <- sort(globals::findGlobals(expr, method = "ordered"))
   message(sprintf("       findGlobals(..., type = 'ordered'): [n=%d] %s", length(globals), commaq(globals)))
-  globals <- sort(globals::findGlobals(expr, method = "tree"))
-  msg <- sprintf("findGlobals(..., type = 'tree'   ): [n=%d] %s", length(globals), commaq(globals))
+  globals <- sort(globals::findGlobals(expr, method = "dfs"))
+  msg <- sprintf("findGlobals(..., type = 'dfs'    ): [n=%d] %s", length(globals), commaq(globals))
   if (is.null(truth)) {
     message(sprintf("[SKIP] %s", msg))
   } else {
