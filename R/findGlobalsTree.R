@@ -405,6 +405,21 @@ findGlobals_AST_function <- function(expr, ..., debug = FALSE) {
 }
 
 
+findGlobals_AST_object <- function(expr, ..., debug = FALSE) {
+  if (debug) {
+    mdebugf_push("findGlobals_AST_object() ...")
+    mprint(expr)
+    on.exit({
+      mprint(globals)
+      mdebugf_pop("findGlobals_AST_object() ... done")
+    })
+  }
+  ## FIXME: Should we search for globals in 'object':s?
+  globals <- dframe(type = "object", comment = "object")
+  globals
+}
+
+
 findGlobals_AST <- function(expr, ..., debug = FALSE) {
   debug <- isTRUE(getOption("globals.debug"))
   if (debug) {
@@ -432,6 +447,8 @@ findGlobals_AST <- function(expr, ..., debug = FALSE) {
     return(findGlobals_AST_expression(expr, debug = debug))
   } else if (is.function(expr)) {
     return(findGlobals_AST_function(expr, debug = debug))
+  } else if (typeof(expr) == "object") {
+    return(findGlobals_AST_object(expr, debug = debug))
   } else {
     mprint(expr)
     mstr(expr)

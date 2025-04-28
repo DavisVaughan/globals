@@ -348,4 +348,14 @@ globals_t <- findGlobals(expr, method = "tree")
 print(globals_t)
 assert_identical_sets(globals_t, c("{", "*", "a", "b"))
 
+# BUG: https://github.com/HenrikBengtsson/globals/issues/93
+expr <- asS3(methods::getClass("S4")@prototype, complete = FALSE)
+print(expr)
+globals <- findGlobals(expr, trace = TRUE)
+print(globals)
+assert_identical_sets(globals, character(0L))
+globals_t <- findGlobals(expr, method = "tree")
+print(globals_t)
+assert_identical_sets(globals, character(0L))
+
 message("*** findGlobals() ... DONE")
