@@ -5,8 +5,11 @@
  * Add `findGlobals(..., method = "tree")`, which finds globals in R
    expressions by walking its abstract syntax tree (AST) using
    depth-first search. This new approach does a better job in
-   emulating how the R engine identifies global variables.
-   Analogously, `globalsOf()` gained support for `method = "tree"`
+   emulating how the R engine identifies global variables. For
+   example, consider `local({ function(x) x; x })`. Then `"ordered"`
+   method fails to identify `x` as a global variable, which `"tree"`
+   picks it up. Analogously, `globalsOf()` gained support for `method
+   = "tree"`
 
  * Now `findGlobals()` supports `expression` objects, e.g.
    `findGlobals(expression(x + y))`.
