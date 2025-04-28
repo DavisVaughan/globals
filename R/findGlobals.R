@@ -178,6 +178,12 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
     }
   }
 
+  ## FIXME: Should never get NA_character_:s here, but just in case ...
+  isNA <- is.na(globals)
+  if (any(isNA)) {
+    globals <- globals[!isNA]
+  }
+  
   if (debug) mdebugf("globals found: [%d] %s", length(globals), hpaste(sQuote(globals)))
 
   globals
