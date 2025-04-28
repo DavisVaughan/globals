@@ -90,11 +90,6 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
   op <- expr[[1]]
   mstr(list(op = op, length = length(op)))
   if (is.call(op)) {
-    globals_op <- findGlobals_dfs_call(op, debug = debug)
-    if (debug) {
-      mdebugf("Function call whose function is a call:")
-      mprint(globals_op)
-    }
     op_name <- as.character(op[[1]])
     name <- NA_character_
   } else if (typeof(op) == "closure") {
@@ -104,11 +99,14 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
   }  
 
   if (typeof(op) == "closure") {
+    if (debug) mdebug_push("Function call via closure ...")
     globals <- list()
     for (kk in seq_len(n)) {
       globals[[kk]] <- findGlobals_dfs(expr[[kk]], debug = debug)
     }
+    if (debug) mdebug_pop("Function call via closure ... done")
   } else if (is.symbol(op) && (name == "function")) {
+    if (debug) mdebug_push("Function call via function ...")
     globals[[1]] <- dframe(type = "closure", comment = "function definition")
     stopifnot(n >= 3L)
 
@@ -152,13 +150,33 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
     ## Consolidate
     globals[[2]] <- globals_args
     globals[[3]] <- globals_body
+    if (debug) mdebug_pop("Function call via function ... done")
   } else {
-    globals[[1]] <- dframe(name = "function", unbound = c(name, op_name), type = "function", comment = "function call")
-    if (n >= 2) {
+    if (debug) {
+      mdebug_push("Function call in other ways ...")
+      mdebugf("n = %d", n)
+    }
+    if (n == 1) {
+      globals[[1]] <- findGlobals_dfs(op, debug = debug)
+    } else if (n >= 2) {
+      if (is.call(op)) {
+        if (debug) mdebug_push("Function call whose function is a call ...")
+        globals[[1]] <- findGlobals_dfs_call(op, debug = debug)
+        if (debug) mdebug_pop("Function call whose function is a call ... done")
+      } else {
+        globals[[1]] <- dframe(name = "function", unbound = c(name, op_name), type = "function", comment = "function call")
+      }
+      if (debug) {
+        mdebug("---------------------------------")
+        mprint(globals)
+        mdebug("---------------------------------")
+      }
       if (name %in% c("::", ":::")) {
+        if (debug) mdebugf("<pkg>%s<obj>", name)
       } else {
         for (kk in 2:n) globals[[kk]] <- findGlobals_dfs(expr[[kk]], debug = debug)
         if (name %in% c("$", "@")) {
+          if (debug) mdebugf("LHS%sRHS", name)
           ## LHS$RHS, LHS@RHS
           globals_lhs <- globals[[2]]
           globals_rhs <- globals[[3]]
@@ -168,6 +186,7 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
             globals[[3]] <- globals_rhs
           }
         } else if (name %in% c("=", "<-", "<<-")) {
+          if (debug) mdebugf("LHS %s RHS", name)
           ## LHS <- RHS
           globals_lhs <- globals[[2]]
           globals_rhs <- globals[[3]]
@@ -259,7 +278,7 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
           ## Example a <- a + 1
           if (name_lhs %in% unbound_rhs) {
           } else {
-            bound_lhs <- unique(name_lhs, bound_lhs)
+            bound_lhs <- unique(c(name_lhs, bound_lhs))
             unbound_lhs <- setdiff(unbound_lhs, bound_lhs)
           }
           globals_lhs[["bound"]] <- list(bound_lhs)
@@ -268,31 +287,36 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
           globals[[2]] <- globals_lhs
         }
       }
+    } else {
+    } ## if (n >= 2)
+    if (debug) mdebug_pop("Function call in other ways ... done")
+  }
+
+  if (length(globals) == 1) {
+    globals <- globals[[1]]
+  } else {
+    if (debug) {
+      mprint(globals)
+      mdebugf_push("Consolidate ...")
+      mprint(expr)
     }
-  }
-  
-  if (debug) {
-    mprint(globals)
-    mdebugf_push("Consolidate ...")
-    mprint(expr)
-  }
-  
-  bound <- unbound <- character(0L)
-  for (kk in seq_along(globals)) {
-    globals_kk <- globals[[kk]]
-    bound_kk <- unlist(globals_kk[["bound"]])
-    unbound_kk <- unlist(globals_kk[["unbound"]])
-    ## Bound previously?
-    unbound_kk <- setdiff(unbound_kk, bound)
     
-    bound <- unique(c(bound, bound_kk))
-    unbound <- unique(c(unbound, unbound_kk))
-  }
-  name <- NA_character_
-  globals <- dframe(name = name, bound = bound, unbound = unbound, type = "language", comment = "consolidated")
-  if (debug) {
-    mprint(globals)
-    mdebugf_pop("Consolidate ... done")
+    bound <- unbound <- character(0L)
+    for (kk in seq_along(globals)) {
+      globals_kk <- globals[[kk]]
+      bound_kk <- unlist(globals_kk[["bound"]])
+      unbound_kk <- unlist(globals_kk[["unbound"]])
+      ## Bound previously?
+      unbound_kk <- setdiff(unbound_kk, bound)
+      
+      bound <- unique(c(bound, bound_kk))
+      unbound <- unique(c(unbound, unbound_kk))
+    }
+    name <- NA_character_
+    globals <- dframe(name = name, bound = bound, unbound = unbound, type = "language", comment = "consolidated")
+    if (debug) {
+      mdebugf_pop("Consolidate ... done")
+    }
   }
   
   globals

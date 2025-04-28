@@ -49,7 +49,23 @@ append_expr({
 
 append_expr(a$b, truth = c("a", "$"))
 
+append_expr(a$b(), truth = c("a", "$"))
+
+append_expr(a$b(2), truth = c("a", "$"))
+
+append_expr(a()$b, truth = c("a", "$"))
+
+append_expr(a(2)$b, truth = c("a", "$"))
+
 append_expr(a@b, truth = c("a", "@"))
+
+append_expr(a@b(), truth = c("a", "@"))
+
+append_expr(a@b(2), truth = c("a", "@"))
+
+append_expr(a()@b, truth = c("a", "@"))
+
+append_expr(a(2)@b, truth = c("a", "@"))
 
 append_expr(a[1] <- 0, truth = c("a", "[<-"))
 
