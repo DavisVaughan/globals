@@ -14,6 +14,7 @@ findGlobals_AST_symbol <- function(expr, ..., debug = FALSE) {
   if (debug) {
     mdebugf_push("findGlobals_AST_symbol() ...")
     mprint(expr)
+    mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
       mdebugf_pop("findGlobals_AST_symbol() ... done")
@@ -77,6 +78,7 @@ findGlobals_AST_call <- function(expr, ..., debug = FALSE) {
   if (debug) {
     mdebugf_push("findGlobals_AST_call() ...")
     mprint(expr)
+    mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
       mdebugf_pop("findGlobals_AST_call() ... done")
@@ -301,6 +303,7 @@ findGlobals_AST_environment <- function(expr, ..., debug = FALSE) {
   if (debug) {
     mdebugf_push("findGlobals_AST_environment() ...")
     mprint(expr)
+    mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
       mdebugf_pop("findGlobals_AST_environment() ... done")
@@ -338,6 +341,7 @@ findGlobals_AST_expression <- function(expr, ..., debug = FALSE) {
   if (debug) {
     mdebugf_push("findGlobals_AST_expression() ...")
     mprint(expr)
+    mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
       mdebugf_pop("findGlobals_AST_expression() ... done")
@@ -371,6 +375,7 @@ findGlobals_AST_function <- function(expr, ..., debug = FALSE) {
   if (debug) {
     mdebugf_push("findGlobals_AST_function() ...")
     mprint(expr)
+    mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
       mdebugf_pop("findGlobals_AST_function() ... done")
@@ -409,13 +414,14 @@ findGlobals_AST_object <- function(expr, ..., debug = FALSE) {
   if (debug) {
     mdebugf_push("findGlobals_AST_object() ...")
     mprint(expr)
+    mdebugf("typeof: %s, class: %s", typeof(expr), class(expr)[1])
     on.exit({
       mprint(globals)
       mdebugf_pop("findGlobals_AST_object() ... done")
     })
   }
   ## FIXME: Should we search for globals in 'object':s?
-  globals <- dframe(type = "object", comment = "object")
+  globals <- dframe(type = typeof(expr), comment = typeof(expr))
   globals
 }
 
@@ -447,7 +453,7 @@ findGlobals_AST <- function(expr, ..., debug = FALSE) {
     return(findGlobals_AST_expression(expr, debug = debug))
   } else if (is.function(expr)) {
     return(findGlobals_AST_function(expr, debug = debug))
-  } else if (typeof(expr) == "object") {
+  } else if (typeof(expr) %in% c("object", "S4")) {
     return(findGlobals_AST_object(expr, debug = debug))
   } else {
     mprint(expr)
