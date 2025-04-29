@@ -353,6 +353,11 @@ findGlobals_dfs_environment <- function(expr, ..., debug = FALSE) {
                   "raw", "NULL")
 
   ## Skip elements in 'expr' of basic types that cannot contain globals
+
+  ## FIXME: The below can lead to infinite, recursive calls /HB 2025-04-27
+  globals <- dframe(type = "environment", comment = "environment")
+  return(globals)
+  
   types <- unlist(list_apply(expr, FUN = typeof), use.names = TRUE)
   keep <- names(types)[!(types %in% basicTypes)]
 
