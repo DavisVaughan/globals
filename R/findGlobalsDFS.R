@@ -466,33 +466,43 @@ findGlobals_dfs <- function(expr, ..., debug = FALSE) {
 
   if (is.null(expr)) {
     globals <- dframe(type = "NULL", comment = "empty")
-    return(globals)
   } else if (is.symbol(expr)) {
-    return(findGlobals_dfs_symbol(expr, debug = debug))
+    globals <- findGlobals_dfs_symbol(expr, debug = debug)
   } else if (is.atomic(expr)) {
-    return(findGlobals_dfs_atomic(expr, debug = debug))
+    globals <- findGlobals_dfs_atomic(expr, debug = debug)
   } else if (is.call(expr)) {
-    return(findGlobals_dfs_call(expr, debug = debug))
+    globals <- findGlobals_dfs_call(expr, debug = debug)
   } else if (is.pairlist(expr)) {
-    return(findGlobals_dfs_pairlist(expr, debug = debug))
+    globals <- findGlobals_dfs_pairlist(expr, debug = debug)
   } else if (is.environment(expr)) {
-    return(findGlobals_dfs_environment(expr, debug = debug))
+    globals <- findGlobals_dfs_environment(expr, debug = debug)
   } else if (is.expression(expr)) {
-    return(findGlobals_dfs_expression(expr, debug = debug))
+    globals <- findGlobals_dfs_expression(expr, debug = debug)
   } else if (is.function(expr)) {
-    return(findGlobals_dfs_function(expr, debug = debug))
+    globals <- findGlobals_dfs_function(expr, debug = debug)
   } else if (typeof(expr) %in% c("object", "S4")) {
-    return(findGlobals_dfs_object(expr, debug = debug))
+    globals <- findGlobals_dfs_object(expr, debug = debug)
   } else {
     mprint(expr)
     mstr(expr)
     stop(sprintf("Do not know how to identify globals for an expression of type '%s' and class '%s'", typeof(expr), class(expr)[1]))
   }
+
   globals
 } ## findGlobals_dfs()
 
 
 findGlobalsDFS <- function(expr, ..., debug = FALSE) {
   data <- findGlobals_dfs(expr, debug = debug)
-  unlist(data[["unbound"]])
+  globals <- unlist(data[["unbound"]])
+  
+  ## FIXME: Should never get NA_character_:s here, but just in case ...
+  isNA <- is.na(globals)
+  if (any(isNA)) globals <- globals[!isNA]
+
+  ## FIXME: Should never get "" here
+  nonempty <- nzchar(globals)
+  if (!all(nonempty)) globals <- globals[!nonempty]
+  
+  globals
 }
