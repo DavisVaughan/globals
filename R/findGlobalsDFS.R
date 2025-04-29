@@ -487,6 +487,9 @@ findGlobals_dfs <- function(expr, ..., debug = FALSE) {
     globals <- findGlobals_dfs_expression(expr, debug = debug)
   } else if (is.function(expr)) {
     globals <- findGlobals_dfs_function(expr, debug = debug)
+  } else if (is.list(expr)) {
+    names <- findGlobals(expr, method = "dfs", debug = debug)
+    globals <- dframe(unbound = names, type = "list", comment = "list")
   } else if (typeof(expr) %in% c("object", "S4")) {
     globals <- findGlobals_dfs_object(expr, debug = debug)
   } else {
