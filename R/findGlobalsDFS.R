@@ -98,24 +98,17 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
   globals <- list()
   
   op <- expr[[1]]
-  mstr(list(op = op, length = length(op)))
-  if (is.call(op)) {
-    op_name <- as.character(op[[1]])
-    name <- NA_character_
-  } else if (typeof(op) == "closure") {
-  } else {
-    op_name <- character(0L)
-    name <- as.character(op)
-  }  
-
-  if (typeof(op) == "closure") {
-    if (debug) mdebug_push("Function call via closure ...")
+  typeof <- typeof(op)
+  mstr(list(op = op, typeof = typeof, length = length(op)))
+  
+  if (typeof %in% c("builtin", "closure")) {
+    if (debug) mdebug_push("Function call via %s ...", typeof)
     globals <- list()
     for (kk in seq_len(n)) {
       globals[[kk]] <- findGlobals_dfs(expr[[kk]], debug = debug)
     }
-    if (debug) mdebug_pop("Function call via closure ... done")
-  } else if (is.symbol(op) && (name == "function")) {
+    if (debug) mdebug_pop("Function call via %s ... done", typeof)
+  } else if (typeof == "symbol" && (as.character(op) == "function")) {
     if (debug) mdebug_push("Function call via function ...")
     globals[[1]] <- dframe(type = "closure", comment = "function definition")
     stopifnot(n >= 3L)
@@ -162,6 +155,14 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
     globals[[3]] <- globals_body
     if (debug) mdebug_pop("Function call via function ... done")
   } else {
+    if (typeof %in% c("call", "language")) {
+      op_name <- as.character(op[[1]])
+      name <- NA_character_
+    } else {
+      op_name <- character(0L)
+      name <- as.character(op)
+    }  
+
     if (debug) {
       mdebug_push("Function call in other ways ...")
       mdebugf("n = %d", n)
