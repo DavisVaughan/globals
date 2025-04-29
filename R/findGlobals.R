@@ -183,7 +183,13 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
   if (any(isNA)) {
     globals <- globals[!isNA]
   }
-  
+
+  ## FIXME: Should never get "" here
+  nonempty <- !nzchar(globals)
+  if (any(nonempty)) {
+    globals <- globals[!nonempty]
+  }
+
   if (debug) mdebugf("globals found: [%d] %s", length(globals), hpaste(sQuote(globals)))
 
   globals
