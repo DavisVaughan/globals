@@ -177,7 +177,7 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
       globals <- unique(c(globals, attrs_globals))
     }
   }
-
+  
   if (debug) mdebugf("globals found: [%d] %s", length(globals), hpaste(sQuote(globals)))
 
   globals

@@ -68,6 +68,20 @@ append_expr(a()@b, truth = c("a", "@"))
 
 append_expr(a(2)@b, truth = c("a", "@"))
 
+append_expr(a[1], truth = c("a", "["))
+
+append_expr(a[NA], truth = c("a", "["))
+
+append_expr(a[NA_character_], truth = c("a", "["))
+
+append_expr(a[Inf], truth = c("a", "["))
+
+append_expr(a[], truth = c("a", "["))
+
+append_expr(a[1,], truth = c("a", "["))
+
+append_expr(a[,1], truth = c("a", "["))
+
 append_expr(a[1] <- 0, truth = c("a", "[<-"))
 
 append_expr(a[b <- 1] <- 0, truth = c("a", "[<-", "<-", if (getRversion() < "4.0.0") c("b")))

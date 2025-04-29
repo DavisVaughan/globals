@@ -20,8 +20,14 @@ findGlobals_dfs_symbol <- function(expr, ..., debug = FALSE) {
       mdebugf_pop("findGlobals_dfs_symbol() ... done")
     })
   }
+
   name <- as.character(expr)
-  globals <- dframe(name = name, unbound = name, type = "variable", comment = "symbol")
+  if (nzchar(name)) {
+    globals <- dframe(name = name, unbound = name, type = "symbol", comment = "symbol")
+  } else {
+    globals <- dframe(name = "<missing>", type = "symbol", comment = "symbol")
+  }
+
   globals
 }
 
@@ -168,6 +174,7 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
         globals[[1]] <- findGlobals_dfs_call(op, debug = debug)
         if (debug) mdebug_pop("Function call whose function is a call ... done")
       } else {
+        if (is.na(name)) name <- character(0L)
         globals[[1]] <- dframe(name = "function", unbound = c(name, op_name), type = "function", comment = "function call")
       }
       if (debug) {
@@ -495,14 +502,10 @@ findGlobals_dfs <- function(expr, ..., debug = FALSE) {
 findGlobalsDFS <- function(expr, ..., debug = FALSE) {
   data <- findGlobals_dfs(expr, debug = debug)
   globals <- unlist(data[["unbound"]])
-  
+
   ## FIXME: Should never get NA_character_:s here, but just in case ...
   isNA <- is.na(globals)
   if (any(isNA)) globals <- globals[!isNA]
 
-  ## FIXME: Should never get "" here
-  nonempty <- nzchar(globals)
-  if (!all(nonempty)) globals <- globals[!nonempty]
-  
   globals
 }
