@@ -42,7 +42,11 @@ findGlobals_dfs_atomic <- function(expr, ..., debug = FALSE) {
   if (typeof %in% c("logical", "integer", "double", "complex", "character", "raw", "NULL")) {
     if (debug) mdebugf("Skipping because typeof = %s", sQuote(typeof))
     ## Basic types that cannot contain unbound variables
-    if (inherits(expr, "srcref")) name <- "<srcref>"
+    if (inherits(expr, "srcref")) {
+      name <- "<srcref>"
+    } else if (length(name) != 1L) {
+      name <- NA_character_
+    }
     globals <- dframe(name = name, type = "constant", comment = "atomic")
   } else {
     bound <- unbound <- character(0L)
