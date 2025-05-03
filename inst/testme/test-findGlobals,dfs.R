@@ -197,6 +197,11 @@ append_expr(expr, substitute = FALSE, truth = c("+", "x", "y"))
 expr <- asS3(methods::getClass("S4")@prototype, complete = FALSE)
 append_expr(expr, substitute = FALSE, truth = character(0L))
 
+con <- rawConnection(raw())
+append_expr(con, substitute = FALSE, truth = character(0L))
+close(con)
+
+
 for (kk in seq_along(exprs)) {
   message(sprintf("\n*** Expression #%d ***", kk))
   expr <- exprs[[kk]]

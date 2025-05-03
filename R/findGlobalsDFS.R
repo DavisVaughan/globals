@@ -498,10 +498,12 @@ findGlobals_dfs <- function(expr, ..., debug = FALSE) {
     globals <- dframe(unbound = names, type = "list", comment = "list")
   } else if (typeof(expr) %in% c("object", "S4")) {
     globals <- findGlobals_dfs_object(expr, debug = debug)
+  } else if (typeof(expr) %in% c("externalptr")) {
+    globals <- dframe(type = "externalptr", comment = "externalptr")
   } else {
     mprint(expr)
     mstr(expr)
-    stop(sprintf("Do not know how to identify globals for an expression of type '%s' and class '%s'", typeof(expr), class(expr)[1]))
+    stop(sprintf("Do not know how to identify globals for an object of type '%s' and class '%s'", typeof(expr), class(expr)[1]))
   }
 
   globals

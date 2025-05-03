@@ -19,6 +19,12 @@
    results from all of them, e.g. `findGlobals(expr, method = c("dfs",
    "ordered"))`.
 
+## Bug Fixes
+
+ * `walkAST()` did not recognize objects of type `externalptr`,
+   leading to an error on `Cannot walk expression. Unknown object type
+   'externalptr'`.
+
 
 # Version 0.17.0 [2025-04-15]
 
@@ -30,6 +36,7 @@
 
  * `walkAST()` did not recognize objects of type `object`, leading to
    an error on `Cannot walk expression. Unknown object type 'object'`.
+   
  * `findGlobals()` would produce `Error in e[[4]] : subscript out of
    expressions of format` for expressions of type ``LHS INFIX_OP
    `$<-`(name, value)``, e.g. ``x %>% `$<-`("a", 42)``. This is due to
