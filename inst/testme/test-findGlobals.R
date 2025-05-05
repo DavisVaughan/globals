@@ -374,6 +374,16 @@ globals <- findGlobals(expr, method = c("ordered", "dfs"))
 print(globals)
 assert_identical_sets(globals, c("{", "+", "a", "<-"))
 
+expr <- quote({ for (x in NULL) NULL })
+globals <- findGlobals(expr, method = c("ordered", "dfs"))
+print(globals)
+assert_identical_sets(globals, c("{", "for"))
+
+expr <- quote({ for (x in NULL) x })
+globals <- findGlobals(expr, method = c("ordered", "dfs"))
+print(globals)
+assert_identical_sets(globals, c("{", "for"))
+
 message("*** findGlobals() - multiple 'method's ... DONE")
 
 

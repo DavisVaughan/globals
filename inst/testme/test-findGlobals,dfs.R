@@ -201,6 +201,12 @@ con <- rawConnection(raw())
 append_expr(con, substitute = FALSE, truth = character(0L))
 close(con)
 
+expr <- quote(for (x in NULL) NULL)
+append_expr(expr, substitute = FALSE, truth = c("for"))
+
+expr <- quote(for (x in NULL) x)
+append_expr(expr, substitute = FALSE, truth = c("for"))
+
 
 for (kk in seq_along(exprs)) {
   message(sprintf("\n*** Expression #%d ***", kk))

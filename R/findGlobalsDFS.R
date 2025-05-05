@@ -108,52 +108,69 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
       globals[[kk]] <- findGlobals_dfs(expr[[kk]], debug = debug)
     }
     if (debug) mdebug_pop("Function call via %s ... done", typeof)
-  } else if (typeof == "symbol" && (as.character(op) == "function")) {
-    if (debug) mdebug_push("Function call via function ...")
-    globals[[1]] <- dframe(type = "closure", comment = "function definition")
-    stopifnot(n >= 3L)
-
-    if (debug) mdebugf("Function definition:")
-
-    ## Arguments
-    globals_args <- findGlobals_dfs(expr[[2]], debug = debug)
-    if (debug) {
-      mdebugf("Function arguments:")
-      mprint(globals_args)
+  } else if (typeof == "symbol" && (as.character(op) %in% c("for", "function"))) {
+    if (as.character(op) == "for") {
+      if (debug) mdebug_push("For loop ...")
+      globals[[1]] <- dframe(unbound = "for", type = "for-loop", comment = "for-loop")
+      globals_iter <- findGlobals_dfs(expr[[2]], debug = debug)
+      globals_iter[["bound"]] <- globals_iter[["unbound"]]
+      globals_iter[["unbound"]] <- list(character(0L))
+      globals_iter[["comment"]] <- "for-loop iterator"
+      globals[[2]] <- globals_iter
+      globals_args <- findGlobals_dfs(expr[[3]], debug = debug)
+      globals_args[["comment"]] <- "for-loop arguments"
+      globals[[3]] <- globals_args
+      globals_body <- findGlobals_dfs(expr[[4]], debug = debug)
+      globals_body[["comment"]] <- "for-loop body"
+      globals[[4]] <- globals_body
+      if (debug) mdebug_pop("For loop ... done")
+    } else if (as.character(op) == "function") {
+      if (debug) mdebug_push("Function call via function ...")
+      globals[[1]] <- dframe(type = "closure", comment = "function definition")
+      stopifnot(n >= 3L)
+  
+      if (debug) mdebugf("Function definition:")
+  
+      ## Arguments
+      globals_args <- findGlobals_dfs(expr[[2]], debug = debug)
+      if (debug) {
+        mdebugf("Function arguments:")
+        mprint(globals_args)
+      }
+      globals_args[["comment"]] <- "arguments"
+      name_args <- globals_args[["name"]]
+      bound_args <- unlist(globals_args[["bound"]])
+      unbound_args <- unlist(globals_args[["unbound"]])
+  
+      ## Body
+      globals_body <- findGlobals_dfs(expr[[3]], debug = debug)
+      if (debug) {
+        mdebugf("Function body:")
+        mprint(globals_body)
+      }
+      globals_body[["comment"]] <- "body"
+      bound_body <- unlist(globals_body[["bound"]])
+      unbound_body <- unlist(globals_body[["unbound"]])
+      unbound_body <- setdiff(unbound_body, name_args)
+      globals_body[["bound"]] <- list(bound_body)
+      globals_body[["unbound"]] <- list(unbound_body)
+      if (debug) {
+        mdebugf("globals_body:")
+        mprint(globals_body)
+      }
+  
+      globals_args[["bound"]] <- list(bound_args)
+      globals_args[["unbound"]] <- list(setdiff(unbound_args, bound_args))
+      if (debug) {
+        mdebugf("globals_args:")
+        mprint(globals_args)
+      }
+  
+      ## Consolidate
+      globals[[2]] <- globals_args
+      globals[[3]] <- globals_body
+      if (debug) mdebug_pop("Function call via function ... done")
     }
-    globals_args[["comment"]] <- "arguments"
-    name_args <- globals_args[["name"]]
-    bound_args <- unlist(globals_args[["bound"]])
-    unbound_args <- unlist(globals_args[["unbound"]])
-
-    ## Body
-    globals_body <- findGlobals_dfs(expr[[3]], debug = debug)
-    if (debug) {
-      mdebugf("Function body:")
-      mprint(globals_body)
-    }
-    globals_body[["comment"]] <- "body"
-    bound_body <- unlist(globals_body[["bound"]])
-    unbound_body <- unlist(globals_body[["unbound"]])
-    unbound_body <- setdiff(unbound_body, name_args)
-    globals_body[["bound"]] <- list(bound_body)
-    globals_body[["unbound"]] <- list(unbound_body)
-    if (debug) {
-      mdebugf("globals_body:")
-      mprint(globals_body)
-    }
-
-    globals_args[["bound"]] <- list(bound_args)
-    globals_args[["unbound"]] <- list(setdiff(unbound_args, bound_args))
-    if (debug) {
-      mdebugf("globals_args:")
-      mprint(globals_args)
-    }
-
-    ## Consolidate
-    globals[[2]] <- globals_args
-    globals[[3]] <- globals_body
-    if (debug) mdebug_pop("Function call via function ... done")
   } else {
     if (typeof %in% c("call", "language")) {
       op_name <- as.character(op[[1]])
