@@ -99,4 +99,6 @@ update_package_options <- function(debug = FALSE) {
   update_package_option("globals.globalsOf.locals", mode = "logical", debug = debug)
   update_package_option("globals.selfassign", mode = "logical", debug = debug)
   update_package_option("globals.walkAST.onUnknownType", debug = debug)
+
+  update_package_option("globals.debug.indent", mode = "character", default = " ", debug = debug)
 }
