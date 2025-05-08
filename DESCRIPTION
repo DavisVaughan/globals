@@ -1,5 +1,5 @@
 Package: globals
-Version: 0.17.0-9026
+Version: 0.18.0
 Depends:
     R (>= 3.1.2)
 Imports:
@@ -11,13 +11,14 @@ Authors@R: c(
     person("Davis","Vaughan", role="ctb",
            email="davis@posit.co"))
 Description: Identifies global ("unknown" or "free") objects in R expressions
-    by code inspection using various strategies (ordered, liberal, or
-    conservative).  The objective of this package is to make it as simple as
-    possible to identify global objects for the purpose of exporting them in
-    parallel, distributed compute environments.
+    by code inspection using various strategies (ordered, liberal,
+    conservative, or deep-first search). The objective of this package is to
+    make it as simple as possible to identify global objects for the purpose
+    of exporting them in parallel, distributed compute environments.
 License: LGPL (>= 2.1)
 LazyLoad: TRUE
 ByteCompile: TRUE
+Language: en-US
 Encoding: UTF-8
 URL: https://globals.futureverse.org, https://github.com/futureverse/globals
 BugReports: https://github.com/futureverse/globals/issues
