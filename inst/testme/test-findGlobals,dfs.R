@@ -208,6 +208,9 @@ expr <- quote(for (x in NULL) x)
 append_expr(expr, substitute = FALSE, truth = c("for"))
 
 
+expr <- quote(base::names(x)[1] <- 0)
+append_expr(expr, substitute = FALSE, truth = c("::", "x", "[<-"))
+
 for (kk in seq_along(exprs)) {
   message(sprintf("\n*** Expression #%d ***", kk))
   expr <- exprs[[kk]]

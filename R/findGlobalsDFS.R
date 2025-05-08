@@ -217,6 +217,7 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
         } else if (name %in% c("=", "<-", "<<-")) {
           if (debug) mdebugf("LHS %s RHS", name)
           ## LHS <- RHS
+          globals_op  <- globals[[1]]  ## e.g. `=`, `<-`, `<<-`
           globals_lhs <- globals[[2]]
           globals_rhs <- globals[[3]]
 
@@ -261,35 +262,64 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
             ##   #>  $ : symbol *vtmp*
             ##
             if (debug) mdebugf_push("Replacement function ...")
-            globals_op <- globals[[1]]
             ## Cases:
             ##
-            ##  1. a[1] <- 0, names(a) <- "x"
-            ##  2. names(a)[1] <- "x"
+            ##  1. a[1] <- 0           => `[<-`
+            ##  2. names(a) <- "x"     => `names<-`
+            ##  3. names(a)[1] <- "x"  => `[<-`, `names<-`
             ##
-            if (name == "=") name <- "<-"
             
+            if (name == "=") name <- "<-"
             rhs <- expr[[3]]
-            if (debug) mdebugf("LHS: %s", commaq(as.character(lhs)))
+            
+            if (debug) mdebugf("LHS: [n=%d] %s", length(lhs), commaq(as.character(lhs)))
             if (debug) mprint(globals_lhs)
-            if (debug) mdebugf("RHS: %s", commaq(as.character(rhs)))
+            if (debug) mdebugf("RHS: [n=%d] %s", length(rhs), commaq(as.character(rhs)))
             if (debug) mprint(globals_rhs)
 
+            ## We don't want the last element, e.g. `1`, `a`
             lhs_fcns <- lhs[-length(lhs)]
+            if (debug) {
+              mdebug("Possible replacement functions:")
+              mstr(as.list(lhs_fcns))
+            }
+            
             if (length(lhs_fcns) == 1L) {
-              ## x[1] <- 1, names(x) <- "A"
-              fcns <- as.character(as.list(lhs_fcns)[[1]])
+              ## names(x) <- ...   => `names<-`
+              first <- lhs_fcns[[1]]
+              fcns <- as.character(first)
               repl_fcns <- sprintf("%s%s", fcns, name)
-            } else {
-              ## names(x)[1] <- "A"
-              if (!is.call(lhs_fcns[[2]])) lhs_fcns <- lhs_fcns[-2]
+            } else if (length(lhs_fcns) == 2L) {
+              ## x[1] <- ...
+              ## names(x)[1] <- ...
+              ## base::names(x)[1] <- ...
+              first <- lhs_fcns[[1]]  ## `[`, `[[`, `$`, `@`
+              second <- lhs_fcns[[2]] ## `x`, `names(x)`, `base::names(x)`
+              if (is.call(second)) {  
+                ## names(x)[1] <- ...
+                ## base::names(x)[1] <- ...
+                call <- second
+                if (length(call[[1]]) == 1L) {
+                  ## names(x)[1] <- ...
+                  ## => keep lhs_fcns == lhs_fcns[1:2]
+                } else if (length(call[[1]]) == 3L) {
+                  ## base::names(x)[1] <- ...
+                  ## => drop lhs_fcns[2]
+                  lhs_fcns <- lhs_fcns[-2]  ## `[`
+                }
+              } else {
+                ## x[1] <- 1
+                lhs_fcns <- lhs_fcns[-2]  ## `[`
+              }
+
               fcns <- vapply(lhs_fcns, FUN.VALUE = NA_character_, FUN = function(x) { as.character(as.list(x)[[1]]) })
               repl_fcns <- sprintf("%s%s", fcns, name)
               fcns <- fcns[1]
             }
-            if (debug) mdebugf("Replacement function(s): `%s`", commaq(fcns))
-            if (debug) mdebugf("Replacement function(s): `%s`", commaq(repl_fcns))
-
+            if (debug) {
+              mdebugf("Replacement function and arguments: [n=%d] `%s`", length(fcns), commaq(fcns))
+              mdebugf("Replacement function(s): [n=%d] `%s`", length(repl_fcns), commaq(repl_fcns))
+            }
             globals_op[["unbound"]] <- list(repl_fcns)
             globals_lhs[["unbound"]] <- list(setdiff(unlist(globals_lhs[["unbound"]]), fcns))
             globals[[1]] <- globals_op
