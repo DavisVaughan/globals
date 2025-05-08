@@ -272,10 +272,12 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
             if (name == "=") name <- "<-"
             rhs <- expr[[3]]
             
-            if (debug) mdebugf("LHS: [n=%d] %s", length(lhs), commaq(as.character(lhs)))
-            if (debug) mprint(globals_lhs)
-            if (debug) mdebugf("RHS: [n=%d] %s", length(rhs), commaq(as.character(rhs)))
-            if (debug) mprint(globals_rhs)
+            if (debug) {
+              mdebugf("LHS: [n=%d] %s", length(lhs), commaq(as.character(lhs)))
+              mprint(globals_lhs)
+              mdebugf("RHS: [n=%d] %s", length(rhs), commaq(as.character(rhs)))
+              mprint(globals_rhs)
+            }
 
             ## We don't want the last element, e.g. `1`, `a`
             lhs_fcns <- lhs[-length(lhs)]
