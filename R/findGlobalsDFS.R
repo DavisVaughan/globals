@@ -282,15 +282,13 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
             ## We don't want the last element, e.g. `1`, `a`
             lhs_fcns <- lhs[-length(lhs)]
             if (debug) {
-              mdebug("Possible replacement functions:")
+              mdebug("Possible functions to become replacement functions:")
               mstr(as.list(lhs_fcns))
             }
             
             if (length(lhs_fcns) == 1L) {
               ## names(x) <- ...   => `names<-`
-              first <- lhs_fcns[[1]]
-              fcns <- as.character(first)
-              repl_fcns <- sprintf("%s%s", fcns, name)
+              lhs_fcns <- lhs_fcns[[1]]
             } else if (length(lhs_fcns) == 2L) {
               ## x[1] <- ...
               ## names(x)[1] <- ...
@@ -313,11 +311,17 @@ findGlobals_dfs_call <- function(expr, ..., debug = FALSE) {
                 ## x[1] <- 1
                 lhs_fcns <- lhs_fcns[-2]  ## `[`
               }
-
-              fcns <- vapply(lhs_fcns, FUN.VALUE = NA_character_, FUN = function(x) { as.character(as.list(x)[[1]]) })
-              repl_fcns <- sprintf("%s%s", fcns, name)
-              fcns <- fcns[1]
             }
+
+            if (debug) {
+              mdebug("Functions to become replacement functions:")
+              mstr(as.list(lhs_fcns))
+            }
+            
+            fcns <- vapply(lhs_fcns, FUN.VALUE = NA_character_, FUN = function(x) { as.character(as.list(x)[[1]]) })
+            repl_fcns <- sprintf("%s%s", fcns, name)
+            fcns <- fcns[1]
+            
             if (debug) {
               mdebugf("Replacement function and arguments: [n=%d] `%s`", length(fcns), commaq(fcns))
               mdebugf("Replacement function(s): [n=%d] `%s`", length(repl_fcns), commaq(repl_fcns))
