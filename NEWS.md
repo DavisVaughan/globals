@@ -1,5 +1,10 @@
 # Version (development version)
 
+ * ...
+
+
+# Version 0.18.0 [2025-05-09]
+
 ## New Features
 
  * Add `findGlobals(..., method = "dfs")`, which finds globals in R
