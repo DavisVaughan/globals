@@ -25,9 +25,10 @@
 #' @param unlist If TRUE, a list of unique objects is returned.
 #'        If FALSE, a list of \code{length(expr)} sublists.
 #'
-#' @param recursive If TRUE, globals that are closures (functions) and that
-#'        exist outside of namespaces ("packages"), will be recursively
-#'        scanned for globals.
+#' @param recursive If TRUE, found globals are searched for additional globals.
+#'        For example, a closure (function) that exist outside a package
+#'        namespace, may contain additional globals. Similarly, a formula
+#'        may depend on globals.
 #'
 #' @param skip (internal) A list of globals not to be searched for
 #'        additional globals.  Ignored unless \code{recursive} is TRUE.
@@ -103,8 +104,17 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
     globalsByName(names, envir = envir, mustExist = mustExist)
   }, error = function(ex) {
     ## HACK: Tweak error message to also include the expression inspected.
+    ## If fail to retrieve one or more variables, narrow in on the
+    ## problematic ones.
+    failed <- vapply(names, FUN.VALUE = NA, FUN = function(name) {
+      res <- tryCatch({
+         globalsByName(name, envir = envir, mustExist = mustExist)
+      }, error = identity)
+      inherits(res, "error")
+    })
+    failed <- names[failed]
     msg <- conditionMessage(ex)
-    msg <- sprintf("Identified global objects via static code inspection (%s). %s", hexpr(expr), msg) #nolint
+    msg <- sprintf("Failed to get one or more globals that were identified via static code inspection (%s). Specifically, the %d globals %s give an error. The reason was: %s", hexpr(expr), length(failed), commaq(failed), msg) #nolint
     ex$message <- msg
     stop(ex)
   })
@@ -146,7 +156,12 @@ globalsOf <- function(expr, envir = parent.frame(), ...,
     ## Enter only functions
     ## NOTE: This excludes functions "not found", but also primitives
     ##       not dropped above.
-    globals_t <- globals_t[vapply(globals_t, FUN = typeof, FUN.VALUE = NA_character_, USE.NAMES = FALSE) == "closure"]
+    keep <- vapply(globals_t, USE.NAMES = FALSE, FUN.VALUE = NA,
+      FUN = function(global) {
+        typeof(global) == "closure"
+      }
+    )
+    globals_t <- globals_t[keep]
 
     if (length(globals_t) > 0) {
       if (debug) mdebugf("subset of globals to be scanned: [%d] %s",
