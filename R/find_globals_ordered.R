@@ -3,7 +3,7 @@ find_globals_ordered <- function(expr, envir, dotdotdot, ..., name = character()
   selfassign <- getOption("globals.selfassign", TRUE)
 
   ## Identified objects are recorded in (name, class), which
-  ## are located in this executation environment
+  ## are located in this execution environment
   
   enter_local <- function(type, v, e, w) {
     hardcoded_locals <- names(w$env)
@@ -119,7 +119,7 @@ find_globals_ordered <- function(expr, envir, dotdotdot, ..., name = character()
         if (trace) trace_printf("=> A function, but not of interest\n")
       }
     } else {
-      if (trace) trace_printf("=> Nothing to else to explore\n")
+      if (trace) trace_printf("=> Nothing else to explore\n")
     }
   } ## enter_global()
 

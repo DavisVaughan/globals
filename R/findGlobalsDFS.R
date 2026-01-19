@@ -400,7 +400,7 @@ findGlobals_dfs_environment <- function(expr, ..., debug = FALSE) {
   }
   
   ## NOTE: Do *not* look for types that we are interested in, but instead
-  ## look for types that we are *not* interested.  The reason for this that
+  ## look for types that we are *not* interested.  The reason for this is that
   ## in future versions of R there might be new types added that may contain
   ## globals and with this approach those types will also be scanned.
   basicTypes <- c("logical", "integer", "double", "complex", "character",
@@ -443,7 +443,7 @@ findGlobals_dfs_expression <- function(expr, ..., debug = FALSE) {
   }
   
   ## NOTE: Do *not* look for types that we are interested in, but instead
-  ## look for types that we are *not* interested.  The reason for this that
+  ## look for types that we are *not* interested.  The reason for this is that
   ## in future versions of R there might be new types added that may contain
   ## globals and with this approach those types will also be scanned.
   basicTypes <- c("logical", "integer", "double", "complex", "character",

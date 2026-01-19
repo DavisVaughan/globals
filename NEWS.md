@@ -117,7 +117,7 @@
    compatibility reasons, the default is `locals = TRUE`, but this
    might become `locals = FALSE` in a later release.
 
- * Any `globals.*` options specific to this packages can now be set
+ * Any `globals.*` options specific to this package can now be set
    via environment variables `R_GLOBALS_*` when the package is loaded.
    For example, `R_GLOBALS_DEBUG=true` sets option `globals.debug =
    TRUE`.
@@ -179,10 +179,10 @@
    if any, should be scanned.  Default is to scan all attributes.
 
  * `findGlobals()`, `globalsOf()`, and `globalsByName()` now
-   recognizes and returns values for `..1`, `..2`, etc. like they do
+   recognize and return values for `..1`, `..2`, etc. like they do
    for `...`.
 
- * `cleanup()` now also drop exported and non-exported
+ * `cleanup()` now also drops exported and non-exported
    `NativeSymbolInfo` objects.
 
 ## New Features

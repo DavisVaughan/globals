@@ -16,10 +16,10 @@
 #' If specified, then the corresponding elements in the results are
 #' lists of class `DotDotDotList` comprising the value of the latter.
 #' If the special argument does not exist, then the value is `NA`, and
-#' the corresponding `where` attributes is `NULL`.
+#' the corresponding `where` attribute is `NULL`.
 #'
 #' @return A \link{Globals} object of named elements and an attribute
-#' `where` with named elements. Both of sets have names according to
+#' `where` with named elements. Both sets have names according to
 #' `names`.
 #'
 #' @example incl/globalsByName.R

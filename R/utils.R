@@ -4,7 +4,7 @@ as_function <- function(expr, envir = parent.frame(), enclos = baseenv(), ...) {
 }
 
 # Although the set of "base" packages rarely changes, it has happened
-# in R's history.  Beause of this, we avoid hardcoding the set of known
+# in R's history.  Because of this, we avoid hardcoding the set of known
 # "base" packages and instead always look them up by the 'Priority'
 # field in their DESCRIPTION data and cache the results.
 #' @importFrom utils packageDescription
@@ -89,7 +89,7 @@ hpaste <- function(..., sep="", collapse=", ", last_collapse=NULL,
   x <- paste(..., sep = sep)
   n <- length(x)
 
-  # Nothing todo?
+  # Nothing to do?
   if (n == 0) return(x)
   if (is.null(collapse)) return(x)
 
@@ -135,7 +135,7 @@ envname <- function(env) {
   if (!is.environment(env)) return(NA_character_)
   name <- environmentName(env)
   if (name == "") {
-    ## NOTE: I might be that:
+    ## NOTE: It might be that:
     ## 1. 'env' is of a class that extends 'environment', e.g.
     ##    R.oo::Object() or R6::R6Class(), or
     ## 2. another package defines print() for 'environment'

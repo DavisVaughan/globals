@@ -26,7 +26,7 @@
 #'        If FALSE, a list of \code{length(expr)} sublists.
 #'
 #' @param recursive If TRUE, found globals are searched for additional globals.
-#'        For example, a closure (function) that exist outside a package
+#'        For example, a closure (function) that exists outside a package
 #'        namespace, may contain additional globals. Similarly, a formula
 #'        may depend on globals.
 #'
@@ -36,14 +36,14 @@
 #' @return \code{globalsOf()} returns a \link{Globals} object.
 #'
 #' @details
-#' There currently three strategies for identifying global objects.
+#' There are currently three strategies for identifying global objects.
 #'
 #' The \code{method = "ordered"} search method identifies globals such that
 #' a global variable preceding a local variable with the same name
 #' is not dropped (which the \code{"conservative"} method would).
 #'
 #' The \code{method = "conservative"} search method tries to keep the number
-#' of false positive to a minimum, i.e. the identified objects are
+#' of false positives to a minimum, i.e. the identified objects are
 #' most likely true global objects.  At the same time, there is
 #' a risk that some true globals are not identified (see example).
 #' This search method returns the exact same result as the
