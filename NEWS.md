@@ -1,6 +1,8 @@
 # Version (development version)
 
- * ...
+ * `findGlobals()` is now much faster when `expr` contains a list
+   of classed lists (such as a list of data frames, which is
+   a common scenario with using furrr or future.apply).
 
 
 # Version 0.18.0 [2025-05-09]
