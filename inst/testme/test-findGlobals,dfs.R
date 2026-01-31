@@ -213,6 +213,9 @@ append_expr(expr, substitute = FALSE, truth = c("::", "x", "[<-"))
 expr <- alist(x = a)
 append_expr(expr, substitute = FALSE, truth = c("a"))
 
+expr <- function(x = a) NULL
+append_expr(expr, substitute = FALSE, truth = c("a"))
+
 for (kk in seq_along(exprs)) {
   message(sprintf("\n*** Expression #%d ***", kk))
   expr <- exprs[[kk]]
