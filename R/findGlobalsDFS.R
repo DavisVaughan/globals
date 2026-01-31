@@ -79,6 +79,7 @@ findGlobals_dfs_pairlist <- function(expr, ..., debug = FALSE) {
   globals <- list()
   for (name in names(expr)) {
     globals[[name]] <- dframe(name = name, type = typeof(expr[[name]]), comment = "pairlist element")
+    globals[[sprintf("%s-formals", name)]] <- findGlobals_dfs(expr[[name]], debug = debug)
   }
   globals <- do.call(rbind, args = globals)
   globals
