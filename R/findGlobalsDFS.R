@@ -502,6 +502,11 @@ findGlobals_dfs_function <- function(expr, ..., debug = FALSE) {
   ## they are arguments of the function
   unbound_args <- setdiff(unbound_args, bound_arg_names)
   unbound_body <- setdiff(unbound_body, bound_arg_names)
+  
+  if ("..." %in% bound_arg_names) {
+    unbound_args <- grep("^[.][.][[:digit:]]+$", unbound_args, invert = TRUE, value = TRUE)
+    unbound_body <- grep("^[.][.][[:digit:]]+$", unbound_body, invert = TRUE, value = TRUE)
+  }
 
   ## Unbound variables may exist in the formals and the body
   unbound <- unique(c(unbound_arg_names, unbound_args, unbound_body))
