@@ -86,7 +86,7 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
     if (debug) mdebugf("expr: <a list of length %d>", .length(expr))
 
     ## NOTE: Do *not* look for types that we are interested in, but instead
-    ## look for types that we are *not* interested.  The reason for this is that
+    ## look for types that we are *not* interested in.  The reason for this is that
     ## in future versions of R there might be new types added that may contain
     ## globals and with this approach those types will also be scanned.
     basicTypes <- c("logical", "integer", "double", "complex", "character",

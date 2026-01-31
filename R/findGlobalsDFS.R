@@ -522,7 +522,7 @@ findGlobals_dfs_object <- function(expr, ..., debug = FALSE) {
       mdebugf_pop("findGlobals_dfs_object() ... done")
     })
   }
-  ## FIXME: Should we search for globals in 'object':s?
+  ## FIXME: Should we search for globals in 'object's?
   globals <- dframe(type = typeof(expr), comment = typeof(expr))
   globals
 }

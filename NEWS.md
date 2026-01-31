@@ -41,7 +41,7 @@
 
 ## New Features
 
- * `walkAST()` now walks also the body of closures ("functions").
+ * `walkAST()` now also walks the body of closures ("functions").
 
 ## Bug Fixes
 
