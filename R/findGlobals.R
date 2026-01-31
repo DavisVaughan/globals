@@ -57,9 +57,22 @@ findGlobals <- function(expr, envir = parent.frame(), ...,
         unlist = TRUE, trace = trace
       )
     }
-    globals <- unlist(globals, use.names = FALSE)
-    globals <- globals[!duplicated(globals)]
-    return(globals)
+
+    globals_all <- unlist(globals, use.names = FALSE)
+    globals_all <- globals_all[!duplicated(globals_all)]
+
+    if (debug) {
+      mdebug("Globals found by per method:")
+      w <- max(nchar(method)) + 2L
+      for (mtd in method) {
+        names <- globals[[mtd]]
+        delta <- setdiff(globals_all, names)
+        delta <- if (length(delta) == 0) "<none>" else commaq(delta)
+        mdebugf("%*s: %s [delta: %s]", w, sQuote(mtd), commaq(names), delta)
+      }
+    }
+
+    return(globals_all)
   } ## if (length(method) > 1)
 
   if (is.logical(attributes)) {
