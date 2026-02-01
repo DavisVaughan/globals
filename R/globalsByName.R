@@ -38,7 +38,7 @@ globalsByName <- function(names, envir = parent.frame(), mustExist = TRUE,
     if (nnames > 1L) info <- sprintf("<%s> [n=%d]", info, nnames)
     info <- sprintf("%s, mustExist = %s", info, mustExist)
     mdebugf_push("globalsByName(%s) ...", info)
-    mdebug("search from environment: %s", sQuote(envname(envir)))
+    mdebugf("search from environment: %s", sQuote(envname(envir)))
     on.exit(mdebugf_pop("globalsByName(%s) ... done", info))
   }
 

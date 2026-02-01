@@ -69,7 +69,7 @@ is not returned.}
 
 \item{recursive}{If TRUE, found globals are searched for additional globals.
 For example, a closure (function) that exists outside a package
-namespace, may contain additional globals. Similarly, a formula
+namespace may contain additional globals. Similarly, a formula
 may depend on globals.}
 
 \item{skip}{(internal) A list of globals not to be searched for
@@ -90,7 +90,7 @@ There are currently three strategies for identifying global objects.
 
 The \code{method = "ordered"} search method identifies globals such that
 a global variable preceding a local variable with the same name
-is not dropped (which the \code{"conservative"} method would).
+is not dropped (unlike the \code{"conservative"} method).
 
 The \code{method = "conservative"} search method tries to keep the number
 of false positives to a minimum, i.e. the identified objects are

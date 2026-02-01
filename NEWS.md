@@ -1,8 +1,17 @@
 # Version (development version)
 
+## Performance
+
  * `findGlobals()` is now much faster when `expr` contains a list
-   of classed lists (such as a list of data frames, which is
-   a common scenario with using furrr or future.apply).
+   of classed lists, e.g. a list of data frames.
+   
+## Bug Fixes
+
+ * `findGlobals(alist(x = a), method = "dfs")` failed to identify `a`
+   as global variable.
+
+ * `findGlobals(function(x = a) NULL, method = "dfs")` failed to
+   identify `a` as global variable.
 
 
 # Version 0.18.0 [2025-05-09]
@@ -37,7 +46,7 @@
 
 ## New Features
 
- * `walkAST()` now walks also the body of closures ("functions").
+ * `walkAST()` now also walks the body of closures ("functions").
 
 ## Bug Fixes
 
